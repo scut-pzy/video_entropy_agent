@@ -66,10 +66,11 @@
       <label>system</label><textarea id="system_prompt" rows="10"></textarea>
       <label>工具返回后的续轮提示</label><textarea id="cont_prompt" rows="3"></textarea>
     </details>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px">
       <div><label>模型</label><select id="model"><option value="qwen35" selected>Qwen3.5-9B</option><option value="deepeyes">DeepEyes-7B</option></select></div>
       <div><label>粗采帧数 k</label><select id="k"><option>4</option><option selected>8</option><option>16</option></select></div>
       <div><label>最多轮数</label><select id="max_turns"><option>2</option><option selected>4</option><option>6</option></select></div>
+      <div><label>每轮最大生成 token（思考长就调大）</label><select id="max_new_tokens"><option>512</option><option selected>1024</option><option>2048</option><option>4096</option></select></div>
     </div>
     <button id="run">▶ 推理</button>
   </div>
@@ -225,7 +226,7 @@ $('run').onclick = async () => {
   $('out').innerHTML = ''; $('summary').innerHTML = ''; $('diag').innerHTML = ''; ENT = []; MARK = {tool_call:[],answer:[],think_end:[],turn_starts:[]}; window.__ansClass = 'other'; drawChart();
   const body = { uuid: CUR.uuid, question: $('question').value, instruction: $('instruction').value,
                  system_prompt: $('system_prompt').value, cont_prompt: $('cont_prompt').value,
-                 model: $('model').value, k: +$('k').value, max_turns: +$('max_turns').value };
+                 model: $('model').value, k: +$('k').value, max_turns: +$('max_turns').value, max_new_tokens: +$('max_new_tokens').value };
   try {
     const resp = await fetch('/api/infer', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
     if (resp.status === 429) { alert('有一条推理正在跑，等它结束'); return; }

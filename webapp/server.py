@@ -167,7 +167,7 @@ def infer_events(req):
     it = ITEMS[req['uuid']]
     lang = 'zh'
     bk = ensure_backend(req.get('model', 'qwen35'))
-    k = int(req.get('k', 8)); max_turns = int(req.get('max_turns', 4)); mnt = int(req.get('max_new_tokens', 512))
+    k = int(req.get('k', 8)); max_turns = int(req.get('max_turns', 4)); mnt = int(req.get('max_new_tokens', 1024))
     sess = vi.VideoSession(it['video'], n_coarse=k)
     coarse = list(range(len(sess.frames)))
     yield sse(dict(type='frames', frames=[dict(idx=i, t=round(sess.frames[i]['t'], 2), img=pil_b64(sess.frames[i]['pil_disp']))
@@ -203,7 +203,16 @@ def infer_events(req):
         if '<answer>' in turn_text:
             pred = vi._extract_letter(turn_text); break
         calls = re.findall(r'<tool_call>(.*?)</tool_call>', turn_text, re.S)
+        n_turn_tokens = len(all_ent) - base_n
         if not calls:
+            if '<tool_call>' in turn_text:
+                # 写了 <tool_call> 但没闭合: 多半是被 max_new_tokens 截断 (思考太长), 或格式错
+                why = (f'<tool_call> 没有闭合：这一轮生成了 {n_turn_tokens} token，已达上限 {mnt}，被截断'
+                       if n_turn_tokens >= mnt - 1 else '<tool_call> 没有闭合，格式错误')
+                rec = dict(turn=turn, ok=False, err=why, name=None, window=None, args=None)
+                tool_recs.append(rec)
+                print(f"[tool] 未闭合 uuid={it['uuid'][:8]} turn={turn} {why}")
+                yield sse(dict(type='tool_call', name='(未闭合)', args=None, ok=False, err=why))
             pred = vi._extract_letter(turn_text); break
         obs = []
         for c in calls[:3]:
@@ -269,7 +278,10 @@ def infer_events(req):
     required = lab.get('label') == 'evidence_required'
     solvable = lab.get('label') == 'already_solvable'
     if attempted and not called:
-        code, title, color = 'call_failed', '工具调用失败：发出了调用但一次都没执行成功（参数/工具名不合法），等于没拿到证据', 'red'
+        if any('截断' in e for e in errors):
+            code, title, color = 'call_truncated', '工具调用被截断：思考太长，写到 <tool_call> 时已达生成上限——把"最大生成 token"调大再试', 'red'
+        else:
+            code, title, color = 'call_failed', '工具调用失败：发出了调用但一次都没执行成功（参数/工具名不合法或未闭合），等于没拿到证据', 'red'
     elif not called:
         if required:
             code, title, color = 'overconfident_skip', 'Overconfident Skip：需要证据却没调工具，直接作答', 'red'
