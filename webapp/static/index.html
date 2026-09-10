@@ -37,6 +37,10 @@
   canvas { width:100%; height:220px; border:1px solid #e5e7eb; border-radius:6px; background:#fff; }
   .summary { font-size:12.5px; color:#333; background:#f3f4f6; padding:6px 8px; border-radius:5px; margin-top:6px; line-height:1.7; }
   .legend { font-size:11px; color:var(--gray); margin-top:4px; }
+  .diag { border-radius:8px; padding:10px 12px; margin:10px 0 6px; color:#fff; }
+  .diag .t { font-size:15px; font-weight:700; }
+  .diag ul { margin:6px 0 0 0; padding-left:18px; font-size:12.5px; line-height:1.7; color:#fff; opacity:.95 }
+  .diag.green { background:var(--green);} .diag.red { background:var(--red);} .diag.orange { background:var(--orange);} .diag.gray { background:var(--gray);}
   .pbar { height:10px; background:#e5e7eb; border-radius:5px; overflow:hidden; margin-top:4px; }
   .pbar > div { height:100%; background:var(--blue); width:0%; transition:width .3s; }
   #loadlog { font-family: ui-monospace, Menlo, monospace; font-size:11px; background:#111827; color:#d1d5db; padding:6px 8px; border-radius:5px; max-height:130px; overflow:auto; white-space:pre-wrap; margin-top:4px; display:none; }
@@ -63,7 +67,7 @@
       <label>工具返回后的续轮提示</label><textarea id="cont_prompt" rows="3"></textarea>
     </details>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-      <div><label>模型</label><select id="model"><option value="deepeyes">DeepEyes-7B</option><option value="qwen35">Qwen3.5-9B</option></select></div>
+      <div><label>模型</label><select id="model"><option value="qwen35" selected>Qwen3.5-9B</option><option value="deepeyes">DeepEyes-7B</option></select></div>
       <div><label>粗采帧数 k</label><select id="k"><option>4</option><option selected>8</option><option>16</option></select></div>
       <div><label>最多轮数</label><select id="max_turns"><option>2</option><option selected>4</option><option>6</option></select></div>
     </div>
@@ -73,9 +77,10 @@
   <div class="col">
     <h2>② 推理过程 <span class="legend">蓝 = 思考 · 橙 = 工具调用 · 绿/红 = 答案对/错</span></h2>
     <div id="out"></div>
-    <h2 style="margin-top:14px">③ next-token 熵 · 横轴 = 输出位置 %</h2>
-    <canvas id="chart" width="1100" height="220"></canvas>
-    <div class="legend">橙色虚线 = &lt;tool_call&gt; 起点 · 蓝点线 = &lt;/think&gt; · 绿线 = &lt;answer&gt; · 红点 = top-20% 高熵 token · 灰线 = 新一轮开始</div>
+    <div id="diag"></div>
+    <h2 style="margin-top:14px">③ next-token 熵 · 横轴 = 输出位置 %（左：逐 token + 滑动平均；右：调用前 vs 调用后）</h2>
+    <canvas id="chart" width="1100" height="240"></canvas>
+    <div class="legend">浅橙背景 = 工具调用之前 · 浅蓝背景 = 之后 · 橙色虚线 = &lt;tool_call&gt; 起点 · 绿线 = &lt;answer&gt; · 红点 = top-20% 高熵 token · 深线 = 7 点滑动平均</div>
     <div class="summary" id="summary"></div>
   </div>
 </div>
@@ -169,27 +174,55 @@ function appendTool(ev) {
 function drawChart() {
   const c = $('chart'), ctx = c.getContext('2d'); const W = c.width, H = c.height;
   ctx.clearRect(0,0,W,H); ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
-  const n = ENT.length; if (n < 2) { ctx.fillStyle='#999'; ctx.fillText('（推理开始后这里画每个 token 的熵）', 20, 30); return; }
-  const L = 44, R = 12, T = 14, Bm = 26; const maxE = Math.max(1e-6, ...ENT) * 1.05;
-  const x = i => L + (W - L - R) * i / (n - 1), y = v => T + (H - T - Bm) * (1 - v / maxE);
-  ctx.strokeStyle = '#e5e7eb'; ctx.beginPath(); for (let p=0;p<=100;p+=20){ const xx = L + (W-L-R)*p/100; ctx.moveTo(xx,T); ctx.lineTo(xx,H-Bm);} ctx.stroke();
-  ctx.fillStyle = '#666'; ctx.font = '11px sans-serif'; for (let p=0;p<=100;p+=20) ctx.fillText(p+'%', L + (W-L-R)*p/100 - 8, H-8);
+  const n = ENT.length; if (n < 2) { ctx.fillStyle='#999'; ctx.font='13px sans-serif'; ctx.fillText('（推理开始后这里画每个 token 的熵）', 20, 30); return; }
+  const L = 44, R = W*0.28 + 10, T = 16, Bm = 26; const PW = W - L - R; const maxE = Math.max(1e-6, ...ENT) * 1.08;
+  const x = i => L + PW * i / (n - 1), y = v => T + (H - T - Bm) * (1 - v / maxE);
+  const tc = (MARK.tool_call||[])[0];
+  // 前后底色
+  if (tc !== undefined) { ctx.fillStyle = '#fff3e8'; ctx.fillRect(L, T, x(tc)-L, H-T-Bm); ctx.fillStyle = '#eaf2fb'; ctx.fillRect(x(tc), T, L+PW-x(tc), H-T-Bm);
+    ctx.fillStyle = '#c05621'; ctx.font = '12px sans-serif'; ctx.fillText('调用前', L+6, T+14); ctx.fillStyle = '#2b6cb0'; ctx.fillText('调用后', x(tc)+6, T+14); }
+  ctx.strokeStyle = '#e5e7eb'; ctx.beginPath(); for (let p=0;p<=100;p+=20){ const xx = L + PW*p/100; ctx.moveTo(xx,T); ctx.lineTo(xx,H-Bm);} ctx.stroke();
+  ctx.fillStyle = '#666'; ctx.font = '11px sans-serif'; for (let p=0;p<=100;p+=20) ctx.fillText(p+'%', L + PW*p/100 - 8, H-8);
   ctx.fillText(maxE.toFixed(1), 4, T+8); ctx.fillText('0', 12, H-Bm);
-  ctx.strokeStyle = '#457b9d'; ctx.lineWidth = 1.2; ctx.beginPath(); ENT.forEach((v,i) => i? ctx.lineTo(x(i),y(v)) : ctx.moveTo(x(i),y(v))); ctx.stroke();
+  // 逐 token (淡) + 滑动平均 (深)
+  ctx.strokeStyle = '#9fb8cc'; ctx.lineWidth = 0.9; ctx.beginPath(); ENT.forEach((v,i) => i? ctx.lineTo(x(i),y(v)) : ctx.moveTo(x(i),y(v))); ctx.stroke();
+  const win = 7, sm = ENT.map((_,i) => { const a = Math.max(0,i-3), b = Math.min(n-1,i+3); let s=0; for (let j=a;j<=b;j++) s+=ENT[j]; return s/(b-a+1); });
+  ctx.strokeStyle = '#1d4e89'; ctx.lineWidth = 2; ctx.beginPath(); sm.forEach((v,i) => i? ctx.lineTo(x(i),y(v)) : ctx.moveTo(x(i),y(v))); ctx.stroke();
   const thr = [...ENT].sort((a,b)=>b-a)[Math.max(0, Math.round(0.2*n)-1)];
-  ctx.fillStyle = '#e76f51'; ENT.forEach((v,i) => { if (v >= thr && v > 0) { ctx.beginPath(); ctx.arc(x(i),y(v),2.2,0,7); ctx.fill(); } });
-  const vline = (i, col, dash, lab) => { ctx.save(); ctx.strokeStyle = col; ctx.setLineDash(dash); ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(x(i),T); ctx.lineTo(x(i),H-Bm); ctx.stroke(); ctx.restore();
-    if (lab) { ctx.fillStyle = col; ctx.fillText(lab + ' ' + Math.round(100*i/(n-1)) + '%', Math.min(x(i)+3, W-90), T+10); } };
+  ctx.fillStyle = '#e76f51'; ENT.forEach((v,i) => { if (v >= thr && v > 0) { ctx.beginPath(); ctx.arc(x(i),y(v),2.4,0,7); ctx.fill(); } });
+  const vline = (i, col, dash, lab) => { ctx.save(); ctx.strokeStyle = col; ctx.setLineDash(dash); ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(x(i),T); ctx.lineTo(x(i),H-Bm); ctx.stroke(); ctx.restore();
+    if (lab) { ctx.fillStyle = col; ctx.font = '11px sans-serif'; ctx.fillText(lab + ' ' + Math.round(100*i/(n-1)) + '%', Math.min(x(i)+3, L+PW-80), T+28); } };
   (MARK.turn_starts||[]).slice(1).forEach(i => vline(i, '#bbb', [], ''));
-  (MARK.think_end||[]).forEach(i => vline(i, '#2b6cb0', [2,3], ''));
   (MARK.tool_call||[]).forEach(i => vline(i, '#c05621', [6,4], '<tool_call>'));
   (MARK.answer||[]).forEach(i => vline(i, '#2f855a', [], '<answer>'));
+  // 右侧: 调用前 vs 调用后
+  const RX = L + PW + 34, RW = W - RX - 10;
+  ctx.fillStyle = '#374151'; ctx.font = '12px sans-serif';
+  if (tc === undefined) { ctx.fillText('（这次没调工具，', RX, T+40); ctx.fillText('没有前后对比）', RX, T+58); return; }
+  const pre = ENT.slice(0, tc), post = ENT.slice(tc);
+  const mean = a => a.length ? a.reduce((s,v)=>s+v,0)/a.length : 0;
+  const hiPre = pre.filter(v => v >= thr && v > 0).length, hiPost = post.filter(v => v >= thr && v > 0).length;
+  const groups = [ {lab:'平均熵', a:mean(pre), b:mean(post), fmt:v=>v.toFixed(2)}, {lab:'高熵 token 数', a:hiPre, b:hiPost, fmt:v=>v} ];
+  const gw = RW/2, bh = H - T - Bm - 30;
+  groups.forEach((g, gi) => {
+    const gx = RX + gi*gw, mx = Math.max(g.a, g.b, 1e-6);
+    const ha = bh*g.a/mx, hb = bh*g.b/mx, base = H - Bm - 14;
+    ctx.fillStyle = '#e08a5c'; ctx.fillRect(gx+8, base-ha, gw*0.32, ha);
+    ctx.fillStyle = '#5b8fc9'; ctx.fillRect(gx+8+gw*0.4, base-hb, gw*0.32, hb);
+    ctx.fillStyle = '#222'; ctx.font = 'bold 12px sans-serif'; ctx.textAlign='center';
+    ctx.fillText(g.fmt(g.a), gx+8+gw*0.16, base-ha-4); ctx.fillText(g.fmt(g.b), gx+8+gw*0.56, base-hb-4);
+    ctx.font = '11px sans-serif'; ctx.fillStyle = '#374151'; ctx.fillText(g.lab, gx+gw/2, base+12);
+    ctx.fillStyle = '#c05621'; ctx.fillText('前', gx+8+gw*0.16, base+24); ctx.fillStyle = '#2b6cb0'; ctx.fillText('后', gx+8+gw*0.56, base+24);
+    ctx.textAlign='left';
+  });
+  const drop = mean(pre) > 0 ? Math.round((1 - mean(post)/mean(pre))*100) : 0;
+  ctx.fillStyle = '#111'; ctx.font = 'bold 12px sans-serif'; ctx.fillText(`调用后熵降 ${drop}%`, RX, T+12);
 }
 
 // ── 主流程 ──
 $('run').onclick = async () => {
   if (RUNNING || !CUR) return; RUNNING = true; $('run').disabled = true;
-  $('out').innerHTML = ''; $('summary').innerHTML = ''; ENT = []; MARK = {tool_call:[],answer:[],think_end:[],turn_starts:[]}; window.__ansClass = 'other'; drawChart();
+  $('out').innerHTML = ''; $('summary').innerHTML = ''; $('diag').innerHTML = ''; ENT = []; MARK = {tool_call:[],answer:[],think_end:[],turn_starts:[]}; window.__ansClass = 'other'; drawChart();
   const body = { uuid: CUR.uuid, question: $('question').value, instruction: $('instruction').value,
                  system_prompt: $('system_prompt').value, cont_prompt: $('cont_prompt').value,
                  model: $('model').value, k: +$('k').value, max_turns: +$('max_turns').value };
@@ -213,7 +246,8 @@ $('run').onclick = async () => {
         else if (ev.type === 'answer') { window.__ansClass = ev.correct ? 'ans-ok' : 'ans-bad'; if (curTurn) curTurn.innerHTML = colorize(curBuf);
           const d = document.createElement('div'); d.className = ev.correct ? 'ans-ok' : 'ans-bad';
           d.textContent = `${ev.correct ? '✅' : '❌'} 模型答案 ${ev.pred} · 正确答案 ${ev.gt}`; $('out').appendChild(d); }
-        else if (ev.type === 'done') { const s = ev.summary;
+        else if (ev.type === 'done') { const s = ev.summary; const dg = s.diagnosis || {};
+          $('diag').innerHTML = `<div class="diag ${dg.color||'gray'}"><div class="t">诊断：${esc(dg.title||'')}</div><ul>${(dg.details||[]).map(d=>'<li>'+esc(d)+'</li>').join('')}</ul></div>`;
           $('summary').innerHTML = `输出 ${s.n_tokens} token · 平均熵 ${s.mean_entropy} · 工具调用起点 ${s.tool_call_pct.length ? s.tool_call_pct.map(v=>v+'%').join(', ') : '（没调工具）'} · <answer> 位置 ${s.answer_pct.map(v=>v+'%').join(', ')||'-'}<br>` +
             (s.ent_pre !== null ? `调用前平均熵 <b>${s.ent_pre}</b> → 调用后 <b>${s.ent_post}</b> · ` : '') +
             `调工具前已下结论：<b>${s.pre_answer ? '是' : '否'}</b>` +

@@ -166,7 +166,7 @@ def sse(obj):
 def infer_events(req):
     it = ITEMS[req['uuid']]
     lang = 'zh'
-    bk = ensure_backend(req.get('model', 'deepeyes'))
+    bk = ensure_backend(req.get('model', 'qwen35'))
     k = int(req.get('k', 8)); max_turns = int(req.get('max_turns', 4)); mnt = int(req.get('max_new_tokens', 512))
     sess = vi.VideoSession(it['video'], n_coarse=k)
     coarse = list(range(len(sess.frames)))
@@ -238,16 +238,63 @@ def infer_events(req):
     n = len(all_ent)
     first_tc = markers['tool_call'][0] if markers['tool_call'] else None
     e = np.array(all_ent) if all_ent else np.zeros(1)
-    pre_ans = bool(re.search(PRE_ANSWER_RE, all_text.split('</think>')[0]))
+    pre_think = all_text.split('</think>')[0]
+    pre_ans = bool(re.search(PRE_ANSWER_RE, pre_think))
+    m_pre = re.findall(r'(?:答案是|正确答案是|应该选|应选|选项|是)\s*([ABCD])\b', pre_think)
+    pre_letter = m_pre[-1] if m_pre else None
     hits = [P.temporal_hit(r['window'], estar)[0] for r in tool_recs if r['ok'] and r['window'] and estar]
-    yield sse(dict(type='answer', pred=pred, gt=gt, correct=(pred == gt)))
+    called = any(r['ok'] for r in tool_recs)
+    hit = any(hits) if hits else None
+    correct = (pred == gt)
+    # 熵: 首次工具调用前后
+    ent_pre = float(e[:first_tc].mean()) if first_tc else None
+    ent_post = float(e[first_tc:].mean()) if first_tc else None
+    kk = max(1, int(round(0.2 * n))); thr = float(np.sort(e)[::-1][kk - 1]) if n else 0.0
+    hi_idx = [i for i, v in enumerate(all_ent) if v >= thr and v > 0]
+    n_hi_pre = sum(1 for i in hi_idx if first_tc is not None and i < first_tc)
+    n_hi_post = len(hi_idx) - n_hi_pre if first_tc is not None else None
+    # 诊断: 这次推理落在 idea 的哪一层失败 (taxonomy 见 docs/01_proposal.md §1)
+    required = lab.get('label') == 'evidence_required'
+    solvable = lab.get('label') == 'already_solvable'
+    if not called:
+        if required:
+            code, title, color = 'overconfident_skip', 'Overconfident Skip：需要证据却没调工具，直接作答', 'red'
+        elif solvable:
+            code, title, color = 'no_tool_needed', '合理：这题粗看可解，不调工具没问题', 'green'
+        else:
+            code, title, color = 'no_call', '没调工具（这题未被认证为需要证据，无法判定对错）', 'gray'
+    elif solvable:
+        code, title, color = 'redundant_call', 'Redundant Call：粗看就能答，调用是多余的（仪式性）', 'orange'
+    elif estar is None:
+        code, title, color = 'uncertain', '调了工具，但这题没有认证过的 E*，无法判定是否找对', 'gray'
+    elif not hit:
+        code, title, color = 'mislocalized', 'Mislocalized Call：知道要看，但看错了地方（工具窗未落进 E*）', 'red'
+    elif pre_ans and (pre_letter is None or pre_letter == pred):
+        code, title, color = 'unused_evidence', 'Unused Evidence / 先答后看：找对了地方，但结论在调用前就定了', 'orange'
+    elif correct:
+        code, title, color = 'effective', '有效取证：找对了地方、看完才作答、答对了', 'green'
+    else:
+        code, title, color = 'hit_but_wrong', '找对了地方仍答错：证据没被用上（Utilization 失败或能力天花板）', 'red'
+    details = []
+    details.append(f"这题：{'需要证据' if required else ('粗看可解' if solvable else (lab.get('label') or '未认证'))}"
+                   + (f"，E* = [{estar[0]:.2f}, {estar[1]:.2f}] s" if estar else ''))
+    details.append(f"调工具：{'是' if called else '否'}" + (f"，时间窗{'命中' if hit else '未命中'} E*" if (called and hit is not None) else ''))
+    details.append(f"调用前是否已下结论：{'是' if pre_ans else '否'}" + (f"（写的是 {pre_letter}，最终答 {pred}）" if pre_letter else ''))
+    if ent_pre is not None:
+        drop = (1 - ent_post / ent_pre) * 100 if ent_pre > 0 else 0
+        details.append(f"熵：调用前平均 {ent_pre:.2f} → 调用后 {ent_post:.2f}（降 {drop:.0f}%）；top-20% 高熵 token 调用前 {n_hi_pre} 个、调用后 {n_hi_post} 个"
+                       + ("——不确定性在证据到来前就释放完了" if (n_hi_pre >= 2 * max(1, n_hi_post or 0)) else ''))
+    details.append(f"答案：{pred} {'✓' if correct else '✗'}（正确 {gt}）")
+    yield sse(dict(type='answer', pred=pred, gt=gt, correct=correct))
     yield sse(dict(type='done', summary=dict(
         n_tokens=n, tool_call_pct=[round(100 * i / max(1, n - 1), 1) for i in markers['tool_call']],
         answer_pct=[round(100 * i / max(1, n - 1), 1) for i in markers['answer']],
-        ent_pre=round(float(e[:first_tc].mean()), 3) if first_tc else None,
-        ent_post=round(float(e[first_tc:].mean()), 3) if first_tc else None,
-        mean_entropy=round(float(e.mean()), 3), pre_answer=pre_ans,
-        temporal_hit=(any(hits) if hits else None), estar=estar, label=lab.get('label'))))
+        ent_pre=round(ent_pre, 3) if ent_pre is not None else None,
+        ent_post=round(ent_post, 3) if ent_post is not None else None,
+        n_hi_pre=n_hi_pre if first_tc is not None else None, n_hi_post=n_hi_post, n_hi=len(hi_idx),
+        first_tc=first_tc, mean_entropy=round(float(e.mean()), 3), pre_answer=pre_ans, pre_letter=pre_letter,
+        temporal_hit=hit, estar=estar, label=lab.get('label'),
+        diagnosis=dict(code=code, title=title, color=color, details=details))))
 
 
 # ───────────────────────── 路由 ─────────────────────────
@@ -352,7 +399,7 @@ async def infer(req: dict):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--port', type=int, default=4175); ap.add_argument('--host', default='0.0.0.0')
-    ap.add_argument('--model', default='deepeyes'); ap.add_argument('--no-preload', action='store_true')
+    ap.add_argument('--model', default='qwen35'); ap.add_argument('--no-preload', action='store_true')
     a = ap.parse_args()
     load_data()
     if not a.no_preload:
