@@ -37,7 +37,16 @@ common/video_imcot.py           视频会话 + zoom/seek 工具（DeepEyes 原�
 pilot/                          合成孪生样本（5 对）：造样本、认证、notebook
 natural/                        真实视频（VideoNet）流水线：筛选 → 定位证据窗 → 四条件审计 → 熵分析
 natural/out/                    全部结果（jsonl / 表 / 图 / 精简轨迹）
+webapp/                         可视化网站：选题 → 看帧 → 改提示词 → 流式看 think/工具/答案 + 熵曲线
 ```
+
+## 可视化网站
+
+```bash
+cd webapp && CUDA_VISIBLE_DEVICES=0 python server.py --port 4175      # 浏览器打开 http://<host>:4175
+```
+
+左栏选题（按"需要证据/边缘/粗看可解/不会"排序，带 `[E*]` 的有认证过的证据窗）、看模型输入的粗采帧、改问题和提示词；右栏逐 token 流式显示推理：思考蓝、`<tool_call>` 橙（附返回帧、是否命中 E*）、答案绿/红；底部画 next-token 熵 vs 输出位置 %，标出工具调用起点。
 
 ## 复现
 

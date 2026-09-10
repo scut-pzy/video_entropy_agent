@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>视频工具推理可视化</title>
+<style>
+  :root { --blue:#2b6cb0; --orange:#c05621; --green:#2f855a; --red:#c53030; --gray:#6b7280; }
+  body { margin:0; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif; font-size:14px; color:#222; background:#f7f7f8; }
+  .wrap { display:grid; grid-template-columns: 460px 1fr; gap:14px; padding:14px; height:100vh; box-sizing:border-box; }
+  .col { overflow:auto; background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:12px; }
+  h2 { font-size:15px; margin:0 0 8px 0; }
+  label { display:block; font-size:12px; color:var(--gray); margin:8px 0 3px; }
+  select, textarea, input { width:100%; box-sizing:border-box; font-size:13px; padding:5px; border:1px solid #d1d5db; border-radius:5px; }
+  textarea { font-family: inherit; resize:vertical; }
+  .frames { display:grid; grid-template-columns: repeat(4, 1fr); gap:4px; margin-top:6px; }
+  .frames img { width:100%; border-radius:3px; border:1px solid #e5e7eb; }
+  .frames .cap { font-size:10px; color:var(--gray); text-align:center; }
+  .info { font-size:12px; color:#444; background:#f3f4f6; padding:6px 8px; border-radius:5px; margin-top:6px; line-height:1.6; }
+  .tag { display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; color:#fff; }
+  button { padding:8px 16px; font-size:14px; border:0; border-radius:6px; background:var(--blue); color:#fff; cursor:pointer; margin-top:10px; }
+  button:disabled { background:#9ca3af; }
+  details summary { cursor:pointer; font-size:12px; color:var(--gray); margin-top:8px; }
+  #out { line-height:1.75; white-space:pre-wrap; word-break:break-word; }
+  .turn { border-left:4px solid #e5e7eb; padding:4px 10px; margin:8px 0; background:#fafafa; border-radius:4px; }
+  .turnhdr { font-size:12px; color:var(--gray); margin-bottom:2px; }
+  .think { color:var(--blue); }
+  .toolcall { color:var(--orange); font-family: ui-monospace, Menlo, monospace; font-size:12.5px; }
+  .toolbox { border:1px dashed var(--orange); border-radius:6px; padding:6px 8px; margin:6px 0; background:#fff7ed; }
+  .toolbox .hit { font-size:12px; margin-left:6px; }
+  .retframes { display:flex; gap:6px; flex-wrap:wrap; margin-top:4px; }
+  .retframes img { height:110px; border-radius:3px; border:1px solid #fed7aa; }
+  .retframes .cap { font-size:10px; color:var(--gray); text-align:center; }
+  .ans-ok { color:var(--green); font-weight:600; }
+  .ans-bad { color:var(--red); font-weight:600; }
+  .other { color:#374151; }
+  .status { font-size:12px; color:var(--gray); }
+  canvas { width:100%; height:220px; border:1px solid #e5e7eb; border-radius:6px; background:#fff; }
+  .summary { font-size:12.5px; color:#333; background:#f3f4f6; padding:6px 8px; border-radius:5px; margin-top:6px; line-height:1.7; }
+  .legend { font-size:11px; color:var(--gray); margin-top:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="col">
+    <h2>① 选题 · 看输入 · 改提示词</h2>
+    <div class="status" id="status">连接中…</div>
+    <label>题目（按"需要证据 / 边缘 / 粗看可解 / 不会"排序；[E*] = 强模型认证过的证据窗）</label>
+    <select id="item"></select>
+    <div class="info" id="iteminfo"></div>
+    <label>模型看到的粗采样帧（k 帧，≤256·28² 像素）</label>
+    <div class="frames" id="frames"></div>
+    <label>问题（可改；四个选项对应 A–D）</label>
+    <textarea id="question" rows="6"></textarea>
+    <label>指令（跟在问题后面）</label>
+    <textarea id="instruction" rows="3"></textarea>
+    <details><summary>系统提示词（工具说明）/ 续轮提示词 — 点开可改</summary>
+      <label>system</label><textarea id="system_prompt" rows="10"></textarea>
+      <label>工具返回后的续轮提示</label><textarea id="cont_prompt" rows="3"></textarea>
+    </details>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div><label>模型</label><select id="model"><option value="deepeyes">DeepEyes-7B</option><option value="qwen35">Qwen3.5-9B</option></select></div>
+      <div><label>粗采帧数 k</label><select id="k"><option>4</option><option selected>8</option><option>16</option></select></div>
+      <div><label>最多轮数</label><select id="max_turns"><option>2</option><option selected>4</option><option>6</option></select></div>
+    </div>
+    <button id="run">▶ 推理</button>
+  </div>
+
+  <div class="col">
+    <h2>② 推理过程 <span class="legend">蓝 = 思考 · 橙 = 工具调用 · 绿/红 = 答案对/错</span></h2>
+    <div id="out"></div>
+    <h2 style="margin-top:14px">③ next-token 熵 · 横轴 = 输出位置 %</h2>
+    <canvas id="chart" width="1100" height="220"></canvas>
+    <div class="legend">橙色虚线 = &lt;tool_call&gt; 起点 · 蓝点线 = &lt;/think&gt; · 绿线 = &lt;answer&gt; · 红点 = top-20% 高熵 token · 灰线 = 新一轮开始</div>
+    <div class="summary" id="summary"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let ITEMS = [], CUR = null, ENT = [], MARK = {tool_call:[],answer:[],think_end:[],turn_starts:[]}, RUNNING = false;
+
+async function init() {
+  const p = await (await fetch('/api/prompts')).json();
+  $('system_prompt').value = p.system_prompt; $('instruction').value = p.instruction; $('cont_prompt').value = p.cont_prompt;
+  ITEMS = await (await fetch('/api/items')).json();
+  const cn = {evidence_required:'需要证据', borderline:'边缘', already_solvable:'粗看可解', unsolvable:'不会', text_shortcut:'文本捷径'};
+  $('item').innerHTML = ITEMS.map(it => `<option value="${it.uuid}">[${cn[it.label]||'未筛'}] ${it.domain} / ${it.name} · ${it.duration}s${it.estar?' [E*]':''}</option>`).join('');
+  $('item').onchange = loadItem; await loadItem(); pollStatus();
+}
+async function pollStatus() {
+  const s = await (await fetch('/api/status')).json();
+  $('status').textContent = s.loading ? '模型加载中…（约 1 分钟）' : (s.model ? `模型已就绪：${s.model} · ${s.gpu||''} · ${s.n_items} 题` : '模型未加载（点推理时自动加载）');
+  setTimeout(pollStatus, 5000);
+}
+async function loadItem() {
+  CUR = await (await fetch('/api/item/' + $('item').value)).json();
+  $('question').value = CUR.question;
+  const col = {evidence_required:'#e76f51', borderline:'#e9c46a', already_solvable:'#2a9d8f', unsolvable:'#8d99ae', text_shortcut:'#999'}[CUR.label] || '#999';
+  $('iteminfo').innerHTML = `<span class="tag" style="background:${col}">${CUR.label||'未筛'}</span> ${CUR.domain} / <b>${CUR.name}</b> · ${CUR.duration.toFixed(1)}s · ${CUR.width}×${CUR.height}<br>` +
+    `正确答案：<b>${CUR.answer_letter}. ${CUR.answer}</b><br>` +
+    (CUR.estar ? `证据窗 E*（Qwen3.5 搜出）：<b>[${CUR.estar[0].toFixed(2)}, ${CUR.estar[1].toFixed(2)}] s</b> · 粗看 p=${(CUR.p_k8||0).toFixed(2)} → 给窗 p=${(CUR.p_estar||0).toFixed(2)}<br>` : '') +
+    (CUR.why ? `<span style="color:#666">${CUR.why}</span><br>` : '') +
+    `<span style="color:#666">定义：${(CUR.definition||'').slice(0,160)}</span>`;
+  renderFrames(CUR.coarse_idx.map(i => ({idx:i, t:(i/CUR.fps), img:`/api/frame/${CUR.uuid}/${i}?cap=coarse`})));
+  $('out').innerHTML = ''; $('summary').innerHTML = ''; ENT = []; drawChart();
+}
+function renderFrames(fr) {
+  $('frames').innerHTML = fr.map(f => `<div><img src="${f.img}"><div class="cap">第${f.idx}帧 · ${(+f.t).toFixed(1)}s</div></div>`).join('');
+}
+
+// ── 推理输出渲染 ──
+let curTurn = null, curBuf = '';
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function colorize(text) {
+  // 把一轮文本按 think / tool_call / answer / 其它 着色
+  let html = '', i = 0;
+  const re = /(<think>[\s\S]*?(?:<\/think>|$))|(<tool_call>[\s\S]*?(?:<\/tool_call>|$))|(<answer>[\s\S]*?(?:<\/answer>|$))/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > i) html += `<span class="think">${esc(text.slice(i, m.index))}</span>`;   // Qwen3.5 模板预开 <think>, 没有开头标签的段也当思考
+    if (m[1]) html += `<span class="think">${esc(m[1])}</span>`;
+    else if (m[2]) html += `<span class="toolcall">${esc(m[2])}</span>`;
+    else if (m[3]) html += `<span class="${window.__ansClass||'other'}">${esc(m[3])}</span>`;
+    i = m.index + m[0].length;
+  }
+  if (i < text.length) html += `<span class="think">${esc(text.slice(i))}</span>`;
+  return html;
+}
+function newTurn(n) {
+  const d = document.createElement('div'); d.className = 'turn';
+  d.innerHTML = `<div class="turnhdr">第 ${n} 轮</div><div class="body"></div>`;
+  $('out').appendChild(d); curTurn = d.querySelector('.body'); curBuf = '';
+}
+function appendToken(t) { curBuf += t; curTurn.innerHTML = colorize(curBuf); $('out').scrollTop = $('out').scrollHeight; }
+function appendTool(ev) {
+  const d = document.createElement('div'); d.className = 'toolbox';
+  const w = ev.window ? (ev.window[0] === ev.window[1] ? `t=${ev.window[0].toFixed(2)}s` : `[${ev.window[0].toFixed(2)}, ${ev.window[1].toFixed(2)}] s`) : '';
+  const hit = ev.hit === null || ev.hit === undefined ? '' : (ev.hit ? `<span class="hit" style="color:var(--green)">✓ 落在 E* 内</span>` : `<span class="hit" style="color:var(--red)">✗ 未落在 E* 内</span>`);
+  d.innerHTML = `<div class="toolcall">🔧 ${ev.name} ${esc(JSON.stringify(ev.args||{}))} ${w} ${ev.ok ? '' : '<span style="color:var(--red)">失败: '+esc(ev.err||'')+'</span>'}${hit}</div>` +
+    (ev.frames ? `<div class="retframes">${ev.frames.map(f => `<div><img src="${f.img}"><div class="cap">第${f.idx}帧 · ${f.t}s${f.label?' · '+esc(f.label):''}</div></div>`).join('')}</div>` : '');
+  $('out').appendChild(d);
+}
+
+// ── 熵图 ──
+function drawChart() {
+  const c = $('chart'), ctx = c.getContext('2d'); const W = c.width, H = c.height;
+  ctx.clearRect(0,0,W,H); ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
+  const n = ENT.length; if (n < 2) { ctx.fillStyle='#999'; ctx.fillText('（推理开始后这里画每个 token 的熵）', 20, 30); return; }
+  const L = 44, R = 12, T = 14, Bm = 26; const maxE = Math.max(1e-6, ...ENT) * 1.05;
+  const x = i => L + (W - L - R) * i / (n - 1), y = v => T + (H - T - Bm) * (1 - v / maxE);
+  ctx.strokeStyle = '#e5e7eb'; ctx.beginPath(); for (let p=0;p<=100;p+=20){ const xx = L + (W-L-R)*p/100; ctx.moveTo(xx,T); ctx.lineTo(xx,H-Bm);} ctx.stroke();
+  ctx.fillStyle = '#666'; ctx.font = '11px sans-serif'; for (let p=0;p<=100;p+=20) ctx.fillText(p+'%', L + (W-L-R)*p/100 - 8, H-8);
+  ctx.fillText(maxE.toFixed(1), 4, T+8); ctx.fillText('0', 12, H-Bm);
+  ctx.strokeStyle = '#457b9d'; ctx.lineWidth = 1.2; ctx.beginPath(); ENT.forEach((v,i) => i? ctx.lineTo(x(i),y(v)) : ctx.moveTo(x(i),y(v))); ctx.stroke();
+  const thr = [...ENT].sort((a,b)=>b-a)[Math.max(0, Math.round(0.2*n)-1)];
+  ctx.fillStyle = '#e76f51'; ENT.forEach((v,i) => { if (v >= thr && v > 0) { ctx.beginPath(); ctx.arc(x(i),y(v),2.2,0,7); ctx.fill(); } });
+  const vline = (i, col, dash, lab) => { ctx.save(); ctx.strokeStyle = col; ctx.setLineDash(dash); ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(x(i),T); ctx.lineTo(x(i),H-Bm); ctx.stroke(); ctx.restore();
+    if (lab) { ctx.fillStyle = col; ctx.fillText(lab + ' ' + Math.round(100*i/(n-1)) + '%', Math.min(x(i)+3, W-90), T+10); } };
+  (MARK.turn_starts||[]).slice(1).forEach(i => vline(i, '#bbb', [], ''));
+  (MARK.think_end||[]).forEach(i => vline(i, '#2b6cb0', [2,3], ''));
+  (MARK.tool_call||[]).forEach(i => vline(i, '#c05621', [6,4], '<tool_call>'));
+  (MARK.answer||[]).forEach(i => vline(i, '#2f855a', [], '<answer>'));
+}
+
+// ── 主流程 ──
+$('run').onclick = async () => {
+  if (RUNNING || !CUR) return; RUNNING = true; $('run').disabled = true;
+  $('out').innerHTML = ''; $('summary').innerHTML = ''; ENT = []; MARK = {tool_call:[],answer:[],think_end:[],turn_starts:[]}; window.__ansClass = 'other'; drawChart();
+  const body = { uuid: CUR.uuid, question: $('question').value, instruction: $('instruction').value,
+                 system_prompt: $('system_prompt').value, cont_prompt: $('cont_prompt').value,
+                 model: $('model').value, k: +$('k').value, max_turns: +$('max_turns').value };
+  try {
+    const resp = await fetch('/api/infer', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+    if (resp.status === 429) { alert('有一条推理正在跑，等它结束'); return; }
+    const reader = resp.body.getReader(); const dec = new TextDecoder(); let buf = '';
+    while (true) {
+      const {value, done} = await reader.read(); if (done) break;
+      buf += dec.decode(value, {stream:true});
+      let idx; while ((idx = buf.indexOf('\n\n')) >= 0) {
+        const line = buf.slice(0, idx).trim(); buf = buf.slice(idx+2);
+        if (!line.startsWith('data:')) continue;
+        const ev = JSON.parse(line.slice(5));
+        if (ev.type === 'status') $('status').textContent = ev.text;
+        else if (ev.type === 'frames') renderFrames(ev.frames);
+        else if (ev.type === 'turn_start') newTurn(ev.turn);
+        else if (ev.type === 'token') { appendToken(ev.text); }
+        else if (ev.type === 'entropy') { ENT = ev.entropy; MARK = ev.markers; drawChart(); }
+        else if (ev.type === 'tool_call') appendTool(ev);
+        else if (ev.type === 'answer') { window.__ansClass = ev.correct ? 'ans-ok' : 'ans-bad'; if (curTurn) curTurn.innerHTML = colorize(curBuf);
+          const d = document.createElement('div'); d.className = ev.correct ? 'ans-ok' : 'ans-bad';
+          d.textContent = `${ev.correct ? '✅' : '❌'} 模型答案 ${ev.pred} · 正确答案 ${ev.gt}`; $('out').appendChild(d); }
+        else if (ev.type === 'done') { const s = ev.summary;
+          $('summary').innerHTML = `输出 ${s.n_tokens} token · 平均熵 ${s.mean_entropy} · 工具调用起点 ${s.tool_call_pct.length ? s.tool_call_pct.map(v=>v+'%').join(', ') : '（没调工具）'} · <answer> 位置 ${s.answer_pct.map(v=>v+'%').join(', ')||'-'}<br>` +
+            (s.ent_pre !== null ? `调用前平均熵 <b>${s.ent_pre}</b> → 调用后 <b>${s.ent_post}</b> · ` : '') +
+            `调工具前已下结论：<b>${s.pre_answer ? '是' : '否'}</b>` +
+            (s.estar ? ` · 证据窗 [${s.estar[0].toFixed(2)}, ${s.estar[1].toFixed(2)}] s · 工具命中 E*：<b style="color:${s.temporal_hit?'var(--green)':'var(--red)'}">${s.temporal_hit===null?'—':(s.temporal_hit?'是':'否')}</b>` : ' · 这题没有认证过的 E*');
+          drawChart(); }
+        else if (ev.type === 'error') { const d = document.createElement('div'); d.className='ans-bad'; d.textContent = '出错：' + ev.error; $('out').appendChild(d); console.error(ev.tb); }
+      }
+    }
+  } finally { RUNNING = false; $('run').disabled = false; }
+};
+init();
+</script>
+</body>
+</html>

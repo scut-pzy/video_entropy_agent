@@ -3,3 +3,4 @@ __pycache__/
 frames_cache/
 *.mp4
 .ipynb_checkpoints/
+webapp/logs/
