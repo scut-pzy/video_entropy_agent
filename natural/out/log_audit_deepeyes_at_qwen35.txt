@@ -1,0 +1,39 @@
+审计单元 (认证者=qwen35, 被测=deepeyes): 22 条 evidence_required + 40 条 N=0 对照
+[deepeyes] 加载完成 50s  device=cuda:0  thinking_template=False  letter_ids={'A': [32, 362], 'B': [33, 425], 'C': [34, 356], 'D': [35, 422]}
+[audit/deepeyes@qwen35] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c audit 39.7s | 已用 3.1min ETA 35.2min | 错误 0
+  [10/62] 0845ab07 audit 30.1s | 已用 6.0min ETA 31.2min | 错误 0
+  [15/62] 0c67dfa1 audit 35.0s | 已用 9.2min ETA 28.9min | 错误 0
+  [20/62] 10a19c06 audit 37.6s | 已用 12.3min ETA 25.7min | 错误 0
+  [25/62] 0ee3b7b5 audit 33.9s | 已用 15.2min ETA 22.5min | 错误 0
+  [30/62] 11467317 audit 46.7s | 已用 18.7min ETA 19.9min | 错误 0
+  [35/62] 061659fb audit 38.0s | 已用 21.9min ETA 16.9min | 错误 0
+  [40/62] 0a502966 audit 18.1s | 已用 23.3min ETA 12.8min | 错误 0
+  [45/62] 089b7c3f audit 21.7s | 已用 25.0min ETA 9.5min | 错误 0
+  [50/62] 11441916 audit 24.4s | 已用 26.7min ETA 6.4min | 错误 0
+  [55/62] 044551b6 audit 23.4s | 已用 28.5min ETA 3.6min | 错误 0
+  [60/62] 0a428591 audit 22.0s | 已用 30.2min ETA 1.0min | 错误 0
+  [62/62] 029cb47f audit 18.6s | 已用 30.8min ETA 0.0min | 错误 0
+
+=== 四条件审计汇总 (62 条) ===
+
+[required] n=22
+  p(正确): none=0.310  true=0.398  decoy=0.312  irr=0.326  dense_matched=0.329
+  EEG = log p(true) - log p(decoy) = +0.303
+  ERG = acc(true) - acc(decoy)     = +0.136
+  比等预算密采多拿到          = +0.068
+  False Resolution 率 = 9% (n=22)
+  Twin 翻转率        = 33% (n=12)
+  agentic: acc=45%  时间命中=5%  先答后看=55%  平均工具调用=1.0  用过 seek 的比例=5%
+
+[control] n=40
+  p(正确): none=0.628  true=0.666  decoy=0.638  irr=0.634  dense_matched=0.644
+  EEG = log p(true) - log p(decoy) = +0.043
+  ERG = acc(true) - acc(decoy)     = -0.050
+  比等预算密采多拿到          = +0.022
+  False Resolution 率 = 0% (n=40)
+  Twin 翻转率        = 32% (n=28)
+  agentic: acc=62%  时间命中=65%  先答后看=52%  平均工具调用=1.0  用过 seek 的比例=2%
+
+精简 JSON: /mnt/afs/panzhengyuan/llm_training/project/video-agent/data/evidencegap_v_natural/out/trajectories_deepeyes@qwen35.json
+entropy 图: 62 张逐条 + 汇总 /mnt/afs/panzhengyuan/llm_training/project/video-agent/data/evidencegap_v_natural/out/figs/entropy_summary_deepeyes@qwen35.png

@@ -1,0 +1,1774 @@
+{
+ "s1_occlusion_color": {
+  "answers": {
+   "A": "red",
+   "B": "blue"
+  },
+  "version": "v1",
+  "A": {
+   "text": {
+    "belief": {
+     "red": 0.4082,
+     "blue": 0.2623,
+     "green": 0.1042,
+     "yellow": 0.2252
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.4082,
+    "p_twin": 0.2623,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "red": 0.441,
+     "blue": 0.2754,
+     "green": 0.0883,
+     "yellow": 0.1953
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "yellow"
+    ],
+    "pred": "red",
+    "p_gt": 0.441,
+    "p_twin": 0.2754,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "red": 0.9992,
+     "blue": 0.0003,
+     "green": 0.0002,
+     "yellow": 0.0002
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.9992,
+    "p_twin": 0.0003,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "red": 0.9982,
+     "blue": 0.001,
+     "green": 0.0005,
+     "yellow": 0.0004
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.9982,
+    "p_twin": 0.001,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "red": 0.9963,
+     "blue": 0.002,
+     "green": 0.0008,
+     "yellow": 0.001
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.9963,
+    "p_twin": 0.002,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "red": 0.002,
+     "blue": 0.9954,
+     "green": 0.0015,
+     "yellow": 0.001
+    },
+    "greedy": [
+     "blue",
+     "blue",
+     "blue",
+     "blue"
+    ],
+    "pred": "blue",
+    "p_gt": 0.002,
+    "p_twin": 0.9954,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "red": 0.5094,
+     "blue": 0.2482,
+     "green": 0.0799,
+     "yellow": 0.1625
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.5094,
+    "p_twin": 0.2482,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "red": 0.4251,
+     "blue": 0.2865,
+     "green": 0.0975,
+     "yellow": 0.1909
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "yellow"
+    ],
+    "pred": "red",
+    "p_gt": 0.4251,
+    "p_twin": 0.2865,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": true,
+    "turns": [
+     "<think>The small round object is only visible for a brief moment, and it is covered by a dark card for most of the video. To see the color of the round object, I need to zoom in on the specific frame where the card slides aside. I will use the image_zoom_in_tool to focus on the small round object.</think>  \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index",
+     "<think>The small round object is clearly visible in the zoomed-in frame, and it appears to be red. Therefore, the color of the round object is red.</think>  \n<answer>A</answer>  \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}",
+      "err": null
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}",
+      "err": null
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 232, 124, 296], \"label\": \"the small round object\"}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "B": {
+   "text": {
+    "belief": {
+     "red": 0.4082,
+     "blue": 0.2623,
+     "green": 0.1042,
+     "yellow": 0.2252
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.2623,
+    "p_twin": 0.4082,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "red": 0.4512,
+     "blue": 0.2647,
+     "green": 0.0957,
+     "yellow": 0.1884
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "yellow"
+    ],
+    "pred": "red",
+    "p_gt": 0.2647,
+    "p_twin": 0.4512,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "red": 0.0004,
+     "blue": 0.9992,
+     "green": 0.0002,
+     "yellow": 0.0002
+    },
+    "greedy": [
+     "blue",
+     "blue",
+     "blue",
+     "blue"
+    ],
+    "pred": "blue",
+    "p_gt": 0.9992,
+    "p_twin": 0.0004,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "red": 0.0012,
+     "blue": 0.998,
+     "green": 0.0005,
+     "yellow": 0.0003
+    },
+    "greedy": [
+     "blue",
+     "blue",
+     "blue",
+     "blue"
+    ],
+    "pred": "blue",
+    "p_gt": 0.998,
+    "p_twin": 0.0012,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "red": 0.0022,
+     "blue": 0.995,
+     "green": 0.0016,
+     "yellow": 0.0011
+    },
+    "greedy": [
+     "blue",
+     "blue",
+     "blue",
+     "blue"
+    ],
+    "pred": "blue",
+    "p_gt": 0.995,
+    "p_twin": 0.0022,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "red": 0.9962,
+     "blue": 0.002,
+     "green": 0.0008,
+     "yellow": 0.001
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.002,
+    "p_twin": 0.9962,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "red": 0.5069,
+     "blue": 0.2477,
+     "green": 0.078,
+     "yellow": 0.1674
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "red"
+    ],
+    "pred": "red",
+    "p_gt": 0.2477,
+    "p_twin": 0.5069,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "red": 0.4234,
+     "blue": 0.2878,
+     "green": 0.0933,
+     "yellow": 0.1955
+    },
+    "greedy": [
+     "red",
+     "red",
+     "red",
+     "yellow"
+    ],
+    "pred": "red",
+    "p_gt": 0.2878,
+    "p_twin": 0.4234,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": false,
+    "turns": [
+     "<think>The small round object is only visible for a brief moment, and it is covered by a dark card for most of the video. To see the color of the round object, I need to zoom in on the frame where the card slides aside. I will use the image_zoom_in_tool for this.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 315, 126, 387], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 315, 126, 387], \"label\": \"the small round object\"}}\n\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 315, 126, 387], \"label\": \"the small round object\"}}\n</tool_call>\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>The small round object is white. Now, I can answer the question.</think> \n<answer>A</answer>"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 315, 126, 387], \"label\": \"the small round object\"}}",
+      "err": null
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [60, 315, 126, 387], \"label\": \"the small round object\"}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "cert": {
+   "C1_coarse_indistinct": true,
+   "C2_evidence_sufficient": true,
+   "C3_no_text_shortcut": true,
+   "C4_evidence_swappable": true,
+   "decoy_no_false_resolution": true,
+   "irr_no_change": true,
+   "prior_bias_text": 0.15,
+   "tv_AB_coarse": 0.018,
+   "PASS": true
+  },
+  "result_tag": "v1"
+ },
+ "s3_roll_direction": {
+  "answers": {
+   "A": "toward the right side",
+   "B": "toward the left side"
+  },
+  "version": "v2",
+  "A": {
+   "text": {
+    "belief": {
+     "toward the right side": 0.7878,
+     "toward the left side": 0.1509,
+     "toward the top": 0.0568,
+     "toward the bottom": 0.0045
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.7878,
+    "p_twin": 0.1509,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "toward the right side": 0.8747,
+     "toward the left side": 0.0683,
+     "toward the top": 0.0526,
+     "toward the bottom": 0.0044
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.8747,
+    "p_twin": 0.0683,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "toward the right side": 0.4574,
+     "toward the left side": 0.3782,
+     "toward the top": 0.1518,
+     "toward the bottom": 0.0126
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the left side",
+     "toward the left side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.4574,
+    "p_twin": 0.3782,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "toward the right side": 0.7503,
+     "toward the left side": 0.1451,
+     "toward the top": 0.0956,
+     "toward the bottom": 0.0091
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.7503,
+    "p_twin": 0.1451,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "toward the right side": 0.9506,
+     "toward the left side": 0.0438,
+     "toward the top": 0.0049,
+     "toward the bottom": 0.0007
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.9506,
+    "p_twin": 0.0438,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "toward the right side": 0.2121,
+     "toward the left side": 0.7201,
+     "toward the top": 0.0652,
+     "toward the bottom": 0.0025
+    },
+    "greedy": [
+     "toward the left side",
+     "toward the left side",
+     "toward the left side",
+     "toward the left side"
+    ],
+    "pred": "toward the left side",
+    "p_gt": 0.2121,
+    "p_twin": 0.7201,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "toward the right side": 0.4979,
+     "toward the left side": 0.3817,
+     "toward the top": 0.1135,
+     "toward the bottom": 0.0068
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the left side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.4979,
+    "p_twin": 0.3817,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "toward the right side": 0.707,
+     "toward the left side": 0.2124,
+     "toward the top": 0.0745,
+     "toward the bottom": 0.0061
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.707,
+    "p_twin": 0.2124,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": true,
+    "turns": [
+     "<think>To determine the direction in which the small orange ball moves, I need to analyze the frames to see if there is a ball present and its position relative to the frame. The ball appears in Frame 6 and Frame 7, so I can use the video_seek_tool to replay the segment around these frames to see the ball's movement more clearly.</think>  \n<tool_call>\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 6.4, \"end_time\": 7.7, \"num_frames\": 3}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 6.4, \"end_time\": 7.7, \"num_frames\": 3}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 6.4, \"end_time\": 7.7, \"num_frames\": 3}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": ",
+     "<think>From the frames, it is clear that the small orange ball moves from the bottom left of the frame towards the right side as time goes on. This can be observed in the dense replay frames where the ball's position changes from Frame 8 to Frame 10.</think>  \n<answer>A</answer>  \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "video_seek_tool",
+      "ok": true,
+      "raw": "{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 6.4, \"end_time\": 7.7, \"num_frames\": 3}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "B": {
+   "text": {
+    "belief": {
+     "toward the right side": 0.7878,
+     "toward the left side": 0.1509,
+     "toward the top": 0.0568,
+     "toward the bottom": 0.0045
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.1509,
+    "p_twin": 0.7878,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "toward the right side": 0.8706,
+     "toward the left side": 0.0717,
+     "toward the top": 0.0532,
+     "toward the bottom": 0.0044
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.0717,
+    "p_twin": 0.8706,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "toward the right side": 0.7091,
+     "toward the left side": 0.0827,
+     "toward the top": 0.2002,
+     "toward the bottom": 0.008
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.0827,
+    "p_twin": 0.7091,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "toward the right side": 0.7679,
+     "toward the left side": 0.1924,
+     "toward the top": 0.0347,
+     "toward the bottom": 0.005
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.1924,
+    "p_twin": 0.7679,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "toward the right side": 0.2145,
+     "toward the left side": 0.7179,
+     "toward the top": 0.065,
+     "toward the bottom": 0.0026
+    },
+    "greedy": [
+     "toward the left side",
+     "toward the left side",
+     "toward the left side",
+     "toward the left side"
+    ],
+    "pred": "toward the left side",
+    "p_gt": 0.7179,
+    "p_twin": 0.2145,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "toward the right side": 0.9498,
+     "toward the left side": 0.0445,
+     "toward the top": 0.005,
+     "toward the bottom": 0.0007
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.0445,
+    "p_twin": 0.9498,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "toward the right side": 0.4889,
+     "toward the left side": 0.3957,
+     "toward the top": 0.1091,
+     "toward the bottom": 0.0063
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the left side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.3957,
+    "p_twin": 0.4889,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "toward the right side": 0.7159,
+     "toward the left side": 0.2046,
+     "toward the top": 0.0736,
+     "toward the bottom": 0.0059
+    },
+    "greedy": [
+     "toward the right side",
+     "toward the right side",
+     "toward the right side",
+     "toward the right side"
+    ],
+    "pred": "toward the right side",
+    "p_gt": 0.2046,
+    "p_twin": 0.7159,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": false,
+    "turns": [
+     "<think>To determine the direction in which the small orange ball moves, I need to analyze the frames to see if there is a ball present and its position relative to the frame. The ball appears in Frame 5 and Frame 6, so I should use the video_seek_tool to replay the segment around these frames to see the ball's movement more clearly.</think>  \n<tool_call>\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 5.1, \"end_time\": 7.7, \"num_frames\": 3}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 5, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 5.1, \"end_time\": 7.7, \"num_frames\": 3}}\n\n\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 5.1, \"end_time\": 7.7, \"num_frames\": 3}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 5, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 220, 587, 280], \"label\": \"the small orange ball\"}}\n\n addCriterion\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 5.1, \"end_time\": 7.7, \"num_frames\": 3}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 5, \"bbox_2d\": [450, 220,",
+     "<think>From the dense replay frames, I can see that the small orange ball moves from the left side of the frame towards the right side as time goes on. This is evident from the position of the ball in Frame 5 and Frame 6, where it is more towards the left, and in Frame 6 and Frame 7, where it is more towards the right. Therefore, the ball moves towards the right side of the frame.</think>  \n<answer>A</answer>  \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "video_seek_tool",
+      "ok": true,
+      "raw": "{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 5.1, \"end_time\": 7.7, \"num_frames\": 3}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "cert": {
+   "C1_coarse_indistinct": true,
+   "C2_evidence_sufficient": true,
+   "C3_no_text_shortcut": true,
+   "C4_evidence_swappable": true,
+   "decoy_no_false_resolution": true,
+   "irr_no_change": true,
+   "prior_bias_text": 0.64,
+   "tv_AB_coarse": 0.004,
+   "PASS": true
+  },
+  "result_tag": "v3"
+ },
+ "s3b_flash_symbol": {
+  "answers": {
+   "A": "triangle",
+   "B": "circle"
+  },
+  "version": "v3",
+  "A": {
+   "text": {
+    "belief": {
+     "triangle": 0.1287,
+     "square": 0.0676,
+     "circle": 0.2846,
+     "cross": 0.5191
+    },
+    "greedy": [
+     "cross",
+     "cross",
+     "cross",
+     "circle"
+    ],
+    "pred": "cross",
+    "p_gt": 0.1287,
+    "p_twin": 0.2846,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "triangle": 0.4131,
+     "square": 0.0416,
+     "circle": 0.2465,
+     "cross": 0.2988
+    },
+    "greedy": [
+     "triangle",
+     "cross",
+     "triangle",
+     "circle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.4131,
+    "p_twin": 0.2465,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "triangle": 0.9995,
+     "square": 0.0002,
+     "circle": 0.0002,
+     "cross": 0.0001
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.9995,
+    "p_twin": 0.0002,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "triangle": 0.9994,
+     "square": 0.0003,
+     "circle": 0.0002,
+     "cross": 0.0002
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.9994,
+    "p_twin": 0.0002,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "triangle": 0.9994,
+     "square": 0.0002,
+     "circle": 0.0002,
+     "cross": 0.0002
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.9994,
+    "p_twin": 0.0002,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "triangle": 0.0007,
+     "square": 0.0007,
+     "circle": 0.9969,
+     "cross": 0.0017
+    },
+    "greedy": [
+     "circle",
+     "circle",
+     "circle",
+     "circle"
+    ],
+    "pred": "circle",
+    "p_gt": 0.0007,
+    "p_twin": 0.9969,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "triangle": 0.3753,
+     "square": 0.0487,
+     "circle": 0.2527,
+     "cross": 0.3233
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "cross"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.3753,
+    "p_twin": 0.2527,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "triangle": 0.3233,
+     "square": 0.0561,
+     "circle": 0.2735,
+     "cross": 0.3471
+    },
+    "greedy": [
+     "cross",
+     "cross",
+     "triangle",
+     "circle"
+    ],
+    "pred": "cross",
+    "p_gt": 0.3233,
+    "p_twin": 0.2735,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "C",
+    "correct": false,
+    "turns": [
+     "<think>To answer this question, I need to focus on the small white card with a black symbol on it that is shown on the table near the lower right. Since the card is not clearly visible in the provided frames, I should use the video_seek_tool to replay the segment where the card is shown more closely.</think>  \n<tool_call>\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 7.7, \"end_time\": 8.0, \"num_frames\": 3}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n��\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 8, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n addCriterion\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 7.7, \"end_time\": 8.0, \"num_frames\": 3}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 6, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 8, \"bbox_2d\": [450, 250, 500, 290], \"label\": \"the small white card\"}}\n\n addCriterion\n{\"name\": \"",
+     "<think>By analyzing the frames, I can see that the small white card with a black symbol on it is shown in Frame 8. The symbol on the card appears to be a circle. Therefore, the correct answer is C.</think>  \n<answer>C</answer>  \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "video_seek_tool",
+      "ok": true,
+      "raw": "{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 7.7, \"end_time\": 8.0, \"num_frames\": 3}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "B": {
+   "text": {
+    "belief": {
+     "triangle": 0.1287,
+     "square": 0.0676,
+     "circle": 0.2846,
+     "cross": 0.5191
+    },
+    "greedy": [
+     "cross",
+     "cross",
+     "cross",
+     "circle"
+    ],
+    "pred": "cross",
+    "p_gt": 0.2846,
+    "p_twin": 0.1287,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "triangle": 0.4196,
+     "square": 0.0427,
+     "circle": 0.2439,
+     "cross": 0.2938
+    },
+    "greedy": [
+     "triangle",
+     "cross",
+     "triangle",
+     "circle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.2439,
+    "p_twin": 0.4196,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "triangle": 0.0011,
+     "square": 0.0021,
+     "circle": 0.9958,
+     "cross": 0.001
+    },
+    "greedy": [
+     "circle",
+     "circle",
+     "circle",
+     "circle"
+    ],
+    "pred": "circle",
+    "p_gt": 0.9958,
+    "p_twin": 0.0011,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "triangle": 0.0012,
+     "square": 0.0026,
+     "circle": 0.9951,
+     "cross": 0.0011
+    },
+    "greedy": [
+     "circle",
+     "circle",
+     "circle",
+     "circle"
+    ],
+    "pred": "circle",
+    "p_gt": 0.9951,
+    "p_twin": 0.0012,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "triangle": 0.0006,
+     "square": 0.0007,
+     "circle": 0.997,
+     "cross": 0.0017
+    },
+    "greedy": [
+     "circle",
+     "circle",
+     "circle",
+     "circle"
+    ],
+    "pred": "circle",
+    "p_gt": 0.997,
+    "p_twin": 0.0006,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "triangle": 0.9994,
+     "square": 0.0002,
+     "circle": 0.0002,
+     "cross": 0.0002
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.0002,
+    "p_twin": 0.9994,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "triangle": 0.3856,
+     "square": 0.0485,
+     "circle": 0.2537,
+     "cross": 0.3122
+    },
+    "greedy": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "circle"
+    ],
+    "pred": "triangle",
+    "p_gt": 0.2537,
+    "p_twin": 0.3856,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "triangle": 0.3269,
+     "square": 0.0552,
+     "circle": 0.2764,
+     "cross": 0.3416
+    },
+    "greedy": [
+     "cross",
+     "cross",
+     "triangle",
+     "circle"
+    ],
+    "pred": "cross",
+    "p_gt": 0.2764,
+    "p_twin": 0.3269,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "C",
+    "correct": true,
+    "turns": [
+     "<think>To answer this question, I need to focus on the small white card with a black symbol on it that is shown on the table near the lower right. Since the card is not clearly visible in the provided frames, I should use the image_zoom_in_tool to zoom in on this specific region to see the symbol more clearly.</think>  \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [530, 300, 550, 320], \"label\": \"small white card with a black symbol\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [530, 300, 550, 320], \"label\": \"small white card with a black symbol\"}}\n\n addCriterion\n<tool_call>\n{\"name\": \"image_seek_tool\", \"arguments\": {\"start_time\": 7.7, \"end_time\": 8.0, \"num_frames\": 3}}\n</tool_call>\n addCriterion\n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [530, 300, 550, 320], \"label\": \"small white card with a black symbol\"}}\n</tool_call>\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n addCriterion\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>Now that I have zoomed in on the small white card with a black symbol, I can see that the symbol is a circle. Therefore, the correct answer is C.</think>  \n<answer>C</answer>  \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [530, 300, 550, 320], \"label\": \"small white card with a black symbol\"}}",
+      "err": null
+     },
+     {
+      "name": "image_seek_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_seek_tool\", \"arguments\": {\"start_time\": 7.7, \"end_time\": 8.0, \"num_frames\": 3}}",
+      "err": "unknown tool image_seek_tool"
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [530, 300, 550, 320], \"label\": \"small white card with a black symbol\"}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "cert": {
+   "C1_coarse_indistinct": true,
+   "C2_evidence_sufficient": true,
+   "C3_no_text_shortcut": true,
+   "C4_evidence_swappable": true,
+   "decoy_no_false_resolution": true,
+   "irr_no_change": true,
+   "prior_bias_text": 0.16,
+   "tv_AB_coarse": 0.008,
+   "PASS": true
+  },
+  "result_tag": "v3"
+ },
+ "s2_tiny_tag": {
+  "answers": {
+   "A": "358",
+   "B": "386"
+  },
+  "version": "v4",
+  "A": {
+   "text": {
+    "belief": {
+     "358": 0.3536,
+     "356": 0.2728,
+     "338": 0.2259,
+     "386": 0.1477
+    },
+    "greedy": [
+     "356",
+     "358",
+     "338",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.3536,
+    "p_twin": 0.1477,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "358": 0.3217,
+     "356": 0.2756,
+     "338": 0.1742,
+     "386": 0.2285
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "358",
+    "p_gt": 0.3217,
+    "p_twin": 0.2285,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "358": 0.3022,
+     "356": 0.2747,
+     "338": 0.1961,
+     "386": 0.227
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "358",
+    "p_gt": 0.3022,
+    "p_twin": 0.227,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "358": 0.2897,
+     "356": 0.2961,
+     "338": 0.2019,
+     "386": 0.2123
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.2897,
+    "p_twin": 0.2123,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "358": 0.9988,
+     "356": 0.0005,
+     "338": 0.0004,
+     "386": 0.0003
+    },
+    "greedy": [
+     "358",
+     "358",
+     "358",
+     "358"
+    ],
+    "pred": "358",
+    "p_gt": 0.9988,
+    "p_twin": 0.0003,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "358": 0.0003,
+     "356": 0.0004,
+     "338": 0.0003,
+     "386": 0.999
+    },
+    "greedy": [
+     "386",
+     "386",
+     "386",
+     "386"
+    ],
+    "pred": "386",
+    "p_gt": 0.0003,
+    "p_twin": 0.999,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "358": 0.274,
+     "356": 0.3215,
+     "338": 0.1956,
+     "386": 0.209
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "358",
+    "p_gt": 0.274,
+    "p_twin": 0.209,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "358": 0.2815,
+     "356": 0.3012,
+     "338": 0.1885,
+     "386": 0.2287
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "358",
+    "p_gt": 0.2815,
+    "p_twin": 0.2287,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "B",
+    "correct": false,
+    "turns": [
+     "<think>To answer this question, I need to zoom in on the small white tag with a number printed on it. The tag is located near the lower right of the frame, so I will use the image_zoom_in_tool to focus on this area.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>Now that I have zoomed in on the small white tag, I can clearly see that the number printed on it is 356. Therefore, the answer is B. 356.</think> \n<answer>B</answer> \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "B": {
+   "text": {
+    "belief": {
+     "358": 0.3536,
+     "356": 0.2728,
+     "338": 0.2259,
+     "386": 0.1477
+    },
+    "greedy": [
+     "356",
+     "358",
+     "338",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1477,
+    "p_twin": 0.3536,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "358": 0.3198,
+     "356": 0.2544,
+     "338": 0.1637,
+     "386": 0.2621
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "358",
+    "p_gt": 0.2621,
+    "p_twin": 0.3198,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "358": 0.297,
+     "356": 0.237,
+     "338": 0.1978,
+     "386": 0.2682
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "358",
+    "p_gt": 0.2682,
+    "p_twin": 0.297,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "358": 0.281,
+     "356": 0.278,
+     "338": 0.2225,
+     "386": 0.2185
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "356",
+    "p_gt": 0.2185,
+    "p_twin": 0.281,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "358": 0.0003,
+     "356": 0.0005,
+     "338": 0.0004,
+     "386": 0.9989
+    },
+    "greedy": [
+     "386",
+     "386",
+     "386",
+     "386"
+    ],
+    "pred": "386",
+    "p_gt": 0.9989,
+    "p_twin": 0.0003,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "358": 0.9987,
+     "356": 0.0006,
+     "338": 0.0004,
+     "386": 0.0004
+    },
+    "greedy": [
+     "358",
+     "358",
+     "358",
+     "358"
+    ],
+    "pred": "358",
+    "p_gt": 0.0004,
+    "p_twin": 0.9987,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "358": 0.2729,
+     "356": 0.2978,
+     "338": 0.1906,
+     "386": 0.2387
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "358",
+    "p_gt": 0.2387,
+    "p_twin": 0.2729,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "358": 0.2783,
+     "356": 0.2948,
+     "338": 0.1863,
+     "386": 0.2406
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "386"
+    ],
+    "pred": "358",
+    "p_gt": 0.2406,
+    "p_twin": 0.2783,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": false,
+    "turns": [
+     "<think>To answer this question, I need to zoom in on the small white tag with a number printed on it. The tag is located near the lower right of the frame, so I will use the image_zoom_in_tool to focus on this area.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>Now that I have zoomed in on the small white tag, I can clearly see that the number printed on it is 358. Therefore, the answer is A. 358.</think> \n<answer>A</answer> \n"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": true,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [500, 330, 530, 360], \"label\": \"small white tag\"}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "cert": {
+   "C1_coarse_indistinct": true,
+   "C2_evidence_sufficient": true,
+   "C3_no_text_shortcut": true,
+   "C4_evidence_swappable": true,
+   "decoy_no_false_resolution": true,
+   "irr_no_change": true,
+   "prior_bias_text": 0.21,
+   "tv_AB_coarse": 0.034,
+   "PASS": true
+  },
+  "result_tag": "v4"
+ },
+ "s2b_tiny_tag_1080p": {
+  "answers": {
+   "A": "358",
+   "B": "386"
+  },
+  "version": "v4",
+  "A": {
+   "text": {
+    "belief": {
+     "358": 0.3499,
+     "356": 0.2961,
+     "338": 0.2024,
+     "386": 0.1516
+    },
+    "greedy": [
+     "356",
+     "358",
+     "338",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.3499,
+    "p_twin": 0.1516,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "358": 0.2809,
+     "356": 0.3843,
+     "338": 0.1856,
+     "386": 0.1491
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.2809,
+    "p_twin": 0.1491,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "358": 0.2659,
+     "356": 0.3831,
+     "338": 0.1754,
+     "386": 0.1756
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.2659,
+    "p_twin": 0.1756,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "358": 0.2363,
+     "356": 0.3827,
+     "338": 0.2206,
+     "386": 0.1604
+    },
+    "greedy": [
+     "356",
+     "338",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.2363,
+    "p_twin": 0.1604,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "358": 0.9978,
+     "356": 0.0011,
+     "338": 0.0007,
+     "386": 0.0005
+    },
+    "greedy": [
+     "358",
+     "358",
+     "358",
+     "358"
+    ],
+    "pred": "358",
+    "p_gt": 0.9978,
+    "p_twin": 0.0005,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "358": 0.0006,
+     "356": 0.0007,
+     "338": 0.0006,
+     "386": 0.9981
+    },
+    "greedy": [
+     "386",
+     "386",
+     "386",
+     "386"
+    ],
+    "pred": "386",
+    "p_gt": 0.0006,
+    "p_twin": 0.9981,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "358": 0.3046,
+     "356": 0.315,
+     "338": 0.1865,
+     "386": 0.1939
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "358",
+    "p_gt": 0.3046,
+    "p_twin": 0.1939,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "358": 0.2988,
+     "356": 0.3258,
+     "338": 0.1907,
+     "386": 0.1847
+    },
+    "greedy": [
+     "358",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "358",
+    "p_gt": 0.2988,
+    "p_twin": 0.1847,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": "A",
+    "correct": true,
+    "turns": [
+     "<think>The small white tag with a number printed on it is not clearly visible in the provided frames. To get a closer look at the tag, I need to use the image_zoom_in_tool function.</think>  \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>It seems there was an issue with the bounding box provided. Let's try a different approach by using the video_seek_tool to replay the segment around the timestamp of the frame and see if we can spot the number more clearly.</think>  \n<tool_call>\n{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 15.4, \"end_time\": 18.0, \"num_frames\": 6}}\n</tool_call>",
+     "<think>The number on the tag is clearly visible in the dense replay frames. The number printed on the tag is 358.</think>  \n<answer>A</answer>  \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 10, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n</tool_call>\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 10, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 10, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 10, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 500, 300, 520], \"label\": \"small white tag\"}}",
+      "err": "invalid bbox [280, 500, 300, 520]"
+     },
+     {
+      "name": "video_seek_tool",
+      "ok": true,
+      "raw": "{\"name\": \"video_seek_tool\", \"arguments\": {\"start_time\": 15.4, \"end_time\": 18.0, \"num_frames\": 6}}",
+      "err": null
+     }
+    ]
+   }
+  },
+  "B": {
+   "text": {
+    "belief": {
+     "358": 0.3499,
+     "356": 0.2961,
+     "338": 0.2024,
+     "386": 0.1516
+    },
+    "greedy": [
+     "356",
+     "358",
+     "338",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1516,
+    "p_twin": 0.3499,
+    "n_frames": 0
+   },
+   "none_k8": {
+    "belief": {
+     "358": 0.2583,
+     "356": 0.4239,
+     "338": 0.1814,
+     "386": 0.1363
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1363,
+    "p_twin": 0.2583,
+    "n_frames": 8
+   },
+   "none_k16": {
+    "belief": {
+     "358": 0.2588,
+     "356": 0.4029,
+     "338": 0.1726,
+     "386": 0.1656
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1656,
+    "p_twin": 0.2588,
+    "n_frames": 16
+   },
+   "none_k32": {
+    "belief": {
+     "358": 0.2417,
+     "356": 0.396,
+     "338": 0.2115,
+     "386": 0.1508
+    },
+    "greedy": [
+     "356",
+     "338",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1508,
+    "p_twin": 0.2417,
+    "n_frames": 32
+   },
+   "true": {
+    "belief": {
+     "358": 0.0005,
+     "356": 0.0006,
+     "338": 0.0005,
+     "386": 0.9984
+    },
+    "greedy": [
+     "386",
+     "386",
+     "386",
+     "386"
+    ],
+    "pred": "386",
+    "p_gt": 0.9984,
+    "p_twin": 0.0005,
+    "n_frames": 12
+   },
+   "twin": {
+    "belief": {
+     "358": 0.9981,
+     "356": 0.0009,
+     "338": 0.0006,
+     "386": 0.0004
+    },
+    "greedy": [
+     "358",
+     "358",
+     "358",
+     "358"
+    ],
+    "pred": "358",
+    "p_gt": 0.0004,
+    "p_twin": 0.9981,
+    "n_frames": 12
+   },
+   "decoy": {
+    "belief": {
+     "358": 0.2815,
+     "356": 0.3547,
+     "338": 0.1809,
+     "386": 0.1829
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1829,
+    "p_twin": 0.2815,
+    "n_frames": 12
+   },
+   "irr": {
+    "belief": {
+     "358": 0.2747,
+     "356": 0.364,
+     "338": 0.1866,
+     "386": 0.1747
+    },
+    "greedy": [
+     "356",
+     "358",
+     "356",
+     "356"
+    ],
+    "pred": "356",
+    "p_gt": 0.1747,
+    "p_twin": 0.2747,
+    "n_frames": 12
+   },
+   "agentic": {
+    "pred": null,
+    "correct": false,
+    "turns": [
+     "<think>To answer this question, I need to zoom in on the small white tag with the number printed on it. The image_zoom_in_tool can help me do this by allowing me to focus on a specific region of the frame.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+     "<think>I need to zoom in on the small white tag with the number printed on it. The image_zoom_in_tool can help me do this by allowing me to focus on a specific region of the frame. I will call the tool again with the correct bounding box coordinates.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n",
+     "<think>I need to zoom in on the small white tag with the number printed on it. The image_zoom_in_tool can help me do this by allowing me to focus on a specific region of the frame. I will call the tool again with the correct bounding box coordinates.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag",
+     "<think>I need to zoom in on the small white tag with the number printed on it. The image_zoom_in_tool can help me do this by allowing me to focus on a specific region of the frame. I will call the tool again with the correct bounding box coordinates.</think> \n<tool_call>\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n</tool_call>\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}\n\n\n addCriterion\n{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label"
+    ],
+    "tool_calls": [
+     {
+      "name": "image_zoom_in_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}",
+      "err": "invalid bbox [280, 602, 300, 620]"
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}",
+      "err": "invalid bbox [280, 602, 300, 620]"
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}",
+      "err": "invalid bbox [280, 602, 300, 620]"
+     },
+     {
+      "name": "image_zoom_in_tool",
+      "ok": false,
+      "raw": "{\"name\": \"image_zoom_in_tool\", \"arguments\": {\"frame_index\": 7, \"bbox_2d\": [280, 602, 300, 620], \"label\": \"small white tag\"}}",
+      "err": "invalid bbox [280, 602, 300, 620]"
+     }
+    ]
+   }
+  },
+  "cert": {
+   "C1_coarse_indistinct": true,
+   "C2_evidence_sufficient": true,
+   "C3_no_text_shortcut": true,
+   "C4_evidence_swappable": true,
+   "decoy_no_false_resolution": true,
+   "irr_no_change": true,
+   "prior_bias_text": 0.2,
+   "tv_AB_coarse": 0.04,
+   "PASS": true
+  },
+  "result_tag": "v4"
+ }
+}

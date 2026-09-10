@@ -1,0 +1,2004 @@
+[
+ {
+  "uuid": "005202cf-c165-441d-ac78-5a880e4c99a0",
+  "域": "Gym",
+  "动作": "Bent-Over Row",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "bent-over row",
+   "B": "romanian deadlift (rdl)",
+   "C": "dumbbell shrug",
+   "D": "face pull"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.47, 0.97, 1.47, 1.97, 2.47, 2.97, 3.47],
+  "E*窗s": [2.45, 2.8],
+  "decoy窗s": [0.7, 1.05],
+  "六条件 p(正确)": {
+   "none": 0.3259,
+   "true": 0.6566,
+   "decoy": 0.267,
+   "irr": 0.2665,
+   "twin": 0.2075,
+   "dense_matched": 0.6469
+  },
+  "指标": {
+   "EEG": 0.8998,
+   "ERG": 1,
+   "gain_over_dense": 0.0097,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "00ba016a-cc19-418b-9079-fe306e3edd0f",
+  "域": "Neurological Abnormalities",
+  "动作": "Absence Seizure",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Neurological Abnormalities is shown in the video?",
+  "选项": {
+   "A": "focal onset seizure",
+   "B": "parkinsonian gait",
+   "C": "orthostatic tremor",
+   "D": "absence seizure"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 1.12, 2.24, 3.4, 4.52, 5.68, 6.8, 7.96],
+  "E*窗s": [6.4, 7.2],
+  "decoy窗s": [4.0, 4.8],
+  "六条件 p(正确)": {
+   "none": 0.4136,
+   "true": 0.6881,
+   "decoy": 0.3592,
+   "irr": 0.5673,
+   "dense_matched": 0.437
+  },
+  "指标": {
+   "EEG": 0.6501,
+   "ERG": 1,
+   "gain_over_dense": 0.2511,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0256d9bf-f914-4604-a203-071ca6dfa33f",
+  "域": "Figure Skating",
+  "动作": "Three Turn",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Figure Skating actions is shown in the video?",
+  "选项": {
+   "A": "rocker",
+   "B": "bracket turn",
+   "C": "twizzle",
+   "D": "three turn"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.3, 0.6, 0.9, 1.23, 1.53, 1.84, 2.17],
+  "E*窗s": [0.66, 1.1],
+  "decoy窗s": [1.76, 2.2],
+  "六条件 p(正确)": {
+   "none": 0.4064,
+   "true": 0.4857,
+   "decoy": 0.3041,
+   "irr": 0.4439,
+   "twin": 0.1986,
+   "dense_matched": 0.3325
+  },
+  "指标": {
+   "EEG": 0.4682,
+   "ERG": 0,
+   "gain_over_dense": 0.1532,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "025c96d6-8e6a-400c-84b2-118453cb56a3",
+  "域": "Bouldering",
+  "动作": "Knee Bar",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Bouldering actions is shown in the video?",
+  "选项": {
+   "A": "bicycle",
+   "B": "stemming",
+   "C": "bat hang",
+   "D": "knee bar"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.57, 1.13, 1.7, 2.27, 2.83, 3.4, 3.97],
+  "E*窗s": [0.8, 1.2],
+  "decoy窗s": [2.8, 3.2],
+  "六条件 p(正确)": {
+   "none": 0.3732,
+   "true": 0.4783,
+   "decoy": 0.3302,
+   "irr": 0.5001,
+   "twin": 0.4688,
+   "dense_matched": 0.4467
+  },
+  "指标": {
+   "EEG": 0.3705,
+   "ERG": 0,
+   "gain_over_dense": 0.0316,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "060f565c-1f1e-41a5-90f1-5f0b1cda6377",
+  "域": "Knots",
+  "动作": "Rolling Hitch",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Knots is shown in the video?",
+  "选项": {
+   "A": "blake's hitch",
+   "B": "midshipman's hitch",
+   "C": "farrimond friction hitch",
+   "D": "rolling hitch"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 3.57, 7.13, 10.7, 14.27, 17.83, 21.4, 24.97],
+  "E*窗s": [0.0, 2.5],
+  "decoy窗s": [22.5, 25.0],
+  "六条件 p(正确)": {
+   "none": 0.3123,
+   "true": 0.4618,
+   "decoy": 0.2569,
+   "irr": 0.3754,
+   "twin": 0.4409,
+   "dense_matched": 0.2479
+  },
+  "指标": {
+   "EEG": 0.5864,
+   "ERG": 1,
+   "gain_over_dense": 0.2139,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "06481e5e-ab86-4a0b-b047-f97c2e0e71a3",
+  "域": "Neurological Assessments",
+  "动作": "Rapid Alternating Movements",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Neurological Assessments is shown in the video?",
+  "选项": {
+   "A": "toe walking",
+   "B": "heel walking",
+   "C": "pronator drift",
+   "D": "rapid alternating movements"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.83, 1.7, 2.53, 3.4, 4.23, 5.1, 5.97],
+  "E*窗s": [3.6, 4.2],
+  "decoy窗s": [0.0, 0.6],
+  "六条件 p(正确)": {
+   "none": 0.1284,
+   "true": 0.7168,
+   "decoy": 0.107,
+   "irr": 0.1169,
+   "dense_matched": 0.3578
+  },
+  "指标": {
+   "EEG": 1.902,
+   "ERG": 1,
+   "gain_over_dense": 0.359,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0686fe1d-2d89-4fce-baf2-7149aaca67ab",
+  "域": "Basketball",
+  "动作": "Block",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Basketball actions is shown in the video?",
+  "选项": {
+   "A": "reach-in foul",
+   "B": "goaltending",
+   "C": "putback dunk",
+   "D": "block"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.28, 0.57, 0.85, 1.13, 1.42, 1.7, 1.98],
+  "E*窗s": [0.4, 0.6],
+  "decoy窗s": [1.0, 1.2],
+  "六条件 p(正确)": {
+   "none": 0.5116,
+   "true": 0.7173,
+   "decoy": 0.3156,
+   "irr": 0.6214,
+   "dense_matched": 0.5174
+  },
+  "指标": {
+   "EEG": 0.821,
+   "ERG": 1,
+   "gain_over_dense": 0.1999,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "06b86d66-0628-45f6-8bd9-4dc6a8c3b82f",
+  "域": "Parkour",
+  "动作": "Coffee Grinder",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Parkour actions is shown in the video?",
+  "选项": {
+   "A": "back roll",
+   "B": "palm spin",
+   "C": "cartwheel",
+   "D": "coffee grinder"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.47, 0.93, 1.4, 1.87, 2.34, 2.8, 3.27],
+  "E*窗s": [1.98, 2.31],
+  "decoy窗s": [0.0, 0.33],
+  "六条件 p(正确)": {
+   "none": 0.261,
+   "true": 0.5497,
+   "decoy": 0.2101,
+   "irr": 0.2029,
+   "twin": 0.1494,
+   "dense_matched": 0.6504
+  },
+  "指标": {
+   "EEG": 0.9618,
+   "ERG": 1,
+   "gain_over_dense": -0.1007,
+   "false_resolution": true,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "07b1dfbd-2a06-491e-9fb8-1be978a7b783",
+  "域": "Parkour",
+  "动作": "Speed Vault",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Parkour actions is shown in the video?",
+  "选项": {
+   "A": "pop vault",
+   "B": "safety vault",
+   "C": "tic tac",
+   "D": "speed vault"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.4, 0.83, 1.27, 1.67, 2.1, 2.54, 2.97],
+  "E*窗s": [1.2, 1.5],
+  "decoy窗s": [2.7, 3.0],
+  "六条件 p(正确)": {
+   "none": 0.5695,
+   "true": 0.7505,
+   "decoy": 0.5346,
+   "irr": 0.5281,
+   "dense_matched": 0.6392
+  },
+  "指标": {
+   "EEG": 0.3392,
+   "ERG": 0,
+   "gain_over_dense": 0.1113,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0845ab07-098f-4a65-ad06-14e3fefe7587",
+  "域": "American Football",
+  "动作": "Fair Catch",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following American Football actions is shown in the video?",
+  "选项": {
+   "A": "punt",
+   "B": "onside kick",
+   "C": "squib kick",
+   "D": "fair catch"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.27, 0.53, 0.83, 1.1, 1.4, 1.67, 1.97],
+  "E*窗s": [0.6, 0.8],
+  "decoy窗s": [1.8, 2.0],
+  "六条件 p(正确)": {
+   "none": 0.1983,
+   "true": 0.4888,
+   "decoy": 0.2203,
+   "irr": 0.2506,
+   "twin": 0.148,
+   "dense_matched": 0.1529
+  },
+  "指标": {
+   "EEG": 0.797,
+   "ERG": 1,
+   "gain_over_dense": 0.3359,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0893e529-f073-41d9-b660-a3591f993b1e",
+  "域": "Tennis",
+  "动作": "Underhand Serve",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Tennis actions is shown in the video?",
+  "选项": {
+   "A": "half-volley",
+   "B": "one-handed backhand",
+   "C": "underhand serve",
+   "D": "drop shot"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.53, 1.1, 1.67, 2.24, 2.8, 3.37, 3.94],
+  "E*窗s": [0.4, 0.79],
+  "decoy窗s": [3.57, 3.97],
+  "六条件 p(正确)": {
+   "none": 0.4376,
+   "true": 0.8623,
+   "decoy": 0.2548,
+   "irr": 0.4261,
+   "dense_matched": 0.8895
+  },
+  "指标": {
+   "EEG": 1.2191,
+   "ERG": 1,
+   "gain_over_dense": -0.0272,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0aeb1625-160b-4410-b9a2-7b2fa7a373ab",
+  "域": "Soccer",
+  "动作": "Tackle",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Soccer actions is shown in the video?",
+  "选项": {
+   "A": "shielding the ball",
+   "B": "diving save",
+   "C": "interception",
+   "D": "tackle"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.77, 1.57, 2.37, 3.17, 3.97, 4.77, 5.57],
+  "E*窗s": [2.24, 2.8],
+  "decoy窗s": [4.48, 5.04],
+  "六条件 p(正确)": {
+   "none": 0.4053,
+   "true": 0.5403,
+   "decoy": 0.1494,
+   "irr": 0.5397,
+   "twin": 0.5311,
+   "dense_matched": 0.3037
+  },
+  "指标": {
+   "EEG": 1.2855,
+   "ERG": 1,
+   "gain_over_dense": 0.2366,
+   "false_resolution": true,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0b785fc4-ee5d-453f-9a27-6e8e9c567b75",
+  "域": "Suturing",
+  "动作": "Continuous Locking Suture",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Sutures is shown in the video?",
+  "选项": {
+   "A": "purse-string suture",
+   "B": "continuous locking suture",
+   "C": "cushing suture",
+   "D": "horizontal mattress suture"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 6.27, 12.53, 18.83, 25.1, 31.4, 37.67, 43.97],
+  "E*窗s": [39.6, 44.0],
+  "decoy窗s": [30.8, 35.2],
+  "六条件 p(正确)": {
+   "none": 0.4427,
+   "true": 0.6847,
+   "decoy": 0.2881,
+   "irr": 0.481,
+   "twin": 0.412,
+   "dense_matched": 0.4389
+  },
+  "指标": {
+   "EEG": 0.8657,
+   "ERG": 1,
+   "gain_over_dense": 0.2458,
+   "false_resolution": true,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0b9827ec-5536-427a-9d25-1ac7f9fccee2",
+  "域": "Hand Sewing / Embroidery",
+  "动作": "Buttonhole Stitch",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Hand Sewing / Embroidery actions is shown in the video?",
+  "选项": {
+   "A": "palestrina stitch",
+   "B": "ladder stitch",
+   "C": "buttonhole stitch",
+   "D": "coral stitch"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 1.27, 2.54, 3.84, 5.11, 6.41, 7.67, 8.98],
+  "E*窗s": [6.31, 7.21],
+  "decoy窗s": [0.0, 0.9],
+  "六条件 p(正确)": {
+   "none": 0.5224,
+   "true": 0.7419,
+   "decoy": 0.5594,
+   "irr": 0.5565,
+   "dense_matched": 0.7841
+  },
+  "指标": {
+   "EEG": 0.2823,
+   "ERG": 0,
+   "gain_over_dense": -0.0422,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0c67dfa1-1392-4dcb-b374-dd2d71627f5f",
+  "域": "American Football",
+  "动作": "Pass Interference",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following American Football actions is shown in the video?",
+  "选项": {
+   "A": "interception",
+   "B": "illegal contact",
+   "C": "hail mary",
+   "D": "pass interference"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.4, 0.84, 1.24, 1.67, 2.07, 2.51, 2.94],
+  "E*窗s": [0.89, 1.19],
+  "decoy窗s": [1.78, 2.08],
+  "六条件 p(正确)": {
+   "none": 0.5774,
+   "true": 0.7228,
+   "decoy": 0.5117,
+   "irr": 0.5847,
+   "dense_matched": 0.6027
+  },
+  "指标": {
+   "EEG": 0.3454,
+   "ERG": 0,
+   "gain_over_dense": 0.1201,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0ce2b3ec-1e04-4d3a-afb5-cd14770b3ff2",
+  "域": "Knots",
+  "动作": "Double Fisherman's Knot",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Knots is shown in the video?",
+  "选项": {
+   "A": "ashley's bend",
+   "B": "zeppelin bend",
+   "C": "double fisherman's knot",
+   "D": "snell knot"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 6.75, 13.54, 20.33, 27.08, 33.88, 40.67, 47.46],
+  "E*窗s": [42.75, 47.5],
+  "decoy窗s": [4.75, 9.5],
+  "六条件 p(正确)": {
+   "none": 0.4585,
+   "true": 0.6365,
+   "decoy": 0.4445,
+   "irr": 0.5347,
+   "dense_matched": 0.3727
+  },
+  "指标": {
+   "EEG": 0.359,
+   "ERG": 0,
+   "gain_over_dense": 0.2638,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0db40947-f857-4cf5-8d6e-f261b874c833",
+  "域": "Basketball",
+  "动作": "Bounce Pass",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Basketball actions is shown in the video?",
+  "选项": {
+   "A": "chest pass",
+   "B": "behind-the-back pass",
+   "C": "wrap-around pass",
+   "D": "bounce pass"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.25, 0.54, 0.83, 1.08, 1.38, 1.67, 1.96],
+  "E*窗s": [1.0, 1.2],
+  "decoy窗s": [0.8, 1.0],
+  "六条件 p(正确)": {
+   "none": 0.6715,
+   "true": 0.8301,
+   "decoy": 0.3475,
+   "irr": 0.637,
+   "twin": 0.4792,
+   "dense_matched": 0.7959
+  },
+  "指标": {
+   "EEG": 0.8708,
+   "ERG": 1,
+   "gain_over_dense": 0.0342,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0e7a5848-f720-4cea-97b7-ada475a89123",
+  "域": "Coffee",
+  "动作": "Stirring",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "tapping",
+   "B": "wdt (weiss distribution technique)",
+   "C": "swirling",
+   "D": "stirring"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.27, 0.53, 0.83, 1.1, 1.4, 1.67, 1.97],
+  "E*窗s": [0.6, 0.8],
+  "decoy窗s": [0.0, 0.2],
+  "六条件 p(正确)": {
+   "none": 0.4766,
+   "true": 0.5758,
+   "decoy": 0.4819,
+   "irr": 0.5144,
+   "twin": 0.3471,
+   "dense_matched": 0.6447
+  },
+  "指标": {
+   "EEG": 0.178,
+   "ERG": 0,
+   "gain_over_dense": -0.0689,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "0f1d2de2-21e1-4aa8-8f45-21b12bd0aade",
+  "域": "Painting",
+  "动作": "Lifting",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Painting actions is shown in the video?",
+  "选项": {
+   "A": "flat wash",
+   "B": "graded wash",
+   "C": "lifting",
+   "D": "glazing"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 3.08, 6.17, 9.25, 12.38, 15.46, 18.54, 21.67],
+  "E*窗s": [2.17, 4.34],
+  "decoy窗s": [13.03, 15.2],
+  "六条件 p(正确)": {
+   "none": 0.5105,
+   "true": 0.6356,
+   "decoy": 0.3362,
+   "irr": 0.5201,
+   "dense_matched": 0.5099
+  },
+  "指标": {
+   "EEG": 0.6369,
+   "ERG": 1,
+   "gain_over_dense": 0.1257,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "10a19c06-477b-46ba-969b-aa5b574e4d8e",
+  "域": "Gym",
+  "动作": "Dip",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "lateral raise",
+   "B": "tricep pushdown",
+   "C": "dip",
+   "D": "dumbbell shrug"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.83, 1.7, 2.54, 3.4, 4.24, 5.11, 5.97],
+  "E*窗s": [3.0, 3.6],
+  "decoy窗s": [4.2, 4.8],
+  "六条件 p(正确)": {
+   "none": 0.1632,
+   "true": 0.6717,
+   "decoy": 0.3988,
+   "irr": 0.2992,
+   "twin": 0.0881,
+   "dense_matched": 0.5165
+  },
+  "指标": {
+   "EEG": 0.5214,
+   "ERG": 1,
+   "gain_over_dense": 0.1552,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "1149b09f-7051-408c-8c3b-23b59c42530c",
+  "域": "Ice Hockey",
+  "动作": "Spearing",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Ice Hockey actions is shown in the video?",
+  "选项": {
+   "A": "spearing",
+   "B": "hip check",
+   "C": "flip shot",
+   "D": "no-look pass"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.27, 0.53, 0.83, 1.1, 1.4, 1.67, 1.97],
+  "E*窗s": [0.6, 0.8],
+  "decoy窗s": [1.8, 2.0],
+  "六条件 p(正确)": {
+   "none": 0.4488,
+   "true": 0.59,
+   "decoy": 0.3424,
+   "irr": 0.3479,
+   "twin": 0.426,
+   "dense_matched": 0.4963
+  },
+  "指标": {
+   "EEG": 0.5441,
+   "ERG": 1,
+   "gain_over_dense": 0.0937,
+   "false_resolution": true,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "dffb7271-5fce-44f7-9e78-65489c59e518",
+  "域": "Cooking",
+  "动作": "Brunoise Cut",
+  "组": "required",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cooking actions is shown in the video?",
+  "选项": {
+   "A": "brunoise cut",
+   "B": "grating",
+   "C": "supreming",
+   "D": "mincing"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.83, 1.7, 2.54, 3.4, 4.24, 5.11, 5.97],
+  "E*窗s": [4.2, 4.8],
+  "decoy窗s": [0.0, 0.6],
+  "六条件 p(正确)": {
+   "none": 0.4012,
+   "true": 0.778,
+   "decoy": 0.449,
+   "irr": 0.3594,
+   "dense_matched": 0.6711
+  },
+  "指标": {
+   "EEG": 0.5497,
+   "ERG": 1,
+   "gain_over_dense": 0.1069,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "00652e15-b64a-445b-a274-fe564592b6d2",
+  "域": "Coffee",
+  "动作": "Purging the Steam Wand",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "backflushing",
+   "B": "emptying the drip tray",
+   "C": "purging the steam wand",
+   "D": "rdt (ross droplet technique)"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.84, 1.68, 2.52, 3.4, 4.24, 5.08, 5.96],
+  "E*窗s": [2.1, 3.9],
+  "decoy窗s": [0.0, 1.8],
+  "六条件 p(正确)": {
+   "none": 0.9256,
+   "true": 0.9264,
+   "decoy": 0.931,
+   "irr": 0.8782,
+   "twin": 0.8369,
+   "dense_matched": 0.9331
+  },
+  "指标": {
+   "EEG": -0.005,
+   "ERG": 0,
+   "gain_over_dense": -0.0067,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "01e52f38-d5c1-470d-8471-38e1e26228d6",
+  "域": "Gym",
+  "动作": "Leg Press",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "deadlift",
+   "B": "calf raise",
+   "C": "leg press",
+   "D": "squat"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 1.45, 2.9, 4.37, 5.82, 7.29, 8.74, 10.21],
+  "E*窗s": [3.58, 6.65],
+  "decoy窗s": [0.0, 3.07],
+  "六条件 p(正确)": {
+   "none": 0.9984,
+   "true": 0.9968,
+   "decoy": 0.9954,
+   "irr": 0.9976,
+   "twin": 0.948,
+   "dense_matched": 0.998
+  },
+  "指标": {
+   "EEG": 0.0014,
+   "ERG": 0,
+   "gain_over_dense": -0.0012,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0ee3b7b5-f404-4f3e-833a-1ea9142fdbdd",
+  "域": "Neurological Assessments",
+  "动作": "Rapid Alternating Movements",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Neurological Assessments is shown in the video?",
+  "选项": {
+   "A": "pronator drift",
+   "B": "rapid alternating movements",
+   "C": "heel walking",
+   "D": "toe walking"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 0.97, 1.97, 2.97, 3.97, 4.97, 5.97, 6.97],
+  "E*窗s": [2.45, 4.55],
+  "decoy窗s": [0.0, 2.1],
+  "六条件 p(正确)": {
+   "none": 0.9054,
+   "true": 0.9352,
+   "decoy": 0.9568,
+   "irr": 0.8434,
+   "dense_matched": 0.9342
+  },
+  "指标": {
+   "EEG": -0.0228,
+   "ERG": 0,
+   "gain_over_dense": 0.001,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0894c24e-aabc-40e3-a05d-006e7b0bbd97",
+  "域": "Parkour",
+  "动作": "Cartwheel",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Parkour actions is shown in the video?",
+  "选项": {
+   "A": "side flip",
+   "B": "coffee grinder",
+   "C": "aerial",
+   "D": "cartwheel"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.48, 0.97, 1.45, 1.95, 2.43, 2.92, 3.42],
+  "E*窗s": [1.2, 2.23],
+  "decoy窗s": [0.0, 1.03],
+  "六条件 p(正确)": {
+   "none": 0.9435,
+   "true": 0.8443,
+   "decoy": 0.9109,
+   "irr": 0.9247,
+   "twin": 0.5803,
+   "dense_matched": 0.9288
+  },
+  "指标": {
+   "EEG": -0.0759,
+   "ERG": 0,
+   "gain_over_dense": -0.0845,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "099918ae-8618-42cc-844d-9624a74cf122",
+  "域": "Ice Hockey",
+  "动作": "Wrap-around Goal",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Ice Hockey actions is shown in the video?",
+  "选项": {
+   "A": "spinorama",
+   "B": "backhand shot",
+   "C": "wrap-around goal",
+   "D": "drop pass"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.42, 0.83, 1.27, 1.69, 2.12, 2.54, 2.97],
+  "E*窗s": [1.05, 1.94],
+  "decoy窗s": [0.0, 0.9],
+  "六条件 p(正确)": {
+   "none": 0.747,
+   "true": 0.7146,
+   "decoy": 0.6426,
+   "irr": 0.7037,
+   "twin": 0.6453,
+   "dense_matched": 0.6868
+  },
+  "指标": {
+   "EEG": 0.1062,
+   "ERG": 0,
+   "gain_over_dense": 0.0278,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "05230870-c1ec-41a7-87f7-5a2b05c547e6",
+  "域": "Crochet",
+  "动作": "Chain",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Crochet actions is shown in the video?",
+  "选项": {
+   "A": "bullion stitch",
+   "B": "puff stitch",
+   "C": "chain",
+   "D": "slip stitch"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 1.97, 3.97, 5.97, 7.97, 9.97, 11.97, 13.97],
+  "E*窗s": [4.9, 9.1],
+  "decoy窗s": [0.0, 4.2],
+  "六条件 p(正确)": {
+   "none": 0.9874,
+   "true": 0.9734,
+   "decoy": 0.977,
+   "irr": 0.9755,
+   "twin": 0.7838,
+   "dense_matched": 0.9913
+  },
+  "指标": {
+   "EEG": -0.0037,
+   "ERG": 0,
+   "gain_over_dense": -0.0179,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "09f6a069-063d-4d74-9ca1-2e8cdea46751",
+  "域": "Bartending",
+  "动作": "Arm Roll",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Bartending actions is shown in the video?",
+  "选项": {
+   "A": "shaking",
+   "B": "arm roll",
+   "C": "twisting",
+   "D": "dry shaking"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 0.28, 0.56, 0.84, 1.12, 1.4, 1.68, 1.98],
+  "E*窗s": [0.7, 1.3],
+  "decoy窗s": [0.0, 0.6],
+  "六条件 p(正确)": {
+   "none": 0.8838,
+   "true": 0.9561,
+   "decoy": 0.893,
+   "irr": 0.897,
+   "twin": 0.5372,
+   "dense_matched": 0.8905
+  },
+  "指标": {
+   "EEG": 0.0683,
+   "ERG": 0,
+   "gain_over_dense": 0.0656,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "11467317-4fbe-4bf6-967a-cab8d9d80363",
+  "域": "Ice Hockey",
+  "动作": "Tripping",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Ice Hockey actions is shown in the video?",
+  "选项": {
+   "A": "poke check",
+   "B": "spinorama",
+   "C": "drop pass",
+   "D": "tripping"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.53, 1.1, 1.63, 2.2, 2.74, 3.3, 3.87],
+  "E*窗s": [1.37, 2.54],
+  "decoy窗s": [0.0, 1.17],
+  "六条件 p(正确)": {
+   "none": 0.7368,
+   "true": 0.762,
+   "decoy": 0.6921,
+   "irr": 0.6398,
+   "twin": 0.7292,
+   "dense_matched": 0.6063
+  },
+  "指标": {
+   "EEG": 0.0962,
+   "ERG": 0,
+   "gain_over_dense": 0.1557,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0b7c0298-7016-4b5e-926e-96565291142b",
+  "域": "Bartending",
+  "动作": "Ice Stamping",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Bartending actions is shown in the video?",
+  "选项": {
+   "A": "shaking",
+   "B": "bump",
+   "C": "stirring",
+   "D": "ice stamping"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 2.57, 5.13, 7.7, 10.27, 12.83, 15.4, 17.97],
+  "E*窗s": [6.3, 11.7],
+  "decoy窗s": [0.0, 5.4],
+  "六条件 p(正确)": {
+   "none": 0.9938,
+   "true": 0.9956,
+   "decoy": 0.9931,
+   "irr": 0.9938,
+   "twin": 0.3677,
+   "dense_matched": 0.9957
+  },
+  "指标": {
+   "EEG": 0.0025,
+   "ERG": 0,
+   "gain_over_dense": -0.0001,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "08bff6e3-d36b-494d-b90f-a03d44c1b8d1",
+  "域": "Coffee",
+  "动作": "Purging the Steam Wand",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "backflushing",
+   "B": "purging the steam wand",
+   "C": "emptying the drip tray",
+   "D": "rdt (ross droplet technique)"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 0.57, 1.13, 1.7, 2.27, 2.83, 3.4, 3.97],
+  "E*窗s": [1.4, 2.6],
+  "decoy窗s": [0.0, 1.2],
+  "六条件 p(正确)": {
+   "none": 0.7001,
+   "true": 0.5575,
+   "decoy": 0.8933,
+   "irr": 0.6047,
+   "twin": 0.4598,
+   "dense_matched": 0.8703
+  },
+  "指标": {
+   "EEG": -0.4715,
+   "ERG": 0,
+   "gain_over_dense": -0.3128,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "01899db7-94f1-4a95-8cf3-134d3e07dfcf",
+  "域": "Gardening",
+  "动作": "Mulching",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Gardening actions is shown in the video?",
+  "选项": {
+   "A": "top dress",
+   "B": "tamping",
+   "C": "air layering",
+   "D": "mulching"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.7, 1.4, 2.1, 2.84, 3.54, 4.24, 4.97],
+  "E*窗s": [1.75, 3.25],
+  "decoy窗s": [0.0, 1.5],
+  "六条件 p(正确)": {
+   "none": 0.9397,
+   "true": 0.9275,
+   "decoy": 0.967,
+   "irr": 0.9437,
+   "dense_matched": 0.9392
+  },
+  "指标": {
+   "EEG": -0.0417,
+   "ERG": 0,
+   "gain_over_dense": -0.0117,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "04287835-75a6-4709-8b57-94458b42c0ef",
+  "域": "Knots",
+  "动作": "Clove Hitch",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Knots is shown in the video?",
+  "选项": {
+   "A": "killick hitch",
+   "B": "constrictor knot",
+   "C": "cow hitch",
+   "D": "clove hitch"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 5.4, 10.84, 16.24, 21.68, 27.08, 32.52, 37.96],
+  "E*窗s": [13.3, 24.7],
+  "decoy窗s": [0.0, 11.4],
+  "六条件 p(正确)": {
+   "none": 0.7051,
+   "true": 0.6082,
+   "decoy": 0.6177,
+   "irr": 0.6827,
+   "twin": 0.6871,
+   "dense_matched": 0.7395
+  },
+  "指标": {
+   "EEG": -0.0155,
+   "ERG": 0,
+   "gain_over_dense": -0.1313,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "061659fb-7193-4554-9a6e-6169e6169b47",
+  "域": "Coffee",
+  "动作": "Purging the Steam Wand",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "backflushing",
+   "B": "emptying the drip tray",
+   "C": "rdt (ross droplet technique)",
+   "D": "purging the steam wand"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.57, 1.13, 1.7, 2.27, 2.83, 3.4, 3.97],
+  "E*窗s": [1.4, 2.6],
+  "decoy窗s": [0.0, 1.2],
+  "六条件 p(正确)": {
+   "none": 0.9974,
+   "true": 0.9973,
+   "decoy": 0.9974,
+   "irr": 0.9975,
+   "twin": 0.9967,
+   "dense_matched": 0.998
+  },
+  "指标": {
+   "EEG": -0.0001,
+   "ERG": 0,
+   "gain_over_dense": -0.0007,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0eab678d-88b1-445e-8387-4c84c8b7edb3",
+  "域": "Pottery",
+  "动作": "Spiral Wedging",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Pottery actions is shown in the video?",
+  "选项": {
+   "A": "collaring",
+   "B": "pulling the walls",
+   "C": "cone down",
+   "D": "spiral wedging"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 3.4, 6.84, 10.24, 13.68, 17.08, 20.52, 23.96],
+  "E*窗s": [8.4, 15.59],
+  "decoy窗s": [0.0, 7.2],
+  "六条件 p(正确)": {
+   "none": 0.8286,
+   "true": 0.9643,
+   "decoy": 0.6841,
+   "irr": 0.8499,
+   "dense_matched": 0.972
+  },
+  "指标": {
+   "EEG": 0.3433,
+   "ERG": 0,
+   "gain_over_dense": -0.0077,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "01a0acd0-5904-49fc-afd8-e6d539ae8692",
+  "域": "Figure Skating",
+  "动作": "Death Spiral",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Figure Skating actions is shown in the video?",
+  "选项": {
+   "A": "cantilever",
+   "B": "hydroblade",
+   "C": "death spiral",
+   "D": "layback spin"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.97, 1.97, 2.97, 3.97, 4.97, 5.97, 6.97],
+  "E*窗s": [2.45, 4.55],
+  "decoy窗s": [0.0, 2.1],
+  "六条件 p(正确)": {
+   "none": 0.8189,
+   "true": 0.7322,
+   "decoy": 0.7759,
+   "irr": 0.7669,
+   "dense_matched": 0.7624
+  },
+  "指标": {
+   "EEG": -0.058,
+   "ERG": 0,
+   "gain_over_dense": -0.0302,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "02ab07fb-f555-440c-89ab-e8d669abcccb",
+  "域": "Pottery",
+  "动作": "Opening the Clay",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Pottery actions is shown in the video?",
+  "选项": {
+   "A": "burnishing",
+   "B": "throwing off the hump",
+   "C": "collaring",
+   "D": "opening the clay"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 1.77, 3.53, 5.33, 7.1, 8.9, 10.67, 12.47],
+  "E*窗s": [4.38, 8.12],
+  "decoy窗s": [0.0, 3.75],
+  "六条件 p(正确)": {
+   "none": 0.713,
+   "true": 0.8318,
+   "decoy": 0.8409,
+   "irr": 0.8205,
+   "dense_matched": 0.6226
+  },
+  "指标": {
+   "EEG": -0.0109,
+   "ERG": 0,
+   "gain_over_dense": 0.2092,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "03f4167c-d1a3-42dc-82a5-183404b52de1",
+  "域": "Gym",
+  "动作": "Dip",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "tricep pushdown",
+   "B": "dip",
+   "C": "dumbbell shrug",
+   "D": "lateral raise"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 0.7, 1.4, 2.1, 2.8, 3.5, 4.2, 4.94],
+  "E*窗s": [1.74, 3.23],
+  "decoy窗s": [0.0, 1.49],
+  "六条件 p(正确)": {
+   "none": 0.9982,
+   "true": 0.9975,
+   "decoy": 0.997,
+   "irr": 0.9962,
+   "twin": 0.8578,
+   "dense_matched": 0.9978
+  },
+  "指标": {
+   "EEG": 0.0005,
+   "ERG": 0,
+   "gain_over_dense": -0.0003,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0a502966-4400-45b6-ad68-568e401462aa",
+  "域": "Cooking",
+  "动作": "Air-Frying",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cooking actions is shown in the video?",
+  "选项": {
+   "A": "roasting",
+   "B": "smoking",
+   "C": "air-frying",
+   "D": "deep-frying"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 2.56, 5.12, 7.68, 10.24, 12.8, 15.36, 17.96],
+  "E*窗s": [6.3, 11.7],
+  "decoy窗s": [0.0, 5.4],
+  "六条件 p(正确)": {
+   "none": 0.9918,
+   "true": 0.9924,
+   "decoy": 0.9945,
+   "irr": 0.9924,
+   "twin": 0.5787,
+   "dense_matched": 0.9916
+  },
+  "指标": {
+   "EEG": -0.0021,
+   "ERG": 0,
+   "gain_over_dense": 0.0008,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0ed86ca0-f7a9-43bc-b028-efd472aafe08",
+  "域": "Cricket",
+  "动作": "Carrom Ball",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cricket actions is shown in the video?",
+  "选项": {
+   "A": "carrom ball",
+   "B": "googly",
+   "C": "doosra",
+   "D": "arm ball"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.83, 1.67, 2.5, 3.37, 4.2, 5.03, 5.9],
+  "E*窗s": [2.08, 3.86],
+  "decoy窗s": [0.0, 1.78],
+  "六条件 p(正确)": {
+   "none": 0.8137,
+   "true": 0.8188,
+   "decoy": 0.743,
+   "irr": 0.8007,
+   "dense_matched": 0.6901
+  },
+  "指标": {
+   "EEG": 0.0971,
+   "ERG": 0,
+   "gain_over_dense": 0.1287,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "113b31e9-9206-4f8f-afa1-4d79df10d360",
+  "域": "Basketball",
+  "动作": "Jump Shot",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Basketball actions is shown in the video?",
+  "选项": {
+   "A": "jump shot",
+   "B": "euro step",
+   "C": "finger roll layup",
+   "D": "free throw"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.57, 1.13, 1.7, 2.27, 2.84, 3.4, 4.0],
+  "E*窗s": [1.41, 2.62],
+  "decoy窗s": [0.0, 1.21],
+  "六条件 p(正确)": {
+   "none": 0.9627,
+   "true": 0.9713,
+   "decoy": 0.9173,
+   "irr": 0.9394,
+   "twin": 0.9112,
+   "dense_matched": 0.9703
+  },
+  "指标": {
+   "EEG": 0.0572,
+   "ERG": 0,
+   "gain_over_dense": 0.001,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "03cb958d-411e-4f77-addb-e79d68078523",
+  "域": "Gym",
+  "动作": "Chest Fly",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "bent-over row",
+   "B": "lateral raise",
+   "C": "skull crusher",
+   "D": "chest fly"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.83, 1.7, 2.54, 3.4, 4.24, 5.11, 5.97],
+  "E*窗s": [2.1, 3.9],
+  "decoy窗s": [0.0, 1.8],
+  "六条件 p(正确)": {
+   "none": 0.8889,
+   "true": 0.869,
+   "decoy": 0.8689,
+   "irr": 0.8694,
+   "twin": 0.3229,
+   "dense_matched": 0.9094
+  },
+  "指标": {
+   "EEG": 0.0001,
+   "ERG": 0,
+   "gain_over_dense": -0.0404,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "01727300-32d9-4cf2-a462-a8bb2d129d5e",
+  "域": "Cooking",
+  "动作": "Knockback",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cooking actions is shown in the video?",
+  "选项": {
+   "A": "slap and fold",
+   "B": "poke test",
+   "C": "knockback",
+   "D": "dividing dough"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.54, 1.13, 1.67, 2.25, 2.79, 3.38, 3.96],
+  "E*窗s": [1.4, 2.6],
+  "decoy窗s": [0.0, 1.2],
+  "六条件 p(正确)": {
+   "none": 0.9194,
+   "true": 0.9266,
+   "decoy": 0.6379,
+   "irr": 0.9184,
+   "twin": 0.3313,
+   "dense_matched": 0.7085
+  },
+  "指标": {
+   "EEG": 0.3733,
+   "ERG": 0,
+   "gain_over_dense": 0.2181,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "089b7c3f-6082-4047-9007-3fa726f9610e",
+  "域": "Spa Massage",
+  "动作": "Skin Rolling",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Spa Massage techniques is shown in the video?",
+  "选项": {
+   "A": "effleurage",
+   "B": "ischemic compression",
+   "C": "skin rolling",
+   "D": "tapotement hacking"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 3.55, 7.13, 10.68, 14.26, 17.81, 21.4, 24.98],
+  "E*窗s": [8.76, 16.27],
+  "decoy窗s": [0.0, 7.51],
+  "六条件 p(正确)": {
+   "none": 0.9263,
+   "true": 0.8967,
+   "decoy": 0.8706,
+   "irr": 0.9257,
+   "twin": 0.9215,
+   "dense_matched": 0.9484
+  },
+  "指标": {
+   "EEG": 0.0295,
+   "ERG": 0,
+   "gain_over_dense": -0.0517,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0f542aeb-343f-4282-bb31-52c273d1a62a",
+  "域": "Bartending",
+  "动作": "Twisting",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Bartending actions is shown in the video?",
+  "选项": {
+   "A": "ice shaving",
+   "B": "snatch",
+   "C": "twisting",
+   "D": "palm spin"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 0.5, 1.03, 1.57, 2.07, 2.6, 3.13, 3.67],
+  "E*窗s": [1.29, 2.41],
+  "decoy窗s": [0.0, 1.11],
+  "六条件 p(正确)": {
+   "none": 0.8133,
+   "true": 0.8733,
+   "decoy": 0.7761,
+   "irr": 0.794,
+   "twin": 0.2905,
+   "dense_matched": 0.7594
+  },
+  "指标": {
+   "EEG": 0.118,
+   "ERG": 0,
+   "gain_over_dense": 0.1139,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "34bd7239-46e9-4769-8896-ae3a1d8847ac",
+  "域": "Cooking",
+  "动作": "Brunoise Cut",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cooking actions is shown in the video?",
+  "选项": {
+   "A": "brunoise cut",
+   "B": "mincing",
+   "C": "supreming",
+   "D": "grating"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 1.54, 3.09, 4.67, 6.21, 7.8, 9.34, 10.93],
+  "E*窗s": [3.84, 7.13],
+  "decoy窗s": [0.0, 3.29],
+  "六条件 p(正确)": {
+   "none": 0.9049,
+   "true": 0.9544,
+   "decoy": 0.938,
+   "irr": 0.886,
+   "dense_matched": 0.9414
+  },
+  "指标": {
+   "EEG": 0.0173,
+   "ERG": 0,
+   "gain_over_dense": 0.013,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0a2a6f74-6fbb-4d2f-83ba-8daade9d31e4",
+  "域": "Cricket",
+  "动作": "LBW (Leg Before Wicket)",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cricket actions is shown in the video?",
+  "选项": {
+   "A": "lbw (leg before wicket)",
+   "B": "hit wicket",
+   "C": "bowled out",
+   "D": "hit the ball twice"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.83, 1.7, 2.53, 3.4, 4.23, 5.1, 5.97],
+  "E*窗s": [2.1, 3.9],
+  "decoy窗s": [0.0, 1.8],
+  "六条件 p(正确)": {
+   "none": 0.8923,
+   "true": 0.8866,
+   "decoy": 0.8234,
+   "irr": 0.8723,
+   "twin": 0.8804,
+   "dense_matched": 0.8929
+  },
+  "指标": {
+   "EEG": 0.074,
+   "ERG": 0,
+   "gain_over_dense": -0.0063,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0fcda87e-cf07-4a8a-9d86-40c9cd17353c",
+  "域": "Cheerleading",
+  "动作": "Twist Basket Toss",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Cheerleading actions is shown in the video?",
+  "选项": {
+   "A": "twist basket toss",
+   "B": "liberty",
+   "C": "pike jump",
+   "D": "standing back tuck"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.54, 1.12, 1.67, 2.25, 2.79, 3.38, 3.96],
+  "E*窗s": [1.4, 2.6],
+  "decoy窗s": [0.0, 1.2],
+  "六条件 p(正确)": {
+   "none": 0.9511,
+   "true": 0.9643,
+   "decoy": 0.9069,
+   "irr": 0.8919,
+   "twin": 0.6897,
+   "dense_matched": 0.8449
+  },
+  "指标": {
+   "EEG": 0.0614,
+   "ERG": 0,
+   "gain_over_dense": 0.1194,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "11441916-5c1e-43d4-80ab-b158c08ec8bb",
+  "域": "Neurological Abnormalities",
+  "动作": "Tonic Seizure",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Neurological Abnormalities is shown in the video?",
+  "选项": {
+   "A": "hyperreflexia",
+   "B": "orthostatic tremor",
+   "C": "parkinsonian tremor",
+   "D": "tonic seizure"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.28, 0.56, 0.84, 1.12, 1.4, 1.68, 1.96],
+  "E*窗s": [0.7, 1.3],
+  "decoy窗s": [0.0, 0.6],
+  "六条件 p(正确)": {
+   "none": 0.9353,
+   "true": 0.9506,
+   "decoy": 0.8538,
+   "irr": 0.9367,
+   "twin": 0.2287,
+   "dense_matched": 0.9302
+  },
+  "指标": {
+   "EEG": 0.1074,
+   "ERG": 0,
+   "gain_over_dense": 0.0204,
+   "false_resolution": false,
+   "twin_flipped": true
+  }
+ },
+ {
+  "uuid": "1c47ea6a-274d-450f-98bc-26260727428c",
+  "域": "Coffee",
+  "动作": "Blooming",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "blooming",
+   "B": "swirling",
+   "C": "backflushing",
+   "D": "purging the steam wand"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 1.27, 2.53, 3.83, 5.1, 6.4, 7.67, 8.97],
+  "E*窗s": [3.15, 5.85],
+  "decoy窗s": [0.0, 2.7],
+  "六条件 p(正确)": {
+   "none": 0.9881,
+   "true": 0.9832,
+   "decoy": 0.9914,
+   "irr": 0.9762,
+   "twin": 0.705,
+   "dense_matched": 0.9823
+  },
+  "指标": {
+   "EEG": -0.0083,
+   "ERG": 0,
+   "gain_over_dense": 0.0009,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "007f8a76-747f-43d3-b0be-9a0b4fd77ae7",
+  "域": "Gym",
+  "动作": "Dumbbell Shrug",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "deadlift",
+   "B": "hammer curl",
+   "C": "lateral raise",
+   "D": "dumbbell shrug"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.42, 0.83, 1.25, 1.67, 2.09, 2.5, 2.92],
+  "E*窗s": [1.04, 1.92],
+  "decoy窗s": [0.0, 0.89],
+  "六条件 p(正确)": {
+   "none": 0.9277,
+   "true": 0.9108,
+   "decoy": 0.9388,
+   "irr": 0.9062,
+   "dense_matched": 0.9025
+  },
+  "指标": {
+   "EEG": -0.0303,
+   "ERG": 0,
+   "gain_over_dense": 0.0083,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0d72449d-3af3-4d22-bf94-3068a98e616f",
+  "域": "Knots",
+  "动作": "Figure Eight Bend",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Knots is shown in the video?",
+  "选项": {
+   "A": "zeppelin bend",
+   "B": "water knot",
+   "C": "alpine butterfly loop",
+   "D": "figure eight bend"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 2.3, 4.63, 6.97, 9.3, 11.63, 13.97, 16.3],
+  "E*窗s": [5.72, 10.62],
+  "decoy窗s": [0.0, 4.9],
+  "六条件 p(正确)": {
+   "none": 0.8148,
+   "true": 0.7948,
+   "decoy": 0.8461,
+   "irr": 0.7895,
+   "twin": 0.6493,
+   "dense_matched": 0.7999
+  },
+  "指标": {
+   "EEG": -0.0625,
+   "ERG": 0,
+   "gain_over_dense": -0.0051,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "08cd9894-1122-45ab-8351-e291648a7340",
+  "域": "Ice Hockey",
+  "动作": "Faceoff",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Ice Hockey actions is shown in the video?",
+  "选项": {
+   "A": "faceoff",
+   "B": "spinorama",
+   "C": "high sticking",
+   "D": "wrist shot"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.4, 0.83, 1.23, 1.67, 2.07, 2.5, 2.94],
+  "E*窗s": [1.04, 1.93],
+  "decoy窗s": [0.0, 0.89],
+  "六条件 p(正确)": {
+   "none": 0.9841,
+   "true": 0.9814,
+   "decoy": 0.9808,
+   "irr": 0.975,
+   "twin": 0.9615,
+   "dense_matched": 0.985
+  },
+  "指标": {
+   "EEG": 0.0006,
+   "ERG": 0,
+   "gain_over_dense": -0.0036,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "044551b6-a549-4e62-a9c5-c30fe85623d0",
+  "域": "Hand Sewing / Embroidery",
+  "动作": "Flat-felled Seam",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Hand Sewing / Embroidery actions is shown in the video?",
+  "选项": {
+   "A": "flat-felled seam",
+   "B": "prick stitch",
+   "C": "herringbone stitch",
+   "D": "double-fold hem"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 15.7, 31.4, 47.1, 62.83, 78.53, 94.23, 109.97],
+  "E*窗s": [38.5, 71.5],
+  "decoy窗s": [0.0, 33.0],
+  "六条件 p(正确)": {
+   "none": 0.9318,
+   "true": 0.8781,
+   "decoy": 0.9156,
+   "irr": 0.9331,
+   "twin": 0.9268,
+   "dense_matched": 0.9644
+  },
+  "指标": {
+   "EEG": -0.0418,
+   "ERG": 0,
+   "gain_over_dense": -0.0863,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "034b1a50-cd0b-421f-b9d8-9701a10e5bc8",
+  "域": "Ballet",
+  "动作": "Développé",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Ballet actions is shown in the video?",
+  "选项": {
+   "A": "développé",
+   "B": "grand battement",
+   "C": "penché",
+   "D": "fondu"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.4, 0.84, 1.24, 1.68, 2.08, 2.52, 2.96],
+  "E*窗s": [1.05, 1.95],
+  "decoy窗s": [0.0, 0.9],
+  "六条件 p(正确)": {
+   "none": 0.7005,
+   "true": 0.6418,
+   "decoy": 0.6489,
+   "irr": 0.5626,
+   "twin": 0.4721,
+   "dense_matched": 0.6476
+  },
+  "指标": {
+   "EEG": -0.011,
+   "ERG": 0,
+   "gain_over_dense": -0.0058,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "10dd8c9d-055f-4956-a939-19e7959fde0d",
+  "域": "Hand Sewing / Embroidery",
+  "动作": "Cross Stitch",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Hand Sewing / Embroidery actions is shown in the video?",
+  "选项": {
+   "A": "tent stitch",
+   "B": "cross stitch",
+   "C": "burden stitch",
+   "D": "algerian eye stitch"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 1.83, 3.67, 5.54, 7.38, 9.25, 11.08, 12.96],
+  "E*窗s": [4.55, 8.45],
+  "decoy窗s": [0.0, 3.9],
+  "六条件 p(正确)": {
+   "none": 0.8142,
+   "true": 0.7677,
+   "decoy": 0.8086,
+   "irr": 0.8192,
+   "dense_matched": 0.7574
+  },
+  "指标": {
+   "EEG": -0.0519,
+   "ERG": 0,
+   "gain_over_dense": 0.0103,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "f103252e-1db7-4fb2-b65d-4924c410a4fe",
+  "域": "Coffee",
+  "动作": "Blooming",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Coffee preparation actions is shown in the video?",
+  "选项": {
+   "A": "purging the steam wand",
+   "B": "backflushing",
+   "C": "blooming",
+   "D": "swirling"
+  },
+  "正确答案": "C",
+  "粗观测帧时间s": [0.0, 2.54, 5.12, 7.67, 10.25, 12.79, 15.38, 17.96],
+  "E*窗s": [6.3, 11.7],
+  "decoy窗s": [0.0, 5.4],
+  "六条件 p(正确)": {
+   "none": 0.9684,
+   "true": 0.9706,
+   "decoy": 0.9835,
+   "irr": 0.9308,
+   "twin": 0.6543,
+   "dense_matched": 0.9868
+  },
+  "指标": {
+   "EEG": -0.0132,
+   "ERG": 0,
+   "gain_over_dense": -0.0162,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "0c55d7dd-3906-495b-a7c2-8abff09581c8",
+  "域": "Pottery",
+  "动作": "Trimming",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Pottery actions is shown in the video?",
+  "选项": {
+   "A": "trimming",
+   "B": "burnishing",
+   "C": "scoring and slipping",
+   "D": "cone up"
+  },
+  "正确答案": "A",
+  "粗观测帧时间s": [0.0, 0.84, 1.68, 2.52, 3.4, 4.24, 5.08, 5.96],
+  "E*窗s": [2.1, 3.9],
+  "decoy窗s": [0.0, 1.8],
+  "六条件 p(正确)": {
+   "none": 0.993,
+   "true": 0.9922,
+   "decoy": 0.9903,
+   "irr": 0.9908,
+   "dense_matched": 0.9935
+  },
+  "指标": {
+   "EEG": 0.0019,
+   "ERG": 0,
+   "gain_over_dense": -0.0013,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "0a428591-4a70-4a84-b3a7-9e18b436e327",
+  "域": "Gym",
+  "动作": "Bulgarian Split Squat",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Strength Training exercises is shown in the video?",
+  "选项": {
+   "A": "calf raise",
+   "B": "lunge",
+   "C": "squat",
+   "D": "bulgarian split squat"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 0.53, 1.1, 1.67, 2.24, 2.8, 3.37, 3.94],
+  "E*窗s": [1.39, 2.58],
+  "decoy窗s": [0.0, 1.19],
+  "六条件 p(正确)": {
+   "none": 0.9679,
+   "true": 0.9772,
+   "decoy": 0.9726,
+   "irr": 0.9718,
+   "twin": 0.7965,
+   "dense_matched": 0.9801
+  },
+  "指标": {
+   "EEG": 0.0047,
+   "ERG": 0,
+   "gain_over_dense": -0.0029,
+   "false_resolution": false,
+   "twin_flipped": false
+  }
+ },
+ {
+  "uuid": "008765fd-6c82-4652-bc73-6e78fc7da12b",
+  "域": "Gardening",
+  "动作": "Reduction Cut",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Gardening actions is shown in the video?",
+  "选项": {
+   "A": "staking",
+   "B": "air layering",
+   "C": "tamping",
+   "D": "reduction cut"
+  },
+  "正确答案": "D",
+  "粗观测帧时间s": [0.0, 2.13, 4.25, 6.38, 8.55, 10.68, 12.8, 14.97],
+  "E*窗s": [5.26, 9.76],
+  "decoy窗s": [0.0, 4.5],
+  "六条件 p(正确)": {
+   "none": 0.994,
+   "true": 0.993,
+   "decoy": 0.9911,
+   "irr": 0.9906,
+   "dense_matched": 0.9943
+  },
+  "指标": {
+   "EEG": 0.0019,
+   "ERG": 0,
+   "gain_over_dense": -0.0013,
+   "false_resolution": false
+  }
+ },
+ {
+  "uuid": "029cb47f-8a83-4f9d-89ea-037437adf7d1",
+  "域": "Neurological Assessments",
+  "动作": "Tandem Gait (Heel to Toe)",
+  "组": "control",
+  "认证者": "qwen35",
+  "题目": "Which of the following Neurological Assessments is shown in the video?",
+  "选项": {
+   "A": "dysdiadochokinesia",
+   "B": "tandem gait (heel to toe)",
+   "C": "nystagmus",
+   "D": "heel-to-shin test"
+  },
+  "正确答案": "B",
+  "粗观测帧时间s": [0.0, 2.27, 4.53, 6.83, 9.1, 11.4, 13.67, 15.97],
+  "E*窗s": [5.6, 10.4],
+  "decoy窗s": [0.0, 4.8],
+  "六条件 p(正确)": {
+   "none": 0.9954,
+   "true": 0.9968,
+   "decoy": 0.997,
+   "irr": 0.9963,
+   "dense_matched": 0.9947
+  },
+  "指标": {
+   "EEG": -0.0002,
+   "ERG": 0,
+   "gain_over_dense": 0.0021,
+   "false_resolution": false
+  }
+ }
+]

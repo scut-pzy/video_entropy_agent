@@ -1,0 +1,340 @@
+uuid	domain	name	duration	label	text	k8	k32	k8_hi	p_estar	estar_frac	only_window	why
+000a7fef-b82f-4bae-9837-a094e95792d1	Basketball	Spin Move	1.6349666666666667	text_shortcut	0.9334	0.8619	0.8433	0.8932	None	None	False	纯文本 p_gt=0.93，不看视频就能答
+00137990-c517-42f8-a243-4c4c0935984f	Gym	Bicep Curl	2.006289308176101	already_solvable	0.3428	0.7794	0.7805		None	None	False	粗观测 p_gt=0.78（N=0 对照）
+00195682-6175-42a2-b3ec-9a0744084c7b	Tattooing	Push Whip Shading	13.4	unsolvable	0.2591	0.1452	0.1752	0.1351	0.2788	0.1	False	最好的窗只到 p_gt=0.28（<0.6），给了证据也解不了
+00362dfc-64b9-4ecb-beb6-36e07ecde1d8	Yo-yo	Double Trapeze	2.5	unsolvable	0.2135	0.1428	0.1468		0.254	0.3	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+004e5ce0-fef3-4f76-8da2-e5a6e94c3f05	Ice Hockey	Hip Check	2.9696333333333333	borderline	0.4805	0.6349	0.6222	0.6454	0.695	0.1	False	粗观测 0.63 → E* 窗 0.69，提升 +0.06 不足 0.25
+004f237c-7016-4f9e-9d89-39be66ca8230	Knots	Water Knot	88.02126666666666	unsolvable	0.0858	0.0871	0.0645	0.1362	0.1177	0.3	False	最好的窗只到 p_gt=0.12（<0.6），给了证据也解不了
+005202cf-c165-441d-ac78-5a880e4c99a0	Gym	Bent-Over Row	3.5	already_solvable	0.3053	0.7466	0.8789	0.8169	None	None	False	粗观测 p_gt=0.75（N=0 对照）
+0053006d-b0e3-499c-b599-6089def0e5cd	Cooking	Windowpane Test	10.977633333333333	unsolvable	0.1436	0.109	0.0397		0.1764	0.1	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+00569342-c7cb-47cc-93fc-ea05dc7ee2fe	Suturing	Running Subcuticular Stitch	132.6	unsolvable	0.2775	0.2508	0.276	0.3004	0.3958	0.3	False	最好的窗只到 p_gt=0.40（<0.6），给了证据也解不了
+005a8473-9531-4886-b03a-a99d0aa39132	Knots	Hunter's Bend	78.0	unsolvable	0.1439	0.1222	0.125		0.1302	0.1	False	最好的窗只到 p_gt=0.13（<0.6），给了证据也解不了
+00652e15-b64a-445b-a274-fe564592b6d2	Coffee	Purging the Steam Wand	6.0	already_solvable	0.2465	0.8801	0.9401	0.9452	None	None	False	粗观测 p_gt=0.88（N=0 对照）
+006db179-f2b0-448f-b065-e3f0ee4ac6d8	Suturing	Vertical Mattress Suture	103.9038	unsolvable	0.1428	0.2216	0.2005	0.2191	0.2613	0.3	False	最好的窗只到 p_gt=0.26（<0.6），给了证据也解不了
+00723481-cb6a-4f13-8339-7fda9d5867fb	Suturing	Horizontal Mattress Suture	77.91116666666667	unsolvable	0.185	0.0878	0.124	0.0956	0.2152	0.2	False	最好的窗只到 p_gt=0.22（<0.6），给了证据也解不了
+007f8a76-747f-43d3-b0be-9a0b4fd77ae7	Gym	Dumbbell Shrug	2.9612916666666664	unsolvable	0.3187	0.3227	0.3738	0.2912	0.554	0.2	False	最好的窗只到 p_gt=0.55（<0.6），给了证据也解不了
+0085cd4c-8fbb-4815-abd3-d369f3898872	Ballet	Échappé	3.003	unsolvable	0.241	0.3862	0.3821	0.4165	0.4959	0.3	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+008765fd-6c82-4652-bc73-6e78fc7da12b	Gardening	Reduction Cut	15.014999999999999	already_solvable	0.1879	0.9938	0.995	0.997	None	None	False	粗观测 p_gt=0.99（N=0 对照）
+00ba016a-cc19-418b-9079-fe306e3edd0f	Neurological Abnormalities	Absence Seizure	8.0	unsolvable	0.1028	0.233	0.2585	0.3219	0.4304	0.1	False	最好的窗只到 p_gt=0.43（<0.6），给了证据也解不了
+00be7a2a-0e9d-4731-bded-9686158343df	Bartending	Multiplex	2.7	unsolvable	0.1325	0.3093	0.3282		0.1853	0.3	False	最好的窗只到 p_gt=0.19（<0.6），给了证据也解不了
+00bf6a5f-84db-4a8e-88a8-7eb87f760d14	Basketball	Finger Roll Layup	3.9622916666666663	unsolvable	0.3059	0.3654	0.4025	0.365	0.5183	0.1	False	最好的窗只到 p_gt=0.52（<0.6），给了证据也解不了
+01175375-b9a4-4684-93b2-593fcae1fdd6	Neurological Abnormalities	Hyperreflexia	3.003	already_solvable	0.1724	0.8025	0.8784	0.7651	None	None	False	粗观测 p_gt=0.80（N=0 对照）
+012583ae-a242-4b9b-8ec0-b65da2f68069	Cricket	Flipper	3.0	unsolvable	0.2013	0.1017	0.0673	0.1124	0.1048	0.2	False	最好的窗只到 p_gt=0.10（<0.6），给了证据也解不了
+01398ac0-60e5-456d-84c9-7feda60a990f	Tennis	Underhand Serve	4.0	unsolvable	0.2191	0.2408	0.2882		0.2877	0.3	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+013d8ff1-a748-410b-9ef8-5049e66b919d	Figure Skating	Triple Flip	16.016000000000002	unsolvable	0.2998	0.4058	0.3351	0.3115	0.3242	0.2	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+01655f01-94a4-4a0c-a201-65cf65bea20a	Neurological Abnormalities	Areflexia	5.0	already_solvable	0.2563	0.8655	0.9365		None	None	False	粗观测 p_gt=0.87（N=0 对照）
+01727300-32d9-4cf2-a462-a8bb2d129d5e	Cooking	Knockback	4.004	unsolvable	0.045	0.1455	0.0877	0.1396	0.0832	0.2	False	最好的窗只到 p_gt=0.08（<0.6），给了证据也解不了
+017a4228-c34f-42c0-b157-c13eca028c39	Tap Dance	Over the Top	9.125	borderline	0.6803	0.6665	0.8066		0.6936	0.1	False	粗观测 0.67 → E* 窗 0.69，提升 +0.03 不足 0.25
+01899db7-94f1-4a95-8cf3-134d3e07dfcf	Gardening	Mulching	5.005	already_solvable	0.5548	0.9838	0.9849	0.9776	None	None	False	粗观测 p_gt=0.98（N=0 对照）
+018b0b08-2daa-41c7-ac31-fb1e43c254d5	Yo-yo	Spirit Bomb	6.8068	unsolvable	0.2389	0.3574	0.3052	0.3061	0.3074	0.1	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+018c3ec1-ef59-41e6-a652-25f796160631	Tap Dance	Brush	3.003	unsolvable	0.176	0.091	0.1278		0.1138	0.1	False	最好的窗只到 p_gt=0.11（<0.6），给了证据也解不了
+019cc9ab-1ac7-47f8-9dc2-5981b76f7894	Hairstyling	Slide Cutting	3.2	unsolvable	0.224	0.2762	0.2862		0.2951	0.1	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+01a0acd0-5904-49fc-afd8-e6d539ae8692	Figure Skating	Death Spiral	7.007000000000001	borderline	0.377	0.5006	0.3515	0.534	0.6228	0.1	False	粗观测 0.50 → E* 窗 0.62，提升 +0.12 不足 0.25
+01a2142e-9694-4105-a8f1-f0cb8d04c18b	Ballet	Cabriole	3.5035	borderline	0.143	0.5841	0.4858	0.5701	0.8132	0.1	False	粗观测 0.58 → E* 窗 0.81，提升 +0.23 不足 0.25
+01b46e8d-5f35-44f6-8ff2-60ebbfdb0ca3	Cooking	Laminating	23.7	already_solvable	0.2203	0.9497	0.9712	0.9402	None	None	False	粗观测 p_gt=0.95（N=0 对照）
+01bb2b90-8a51-4f8c-a271-e45d3b3f810d	Figure Skating	Double Axel	8.0	unsolvable	0.2062	0.1562	0.1242	0.1502	0.2175	0.1	False	最好的窗只到 p_gt=0.22（<0.6），给了证据也解不了
+01d0ba27-e77c-485b-8917-42b9e4442a75	Figure Skating	Combination Spin	16.005683480295875	borderline	0.2817	0.5356	0.2999		0.6115	0.1	False	粗观测 0.54 → E* 窗 0.61，提升 +0.08 不足 0.25
+01d5a2bd-605d-481c-9fa0-4b07c2a8495b	Pottery	Spiral Wedging	101.0	already_solvable	0.2209	0.9468	0.9842	0.9716	None	None	False	粗观测 p_gt=0.95（N=0 对照）
+01d661b0-b3ec-45fa-898e-c2c6ff8aa07e	Gardening	Hand Pollination	11.3	already_solvable	0.4625	0.9662	0.8998	0.9874	None	None	False	粗观测 p_gt=0.97（N=0 对照）
+01df8fe9-1458-4902-8a3b-1050f816abbe	Cricket	Run Out	10.72	borderline	0.223	0.3973	0.4502	0.4966	0.6224	0.1	False	粗观测 0.40 → E* 窗 0.62，提升 +0.23 不足 0.25
+01e1a46d-a214-43aa-8937-77614a5816fd	Skateboarding	Drop In	5.005	text_shortcut	0.7418	0.5203	0.5408	0.3519	None	None	False	纯文本 p_gt=0.74，不看视频就能答
+01e52f38-d5c1-470d-8471-38e1e26228d6	Gym	Leg Press	10.226883333333333	already_solvable	0.0843	0.9913	0.9859	0.9738	None	None	False	粗观测 p_gt=0.99（N=0 对照）
+0201cd34-e86e-48ea-9c39-a374e7a18120	Basketball	Between-the-Legs Dunk	4.0040000000000004	unsolvable	0.3343	0.2666	0.2887	0.3171	0.4007	0.2	False	最好的窗只到 p_gt=0.40（<0.6），给了证据也解不了
+02044290-676d-4416-91d6-1a670856e0ff	Skateboarding	Fakie Big Flip	3.4	unsolvable	0.3576	0.3187	0.3535	0.3055	0.3501	0.3	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+02095156-b0ef-43b4-8ebf-360707203b19	Woodworking / Whittling	Pull Cut	7.007000000000001	unsolvable	0.4011	0.5456	0.4968	0.4683	0.4243	0.1	False	最好的窗只到 p_gt=0.42（<0.6），给了证据也解不了
+02112da3-b26a-4f51-99bb-7da86e189d5b	Juggling	Multiplex	4.0040000000000004	borderline	0.3265	0.5904	0.6036	0.6059	0.7268	0.1	False	粗观测 0.59 → E* 窗 0.73，提升 +0.14 不足 0.25
+0247c7f4-8809-476d-b59f-17ad1348fae0	Tattooing	Color Packing	3.0	unsolvable	0.1237	0.0679	0.0543	0.0991	0.0674	0.1	False	最好的窗只到 p_gt=0.07（<0.6），给了证据也解不了
+02517c8a-9f04-49ca-b413-20c6185d0b0d	Parkour	Lazy Vault	3.5035000000000003	unsolvable	0.2107	0.4611	0.4958	0.4827	0.5022	0.1	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+02536410-7c8b-4c12-a484-4d97882ebcaa	Knots	Constrictor Knot	23.990633333333335	unsolvable	0.1686	0.232	0.2193	0.2154	0.3016	0.3	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+0256d9bf-f914-4604-a203-071ca6dfa33f	Figure Skating	Three Turn	2.2022	unsolvable	0.1854	0.2494	0.2295	0.2353	0.1976	0.1	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+0259b562-8c9c-4502-be78-4b164ff556be	Ice Hockey	Hip Check	3.003	unsolvable	0.5332	0.2508	0.2126	0.3382	0.5238	0.1	False	最好的窗只到 p_gt=0.52（<0.6），给了证据也解不了
+025c96d6-8e6a-400c-84b2-118453cb56a3	Bouldering	Knee Bar	4.0	unsolvable	0.0921	0.1785	0.1519		0.3176	0.3	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+0269246f-25bb-45e5-81fe-73ba8fffef98	Suturing	Horizontal Mattress Suture	211.01080000000002	unsolvable	0.1981	0.2287	0.1926	0.1858	0.338	0.2	False	最好的窗只到 p_gt=0.34（<0.6），给了证据也解不了
+028b3264-3adb-4bd6-b9dd-860848a4e453	Pen Spinning	Sonic	2.5	unsolvable	0.1987	0.1476	0.1525	0.1274	0.1824	0.3	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+028dc6a7-e866-4e30-acc7-5f8e59296915	Cheerleading	Liberty	7.0	unsolvable	0.2979	0.3041	0.2639		0.2916	0.1	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+029118f2-d436-4d18-b87a-3b37de9a9b90	Yo-yo	Milk the Cow	6.006	unsolvable	0.298	0.146	0.1234	0.1687	0.1756	0.1	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+029cb47f-8a83-4f9d-89ea-037437adf7d1	Neurological Assessments	Tandem Gait (Heel to Toe)	16.0	already_solvable	0.186	0.9277	0.9732	0.9308	None	None	False	粗观测 p_gt=0.93（N=0 对照）
+02a57b80-1cfa-4eba-89a4-9b65af7ca8ce	Break Dance	Head Spin	3.0	borderline	0.335	0.5118	0.5907		0.7196	0.1	False	粗观测 0.51 → E* 窗 0.72，提升 +0.21 不足 0.25
+02ab07fb-f555-440c-89ab-e8d669abcccb	Pottery	Opening the Clay	12.5	unsolvable	0.1245	0.3441	0.3183		0.4964	0.1	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+02ab088f-5409-4eec-a6ce-9d97af38f860	Coffee	Swirling	2.002	already_solvable	0.0505	0.7994	0.8744	0.8104	None	None	False	粗观测 p_gt=0.80（N=0 对照）
+02ad21c3-8874-43fa-ae15-1fac34e3b5a2	American Football	Trap	8.933333333333334	unsolvable	0.1924	0.3145	0.2581	0.254	0.4856	0.2	False	最好的窗只到 p_gt=0.49（<0.6），给了证据也解不了
+02b2cea0-887e-4297-ad50-5da08afb1dce	Tennis	Squash Shot	4.0	unsolvable	0.0949	0.1001	0.1143	0.1589	0.1484	0.2	False	最好的窗只到 p_gt=0.15（<0.6），给了证据也解不了
+02b39c36-e5f9-414d-b855-19128c3a6a92	Bouldering	Deadpoint	2.7083333333333335	unsolvable	0.1799	0.091	0.1023	0.0685	0.1621	0.2	False	最好的窗只到 p_gt=0.16（<0.6），给了证据也解不了
+02b8d51f-c42d-4233-9085-c125420e62db	Basketball	Behind-the-Back Pass	4.0	unsolvable	0.4475	0.3169	0.3084		0.4028	0.2	False	最好的窗只到 p_gt=0.40（<0.6），给了证据也解不了
+02bc30b2-8bbd-4202-9342-00251650f8ad	Tap Dance	Riffle	2.5025	unsolvable	0.0596	0.0355	0.0294	0.0429	0.0466	0.2	False	最好的窗只到 p_gt=0.05（<0.6），给了证据也解不了
+02de3c88-a69c-4c48-bc99-fa14c28bc28e	Tennis	Behind-the-Back	2.9696333333333333	unsolvable	0.1384	0.0622	0.0283		0.0747	0.1	False	最好的窗只到 p_gt=0.07（<0.6），给了证据也解不了
+02fb0f6f-e1ac-45cc-bdbd-e49e48c9f229	Break Dance	Kip Up	2.002	unsolvable	0.2773	0.3753	0.4837	0.4519	0.3993	0.1	False	最好的窗只到 p_gt=0.40（<0.6），给了证据也解不了
+02fe3aa3-d91c-46e4-b6ba-b787c643c502	Skateboarding	Laser Flip	2.4024024024024024	unsolvable	0.1421	0.1272	0.1172		0.1804	0.2	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+03038de6-5e23-4c76-b3d6-f3178185dc80	Basketball	Corner Three	3.0	unsolvable	0.2208	0.0052	0.0085		0.0069	0.1	False	最好的窗只到 p_gt=0.01（<0.6），给了证据也解不了
+0304365f-9b86-414b-ba93-ca8d4ab71e6b	Ice Hockey	Delay of Game	5.9726333333333335	unsolvable	0.0382	0.0887	0.1921	0.1466	0.4227	0.1	False	最好的窗只到 p_gt=0.42（<0.6），给了证据也解不了
+031a20cd-1e23-4243-8ddb-ab478f6b166a	Knots	Rolling Hitch	16.5	unsolvable	0.1728	0.0733	0.0575	0.0734	0.0891	0.1	False	最好的窗只到 p_gt=0.09（<0.6），给了证据也解不了
+033a8ca2-4189-45dc-905d-d4f015f35ca6	Crochet	Bobble Stitch	49.4	unsolvable	0.1938	0.3646	0.3012	0.2912	0.3575	0.1	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+033f044b-7bac-4a4f-8b67-173d292b6967	Painting	Stippling	2.0	unsolvable	0.3164	0.5128	0.4219	0.2565	0.5006	0.2	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+034b1a50-cd0b-421f-b9d8-9701a10e5bc8	Ballet	Développé	3.0	already_solvable	0.463	0.7197	0.762	0.7004	None	None	False	粗观测 p_gt=0.72（N=0 对照）
+0357a9e5-a503-410e-b828-a4243fef871c	Hand Sewing / Embroidery	Double-fold Hem	45.011633333333336	unsolvable	0.0189	0.3597	0.437	0.3912	0.4432	0.1	False	最好的窗只到 p_gt=0.44（<0.6），给了证据也解不了
+0366fe50-7de7-4b5a-8bd1-af8fa3013e66	Parkour	Aerial	2.52	unsolvable	0.2235	0.1084	0.0881	0.0563	0.2619	0.1	False	最好的窗只到 p_gt=0.26（<0.6），给了证据也解不了
+0367d739-3a76-4d25-8452-b58424421cc1	Crochet	Decrease / Single Crochet Decrease	20.0	unsolvable	0.3803	0.2082	0.1322	0.1977	0.1819	0.2	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+036975ea-c469-404d-a129-2bbbc0ab0d22	Yo-yo	Electric Fan	21.980291666666666	unsolvable	0.1001	0.1584	0.2095	0.1651	0.2356	0.2	False	最好的窗只到 p_gt=0.24（<0.6），给了证据也解不了
+03719652-1e54-4997-9e95-60e3a5332ca5	Skateboarding	Smith Grind	3.5035000000000003	unsolvable	0.3649	0.4244	0.3561	0.426	0.4769	0.1	False	最好的窗只到 p_gt=0.48（<0.6），给了证据也解不了
+037bdc28-dc09-4df1-9fae-ac5ea3d227db	Cooking	Poke Test	6.965291666666666	already_solvable	0.2849	0.9678	0.9725	0.971	None	None	False	粗观测 p_gt=0.97（N=0 对照）
+0381ecd5-ea0f-4688-b7e9-193fa8e67641	Skateboarding	5-0 Grind	3.003	borderline	0.3429	0.4845	0.5511	0.6437	0.6322	0.3	False	粗观测 0.48 → E* 窗 0.63，提升 +0.15 不足 0.25
+0386d539-9588-479d-af16-6e3ee5b397c5	Tap Dance	Toe Stand	2.002002002002002	unsolvable	0.4031	0.2611	0.2708	0.3749	0.2471	0.1	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+038acf71-726e-4fe9-9555-14940158c520	Knots	Diamond Knot	197.0	unsolvable	0.2013	0.2774	0.2508	0.2848	0.2853	0.1	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+03951c2d-fb23-4b59-9ed5-6e4088af3923	Hand Sewing / Embroidery	Quilter's Knot	51.017633333333336	borderline	0.0894	0.6617	0.5695	0.7162	0.8042	0.1	False	粗观测 0.66 → E* 窗 0.80，提升 +0.14 不足 0.25
+03a7c027-7630-4fb6-93fc-94cdc90c176e	Juggling	Takeouts	2.7027	unsolvable	0.2804	0.2212	0.2149	0.2272	0.2856	0.1	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+03b92521-180a-4530-9308-e26d99a23319	Skateboarding	Hardflip	4.783333333333333	already_solvable	0.2402	0.7147	0.7114	0.7869	None	None	False	粗观测 p_gt=0.71（N=0 对照）
+03ba05ca-8793-4718-9dad-5ef56ae85b42	Yo-yo	Vertical Punches	2.0020000000000002	borderline	0.3496	0.4276	0.4706	0.4226	0.6761	0.1	False	粗观测 0.43 → E* 窗 0.68，提升 +0.25 不足 0.25
+03bebaab-b371-4d42-b04d-91bd38e35e68	Bartending	Nest	2.3023000000000002	unsolvable	0.0597	0.0828	0.0406		0.1136	0.1	False	最好的窗只到 p_gt=0.11（<0.6），给了证据也解不了
+03cad0dd-8a5a-4ac6-8f44-7a7cfffbe739	Basketball	Crossover	4.0	already_solvable	0.5728	0.7788	0.687	0.7675	None	None	False	粗观测 p_gt=0.78（N=0 对照）
+03cb958d-411e-4f77-addb-e79d68078523	Gym	Chest Fly	6.006	borderline	0.0519	0.6091	0.4074	0.6036	0.6625	0.1	False	粗观测 0.61 → E* 窗 0.66，提升 +0.05 不足 0.25
+03d5358d-8a65-48ac-aa3f-b7a528f8970d	Bouldering	Smearing	4.0	unsolvable	0.3517	0.2898	0.4233	0.3882	0.3859	0.2	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+03e4536f-9900-4514-9b3c-a6397abae7f9	Ballet	Fondu	11.0	unsolvable	0.3412	0.2066	0.1645	0.2085	0.1657	0.2	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+03ec3c45-4f15-4073-b161-6378fb2c034c	Bouldering	Palm Press	8.03448275862069	unsolvable	0.1873	0.2479	0.2065		0.3502	0.3	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+03ed6c10-7206-41df-bec9-e3637b2c4869	Figure Skating	Triple Flip	8.8088	unsolvable	0.4103	0.3725	0.3611	0.3471	0.3828	0.1	False	最好的窗只到 p_gt=0.38（<0.6），给了证据也解不了
+03f196fc-139c-41d5-9834-4f6842fd7325	Skateboarding	No Comply 180	3.6333333333333333	unsolvable	0.2628	0.1922	0.2302		0.227	0.1	False	最好的窗只到 p_gt=0.23（<0.6），给了证据也解不了
+03f4167c-d1a3-42dc-82a5-183404b52de1	Gym	Dip	4.971633333333333	already_solvable	0.1865	0.9992	0.9987	0.9997	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+03f68394-052b-4a08-a27b-f09c13f65e5d	Ice Hockey	Slap Shot	2.6026000000000002	already_solvable	0.6096	0.9262	0.8688	0.9229	None	None	False	粗观测 p_gt=0.93（N=0 对照）
+0404e944-5716-4634-90f4-6ce8bd584711	American Football	Trap	5.338666666666667	unsolvable	0.2348	0.3752	0.342	0.4232	0.3607	0.1	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+041f9c5f-0b22-4173-b777-9394ba5fff6c	Parkour	Kash Vault	2.4024	unsolvable	0.084	0.0399	0.0642	0.0504	0.0737	0.2	False	最好的窗只到 p_gt=0.07（<0.6），给了证据也解不了
+04221b07-499a-4ad1-a1af-6eb6fa8972ca	Gym	Dumbbell Shrug	4.0040000000000004	unsolvable	0.3708	0.5121	0.5105		0.5307	0.1	False	最好的窗只到 p_gt=0.53（<0.6），给了证据也解不了
+042250b4-6df9-42d1-8f44-2048d39e3459	Cheerleading	Pancake	5.0	unsolvable	0.3199	0.1452	0.157		0.2386	0.1	False	最好的窗只到 p_gt=0.24（<0.6），给了证据也解不了
+04287835-75a6-4709-8b57-94458b42c0ef	Knots	Clove Hitch	38.0	unsolvable	0.5239	0.3865	0.3099	0.3732	0.4653	0.2	False	最好的窗只到 p_gt=0.47（<0.6），给了证据也解不了
+04322fb8-2c2d-445d-83cd-3ef02a5eb536	Ice Hockey	Drop Pass	4.0040000000000004	unsolvable	0.1436	0.0588	0.0666	0.0476	0.1482	0.3	False	最好的窗只到 p_gt=0.15（<0.6），给了证据也解不了
+044551b6-a549-4e62-a9c5-c30fe85623d0	Hand Sewing / Embroidery	Flat-felled Seam	110.0	already_solvable	0.0067	0.8637	0.8822	0.9073	None	None	False	粗观测 p_gt=0.86（N=0 对照）
+04535232-c315-4697-a2ed-8218cd7c5342	American Football	Bootleg	15.0	borderline	0.3667	0.6647	0.7861		0.9071	0.1	False	粗观测 0.66 → E* 窗 0.91，提升 +0.24 不足 0.25
+0469cd05-3105-47c9-8fce-ee6508ad8247	Spa Massage	Ischemic Compression	30.997633333333333	unsolvable	0.151	0.6724	0.5957	0.5906	0.5956	0.2	False	最好的窗只到 p_gt=0.60（<0.6），给了证据也解不了
+04776104-5ae0-4fb3-a54d-8c41644cb4a6	Salsa	Setenta	18.485133333333334	unsolvable	0.2508	0.2154	0.1882	0.1924	0.2662	0.1	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+047d3384-c4dc-40c1-89a5-ce184f632dbf	Hand Sewing / Embroidery	Buttonhole Stitch	11.0	unsolvable	0.3096	0.1431	0.12	0.1452	0.1737	0.1	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+04960c4f-0c65-4bf1-b462-5a910427e9ce	Yo-yo	Electric Fan	8.8088	unsolvable	0.0992	0.2188	0.2529	0.2426	0.326	0.2	False	最好的窗只到 p_gt=0.33（<0.6），给了证据也解不了
+04b42a56-8ff7-41b2-986c-5a9e2c563367	Yo-yo	Slack Trapeze	7.007000000000001	unsolvable	0.0941	0.1371	0.0942		0.2109	0.1	False	最好的窗只到 p_gt=0.21（<0.6），给了证据也解不了
+04b81bef-009a-4ddb-a7a9-2bad4baa40d1	Bouldering	Heel Hook	3.0	unsolvable	0.2075	0.4013	0.4782	0.3103	0.4586	0.3	False	最好的窗只到 p_gt=0.46（<0.6），给了证据也解不了
+04bedfa4-7c52-4b52-a909-40df067d307c	American Football	ISO	14.133333333333333	unsolvable	0.294	0.2395	0.264	0.2054	0.3012	0.3	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+04c08527-4beb-436c-a75e-d1b4de719ed8	Coffee	Backflushing	20.32	unsolvable	0.1033	0.2442	0.1389		0.582	0.1	False	最好的窗只到 p_gt=0.58（<0.6），给了证据也解不了
+04c11717-6caf-4605-9ad9-960cd006e504	Break Dance	Deadman	2.9612916666666664	unsolvable	0.192	0.3978	0.4923	0.4983	0.4756	0.1	False	最好的窗只到 p_gt=0.48（<0.6），给了证据也解不了
+04c7cdb8-c8bd-47f1-9120-a796111f6dbf	Juggling	Fake Columns	4.0	unsolvable	0.1907	0.2235	0.2081		0.3909	0.2	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+04f282a0-7f54-48ec-a4e0-0a304904e8b7	Yo-yo	White Buddha	26.234541666666665	unsolvable	0.171	0.1343	0.1511	0.1788	0.1934	0.2	False	最好的窗只到 p_gt=0.19（<0.6），给了证据也解不了
+04faf2c8-51d0-45e0-89e3-02dc9334a8cc	Neurological Abnormalities	Myoclonic Seizure	3.9706333333333332	already_solvable	0.2466	0.9401	0.8473	0.9281	None	None	False	粗观测 p_gt=0.94（N=0 对照）
+0512a3f2-941f-45cc-a02b-4597bd14fc6a	Neurological Abnormalities	Absence Seizure	14.005571030640668	borderline	0.1109	0.5341	0.5406		0.7238	0.1	False	粗观测 0.53 → E* 窗 0.72，提升 +0.19 不足 0.25
+0517e1ba-a724-4a96-8b02-e04d1017f71a	Neurological Abnormalities	Dystonic Tremor	3.9622916666666663	unsolvable	0.2113	0.4002	0.3919	0.4081	0.4792	0.1	False	最好的窗只到 p_gt=0.48（<0.6），给了证据也解不了
+05230870-c1ec-41a7-87f7-5a2b05c547e6	Crochet	Chain	14.0	unsolvable	0.3385	0.3755	0.2487		0.379	0.1	False	最好的窗只到 p_gt=0.38（<0.6），给了证据也解不了
+052d599c-2902-4744-bec5-fb1d180aae3b	Cheerleading	Scorpion	15.999315825482869	unsolvable	0.2849	0.4479	0.4663	0.4088	0.4451	0.1	False	最好的窗只到 p_gt=0.45（<0.6），给了证据也解不了
+052e49d8-674a-4fc8-a083-7ec6069712ac	Cricket	Slower Ball	3.8333333333333335	unsolvable	0.1095	0.1017	0.142	0.1202	0.1409	0.1	False	最好的窗只到 p_gt=0.14（<0.6），给了证据也解不了
+053408fe-4bd4-4787-be73-34997b097a62	Knots	Midshipman's Hitch	36.0	borderline	0.3916	0.6303	0.6479	0.609	0.726	0.1	False	粗观测 0.63 → E* 窗 0.73，提升 +0.10 不足 0.25
+0539a82d-7c7c-474a-9f0c-9c604c6efae5	Knots	Single Sheet Bend	14.708333333333334	unsolvable	0.3363	0.2511	0.1909	0.2545	0.1778	0.1	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+0543442b-b5bb-4d6f-a7b9-a9f9ccb46c86	Bartending	Shaking	9.008999999999999	already_solvable	0.6839	0.9973	0.9979	0.9975	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+05645735-ed75-42a7-a51e-eb3c183ef5e9	Calligraphy	Downstroke	1.9602916666666665	unsolvable	0.4287	0.192	0.4579	0.2702	0.1434	0.1	False	最好的窗只到 p_gt=0.14（<0.6），给了证据也解不了
+05671564-8295-4dc7-bfb2-f61147ce4929	Woodworking / Whittling	Stop Cut	35.0	unsolvable	0.1577	0.1145	0.158	0.1074	0.2951	0.1	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+057f1d43-0c5a-4acc-ab72-e9e194be1b50	Ballet	Grand Battement	3.0	unsolvable	0.1903	0.2407	0.2335		0.2968	0.3	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+05a33d78-d8b5-43e7-8eed-9ab5b9d6b1e7	Neurological Abnormalities	Myoclonic Seizure	4.0	unsolvable	0.2341	0.1055	0.0559		0.1451	0.1	False	最好的窗只到 p_gt=0.15（<0.6），给了证据也解不了
+05e41937-11ad-4b33-84b5-6d4e9529f9a2	Yo-yo	Rock the Baby	6.083333333333333	unsolvable	0.2817	0.2882	0.2832	0.2774	0.3643	0.1	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+060879ea-39fb-45cb-8744-e53a0ee3dddf	Parkour	Gainer	2.5	unsolvable	0.2003	0.4415	0.4459		0.562	0.1	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+060f565c-1f1e-41a5-90f1-5f0b1cda6377	Knots	Rolling Hitch	25.0	unsolvable	0.1768	0.1337	0.106	0.0973	0.1657	0.1	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+061659fb-7193-4554-9a6e-6169e6169b47	Coffee	Purging the Steam Wand	4.0	already_solvable	0.3456	0.9858	0.9862	0.989	None	None	False	粗观测 p_gt=0.99（N=0 对照）
+062a56ff-e076-430c-a908-591411550db4	Salsa	Copa	6.006	unsolvable	0.1695	0.1997	0.166	0.2082	0.2633	0.1	False	最好的窗只到 p_gt=0.26（<0.6），给了证据也解不了
+0638aa66-6b90-4da1-9662-b4c1f81dcb0b	American Football	Chop Block	23.023	unsolvable	0.4209	0.2234	0.2375	0.2491	0.3533	0.3	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+06481e5e-ab86-4a0b-b047-f97c2e0e71a3	Neurological Assessments	Rapid Alternating Movements	6.0	borderline	0.3434	0.4647	0.521	0.5465	0.6883	0.1	False	粗观测 0.46 → E* 窗 0.69，提升 +0.22 不足 0.25
+0675eb89-458a-4177-8419-cb14bd1d1f4e	Crochet	Half Double Crochet	52.177125	unsolvable	0.1639	0.4124	0.3648	0.3571	0.5303	0.2	False	最好的窗只到 p_gt=0.53（<0.6），给了证据也解不了
+067f2f45-0413-4f9f-bb3e-73832f0aa98d	Pottery	Spiral Wedging	9.16	already_solvable	0.2778	0.888	0.9406	0.9367	None	None	False	粗观测 p_gt=0.89（N=0 对照）
+0686fe1d-2d89-4fce-baf2-7149aaca67ab	Basketball	Block	2.0	evidence_required	0.2965	0.449	0.352	0.2692	0.7732	0.1	True	粗观测 0.45 → E* 窗 0.77（+0.32）；只有定位到窗才行
+0690d8b2-c9b9-4528-9a1b-6ddbc76712df	Tennis	Ace	7.0	unsolvable	0.1173	0.1676	0.1603	0.2253	0.1992	0.2	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+069d560d-7270-41d0-a4da-e660db2d6da1	Crochet	Puff Stitch	47.514133333333334	unsolvable	0.4055	0.2836	0.3421	0.2921	0.3105	0.1	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+06a07ca8-3aa2-4a27-be18-afd7b3af8db3	Cricket	Outswinger	4.3	unsolvable	0.1972	0.2375	0.3256	0.3023	0.5558	0.2	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+06a66a3d-96ef-4c5c-b9d8-9b4099b20607	Bouldering	Stemming	4.971633333333333	unsolvable	0.5203	0.3074	0.3692		0.4626	0.3	False	最好的窗只到 p_gt=0.46（<0.6），给了证据也解不了
+06b72fc3-1102-4531-b738-7cf851673fc8	Bouldering	Bicycle	5.0	unsolvable	0.0177	0.0305	0.0446	0.0232	0.028	0.2	False	最好的窗只到 p_gt=0.03（<0.6），给了证据也解不了
+06b86d66-0628-45f6-8bd9-4dc6a8c3b82f	Parkour	Coffee Grinder	3.3033	evidence_required	0.2857	0.3782	0.4204	0.3809	0.9493	0.1	True	粗观测 0.38 → E* 窗 0.95（+0.57）；只有定位到窗才行
+06edbba3-b972-4b88-b6b7-408c8ade5ea7	Parkour	Muscle Up	3.9622916666666663	already_solvable	0.0248	0.9224	0.9096	0.9389	None	None	False	粗观测 p_gt=0.92（N=0 对照）
+06f1b59b-a3fa-4422-b612-364966d7da37	Hand Sewing / Embroidery	Split Stitch	11.011000000000001	unsolvable	0.2	0.1882	0.2025	0.2013	0.1968	0.1	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+06f589e4-228e-47c6-875d-3a046c68eff4	Cricket	Hit the Ball Twice	6.0	evidence_required	0.1473	0.126	0.0683	0.2648	0.6963	0.3	True	粗观测 0.13 → E* 窗 0.70（+0.57）；只有定位到窗才行
+07050483-71b5-4f84-9848-054a09cfd832	Bartending	Helicopter	4.0	borderline	0.0707	0.4604	0.4446	0.4086	0.6028	0.1	False	粗观测 0.46 → E* 窗 0.60，提升 +0.14 不足 0.25
+0735141f-75ba-4c11-904d-f2922f310649	Pen Spinning	Infinity	4.0	unsolvable	0.2969	0.2696	0.2903	0.2699	0.2964	0.2	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+077c21f0-bed3-49b6-9495-b5b161282971	Parkour	Lazy Vault	3.5035000000000003	unsolvable	0.2889	0.5269	0.5219	0.5677	0.536	0.1	False	最好的窗只到 p_gt=0.54（<0.6），给了证据也解不了
+078b65bb-ddf2-4d9a-b299-d28b963749d2	Bouldering	Pogo / Moon Kick	10.0	unsolvable	0.2482	0.052	0.0701	0.0676	0.1492	0.1	False	最好的窗只到 p_gt=0.15（<0.6），给了证据也解不了
+0791f026-3634-4816-b67d-cdde7f57b460	Yo-yo	Brain Twister	7.5075	unsolvable	0.1794	0.1623	0.2474	0.1935	0.1997	0.3	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+07945539-9cd0-4207-aab9-c17c2af07f08	Cricket	Helicopter Shot	8.0	unsolvable	0.2491	0.2113	0.2381		0.3376	0.1	False	最好的窗只到 p_gt=0.34（<0.6），给了证据也解不了
+07b135e9-ab18-4f7b-b1cb-b681e3c8e95b	Knots	Rolling Hitch	59.02563333333333	unsolvable	0.1728	0.1089	0.0799	0.0813	0.1321	0.1	False	最好的窗只到 p_gt=0.13（<0.6），给了证据也解不了
+07b1dfbd-2a06-491e-9fb8-1be978a7b783	Parkour	Speed Vault	3.003	unsolvable	0.3337	0.3136	0.2692	0.342	0.4234	0.1	False	最好的窗只到 p_gt=0.42（<0.6），给了证据也解不了
+07d4d07f-b881-47b8-900e-63b7988895e5	Basketball	Lane Violation	7.533333333333333	unsolvable	0.1867	0.1202	0.1113	0.1077	0.0969	0.3	False	最好的窗只到 p_gt=0.10（<0.6），给了证据也解不了
+07de0bed-2fa9-4567-86cc-b2491fe00df7	Cooking	Julienne Cut	6.005999999999999	already_solvable	0.087	0.9906	0.982	0.9903	None	None	False	粗观测 p_gt=0.99（N=0 对照）
+07f0f879-c79f-4d19-937a-9776afc05375	Ballet	Retiré	5.0	unsolvable	0.266	0.4238	0.3925	0.2941	0.4481	0.1	False	最好的窗只到 p_gt=0.45（<0.6），给了证据也解不了
+07f6d423-dce5-4a9d-9bf5-5c8572aa02e7	Knots	Mooring Hitch	38.0	unsolvable	0.1151	0.0914	0.0708	0.1013	0.1298	0.2	False	最好的窗只到 p_gt=0.13（<0.6），给了证据也解不了
+07f8f57c-13a3-4f43-bfaf-c11e0f74e51c	Basketball	Crossover	3.0	borderline	0.626	0.5718	0.6149	0.6427	0.7527	0.1	False	粗观测 0.57 → E* 窗 0.75，提升 +0.18 不足 0.25
+082ebbfd-5404-444d-b383-cc19fb112402	Bharatanatyam	Visharu Adavu	49.0	unsolvable	0.2107	0.2406	0.2544	0.2577	0.2606	0.1	False	最好的窗只到 p_gt=0.26（<0.6），给了证据也解不了
+083580c4-2285-4241-820d-af9dff799e95	American Football	Block in the Back	7.007000000000001	unsolvable	0.1879	0.192	0.2628	0.1843	0.1449	0.1	False	最好的窗只到 p_gt=0.14（<0.6），给了证据也解不了
+0845a043-7931-4c80-b799-eddce60ad099	Coffee	Knocking Out the Puck	3.1333333333333333	unsolvable	0.3172	0.4276	0.5255	0.4894	0.5633	0.1	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+0845ab07-098f-4a65-ad06-14e3fefe7587	American Football	Fair Catch	2.0	unsolvable	0.1328	0.0976	0.322		0.253	0.1	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+085c3bb0-f11b-4302-ab24-05788ad7a57b	Parkour	Muscle Up	3.0	already_solvable	0.0284	0.8695	0.8349	0.8866	None	None	False	粗观测 p_gt=0.87（N=0 对照）
+08658793-6815-449e-9fc5-9ebe5d6bab20	Pen Spinning	Thumb Around Reverse	1.6666666666666667	unsolvable	0.3454	0.2893	0.3121	0.2999	0.3175	0.1	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+0871038d-99fc-44ab-95c8-d96086276b5b	Hand Sewing / Embroidery	Sheaf Stitch	51.0	unsolvable	0.1169	0.1798	0.2124	0.1365	0.3132	0.2	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+0880bbfb-8bb8-4726-a2bc-c6bc41752dab	Yo-yo	Creeper	4.0040000000000004	unsolvable	0.2153	0.2147	0.2035		0.2764	0.1	False	最好的窗只到 p_gt=0.28（<0.6），给了证据也解不了
+088b561d-aa8a-4cb5-89a5-bf06635d5f96	Cricket	Off Cutter	2.6333333333333333	unsolvable	0.2168	0.202	0.1804	0.2018	0.2302	0.1	False	最好的窗只到 p_gt=0.23（<0.6），给了证据也解不了
+0893e529-f073-41d9-b660-a3591f993b1e	Tennis	Underhand Serve	3.9706333333333332	unsolvable	0.2191	0.3133	0.4241	0.249	0.4706	0.1	False	最好的窗只到 p_gt=0.47（<0.6），给了证据也解不了
+0894c24e-aabc-40e3-a05d-006e7b0bbd97	Parkour	Cartwheel	3.433333333333333	already_solvable	0.0628	0.7435	0.8679	0.7448	None	None	False	粗观测 p_gt=0.74（N=0 对照）
+089b7c3f-6082-4047-9007-3fa726f9610e	Spa Massage	Skin Rolling	25.025	already_solvable	0.0859	0.8722	0.9555	0.955	None	None	False	粗观测 p_gt=0.87（N=0 对照）
+08bff6e3-d36b-494d-b90f-a03d44c1b8d1	Coffee	Purging the Steam Wand	4.0	already_solvable	0.3231	0.7068	0.6983	0.7711	None	None	False	粗观测 p_gt=0.71（N=0 对照）
+08c38cbd-45db-46ae-85de-c873961906fd	Cooking	Press and Push	3.003	unsolvable	0.0205	0.2077	0.2119	0.2046	0.3902	0.1	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+08cd9894-1122-45ab-8351-e291648a7340	Ice Hockey	Faceoff	2.9696333333333333	borderline	0.4975	0.6993	0.883	0.6891	0.9196	0.1	False	粗观测 0.70 → E* 窗 0.92，提升 +0.22 不足 0.25
+08fe851a-8bc8-4437-b4c1-e16a08c16dd4	Yo-yo	Hidemasa Hook	9.0	unsolvable	0.2282	0.2562	0.2355		0.2459	0.2	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+0900d769-20f1-4006-9748-1eadcd407be6	Coffee	Emptying the Drip Tray	8.008000000000001	already_solvable	0.0794	0.9055	0.9476	0.862	None	None	False	粗观测 p_gt=0.91（N=0 对照）
+090195d9-24e3-467f-a947-3b630b310390	American Football	Draw	13.013	unsolvable	0.0394	0.0452	0.0296	0.0378	0.0486	0.1	False	最好的窗只到 p_gt=0.05（<0.6），给了证据也解不了
+092e1c8d-7301-494a-86a9-16dda45975b8	American Football	Tackle for Loss	7.007000000000001	unsolvable	0.189	0.1996	0.3094	0.3116	0.2869	0.2	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+0946b5ec-612e-4bb8-ad42-6f2cd461e866	Gym	Calf Raise	4.0	unsolvable	0.2454	0.0382	0.0244	0.0244	0.045	0.1	False	最好的窗只到 p_gt=0.04（<0.6），给了证据也解不了
+0947b19f-b5c7-411c-a255-9547079378cd	Juggling	Penguin Catches	2.0	unsolvable	0.2847	0.1002	0.092	0.0668	0.0781	0.3	False	最好的窗只到 p_gt=0.08（<0.6），给了证据也解不了
+09528ab1-953d-46c8-92e3-217371307827	Knots	Honda Knot	58.0	unsolvable	0.3268	0.3987	0.45	0.3978	0.5578	0.2	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+095c12b2-c1c1-4461-b778-629fd95a6ef3	Pen Spinning	Twisted Sonic Reverse	4.0	unsolvable	0.4072	0.4416	0.3825	0.4058	0.4439	0.1	False	最好的窗只到 p_gt=0.44（<0.6），给了证据也解不了
+097252a8-81dd-45ad-82f8-ea201c951424	Ballet	Renversé	3.420083333333333	unsolvable	0.0978	0.1523	0.0985	0.1338	0.1035	0.3	False	最好的窗只到 p_gt=0.10（<0.6），给了证据也解不了
+09955097-a7f1-4563-8b0b-79ff1212dd1c	American Football	Illegal Formation	3.003	unsolvable	0.2332	0.4241	0.4544	0.4479	0.5923	0.1	False	最好的窗只到 p_gt=0.59（<0.6），给了证据也解不了
+09965add-3b12-4d8d-8359-f7892ccc8d20	Yo-yo	Velvet Rolls	7.007000000000001	unsolvable	0.1902	0.1635	0.178		0.1565	0.1	False	最好的窗只到 p_gt=0.16（<0.6），给了证据也解不了
+099918ae-8618-42cc-844d-9624a74cf122	Ice Hockey	Wrap-around Goal	2.9863166666666667	already_solvable	0.4634	0.8962	0.92	0.9306	None	None	False	粗观测 p_gt=0.90（N=0 对照）
+099e2a75-5932-4bf2-b163-74946442a623	Suturing	Running Subcuticular Stitch	35.0	unsolvable	0.237	0.181	0.1701	0.1511	0.2689	0.1	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+09aa2da9-410a-4685-b5ae-2f69ae6d9305	Skateboarding	360 Flip	21.004316666666668	unsolvable	0.2654	0.3912	0.3513	0.3547	0.3907	0.2	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+09ac6b93-ebed-4d73-bafe-b8ae66419831	Figure Skating	Quad Loop	10.710700000000001	unsolvable	0.209	0.1786	0.2439	0.1798	0.2024	0.2	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+09af4c90-3011-4693-936a-ddab8a02c41b	Soccer	Cutback Pass	4.0	unsolvable	0.432	0.2999	0.2466	0.2552	0.2877	0.1	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+09afff4c-2b70-475e-84c7-83d696ffc22e	Bartending	Swizzling	9.008999999999999	already_solvable	0.3926	0.9726	0.9847	0.9899	None	None	False	粗观测 p_gt=0.97（N=0 对照）
+09b5ec8c-7a9b-42aa-872a-4761496ee156	Juggling	Multiplex	5.572233333333333	borderline	0.3712	0.6113	0.5814	0.6058	0.6762	0.1	False	粗观测 0.61 → E* 窗 0.68，提升 +0.06 不足 0.25
+09f6a069-063d-4d74-9ca1-2e8cdea46751	Bartending	Arm Roll	2.0	unsolvable	0.1039	0.1387	0.083	0.1565	0.3841	0.2	False	最好的窗只到 p_gt=0.38（<0.6），给了证据也解不了
+0a0eb232-e9eb-4108-bc04-402d7c977d8a	Ice Hockey	Tape-to-Tape Pass	4.0	unsolvable	0.472	0.3284	0.2639	0.2934	0.4328	0.1	False	最好的窗只到 p_gt=0.43（<0.6），给了证据也解不了
+0a11e666-255b-4b9a-a948-a278e2337b62	Ballet	Pas de Bourrée	7.5	unsolvable	0.2918	0.1494	0.1341	0.2431	0.2186	0.2	False	最好的窗只到 p_gt=0.22（<0.6），给了证据也解不了
+0a2933b7-38ac-478e-a4e4-8104334fd0c3	Cheerleading	Herkie Jump	3.0029999999999997	already_solvable	0.2748	0.8094	0.5637	0.7963	None	None	False	粗观测 p_gt=0.81（N=0 对照）
+0a2a6f74-6fbb-4d2f-83ba-8daade9d31e4	Cricket	LBW (Leg Before Wicket)	6.0	borderline	0.5045	0.4859	0.5727		0.6437	0.1	False	粗观测 0.49 → E* 窗 0.64，提升 +0.16 不足 0.25
+0a428591-4a70-4a84-b3a7-9e18b436e327	Gym	Bulgarian Split Squat	3.9706333333333332	unsolvable	0.4639	0.3941	0.3746	0.4832	0.4435	0.2	False	最好的窗只到 p_gt=0.44（<0.6），给了证据也解不了
+0a502966-4400-45b6-ad68-568e401462aa	Cooking	Air-Frying	18.0	already_solvable	0.3481	0.9592	0.964		None	None	False	粗观测 p_gt=0.96（N=0 对照）
+0a752fb3-2d69-4a13-8b79-bc8005b06ef1	Yo-yo	Spirit Bomb	51.017633333333336	unsolvable	0.2389	0.1559	0.2142		0.1719	0.1	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+0a8044c3-43f4-43c8-b1c8-50cd350788d4	Bharatanatyam	Thattadavu 4	21.016	unsolvable	0.2547	0.2278	0.1984	0.2217	0.2259	0.3	False	最好的窗只到 p_gt=0.23（<0.6），给了证据也解不了
+0aa74c23-bbfd-4c91-bed9-d1fcc8dc458e	Break Dance	Kick Side Step	6.005999999999999	borderline	0.335	0.6393	0.5276	0.6458	0.6981	0.1	False	粗观测 0.64 → E* 窗 0.70，提升 +0.06 不足 0.25
+0aabdf55-8e05-4356-b4de-d1d4bffdf1d8	Skateboarding	Impossible	1.3333333333333333	unsolvable	0.3126	0.0726	0.0735		0.0452	0.1	False	最好的窗只到 p_gt=0.05（<0.6），给了证据也解不了
+0ac2a48e-74c1-412d-9699-9d498c40e49e	Bartending	Helicopter	6.006	evidence_required	0.0707	0.2724	0.4416	0.4411	0.6917	0.1	True	粗观测 0.27 → E* 窗 0.69（+0.42）；只有定位到窗才行
+0aeb1625-160b-4410-b9a2-7b2fa7a373ab	Soccer	Tackle	5.6	unsolvable	0.2137	0.2794	0.0983	0.3812	0.5562	0.3	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+0aeffb72-341b-4e33-8d66-48d8c3c42c9d	Basketball	Blocking Foul	5.0	unsolvable	0.194	0.3665	0.3776	0.4064	0.4746	0.1	False	最好的窗只到 p_gt=0.47（<0.6），给了证据也解不了
+0b01b9ff-ebc2-40d7-b98a-c3c2bfa67cb0	American Football	Onside Kick	9.009	unsolvable	0.1971	0.2126	0.1874	0.2313	0.3253	0.1	False	最好的窗只到 p_gt=0.33（<0.6），给了证据也解不了
+0b421f7b-2b93-4e39-957d-14bf5ebc67aa	Ice Hockey	Stretch Pass	2.8028	unsolvable	0.0815	0.2332	0.1805	0.2129	0.3317	0.1	False	最好的窗只到 p_gt=0.33（<0.6），给了证据也解不了
+0b423503-bd12-4507-8cac-a9ab601cf4fe	Skateboarding	Acid Drop	1.9185833333333333	unsolvable	0.0582	0.0885	0.0651	0.0927	0.0992	0.1	False	最好的窗只到 p_gt=0.10（<0.6），给了证据也解不了
+0b4eff1c-b207-4d7e-a2e6-7e77fba9754f	Cooking	Charring	6.0	unsolvable	0.0913	0.2894	0.3355		0.5035	0.2	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+0b4fe9bf-d8af-4702-8c34-721701d4748d	Cooking	Deep-Frying	4.004	unsolvable	0.2905	0.2759	0.1986	0.0746	0.385	0.2	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+0b5580ab-6f38-4eef-b602-3758b8260e74	Tap Dance	Triple Time Step	3.0	unsolvable	0.2513	0.6033	0.4716	0.6196	0.5857	0.3	False	最好的窗只到 p_gt=0.59（<0.6），给了证据也解不了
+0b785fc4-ee5d-453f-9a27-6e8e9c567b75	Suturing	Continuous Locking Suture	44.0	unsolvable	0.1852	0.3345	0.4485	0.3574	0.3454	0.1	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+0b7c0298-7016-4b5e-926e-96565291142b	Bartending	Ice Stamping	18.0	already_solvable	0.1714	0.9977	0.9977	0.9979	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+0b905fbe-c43d-408a-ba77-185a29f9a46b	Ice Hockey	High Sticking	6.0	unsolvable	0.1003	0.0695	0.0264		0.1681	0.3	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+0b9827ec-5536-427a-9d25-1ac7f9fccee2	Hand Sewing / Embroidery	Buttonhole Stitch	9.009	unsolvable	0.2839	0.0538	0.0586	0.0637	0.1361	0.1	False	最好的窗只到 p_gt=0.14（<0.6），给了证据也解不了
+0b9a7ab3-58d5-4b58-90b0-f37ef72b68eb	Ice Hockey	Charging	6.4	unsolvable	0.0961	0.0679	0.0749	0.0581	0.1311	0.1	False	最好的窗只到 p_gt=0.13（<0.6），给了证据也解不了
+0bb47aee-02be-45df-8cc3-484c2c63148a	Soccer	Rainbow Flick	6.0	unsolvable	0.1374	0.1339	0.1303	0.1549	0.2807	0.2	False	最好的窗只到 p_gt=0.28（<0.6），给了证据也解不了
+0beae15b-d154-4bd0-9509-70b4243d53b6	Yo-yo	Ninja Vanish	7.007000000000001	unsolvable	0.2881	0.2494	0.2286	0.2498	0.2798	0.2	False	最好的窗只到 p_gt=0.28（<0.6），给了证据也解不了
+0bec9990-2bd0-4d75-8d5f-174b288d623a	Skateboarding	Bluntslide	2.1021	unsolvable	0.236	0.1773	0.1623	0.1844	0.1811	0.1	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+0bed6cc9-dfeb-4fc1-9c7e-d9b82720b40d	Yo-yo	Leg Wrap	2.5025	already_solvable	0.2785	0.8394	0.8156	0.8564	None	None	False	粗观测 p_gt=0.84（N=0 对照）
+0bf7adb3-1d4c-409a-8cc4-ab78256f6144	Bharatanatyam	Visharu Adavu	22.022000000000002	unsolvable	0.2401	0.2736	0.2589	0.2771	0.2692	0.2	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+0c0d65aa-553b-49f9-b407-3f548ff6a643	Salsa	Open Break	5.2	unsolvable	0.1954	0.169	0.1852		0.2119	0.3	False	最好的窗只到 p_gt=0.21（<0.6），给了证据也解不了
+0c193e16-2d99-41be-b9a3-b04138ed6355	Ice Hockey	Pad Stack Save	3.003	unsolvable	0.3635	0.3966	0.3903	0.3562	0.4284	0.3	False	最好的窗只到 p_gt=0.43（<0.6），给了证据也解不了
+0c38c4fc-f1c8-430e-b575-2a7a11ecfeca	Salsa	Setenta	13.0	unsolvable	0.2508	0.2383	0.2164	0.2468	0.2862	0.1	False	最好的窗只到 p_gt=0.29（<0.6），给了证据也解不了
+0c55d7dd-3906-495b-a7c2-8abff09581c8	Pottery	Trimming	6.0	evidence_required	0.2109	0.472	0.8674	0.8321	0.9387	0.1	False	粗观测 0.47 → E* 窗 0.94（+0.47）；均匀 k32 也行(0.87)、高分辨率也行(0.83)
+0c622af4-0193-4a9f-a2e8-721ccfc863b5	Parkour	Kash Vault	2.469133333333333	unsolvable	0.1529	0.1338	0.1587	0.1414	0.1554	0.3	False	最好的窗只到 p_gt=0.16（<0.6），给了证据也解不了
+0c67dfa1-1392-4dcb-b374-dd2d71627f5f	American Football	Pass Interference	2.9749303621169916	evidence_required	0.1477	0.389	0.4745	0.4558	0.8018	0.1	True	粗观测 0.39 → E* 窗 0.80（+0.41）；只有定位到窗才行
+0c6d0dd1-bf3a-4d21-b9a5-cfb09f7ef65f	Yo-yo	Windmill	3.2699333333333334	unsolvable	0.3198	0.3467	0.3585	0.3506	0.359	0.2	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+0c73cbd7-6381-427f-9786-fb965900c069	Tap Dance	Wings	3.0	unsolvable	0.1822	0.2007	0.2436		0.307	0.1	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+0c75b4f9-2c75-4565-9aa1-ae864874c56c	Break Dance	Zulu Spin	2.9696333333333333	unsolvable	0.1602	0.1026	0.1308	0.0919	0.1025	0.1	False	最好的窗只到 p_gt=0.10（<0.6），给了证据也解不了
+0c8ebdc8-75b8-407e-b277-70e82acb7db5	Figure Skating	Mohawk	5.7	unsolvable	0.0629	0.0403	0.0356	0.0523	0.0245	0.2	False	最好的窗只到 p_gt=0.02（<0.6），给了证据也解不了
+0c8faabf-e6c8-447f-bd4a-7ed226c175a3	Ballet	Emboîté	20.0	unsolvable	0.26	0.1588	0.2322	0.1643	0.2088	0.1	False	最好的窗只到 p_gt=0.21（<0.6），给了证据也解不了
+0c98080c-a5a4-418d-9023-b745700b9045	American Football	Bootleg	6.666666666666667	borderline	0.3667	0.6217	0.3806		0.6724	0.1	False	粗观测 0.62 → E* 窗 0.67，提升 +0.05 不足 0.25
+0ce2b3ec-1e04-4d3a-afb5-cd14770b3ff2	Knots	Double Fisherman's Knot	47.5	borderline	0.4809	0.6841	0.6784	0.7362	0.8492	0.1	False	粗观测 0.68 → E* 窗 0.85，提升 +0.17 不足 0.25
+0cf28ff6-3c8a-4d34-83e6-b751ff117b85	Knots	Timber Hitch	29.029	unsolvable	0.4351	0.4494	0.4295		0.3761	0.1	False	最好的窗只到 p_gt=0.38（<0.6），给了证据也解不了
+0d08d92b-9be6-432e-8ab2-d0b96a65e02e	Soccer	Rainbow Flick	3.9706333333333332	unsolvable	0.1374	0.2503	0.242	0.2724	0.3913	0.3	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+0d0cff41-5d37-4813-bff1-24aef9669d18	Yo-yo	Robin Hood	3.9706333333333332	unsolvable	0.1938	0.2455	0.2663		0.2628	0.3	False	最好的窗只到 p_gt=0.26（<0.6），给了证据也解不了
+0d1f9bbb-a0e1-4470-a4ba-517619bbac44	Cooking	Blind Baking	49.2	already_solvable	0.6163	0.9747	0.9737	0.9817	None	None	False	粗观测 p_gt=0.97（N=0 对照）
+0d26e8ba-4c13-4b40-b7a2-ea4bbd8aab1c	Knots	Square Knot	28.0	already_solvable	0.5819	0.7427	0.7775	0.8916	None	None	False	粗观测 p_gt=0.74（N=0 对照）
+0d29bf9d-339a-4dc0-9af5-1ded0a062707	American Football	Clipping	7.0	unsolvable	0.3575	0.2019	0.2213		0.3504	0.2	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+0d2a4256-0bda-4024-a43b-7e75018941b0	Gardening	Heading Cut	10.01001001001001	already_solvable	0.2797	0.9898	0.9918	0.9949	None	None	False	粗观测 p_gt=0.99（N=0 对照）
+0d403fbe-151d-4468-87a5-fb1f2463fe06	Knots	Prusik Knot	36.01931666666667	unsolvable	0.3851	0.253	0.2559	0.2439	0.2988	0.1	False	最好的窗只到 p_gt=0.30（<0.6），给了证据也解不了
+0d55608d-681e-4666-933c-83b354c16c9e	Basketball	Catch-and-Shoot Three	4.0040000000000004	unsolvable	0.226	0.139	0.0772	0.0784	0.3385	0.3	False	最好的窗只到 p_gt=0.34（<0.6），给了证据也解不了
+0d5bcc46-04da-4306-bd77-d3f4855d74e0	Parkour	Turn Vault	2.12	unsolvable	0.2792	0.2309	0.2554	0.236	0.2222	0.2	False	最好的窗只到 p_gt=0.22（<0.6），给了证据也解不了
+0d70bea1-e003-43dd-a4a9-e0d5fa2a1880	Figure Skating	Double Lutz	4.0040000000000004	borderline	0.3909	0.4921	0.5017		0.6152	0.1	False	粗观测 0.49 → E* 窗 0.62，提升 +0.12 不足 0.25
+0d72449d-3af3-4d22-bf94-3068a98e616f	Knots	Figure Eight Bend	16.333333333333332	unsolvable	0.3807	0.2398	0.2621		0.3539	0.2	False	最好的窗只到 p_gt=0.35（<0.6），给了证据也解不了
+0d7912a2-ee6f-43fb-a695-1722abf17a4d	Knots	Manger Hitch	58.992266666666666	unsolvable	0.1374	0.1135	0.0983	0.0985	0.114	0.1	False	最好的窗只到 p_gt=0.11（<0.6），给了证据也解不了
+0d83d7cf-9947-4534-81cf-e17406a6b768	Salsa	360	8.0	unsolvable	0.145	0.0436	0.0659	0.0711	0.1781	0.1	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+0d992ab5-0a0a-4e13-9899-2510083f286d	Basketball	Hesitation / Hesi	1.9019	unsolvable	0.1118	0.2336	0.1991	0.2351	0.1822	0.2	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+0dabaf41-0e38-439c-8b0b-e7fe525168f3	Figure Skating	Mohawk	4.88	unsolvable	0.0629	0.0586	0.0715	0.0824	0.2363	0.3	False	最好的窗只到 p_gt=0.24（<0.6），给了证据也解不了
+0db40947-f857-4cf5-8d6e-f261b874c833	Basketball	Bounce Pass	2.0	unsolvable	0.1994	0.204	0.3614	0.2818	0.4673	0.1	False	最好的窗只到 p_gt=0.47（<0.6），给了证据也解不了
+0dcd6ce0-b2a8-4269-bf66-9b93dc80517e	Yo-yo	Gyroscopic Flop	7.007000000000001	unsolvable	0.1831	0.1998	0.2054		0.2241	0.2	False	最好的窗只到 p_gt=0.22（<0.6），给了证据也解不了
+0dd384cc-145e-4f01-b46f-b5cb48c286c6	American Football	Power	11.0	unsolvable	0.2499	0.1809	0.141	0.1488	0.2426	0.1	False	最好的窗只到 p_gt=0.24（<0.6），给了证据也解不了
+0dd7111a-1d67-42e1-9454-638daff76829	Ice Hockey	Slap Shot	10.477133333333333	already_solvable	0.6258	0.8786	0.7439	0.8782	None	None	False	粗观测 p_gt=0.88（N=0 对照）
+0dee90ba-77eb-4fd7-9f27-0014403e7406	Bouldering	Dyno	3.32	borderline	0.3735	0.6907	0.6248	0.7222	0.7842	0.1	False	粗观测 0.69 → E* 窗 0.78，提升 +0.09 不足 0.25
+0dfe0fc4-7de8-4796-a620-010546278653	Crochet	Popcorn Stitch	87.0	unsolvable	0.212	0.2536	0.3187	0.2974	0.3653	0.2	False	最好的窗只到 p_gt=0.37（<0.6），给了证据也解不了
+0dfe8fc8-eadc-49b1-9135-2b09d7e52f65	Skateboarding	5-0 Grind	5.0	already_solvable	0.2924	0.7859	0.8162	0.7361	None	None	False	粗观测 p_gt=0.79（N=0 对照）
+0dfece58-6e04-4707-9c07-340961e84760	Juggling	Columns	4.004	unsolvable	0.3184	0.3762	0.457	0.4104	0.357	0.1	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+0e24417c-2912-4e99-bc19-fd19d3068936	Bouldering	Mantle	6.005999999999999	borderline	0.627	0.6562	0.7086	0.6985	0.6224	0.1	False	粗观测 0.66 → E* 窗 0.62，提升 -0.03 不足 0.25
+0e307187-d789-43cc-9928-0016883e8b04	Knots	Canadian Jam Knot	55.0	unsolvable	0.314	0.4824	0.5081	0.5364	0.5033	0.2	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+0e3f5230-e047-4e5b-890a-0744fb3635c4	American Football	Tackle for Loss	6.518105849582173	unsolvable	0.1562	0.1433	0.0965	0.0838	0.0756	0.1	False	最好的窗只到 p_gt=0.08（<0.6），给了证据也解不了
+0e4dc67b-610d-409c-ab1e-30345dc0cd43	Cricket	Inswinger	4.0	unsolvable	0.2216	0.3249	0.2696	0.3156	0.4756	0.1	False	最好的窗只到 p_gt=0.48（<0.6），给了证据也解不了
+0e52e9eb-9a46-4c35-ad9e-56e0834b5c4a	Skateboarding	Smith Grind	2.0020000000000002	unsolvable	0.3748	0.3418	0.2907	0.3248	0.322	0.2	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+0e712c5d-4b5a-4d63-b93e-369036c3c121	Yo-yo	Man on Trapeze	17.017	unsolvable	0.1478	0.0322	0.0449	0.0221	0.0407	0.2	False	最好的窗只到 p_gt=0.04（<0.6），给了证据也解不了
+0e7a5848-f720-4cea-97b7-ada475a89123	Coffee	Stirring	2.0020000000000002	borderline	0.4218	0.5091	0.4981	0.588	0.7514	0.1	False	粗观测 0.51 → E* 窗 0.75，提升 +0.24 不足 0.25
+0e82b302-26b0-4643-8883-be0d196afd71	Knots	Manger Hitch	17.984651317984653	unsolvable	0.1374	0.0906	0.0905		0.0946	0.1	False	最好的窗只到 p_gt=0.09（<0.6），给了证据也解不了
+0eab678d-88b1-445e-8387-4c84c8b7edb3	Pottery	Spiral Wedging	23.990633333333335	evidence_required	0.2426	0.3375	0.7119		0.8559	0.1	False	粗观测 0.34 → E* 窗 0.86（+0.52）；均匀 k32 也行(0.71)
+0ebe5286-9e95-4527-9fac-62a0c0a7debf	Hand Sewing / Embroidery	Stem Stitch	19.019000000000002	unsolvable	0.399	0.4559	0.4045	0.4511	0.4916	0.1	False	最好的窗只到 p_gt=0.49（<0.6），给了证据也解不了
+0ec14f75-e440-46ad-89b2-25650e45ef1f	Neurological Assessments	Head Impulse	17.0	already_solvable	0.2457	0.9552	0.8848	0.9697	None	None	False	粗观测 p_gt=0.96（N=0 对照）
+0ed86ca0-f7a9-43bc-b028-efd472aafe08	Cricket	Carrom Ball	5.933333333333334	unsolvable	0.0587	0.0202	0.0165		0.0314	0.2	False	最好的窗只到 p_gt=0.03（<0.6），给了证据也解不了
+0ee3b7b5-f404-4f3e-833a-1ea9142fdbdd	Neurological Assessments	Rapid Alternating Movements	7.0	unsolvable	0.2567	0.3146	0.2797	0.2989	0.4466	0.3	False	最好的窗只到 p_gt=0.45（<0.6），给了证据也解不了
+0effd7a2-18f2-47ad-8d6e-874bac3e9680	Ballet	Fouetté	9.009	unsolvable	0.3861	0.4415	0.1897	0.3423	0.4659	0.1	False	最好的窗只到 p_gt=0.47（<0.6），给了证据也解不了
+0f07f9d1-6b3a-450a-b515-bc1596e14b86	Cricket	Reverse Sweep	2.9863166666666667	borderline	0.3299	0.528	0.5738	0.5539	0.7386	0.1	False	粗观测 0.53 → E* 窗 0.74，提升 +0.21 不足 0.25
+0f083f85-4ce0-4219-ac3e-1c3e99995d22	Spa Massage	Hara Massage	6.0	unsolvable	0.0566	0.4806	0.4256		0.5038	0.1	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+0f0a7c87-df2f-49a5-9547-be600189b198	Knots	Trucker's Hitch	97.03026666666666	unsolvable	0.4421	0.3697	0.3299	0.409	0.4347	0.3	False	最好的窗只到 p_gt=0.43（<0.6），给了证据也解不了
+0f1d2de2-21e1-4aa8-8f45-21b12bd0aade	Painting	Lifting	21.708333333333332	unsolvable	0.1658	0.0765	0.094	0.0894	0.1283	0.2	False	最好的窗只到 p_gt=0.13（<0.6），给了证据也解不了
+0f361c25-434c-4383-af55-694e99baa8f2	Figure Skating	Rocker	1.2	unsolvable	0.2678	0.2078	0.215		0.3196	0.2	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+0f525ce1-63f7-4cfe-a1c4-38f42b5933a9	Pottery	Trimming	0.23333333333333334	borderline	0.1564	0.5997	0.5997		0.6938	0.1	False	粗观测 0.60 → E* 窗 0.69，提升 +0.09 不足 0.25
+0f542aeb-343f-4282-bb31-52c273d1a62a	Bartending	Twisting	3.7	already_solvable	0.0452	0.8981	0.7104		None	None	False	粗观测 p_gt=0.90（N=0 对照）
+0f609375-f564-4959-b22d-85ad535f89c5	Ballet	Pas de Cheval	3.0	unsolvable	0.2232	0.0708	0.072	0.0528	0.0926	0.1	False	最好的窗只到 p_gt=0.09（<0.6），给了证据也解不了
+0f6f2181-5965-4309-ace3-cf7f04d93e73	American Football	Field Goal	5.005	already_solvable	0.3895	0.8373	0.7909	0.848	None	None	False	粗观测 p_gt=0.84（N=0 对照）
+0f6f5b09-bddc-4c12-bce8-25af337c061a	Hand Sewing / Embroidery	Flat-felled Seam	178.01116666666667	unsolvable	0.0084	0.3119	0.3393	0.4591	0.5642	0.2	False	最好的窗只到 p_gt=0.56（<0.6），给了证据也解不了
+0f84a21c-4f8a-4f1a-8629-b5cbea475df0	Yo-yo	Double Trapeze	2.0020000000000002	unsolvable	0.3419	0.3325	0.3361	0.3905	0.1825	0.3	False	最好的窗只到 p_gt=0.18（<0.6），给了证据也解不了
+0f88c049-c3cb-4fc8-9c48-4c53dd24c0db	Juggling	The Windmill	7.007000000000001	unsolvable	0.342	0.1472	0.1518	0.1392	0.1718	0.1	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+0f9055f6-ac6b-46fe-9ad5-100eae9254da	American Football	Targeting	2.1062485373274047	unsolvable	0.1186	0.0866	0.0922		0.5042	0.3	False	最好的窗只到 p_gt=0.50（<0.6），给了证据也解不了
+0f99b03a-20ee-40ea-9622-0354071ac3b3	Bartending	Jigger	4.003999789484764	already_solvable	0.3603	0.9971	0.9962	0.9965	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+0f9a2471-d68d-4eaf-9e4a-b342150bfb72	Tap Dance	Cramp Roll	2.1021	unsolvable	0.4142	0.2407	0.2437		0.3102	0.1	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+0fa107e0-c99f-4a44-b680-ee21a3d89737	Break Dance	Elbow Freeze	4.0040000000000004	unsolvable	0.2046	0.1565	0.1295	0.1324	0.2717	0.2	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+0fade254-7480-4d77-8533-48233242fb38	Bharatanatyam	Thattadavu 6	10.7	unsolvable	0.2187	0.1755	0.1875	0.1585	0.1676	0.2	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+0fb7e399-e7ef-4aef-ae72-5877a90bc2bd	Hand Sewing / Embroidery	Lazy Daisy Stitch	17.0	unsolvable	0.4667	0.5388	0.6281	0.5985	0.5476	0.2	False	最好的窗只到 p_gt=0.55（<0.6），给了证据也解不了
+0fc56c4e-27c7-40d8-abdb-1136acc0ba11	Crochet	Half Double Crochet	12.0	unsolvable	0.1401	0.4332	0.4001		0.4326	0.1	False	最好的窗只到 p_gt=0.43（<0.6），给了证据也解不了
+0fcda87e-cf07-4a8a-9d86-40c9cd17353c	Cheerleading	Twist Basket Toss	4.0	borderline	0.3376	0.6407	0.6524	0.7334	0.7718	0.1	False	粗观测 0.64 → E* 窗 0.77，提升 +0.13 不足 0.25
+0fd1272a-e9d4-4223-a1cf-fbb784a6a7fe	Bartending	Ice Carving / Ice Cutting	24.0073154044524	already_solvable	0.1941	0.9986	0.9986	0.9986	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+0fdfd61e-60d6-4d75-a5be-157258a7bc73	Cheerleading	Table Top	20.0	borderline	0.3678	0.5485	0.7623	0.6243	0.7905	0.1	False	粗观测 0.55 → E* 窗 0.79，提升 +0.24 不足 0.25
+0fe62a49-21c3-4355-8328-a7f0c0f484fd	Figure Skating	Spiral	8.0	unsolvable	0.301	0.257	0.144	0.2256	0.3588	0.2	False	最好的窗只到 p_gt=0.36（<0.6），给了证据也解不了
+0feb44cb-dfc1-464e-adb3-4b631f395ab4	Cricket	Inside Out Shot	5.0	unsolvable	0.1915	0.1921	0.1634	0.1428	0.2486	0.2	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+101367e7-7417-4f5e-a201-a4ced7856415	Neurological Abnormalities	Infantile Spasm	3.003	unsolvable	0.3462	0.2818	0.2215	0.3097	0.3152	0.1	False	最好的窗只到 p_gt=0.32（<0.6），给了证据也解不了
+10271d78-cd7a-4c90-8b01-a415837590b2	Neurological Assessments	Thumb Opposition	8.533333333333333	already_solvable	0.0711	0.724	0.7474	0.8897	None	None	False	粗观测 p_gt=0.72（N=0 对照）
+103dbe49-1c97-4720-b1c0-5b4115ac62de	Basketball	Steal	2.9863165096573865	unsolvable	0.1726	0.2153	0.1782	0.2098	0.3904	0.3	False	最好的窗只到 p_gt=0.39（<0.6），给了证据也解不了
+1042e924-0c5b-4bca-a2d0-44641928b19e	Cricket	On Drive	3.0	unsolvable	0.1494	0.2708	0.273	0.2479	0.3339	0.1	False	最好的窗只到 p_gt=0.33（<0.6），给了证据也解不了
+104703f8-9492-4f7e-80bc-d38010523900	Juggling	Chops	2.4	unsolvable	0.1698	0.0273	0.0276	0.0426	0.0408	0.2	False	最好的窗只到 p_gt=0.04（<0.6），给了证据也解不了
+104a55b0-a179-4069-8a73-2fab33275609	Yo-yo	Plastic Whip	6.8	unsolvable	0.2992	0.3146	0.3758		0.2688	0.2	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+10782308-79d5-4719-86e7-ab6acf2ad8b6	Tennis	Lob	6.965291666666666	unsolvable	0.1806	0.1106	0.1617	0.2001	0.191	0.3	False	最好的窗只到 p_gt=0.19（<0.6），给了证据也解不了
+1086c015-aacb-4b23-b5c1-9583973fe592	Break Dance	Flag Freeze	2.7027	unsolvable	0.315	0.326	0.3265	0.3643	0.4481	0.2	False	最好的窗只到 p_gt=0.45（<0.6），给了证据也解不了
+109675a4-85dd-4155-ad97-509be4dfac9b	Break Dance	Zulu Spin	6.0	unsolvable	0.1525	0.1087	0.1351	0.1648	0.1527	0.2	False	最好的窗只到 p_gt=0.15（<0.6），给了证据也解不了
+10a19c06-477b-46ba-969b-aa5b574e4d8e	Gym	Dip	6.006	unsolvable	0.1865	0.1606	0.3001	0.5272	0.5744	0.1	False	最好的窗只到 p_gt=0.57（<0.6），给了证据也解不了
+10a6b562-87fd-424f-b3ca-395b689a8953	Cooking	Pureeing	14.7	already_solvable	0.2902	0.9914	0.9927		None	None	False	粗观测 p_gt=0.99（N=0 对照）
+10a8f970-208b-4e11-95fb-f3644770f85c	Basketball	Charging	3.6	unsolvable	0.2283	0.3904	0.4494	0.4564	0.5917	0.1	False	最好的窗只到 p_gt=0.59（<0.6），给了证据也解不了
+10ad4239-ddf2-443a-b22c-b3572c8ca7f1	Soccer	Shielding the Ball	2.9	unsolvable	0.3965	0.3958	0.4347		0.5197	0.1	False	最好的窗只到 p_gt=0.52（<0.6），给了证据也解不了
+10b05210-4162-41c9-8336-f71b5be27c06	Tap Dance	Triple Time Step	6.8068	unsolvable	0.2876	0.4933	0.4257	0.4734	0.588	0.1	False	最好的窗只到 p_gt=0.59（<0.6），给了证据也解不了
+10c74cd2-7828-443d-9fdb-7cc72002109d	Soccer	Maradona Spin	2.8361666666666663	unsolvable	0.0941	0.086	0.0932	0.0672	0.0928	0.2	False	最好的窗只到 p_gt=0.09（<0.6），给了证据也解不了
+10dd8c9d-055f-4956-a939-19e7959fde0d	Hand Sewing / Embroidery	Cross Stitch	13.0	already_solvable	0.5203	0.7191	0.8251	0.8103	None	None	False	粗观测 p_gt=0.72（N=0 对照）
+110be48e-fb08-4a62-a0fc-da71b33c9490	Figure Skating	Spiral	12.0	unsolvable	0.3089	0.086	0.0567		0.14	0.2	False	最好的窗只到 p_gt=0.14（<0.6），给了证据也解不了
+111e0801-5ba0-4f9f-acae-b7ebdd9fbb9f	Skateboarding	Rock to Fakie	2.002	unsolvable	0.2991	0.0745	0.078	0.0829	0.089	0.2	False	最好的窗只到 p_gt=0.09（<0.6），给了证据也解不了
+113b31e9-9206-4f8f-afa1-4d79df10d360	Basketball	Jump Shot	4.037370704037371	evidence_required	0.3221	0.6657	0.8521	0.7933	0.9623	0.1	False	粗观测 0.67 → E* 窗 0.96（+0.30）；均匀 k32 也行(0.85)、高分辨率也行(0.79)
+11441916-5c1e-43d4-80ab-b158c08ec8bb	Neurological Abnormalities	Tonic Seizure	2.0	unsolvable	0.1308	0.1996	0.1683	0.3127	0.2525	0.1	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+11467317-4fbe-4bf6-967a-cab8d9d80363	Ice Hockey	Tripping	3.9039	unsolvable	0.0604	0.2107	0.0991	0.2138	0.2487	0.3	False	最好的窗只到 p_gt=0.25（<0.6），给了证据也解不了
+1149b09f-7051-408c-8c3b-23b59c42530c	Ice Hockey	Spearing	2.0	unsolvable	0.153	0.4021	0.4112		0.4848	0.1	False	最好的窗只到 p_gt=0.48（<0.6），给了证据也解不了
+11637fa6-98e4-46fe-8caf-5286f30a2e1a	Cooking	Folding In / Folding	57.0	already_solvable	0.2872	0.9386	0.8433	0.8101	None	None	False	粗观测 p_gt=0.94（N=0 对照）
+116953f5-1575-4a6d-81a1-61a7ab34d0d4	Ballet	Frappé	3.0	unsolvable	0.1481	0.1625	0.0799	0.138	0.167	0.1	False	最好的窗只到 p_gt=0.17（<0.6），给了证据也解不了
+116e0bea-5ab4-4490-88c2-07d3a90710de	Skateboarding	5-0 Grind	1.1333333333333333	borderline	0.3429	0.5322	0.5338		0.6037	0.1	False	粗观测 0.53 → E* 窗 0.60，提升 +0.07 不足 0.25
+116f16bc-565c-4be0-9103-1b3240c21d45	Gardening	Deadheading	8.0	already_solvable	0.4151	0.9971	0.9958	0.997	None	None	False	粗观测 p_gt=1.00（N=0 对照）
+117abc05-c07e-46a4-8629-7c8aa2c9d677	American Football	Blocking Below the Waist	7.4074	unsolvable	0.203	0.1269	0.2628	0.1185	0.441	0.1	False	最好的窗只到 p_gt=0.44（<0.6），给了证据也解不了
+118f5a6c-3805-475d-928e-e0a7678f9693	Pen Spinning	Charge Reverse	3.5	unsolvable	0.0813	0.092	0.0896	0.1016	0.1984	0.1	False	最好的窗只到 p_gt=0.20（<0.6），给了证据也解不了
+11a68573-7c44-45a8-94cc-56f84fdd0fcd	Cricket	Yorker	6.6	unsolvable	0.3017	0.3646	0.4818	0.4395	0.5818	0.1	False	最好的窗只到 p_gt=0.58（<0.6），给了证据也解不了
+11b7d5e3-6198-4093-aaf6-d2da56e16b6e	Salsa	Suzie Q	9.0	unsolvable	0.1855	0.2355	0.2462	0.2587	0.3094	0.3	False	最好的窗只到 p_gt=0.31（<0.6），给了证据也解不了
+11ba70b5-4de5-4173-a42e-502e8691c008	Tattooing	Cross Shading	8.0	unsolvable	0.2316	0.4585	0.5057	0.4318	0.5538	0.2	False	最好的窗只到 p_gt=0.55（<0.6），给了证据也解不了
+11bde17c-b339-4a0b-811c-b29a966ec4a1	Pen Spinning	Palm Spin	4.971633333333333	already_solvable	0.4709	0.8056	0.8261	0.8127	None	None	False	粗观测 p_gt=0.81（N=0 对照）
+1c47ea6a-274d-450f-98bc-26260727428c	Coffee	Blooming	9.0	already_solvable	0.6219	0.9406	0.9151	0.9403	None	None	False	粗观测 p_gt=0.94（N=0 对照）
+32f317ad-2804-4925-ad5e-c3d866f951ae	Calligraphy	Upstroke	4.2	borderline	0.3566	0.524	0.3793	0.5113	0.6392	0.1	False	粗观测 0.52 → E* 窗 0.64，提升 +0.12 不足 0.25
+34bd7239-46e9-4769-8896-ae3a1d8847ac	Cooking	Brunoise Cut	10.969291666666665	borderline	0.2394	0.5303	0.5312	0.7357	0.7109	0.1	False	粗观测 0.53 → E* 窗 0.71，提升 +0.18 不足 0.25
+5cc0e669-2cf7-4dbd-b991-128fad82b846	Crochet	Chain	11.011	unsolvable	0.3755	0.0934	0.11	0.1025	0.1093	0.1	False	最好的窗只到 p_gt=0.11（<0.6），给了证据也解不了
+79b1d7d7-b0bb-42d8-a526-0eaa566e1abf	Crochet	Chain	9.009	unsolvable	0.32	0.3586	0.3525	0.3318	0.5159	0.2	False	最好的窗只到 p_gt=0.52（<0.6），给了证据也解不了
+8c842293-6717-4988-a91c-6615251f2f66	Bartending	Shaking	2.0	text_shortcut	0.7131	0.9892	0.9911	0.9833	None	None	False	纯文本 p_gt=0.71，不看视频就能答
+905ce3c1-63bf-455b-abc9-c1b61352f86e	Bartending	Shaking	4.004	text_shortcut	0.74	0.9867	0.9873	0.9959	None	None	False	纯文本 p_gt=0.74，不看视频就能答
+d41f172a-d38a-4ba6-93fa-4311a3349111	Calligraphy	Upstroke	0.6	borderline	0.3433	0.5826	0.4139	0.6313	0.6021	0.1	False	粗观测 0.58 → E* 窗 0.60，提升 +0.02 不足 0.25
+dffb7271-5fce-44f7-9e78-65489c59e518	Cooking	Brunoise Cut	6.006	unsolvable	0.2012	0.1664	0.1734	0.3385	0.2651	0.1	False	最好的窗只到 p_gt=0.27（<0.6），给了证据也解不了
+f103252e-1db7-4fb2-b65d-4924c410a4fe	Coffee	Blooming	18.0	already_solvable	0.6083	0.9887	0.9692	0.9845	None	None	False	粗观测 p_gt=0.99（N=0 对照）

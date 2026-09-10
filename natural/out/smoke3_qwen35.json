@@ -1,0 +1,2412 @@
+{
+ "08cd9894-1122-45ab-8351-e291648a7340": {
+  "item": {
+   "key": "251-mcq-test-1",
+   "uuid": "08cd9894-1122-45ab-8351-e291648a7340",
+   "domain": "Ice Hockey",
+   "name": "Faceoff",
+   "definition": "The method used to start play at the beginning of a period or after a stoppage. Two opposing players square off to compete for possession when an official drops the puck between them onto a designated spot on the ice.",
+   "stem": "Which of the following Ice Hockey actions is shown in the video?",
+   "options": [
+    "faceoff",
+    "spinorama",
+    "high sticking",
+    "wrist shot"
+   ],
+   "answer_letter": "A",
+   "answer_idx": 0,
+   "duration": 2.9696333333333333,
+   "n_frames": 89,
+   "fps": 29.97002997002997,
+   "width": 1280,
+   "height": 720
+  },
+  "screen": {
+   "k2": {
+    "p": [
+     0.9128,
+     0.0237,
+     0.013,
+     0.0505
+    ],
+    "pred_idx": 0,
+    "entropy": 0.3791,
+    "perm_std": 0.0321,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 2,
+    "p_gt": 0.9128,
+    "correct": true
+   },
+   "k4": {
+    "p": [
+     0.9326,
+     0.0147,
+     0.0076,
+     0.0451
+    ],
+    "pred_idx": 0,
+    "entropy": 0.3039,
+    "perm_std": 0.0259,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 4,
+    "p_gt": 0.9326,
+    "correct": true
+   },
+   "k8": {
+    "p": [
+     0.9841,
+     0.0059,
+     0.0022,
+     0.0078
+    ],
+    "pred_idx": 0,
+    "entropy": 0.0973,
+    "perm_std": 0.0054,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.9841,
+    "correct": true
+   },
+   "k16": {
+    "p": [
+     0.9797,
+     0.0073,
+     0.0023,
+     0.0108
+    ],
+    "pred_idx": 0,
+    "entropy": 0.1184,
+    "perm_std": 0.0073,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 16,
+    "p_gt": 0.9797,
+    "correct": true
+   },
+   "k32": {
+    "p": [
+     0.9823,
+     0.006,
+     0.0017,
+     0.01
+    ],
+    "pred_idx": 0,
+    "entropy": 0.1054,
+    "perm_std": 0.0092,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 32,
+    "p_gt": 0.9823,
+    "correct": true
+   },
+   "k8_hi": {
+    "p": [
+     0.99,
+     0.0046,
+     0.0014,
+     0.0041
+    ],
+    "pred_idx": 0,
+    "entropy": 0.0661,
+    "perm_std": 0.0043,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.99,
+    "correct": true
+   },
+   "text": {
+    "p": [
+     0.2734,
+     0.1055,
+     0.056,
+     0.5651
+    ],
+    "pred_idx": 3,
+    "entropy": 1.0758,
+    "perm_std": 0.1706,
+    "greedy": [
+     3,
+     3,
+     3,
+     0
+    ],
+    "p_gt": 0.2734,
+    "correct": false
+   }
+  },
+  "label": "borderline",
+  "why": "粗观测 0.98 → E* 窗 0.99，提升 +0.00 不足 0.25",
+  "localize": {
+   "windows": [
+    {
+     "t0": 0.0,
+     "t1": 0.297,
+     "frac": 0.1,
+     "p_gt": 0.9872,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.0815,
+     "n_frames": 6,
+     "idx": [
+      0,
+      1,
+      3,
+      5,
+      7,
+      9
+     ]
+    },
+    {
+     "t0": 0.297,
+     "t1": 0.594,
+     "frac": 0.1,
+     "p_gt": 0.9733,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1465,
+     "n_frames": 6,
+     "idx": [
+      9,
+      10,
+      12,
+      14,
+      16,
+      18
+     ]
+    },
+    {
+     "t0": 0.594,
+     "t1": 0.891,
+     "frac": 0.1,
+     "p_gt": 0.958,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.2021,
+     "n_frames": 6,
+     "idx": [
+      18,
+      19,
+      21,
+      23,
+      25,
+      27
+     ]
+    },
+    {
+     "t0": 0.891,
+     "t1": 1.188,
+     "frac": 0.1,
+     "p_gt": 0.9779,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.126,
+     "n_frames": 6,
+     "idx": [
+      27,
+      28,
+      30,
+      32,
+      34,
+      36
+     ]
+    },
+    {
+     "t0": 1.188,
+     "t1": 1.485,
+     "frac": 0.1,
+     "p_gt": 0.9773,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1284,
+     "n_frames": 6,
+     "idx": [
+      36,
+      37,
+      39,
+      41,
+      43,
+      45
+     ]
+    },
+    {
+     "t0": 1.485,
+     "t1": 1.782,
+     "frac": 0.1,
+     "p_gt": 0.9802,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1143,
+     "n_frames": 6,
+     "idx": [
+      45,
+      46,
+      48,
+      49,
+      51,
+      53
+     ]
+    },
+    {
+     "t0": 1.782,
+     "t1": 2.079,
+     "frac": 0.1,
+     "p_gt": 0.981,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1121,
+     "n_frames": 6,
+     "idx": [
+      53,
+      54,
+      56,
+      58,
+      60,
+      62
+     ]
+    },
+    {
+     "t0": 2.079,
+     "t1": 2.376,
+     "frac": 0.1,
+     "p_gt": 0.9801,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1159,
+     "n_frames": 6,
+     "idx": [
+      62,
+      63,
+      65,
+      67,
+      69,
+      71
+     ]
+    },
+    {
+     "t0": 2.376,
+     "t1": 2.673,
+     "frac": 0.1,
+     "p_gt": 0.9782,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1251,
+     "n_frames": 6,
+     "idx": [
+      71,
+      72,
+      74,
+      76,
+      78,
+      80
+     ]
+    },
+    {
+     "t0": 2.673,
+     "t1": 2.97,
+     "frac": 0.1,
+     "p_gt": 0.9647,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1851,
+     "n_frames": 6,
+     "idx": [
+      80,
+      81,
+      83,
+      84,
+      86,
+      88
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 0.594,
+     "frac": 0.2,
+     "p_gt": 0.9879,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.0777,
+     "n_frames": 6,
+     "idx": [
+      0,
+      3,
+      7,
+      10,
+      14,
+      18
+     ]
+    },
+    {
+     "t0": 0.297,
+     "t1": 0.891,
+     "frac": 0.2,
+     "p_gt": 0.9623,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1888,
+     "n_frames": 6,
+     "idx": [
+      9,
+      12,
+      16,
+      19,
+      23,
+      27
+     ]
+    },
+    {
+     "t0": 0.594,
+     "t1": 1.188,
+     "frac": 0.2,
+     "p_gt": 0.9774,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1275,
+     "n_frames": 6,
+     "idx": [
+      18,
+      21,
+      25,
+      28,
+      32,
+      36
+     ]
+    },
+    {
+     "t0": 0.891,
+     "t1": 1.485,
+     "frac": 0.2,
+     "p_gt": 0.9816,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1089,
+     "n_frames": 6,
+     "idx": [
+      27,
+      30,
+      34,
+      37,
+      41,
+      45
+     ]
+    },
+    {
+     "t0": 1.188,
+     "t1": 1.782,
+     "frac": 0.2,
+     "p_gt": 0.982,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1062,
+     "n_frames": 6,
+     "idx": [
+      36,
+      39,
+      42,
+      46,
+      49,
+      53
+     ]
+    },
+    {
+     "t0": 1.485,
+     "t1": 2.079,
+     "frac": 0.2,
+     "p_gt": 0.9774,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1275,
+     "n_frames": 6,
+     "idx": [
+      45,
+      48,
+      51,
+      55,
+      58,
+      62
+     ]
+    },
+    {
+     "t0": 1.782,
+     "t1": 2.376,
+     "frac": 0.2,
+     "p_gt": 0.982,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1069,
+     "n_frames": 6,
+     "idx": [
+      53,
+      56,
+      60,
+      63,
+      67,
+      71
+     ]
+    },
+    {
+     "t0": 2.079,
+     "t1": 2.673,
+     "frac": 0.2,
+     "p_gt": 0.9799,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1172,
+     "n_frames": 6,
+     "idx": [
+      62,
+      65,
+      69,
+      72,
+      76,
+      80
+     ]
+    },
+    {
+     "t0": 2.376,
+     "t1": 2.97,
+     "frac": 0.2,
+     "p_gt": 0.9734,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1463,
+     "n_frames": 6,
+     "idx": [
+      71,
+      74,
+      77,
+      81,
+      84,
+      88
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 0.891,
+     "frac": 0.3,
+     "p_gt": 0.9813,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1114,
+     "n_frames": 6,
+     "idx": [
+      0,
+      5,
+      10,
+      16,
+      21,
+      27
+     ]
+    },
+    {
+     "t0": 0.445,
+     "t1": 1.336,
+     "frac": 0.3,
+     "p_gt": 0.9563,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.2064,
+     "n_frames": 6,
+     "idx": [
+      13,
+      18,
+      23,
+      29,
+      34,
+      40
+     ]
+    },
+    {
+     "t0": 0.891,
+     "t1": 1.782,
+     "frac": 0.3,
+     "p_gt": 0.9786,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1224,
+     "n_frames": 6,
+     "idx": [
+      27,
+      32,
+      37,
+      42,
+      47,
+      53
+     ]
+    },
+    {
+     "t0": 1.336,
+     "t1": 2.227,
+     "frac": 0.3,
+     "p_gt": 0.9796,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1178,
+     "n_frames": 6,
+     "idx": [
+      40,
+      45,
+      50,
+      56,
+      61,
+      67
+     ]
+    },
+    {
+     "t0": 1.782,
+     "t1": 2.673,
+     "frac": 0.3,
+     "p_gt": 0.9828,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 0.1035,
+     "n_frames": 6,
+     "idx": [
+      53,
+      58,
+      63,
+      69,
+      74,
+      80
+     ]
+    }
+   ],
+   "estar": {
+    "t0": 0.0,
+    "t1": 0.297,
+    "frac": 0.1,
+    "p_gt": 0.9872,
+    "pred_idx": 0,
+    "correct": true,
+    "entropy": 0.0815,
+    "n_frames": 6,
+    "idx": [
+     0,
+     1,
+     3,
+     5,
+     7,
+     9
+    ]
+   },
+   "decoy": {
+    "t0": 0.594,
+    "t1": 0.891,
+    "frac": 0.1,
+    "p_gt": 0.958,
+    "pred_idx": 0,
+    "correct": true,
+    "entropy": 0.2021,
+    "n_frames": 6,
+    "idx": [
+     18,
+     19,
+     21,
+     23,
+     25,
+     27
+    ]
+   },
+   "certified": true,
+   "n_windows": 24
+  },
+  "audit": {
+   "none": {
+    "p": [
+     0.9841,
+     0.0059,
+     0.0022,
+     0.0078
+    ],
+    "pred_idx": 0,
+    "entropy": 0.0973,
+    "perm_std": 0.0054,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.9841,
+    "correct": true
+   },
+   "true": {
+    "p": [
+     0.9865,
+     0.0065,
+     0.0019,
+     0.005
+    ],
+    "pred_idx": 0,
+    "entropy": 0.0848,
+    "perm_std": 0.0052,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.9865,
+    "correct": true
+   },
+   "decoy": {
+    "p": [
+     0.9692,
+     0.0074,
+     0.0026,
+     0.0207
+    ],
+    "pred_idx": 0,
+    "entropy": 0.1627,
+    "perm_std": 0.0228,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.9692,
+    "correct": true
+   },
+   "irr": {
+    "p": [
+     0.9742,
+     0.0086,
+     0.003,
+     0.0142
+    ],
+    "pred_idx": 0,
+    "entropy": 0.1443,
+    "perm_std": 0.012,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.9742,
+    "correct": true
+   },
+   "twin": {
+    "p": [
+     0.9615,
+     0.0129,
+     0.0042,
+     0.0215
+    ],
+    "pred_idx": 0,
+    "entropy": 0.1991,
+    "perm_std": 0.0113,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.9615,
+    "correct": true,
+    "twin_idx": 2,
+    "p_twin": 0.0042
+   },
+   "dense_matched": {
+    "p": [
+     0.985,
+     0.0056,
+     0.0015,
+     0.0079
+    ],
+    "pred_idx": 0,
+    "entropy": 0.0917,
+    "perm_std": 0.0073,
+    "greedy": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "p_gt": 0.985,
+    "correct": true,
+    "k": 26,
+    "n_frames_used": 26
+   },
+   "_meta": {
+    "estar": [
+     0.0,
+     0.297
+    ],
+    "decoy": [
+     0.594,
+     0.891
+    ],
+    "bbox": null,
+    "n_evid": 6,
+    "coarse_idx": [
+     0,
+     12,
+     25,
+     37,
+     50,
+     62,
+     75,
+     88
+    ],
+    "gt": 0
+   }
+  },
+  "metrics": {
+   "p_none": 0.9841,
+   "p_true": 0.9865,
+   "p_decoy": 0.9692,
+   "p_irr": 0.9742,
+   "p_dense": 0.985,
+   "EEG": 0.0177,
+   "ERG": 0,
+   "false_resolution": false,
+   "gain_over_dense": 0.0015,
+   "gain_over_none": 0.0024,
+   "twin_p_twin": 0.0042,
+   "twin_flipped": false
+  },
+  "agentic": {
+   "turns": [
+    "用户现在需要判断冰球视频中的动作。首先看帧的变化，从第0帧到后续帧，能看到球员在争球，裁判在中间，这是faceoff（争球）的典型场景。其他选项spinorama是旋转动作，high sticking是挥杆过高，wrist shot是推杆射门，这里主要是争球过程。所以选A。\n</think>\n\n<answer>A</answer>\n"
+   ],
+   "tool_calls": [],
+   "pred": "A",
+   "correct": true,
+   "pre_answer": false,
+   "tools_used": [],
+   "n_calls_ok": 0,
+   "temporal_hit": false,
+   "temporal_iou_max": 0.0
+  },
+  "wall_s": 70.3
+ },
+ "06f589e4-228e-47c6-875d-3a046c68eff4": {
+  "item": {
+   "key": "133-mcq-test-1",
+   "uuid": "06f589e4-228e-47c6-875d-3a046c68eff4",
+   "domain": "Cricket",
+   "name": "Hit the Ball Twice",
+   "definition": "A method of dismissal where the batsman deliberately strikes the ball a second time with his bat after already playing it once. Look for the batsman hitting the ball twice in sequence, usually attempting to prevent it from hitting the stumps.",
+   "stem": "Which of the following Cricket actions is shown in the video?",
+   "options": [
+    "hit the ball twice",
+    "handling the ball",
+    "obstructing the field",
+    "hit wicket"
+   ],
+   "answer_letter": "A",
+   "answer_idx": 0,
+   "duration": 6.0,
+   "n_frames": 150,
+   "fps": 25.0,
+   "width": 1280,
+   "height": 720
+  },
+  "screen": {
+   "k2": {
+    "p": [
+     0.053,
+     0.5988,
+     0.1246,
+     0.2236
+    ],
+    "pred_idx": 1,
+    "entropy": 1.0572,
+    "perm_std": 0.1206,
+    "greedy": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "n_frames_used": 2,
+    "p_gt": 0.053,
+    "correct": false
+   },
+   "k4": {
+    "p": [
+     0.2292,
+     0.3989,
+     0.1471,
+     0.2247
+    ],
+    "pred_idx": 1,
+    "entropy": 1.3217,
+    "perm_std": 0.2056,
+    "greedy": [
+     0,
+     1,
+     1,
+     1
+    ],
+    "n_frames_used": 4,
+    "p_gt": 0.2292,
+    "correct": false
+   },
+   "k8": {
+    "p": [
+     0.1975,
+     0.3103,
+     0.1347,
+     0.3574
+    ],
+    "pred_idx": 3,
+    "entropy": 1.3213,
+    "perm_std": 0.1269,
+    "greedy": [
+     0,
+     3,
+     3,
+     1
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.1975,
+    "correct": false
+   },
+   "k16": {
+    "p": [
+     0.1438,
+     0.2573,
+     0.1071,
+     0.4917
+    ],
+    "pred_idx": 3,
+    "entropy": 1.2165,
+    "perm_std": 0.143,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 16,
+    "p_gt": 0.1438,
+    "correct": false
+   },
+   "k32": {
+    "p": [
+     0.0962,
+     0.1783,
+     0.0829,
+     0.6425
+    ],
+    "pred_idx": 3,
+    "entropy": 1.0235,
+    "perm_std": 0.1139,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 32,
+    "p_gt": 0.0962,
+    "correct": false
+   },
+   "k8_hi": {
+    "p": [
+     0.1401,
+     0.3478,
+     0.1092,
+     0.4029
+    ],
+    "pred_idx": 3,
+    "entropy": 1.2508,
+    "perm_std": 0.175,
+    "greedy": [
+     3,
+     1,
+     3,
+     1
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.1401,
+    "correct": false
+   },
+   "text": {
+    "p": [
+     0.1233,
+     0.4296,
+     0.1571,
+     0.29
+    ],
+    "pred_idx": 1,
+    "entropy": 1.2708,
+    "perm_std": 0.081,
+    "greedy": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "p_gt": 0.1233,
+    "correct": false
+   }
+  },
+  "label": "unsolvable",
+  "why": "最好的窗只到 p_gt=0.38（<0.6），给了证据也解不了",
+  "localize": {
+   "windows": [
+    {
+     "t0": 0.0,
+     "t1": 0.6,
+     "frac": 0.1,
+     "p_gt": 0.0993,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.0948,
+     "n_frames": 6,
+     "idx": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "t0": 0.6,
+     "t1": 1.2,
+     "frac": 0.1,
+     "p_gt": 0.0382,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 0.6548,
+     "n_frames": 6,
+     "idx": [
+      15,
+      18,
+      21,
+      24,
+      27,
+      30
+     ]
+    },
+    {
+     "t0": 1.2,
+     "t1": 1.8,
+     "frac": 0.1,
+     "p_gt": 0.0621,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 0.8087,
+     "n_frames": 6,
+     "idx": [
+      30,
+      33,
+      36,
+      39,
+      42,
+      45
+     ]
+    },
+    {
+     "t0": 1.8,
+     "t1": 2.4,
+     "frac": 0.1,
+     "p_gt": 0.3371,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 1.3498,
+     "n_frames": 6,
+     "idx": [
+      45,
+      48,
+      51,
+      54,
+      57,
+      60
+     ]
+    },
+    {
+     "t0": 2.4,
+     "t1": 3.0,
+     "frac": 0.1,
+     "p_gt": 0.3111,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2931,
+     "n_frames": 6,
+     "idx": [
+      60,
+      63,
+      66,
+      69,
+      72,
+      75
+     ]
+    },
+    {
+     "t0": 3.0,
+     "t1": 3.6,
+     "frac": 0.1,
+     "p_gt": 0.3477,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2935,
+     "n_frames": 6,
+     "idx": [
+      75,
+      78,
+      81,
+      84,
+      87,
+      90
+     ]
+    },
+    {
+     "t0": 3.6,
+     "t1": 4.2,
+     "frac": 0.1,
+     "p_gt": 0.3289,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2617,
+     "n_frames": 6,
+     "idx": [
+      90,
+      93,
+      96,
+      99,
+      102,
+      105
+     ]
+    },
+    {
+     "t0": 4.2,
+     "t1": 4.8,
+     "frac": 0.1,
+     "p_gt": 0.206,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2321,
+     "n_frames": 6,
+     "idx": [
+      105,
+      108,
+      111,
+      114,
+      117,
+      120
+     ]
+    },
+    {
+     "t0": 4.8,
+     "t1": 5.4,
+     "frac": 0.1,
+     "p_gt": 0.188,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.1278,
+     "n_frames": 6,
+     "idx": [
+      120,
+      123,
+      126,
+      129,
+      132,
+      135
+     ]
+    },
+    {
+     "t0": 5.4,
+     "t1": 6.0,
+     "frac": 0.1,
+     "p_gt": 0.1966,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2371,
+     "n_frames": 6,
+     "idx": [
+      135,
+      137,
+      140,
+      143,
+      146,
+      149
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 1.2,
+     "frac": 0.2,
+     "p_gt": 0.044,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 0.6977,
+     "n_frames": 6,
+     "idx": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30
+     ]
+    },
+    {
+     "t0": 0.6,
+     "t1": 1.8,
+     "frac": 0.2,
+     "p_gt": 0.1061,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.0301,
+     "n_frames": 6,
+     "idx": [
+      15,
+      21,
+      27,
+      33,
+      39,
+      45
+     ]
+    },
+    {
+     "t0": 1.2,
+     "t1": 2.4,
+     "frac": 0.2,
+     "p_gt": 0.1311,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.0738,
+     "n_frames": 6,
+     "idx": [
+      30,
+      36,
+      42,
+      48,
+      54,
+      60
+     ]
+    },
+    {
+     "t0": 1.8,
+     "t1": 3.0,
+     "frac": 0.2,
+     "p_gt": 0.3808,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 1.3023,
+     "n_frames": 6,
+     "idx": [
+      45,
+      51,
+      57,
+      63,
+      69,
+      75
+     ]
+    },
+    {
+     "t0": 2.4,
+     "t1": 3.6,
+     "frac": 0.2,
+     "p_gt": 0.3581,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 1.3106,
+     "n_frames": 6,
+     "idx": [
+      60,
+      66,
+      72,
+      78,
+      84,
+      90
+     ]
+    },
+    {
+     "t0": 3.0,
+     "t1": 4.2,
+     "frac": 0.2,
+     "p_gt": 0.3402,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2335,
+     "n_frames": 6,
+     "idx": [
+      75,
+      81,
+      87,
+      93,
+      99,
+      105
+     ]
+    },
+    {
+     "t0": 3.6,
+     "t1": 4.8,
+     "frac": 0.2,
+     "p_gt": 0.2697,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2271,
+     "n_frames": 6,
+     "idx": [
+      90,
+      96,
+      102,
+      108,
+      114,
+      120
+     ]
+    },
+    {
+     "t0": 4.2,
+     "t1": 5.4,
+     "frac": 0.2,
+     "p_gt": 0.211,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.22,
+     "n_frames": 6,
+     "idx": [
+      105,
+      111,
+      117,
+      123,
+      129,
+      135
+     ]
+    },
+    {
+     "t0": 4.8,
+     "t1": 6.0,
+     "frac": 0.2,
+     "p_gt": 0.2261,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2236,
+     "n_frames": 6,
+     "idx": [
+      120,
+      125,
+      131,
+      137,
+      143,
+      149
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 1.8,
+     "frac": 0.3,
+     "p_gt": 0.1146,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.0945,
+     "n_frames": 6,
+     "idx": [
+      0,
+      9,
+      18,
+      27,
+      36,
+      45
+     ]
+    },
+    {
+     "t0": 0.9,
+     "t1": 2.7,
+     "frac": 0.3,
+     "p_gt": 0.2017,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2913,
+     "n_frames": 6,
+     "idx": [
+      22,
+      31,
+      40,
+      49,
+      58,
+      68
+     ]
+    },
+    {
+     "t0": 1.8,
+     "t1": 3.6,
+     "frac": 0.3,
+     "p_gt": 0.3847,
+     "pred_idx": 0,
+     "correct": true,
+     "entropy": 1.2953,
+     "n_frames": 6,
+     "idx": [
+      45,
+      54,
+      63,
+      72,
+      81,
+      90
+     ]
+    },
+    {
+     "t0": 2.7,
+     "t1": 4.5,
+     "frac": 0.3,
+     "p_gt": 0.2786,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2601,
+     "n_frames": 6,
+     "idx": [
+      68,
+      76,
+      85,
+      94,
+      103,
+      112
+     ]
+    },
+    {
+     "t0": 3.6,
+     "t1": 5.4,
+     "frac": 0.3,
+     "p_gt": 0.2826,
+     "pred_idx": 3,
+     "correct": false,
+     "entropy": 1.2609,
+     "n_frames": 6,
+     "idx": [
+      90,
+      99,
+      108,
+      117,
+      126,
+      135
+     ]
+    }
+   ],
+   "estar": {
+    "t0": 1.8,
+    "t1": 3.6,
+    "frac": 0.3,
+    "p_gt": 0.3847,
+    "pred_idx": 0,
+    "correct": true,
+    "entropy": 1.2953,
+    "n_frames": 6,
+    "idx": [
+     45,
+     54,
+     63,
+     72,
+     81,
+     90
+    ]
+   },
+   "decoy": {
+    "t0": 0.0,
+    "t1": 1.8,
+    "frac": 0.3,
+    "p_gt": 0.1146,
+    "pred_idx": 3,
+    "correct": false,
+    "entropy": 1.0945,
+    "n_frames": 6,
+    "idx": [
+     0,
+     9,
+     18,
+     27,
+     36,
+     45
+    ]
+   },
+   "certified": false,
+   "n_windows": 24
+  },
+  "audit": {
+   "none": {
+    "p": [
+     0.1975,
+     0.3103,
+     0.1347,
+     0.3574
+    ],
+    "pred_idx": 3,
+    "entropy": 1.3213,
+    "perm_std": 0.1269,
+    "greedy": [
+     0,
+     3,
+     3,
+     1
+    ],
+    "p_gt": 0.1975,
+    "correct": false
+   },
+   "true": {
+    "p": [
+     0.3293,
+     0.2545,
+     0.1512,
+     0.2651
+    ],
+    "pred_idx": 0,
+    "entropy": 1.3516,
+    "perm_std": 0.1682,
+    "greedy": [
+     0,
+     3,
+     0,
+     1
+    ],
+    "p_gt": 0.3293,
+    "correct": true
+   },
+   "decoy": {
+    "p": [
+     0.1239,
+     0.3,
+     0.1057,
+     0.4703
+    ],
+    "pred_idx": 3,
+    "entropy": 1.2123,
+    "perm_std": 0.1648,
+    "greedy": [
+     3,
+     3,
+     3,
+     1
+    ],
+    "p_gt": 0.1239,
+    "correct": false
+   },
+   "irr": {
+    "p": [
+     0.1927,
+     0.2589,
+     0.1662,
+     0.3823
+    ],
+    "pred_idx": 3,
+    "entropy": 1.333,
+    "perm_std": 0.1532,
+    "greedy": [
+     3,
+     3,
+     0,
+     1
+    ],
+    "p_gt": 0.1927,
+    "correct": false
+   },
+   "dense_matched": {
+    "p": [
+     0.0938,
+     0.162,
+     0.0794,
+     0.6648
+    ],
+    "pred_idx": 3,
+    "entropy": 0.9894,
+    "perm_std": 0.1143,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.0938,
+    "correct": false,
+    "k": 26,
+    "n_frames_used": 26
+   },
+   "_meta": {
+    "estar": [
+     1.8,
+     3.6
+    ],
+    "decoy": [
+     0.0,
+     1.8
+    ],
+    "bbox": null,
+    "n_evid": 6,
+    "coarse_idx": [
+     0,
+     21,
+     42,
+     63,
+     85,
+     106,
+     127,
+     149
+    ],
+    "gt": 0
+   }
+  },
+  "metrics": {
+   "p_none": 0.1975,
+   "p_true": 0.3293,
+   "p_decoy": 0.1239,
+   "p_irr": 0.1927,
+   "p_dense": 0.0938,
+   "EEG": 0.9775,
+   "ERG": 1,
+   "false_resolution": true,
+   "gain_over_dense": 0.2355,
+   "gain_over_none": 0.1318
+  },
+  "agentic": {
+   "turns": [
+    "用户需要判断视频中显示的板球动作。\n\n1.  **分析视频内容**：\n    *   **第0帧 (0.0s)**: 投球手站在投球区，准备投球。击球手在远处准备。\n    *   **第1帧 (0.8s)**: 投球手正在投球动作中，手臂举起。\n    *   **第2帧 (1.7s)**: 投球手已经投出球，球在空中飞行（红色轨迹）。击球手准备击球。\n    *   **第3帧 (2.5s)**: 击球手挥棒击球。球被击中后飞向空中（红色球体）。\n    *   **第4帧 (3.4s)**: 击球手继续挥棒动作，球在空中。\n    *   **第5帧 (4.2s)**: 击球手完成挥棒动作，球已经飞得很高。\n    *   **第6帧 (5.1s)**: 画面变暗，似乎球飞出了画面或者击球手跑向边界。\n    *   **第7帧 (6.0s)**: 击球手站在击球区，举起手，似乎在庆祝或者示意。\n\n2.  **评估选项**：\n    *   **A. hit the ball twice (击球两次)**: 视频中只看到一次完整的击球动作。\n    *   **B. handling the ball (处理球)**: 这通常指守门员或投球手接球。虽然投球手投球了，但视频的核心动作是击球手击球。不过，\"handling the ball\" 在板球规则中通常指违规接球。这里更像是正常的击球过程。\n    *   **C. obstructing the field (阻碍比赛)**: 没有看到明显的阻碍行为。\n    *   **D. hit wicket (击倒三柱门)**: 视频中没有显示击球手在击球时撞倒三柱门。\n\n    等等，让我重新审视一下选项和动作。\n    视频展示了一个完整的投球和击球过程。\n    投球手投球 -> 击球手挥棒 -> 击球手击中球。\n    这看起来就是一个普通的击球动作。\n    但是选项里没有"
+   ],
+   "tool_calls": [],
+   "pred": "A",
+   "correct": true,
+   "pre_answer": false,
+   "tools_used": [],
+   "n_calls_ok": 0,
+   "temporal_hit": false,
+   "temporal_iou_max": 0.0
+  },
+  "wall_s": 75.5
+ },
+ "01b46e8d-5f35-44f6-8ff2-60ebbfdb0ca3": {
+  "item": {
+   "key": "399-mcq-test-1",
+   "uuid": "01b46e8d-5f35-44f6-8ff2-60ebbfdb0ca3",
+   "domain": "Cooking",
+   "name": "Laminating",
+   "definition": "The process of creating alternating layers of dough and fat (usually butter) by repeated folding and rolling. This technique creates the signature flaky layers in pastries like croissants and puff pastry. Look for the distinct layers visible in the finished baked good.",
+   "stem": "Which of the following Cooking actions is shown in the video?",
+   "options": [
+    "crimping",
+    "blind baking",
+    "stretch and fold",
+    "laminating"
+   ],
+   "answer_letter": "D",
+   "answer_idx": 3,
+   "duration": 23.7,
+   "n_frames": 711,
+   "fps": 30.0,
+   "width": 1080,
+   "height": 1920
+  },
+  "screen": {
+   "k2": {
+    "p": [
+     0.0051,
+     0.0016,
+     0.0412,
+     0.9521
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2153,
+    "perm_std": 0.0213,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 2,
+    "p_gt": 0.9521,
+    "correct": true
+   },
+   "k4": {
+    "p": [
+     0.009,
+     0.0034,
+     0.0911,
+     0.8966
+    ],
+    "pred_idx": 3,
+    "entropy": 0.3776,
+    "perm_std": 0.0458,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 4,
+    "p_gt": 0.8966,
+    "correct": true
+   },
+   "k8": {
+    "p": [
+     0.0027,
+     0.0009,
+     0.0517,
+     0.9447
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2291,
+    "perm_std": 0.0137,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.9447,
+    "correct": true
+   },
+   "k16": {
+    "p": [
+     0.0036,
+     0.001,
+     0.0623,
+     0.933
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2652,
+    "perm_std": 0.0195,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 16,
+    "p_gt": 0.933,
+    "correct": true
+   },
+   "k32": {
+    "p": [
+     0.0038,
+     0.0009,
+     0.0239,
+     0.9713
+    ],
+    "pred_idx": 3,
+    "entropy": 0.1451,
+    "perm_std": 0.0113,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 32,
+    "p_gt": 0.9713,
+    "correct": true
+   },
+   "k8_hi": {
+    "p": [
+     0.0038,
+     0.001,
+     0.0608,
+     0.9344
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2616,
+    "perm_std": 0.0267,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "n_frames_used": 8,
+    "p_gt": 0.9344,
+    "correct": true
+   },
+   "text": {
+    "p": [
+     0.2411,
+     0.2503,
+     0.38,
+     0.1285
+    ],
+    "pred_idx": 2,
+    "entropy": 1.3211,
+    "perm_std": 0.2075,
+    "greedy": [
+     2,
+     2,
+     0,
+     1
+    ],
+    "p_gt": 0.1285,
+    "correct": false
+   }
+  },
+  "label": "borderline",
+  "why": "粗观测 0.94 → E* 窗 0.99，提升 +0.05 不足 0.25",
+  "localize": {
+   "windows": [
+    {
+     "t0": 0.0,
+     "t1": 2.37,
+     "frac": 0.1,
+     "p_gt": 0.9915,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.0527,
+     "n_frames": 6,
+     "idx": [
+      0,
+      14,
+      28,
+      42,
+      56,
+      71
+     ]
+    },
+    {
+     "t0": 2.37,
+     "t1": 4.74,
+     "frac": 0.1,
+     "p_gt": 0.9747,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1251,
+     "n_frames": 6,
+     "idx": [
+      71,
+      85,
+      99,
+      113,
+      127,
+      142
+     ]
+    },
+    {
+     "t0": 4.74,
+     "t1": 7.11,
+     "frac": 0.1,
+     "p_gt": 0.8773,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.388,
+     "n_frames": 6,
+     "idx": [
+      142,
+      156,
+      170,
+      184,
+      198,
+      213
+     ]
+    },
+    {
+     "t0": 7.11,
+     "t1": 9.48,
+     "frac": 0.1,
+     "p_gt": 0.9578,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1845,
+     "n_frames": 6,
+     "idx": [
+      213,
+      227,
+      241,
+      255,
+      269,
+      284
+     ]
+    },
+    {
+     "t0": 9.48,
+     "t1": 11.85,
+     "frac": 0.1,
+     "p_gt": 0.9731,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1301,
+     "n_frames": 6,
+     "idx": [
+      284,
+      298,
+      312,
+      327,
+      341,
+      356
+     ]
+    },
+    {
+     "t0": 11.85,
+     "t1": 14.22,
+     "frac": 0.1,
+     "p_gt": 0.9756,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1215,
+     "n_frames": 6,
+     "idx": [
+      356,
+      370,
+      384,
+      398,
+      412,
+      427
+     ]
+    },
+    {
+     "t0": 14.22,
+     "t1": 16.59,
+     "frac": 0.1,
+     "p_gt": 0.9283,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.2706,
+     "n_frames": 6,
+     "idx": [
+      427,
+      441,
+      455,
+      469,
+      483,
+      498
+     ]
+    },
+    {
+     "t0": 16.59,
+     "t1": 18.96,
+     "frac": 0.1,
+     "p_gt": 0.9635,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1629,
+     "n_frames": 6,
+     "idx": [
+      498,
+      512,
+      526,
+      540,
+      554,
+      569
+     ]
+    },
+    {
+     "t0": 18.96,
+     "t1": 21.33,
+     "frac": 0.1,
+     "p_gt": 0.932,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.2582,
+     "n_frames": 6,
+     "idx": [
+      569,
+      583,
+      597,
+      611,
+      625,
+      640
+     ]
+    },
+    {
+     "t0": 21.33,
+     "t1": 23.7,
+     "frac": 0.1,
+     "p_gt": 0.9829,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.0902,
+     "n_frames": 6,
+     "idx": [
+      640,
+      654,
+      668,
+      682,
+      696,
+      710
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 4.74,
+     "frac": 0.2,
+     "p_gt": 0.9925,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.0475,
+     "n_frames": 6,
+     "idx": [
+      0,
+      28,
+      56,
+      85,
+      113,
+      142
+     ]
+    },
+    {
+     "t0": 2.37,
+     "t1": 7.11,
+     "frac": 0.2,
+     "p_gt": 0.9513,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.2048,
+     "n_frames": 6,
+     "idx": [
+      71,
+      99,
+      127,
+      156,
+      184,
+      213
+     ]
+    },
+    {
+     "t0": 4.74,
+     "t1": 9.48,
+     "frac": 0.2,
+     "p_gt": 0.955,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1931,
+     "n_frames": 6,
+     "idx": [
+      142,
+      170,
+      198,
+      227,
+      255,
+      284
+     ]
+    },
+    {
+     "t0": 7.11,
+     "t1": 11.85,
+     "frac": 0.2,
+     "p_gt": 0.9741,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1266,
+     "n_frames": 6,
+     "idx": [
+      213,
+      241,
+      270,
+      298,
+      327,
+      356
+     ]
+    },
+    {
+     "t0": 9.48,
+     "t1": 14.22,
+     "frac": 0.2,
+     "p_gt": 0.9739,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1273,
+     "n_frames": 6,
+     "idx": [
+      284,
+      312,
+      341,
+      369,
+      398,
+      427
+     ]
+    },
+    {
+     "t0": 11.85,
+     "t1": 16.59,
+     "frac": 0.2,
+     "p_gt": 0.9233,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.2832,
+     "n_frames": 6,
+     "idx": [
+      356,
+      384,
+      412,
+      441,
+      469,
+      498
+     ]
+    },
+    {
+     "t0": 14.22,
+     "t1": 18.96,
+     "frac": 0.2,
+     "p_gt": 0.9673,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1514,
+     "n_frames": 6,
+     "idx": [
+      427,
+      455,
+      483,
+      512,
+      540,
+      569
+     ]
+    },
+    {
+     "t0": 16.59,
+     "t1": 21.33,
+     "frac": 0.2,
+     "p_gt": 0.9496,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.2086,
+     "n_frames": 6,
+     "idx": [
+      498,
+      526,
+      554,
+      583,
+      611,
+      640
+     ]
+    },
+    {
+     "t0": 18.96,
+     "t1": 23.7,
+     "frac": 0.2,
+     "p_gt": 0.982,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.094,
+     "n_frames": 6,
+     "idx": [
+      569,
+      597,
+      625,
+      653,
+      681,
+      710
+     ]
+    },
+    {
+     "t0": 0.0,
+     "t1": 7.11,
+     "frac": 0.3,
+     "p_gt": 0.9703,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1413,
+     "n_frames": 6,
+     "idx": [
+      0,
+      42,
+      85,
+      127,
+      170,
+      213
+     ]
+    },
+    {
+     "t0": 3.555,
+     "t1": 10.665,
+     "frac": 0.3,
+     "p_gt": 0.955,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1931,
+     "n_frames": 6,
+     "idx": [
+      107,
+      149,
+      192,
+      234,
+      277,
+      320
+     ]
+    },
+    {
+     "t0": 7.11,
+     "t1": 14.22,
+     "frac": 0.3,
+     "p_gt": 0.965,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1597,
+     "n_frames": 6,
+     "idx": [
+      213,
+      255,
+      298,
+      341,
+      384,
+      427
+     ]
+    },
+    {
+     "t0": 10.665,
+     "t1": 17.775,
+     "frac": 0.3,
+     "p_gt": 0.977,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1153,
+     "n_frames": 6,
+     "idx": [
+      320,
+      362,
+      405,
+      447,
+      490,
+      533
+     ]
+    },
+    {
+     "t0": 14.22,
+     "t1": 21.33,
+     "frac": 0.3,
+     "p_gt": 0.9584,
+     "pred_idx": 3,
+     "correct": true,
+     "entropy": 0.1798,
+     "n_frames": 6,
+     "idx": [
+      427,
+      469,
+      512,
+      554,
+      597,
+      640
+     ]
+    }
+   ],
+   "estar": {
+    "t0": 0.0,
+    "t1": 2.37,
+    "frac": 0.1,
+    "p_gt": 0.9915,
+    "pred_idx": 3,
+    "correct": true,
+    "entropy": 0.0527,
+    "n_frames": 6,
+    "idx": [
+     0,
+     14,
+     28,
+     42,
+     56,
+     71
+    ]
+   },
+   "decoy": {
+    "t0": 4.74,
+    "t1": 7.11,
+    "frac": 0.1,
+    "p_gt": 0.8773,
+    "pred_idx": 3,
+    "correct": true,
+    "entropy": 0.388,
+    "n_frames": 6,
+    "idx": [
+     142,
+     156,
+     170,
+     184,
+     198,
+     213
+    ]
+   },
+   "certified": true,
+   "n_windows": 24
+  },
+  "audit": {
+   "none": {
+    "p": [
+     0.0027,
+     0.0009,
+     0.0517,
+     0.9447
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2291,
+    "perm_std": 0.0137,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.9447,
+    "correct": true
+   },
+   "true": {
+    "p": [
+     0.0016,
+     0.0004,
+     0.0101,
+     0.988
+    ],
+    "pred_idx": 3,
+    "entropy": 0.0713,
+    "perm_std": 0.0041,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.988,
+    "correct": true
+   },
+   "decoy": {
+    "p": [
+     0.0035,
+     0.001,
+     0.1219,
+     0.8735
+    ],
+    "pred_idx": 3,
+    "entropy": 0.4015,
+    "perm_std": 0.043,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.8735,
+    "correct": true
+   },
+   "irr": {
+    "p": [
+     0.0018,
+     0.0005,
+     0.0549,
+     0.9428
+    ],
+    "pred_idx": 3,
+    "entropy": 0.2302,
+    "perm_std": 0.0264,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.9428,
+    "correct": true
+   },
+   "twin": {
+    "p": [
+     0.0217,
+     0.5855,
+     0.1208,
+     0.2719
+    ],
+    "pred_idx": 1,
+    "entropy": 1.006,
+    "perm_std": 0.205,
+    "greedy": [
+     3,
+     3,
+     1,
+     1
+    ],
+    "p_gt": 0.2719,
+    "correct": false,
+    "twin_idx": 1,
+    "p_twin": 0.5855
+   },
+   "dense_matched": {
+    "p": [
+     0.0022,
+     0.0005,
+     0.0091,
+     0.9882
+    ],
+    "pred_idx": 3,
+    "entropy": 0.0717,
+    "perm_std": 0.0049,
+    "greedy": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "p_gt": 0.9882,
+    "correct": true,
+    "k": 26,
+    "n_frames_used": 26
+   },
+   "_meta": {
+    "estar": [
+     0.0,
+     2.37
+    ],
+    "decoy": [
+     4.74,
+     7.11
+    ],
+    "bbox": null,
+    "n_evid": 6,
+    "coarse_idx": [
+     0,
+     101,
+     202,
+     304,
+     405,
+     507,
+     608,
+     710
+    ],
+    "gt": 3
+   }
+  },
+  "metrics": {
+   "p_none": 0.9447,
+   "p_true": 0.988,
+   "p_decoy": 0.8735,
+   "p_irr": 0.9428,
+   "p_dense": 0.9882,
+   "EEG": 0.1232,
+   "ERG": 0,
+   "false_resolution": false,
+   "gain_over_dense": -0.0002,
+   "gain_over_none": 0.0433,
+   "twin_p_twin": 0.5855,
+   "twin_flipped": true
+  },
+  "agentic": {
+   "turns": [
+    "用户现在需要判断视频中的烹饪动作。看最后一帧（第7帧），面团被折叠，能看到多层结构，这是laminating（层压）的特征，层压是制作酥皮等需要多层脂肪和面团的工艺。其他选项：crimping是捏边，blind baking是盲烤，stretch and fold是拉伸折叠但这里更侧重层压的多层结构。所以选D。\n</think>\n\n<answer>D</answer>\n"
+   ],
+   "tool_calls": [],
+   "pred": "D",
+   "correct": true,
+   "pre_answer": false,
+   "tools_used": [],
+   "n_calls_ok": 0,
+   "temporal_hit": false,
+   "temporal_iou_max": 0.0
+  },
+  "wall_s": 66.7
+ }
+}

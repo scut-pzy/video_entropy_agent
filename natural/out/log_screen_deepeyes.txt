@@ -1,0 +1,142 @@
+339 条题; 帧缓存现状 {'videos': 6, 'frames': 340, 'mb': 46.3}
+[deepeyes] 加载完成 49s  device=cuda:0  letter_ids={'A': [32, 362], 'B': [33, 425], 'C': [34, 356], 'D': [35, 422]}
+[screen/deepeyes] 共 339 个单元, 已完成 0, 待跑 339
+  [5/339] 004e5ce0 screen 16.5s | 已用 1.5min ETA 99.1min | 错误 0
+  [10/339] 005a8473 screen 14.1s | 已用 2.9min ETA 96.9min | 错误 0
+  [15/339] 0085cd4c screen 16.6s | 已用 4.6min ETA 98.8min | 错误 0
+  [20/339] 01175375 screen 17.8s | 已用 6.0min ETA 96.4min | 错误 0
+  [25/339] 01727300 screen 15.5s | 已用 7.2min ETA 90.6min | 错误 0
+  [30/339] 019cc9ab screen 11.4s | 已用 8.2min ETA 84.5min | 错误 0
+  [35/339] 01d0ba27 screen 9.3s | 已用 9.2min ETA 79.9min | 错误 0
+  [40/339] 01e52f38 screen 18.0s | 已用 10.7min ETA 79.8min | 错误 0
+  [45/339] 0247c7f4 screen 15.6s | 已用 12.0min ETA 78.2min | 错误 0
+  [50/339] 025c96d6 screen 13.2s | 已用 13.3min ETA 76.7min | 错误 0
+  [55/339] 029cb47f screen 16.1s | 已用 14.5min ETA 75.1min | 错误 0
+  [60/339] 02b2cea0 screen 16.1s | 已用 15.8min ETA 73.2min | 错误 0
+  [65/339] 02fb0f6f screen 15.7s | 已用 17.0min ETA 71.7min | 错误 0
+  [70/339] 033a8ca2 screen 15.1s | 已用 18.3min ETA 70.2min | 错误 0
+  [75/339] 0367d739 screen 16.6s | 已用 19.5min ETA 68.6min | 错误 0
+  [80/339] 0386d539 screen 16.7s | 已用 21.0min ETA 67.9min | 错误 0
+  [85/339] 03ba05ca screen 14.9s | 已用 22.5min ETA 67.1min | 错误 0
+  [90/339] 03e4536f screen 14.2s | 已用 23.5min ETA 65.1min | 错误 0
+  [95/339] 03f68394 screen 14.1s | 已用 24.8min ETA 63.7min | 错误 0
+  [100/339] 04287835 screen 13.6s | 已用 25.8min ETA 61.8min | 错误 0
+  [105/339] 04776104 screen 13.4s | 已用 26.8min ETA 59.7min | 错误 0
+  [110/339] 04bedfa4 screen 17.6s | 已用 28.0min ETA 58.3min | 错误 0
+  [115/339] 04faf2c8 screen 14.9s | 已用 29.3min ETA 57.0min | 错误 0
+  [120/339] 052e49d8 screen 18.8s | 已用 30.7min ETA 56.0min | 错误 0
+  [125/339] 05671564 screen 27.8s | 已用 32.7min ETA 56.0min | 错误 0
+  [130/339] 060f565c screen 24.9s | 已用 34.5min ETA 55.5min | 错误 0
+  [135/339] 0675eb89 screen 20.1s | 已用 36.3min ETA 54.8min | 错误 0
+  [140/339] 06a07ca8 screen 24.6s | 已用 38.2min ETA 54.3min | 错误 0
+  [145/339] 06f1b59b screen 25.9s | 已用 40.3min ETA 53.9min | 错误 0
+  [150/339] 078b65bb screen 31.0s | 已用 42.8min ETA 54.0min | 错误 0
+  [155/339] 07d4d07f screen 28.6s | 已用 44.8min ETA 53.2min | 错误 0
+  [160/339] 082ebbfd screen 24.9s | 已用 47.0min ETA 52.6min | 错误 0
+  [165/339] 08658793 screen 22.2s | 已用 48.8min ETA 51.4min | 错误 0
+  [170/339] 0894c24e screen 22.4s | 已用 50.6min ETA 50.3min | 错误 0
+  [175/339] 08fe851a screen 15.9s | 已用 52.4min ETA 49.1min | 错误 0
+  [180/339] 0947b19f screen 18.6s | 已用 54.1min ETA 47.8min | 错误 0
+  [185/339] 09965add screen 9.6s | 已用 55.7min ETA 46.3min | 错误 0
+  [190/339] 09af4c90 screen 19.7s | 已用 57.4min ETA 45.0min | 错误 0
+  [195/339] 0a11e666 screen 25.1s | 已用 59.2min ETA 43.7min | 错误 0
+  [200/339] 0a752fb3 screen 14.2s | 已用 60.7min ETA 42.2min | 错误 0
+  [205/339] 0aeb1625 screen 19.5s | 已用 62.4min ETA 40.8min | 错误 0
+  [210/339] 0b4eff1c screen 15.5s | 已用 64.1min ETA 39.4min | 错误 0
+  [215/339] 0b905fbe screen 12.2s | 已用 65.6min ETA 37.8min | 错误 0
+  [220/339] 0bec9990 screen 20.4s | 已用 67.2min ETA 36.4min | 错误 0
+  [225/339] 0c38c4fc screen 19.5s | 已用 68.7min ETA 34.8min | 错误 0
+  [230/339] 0c73cbd7 screen 15.9s | 已用 70.3min ETA 33.3min | 错误 0
+  [235/339] 0ce2b3ec screen 26.2s | 已用 72.0min ETA 31.9min | 错误 0
+  [240/339] 0d26e8ba screen 30.5s | 已用 74.2min ETA 30.6min | 错误 0
+  [245/339] 0d5bcc46 screen 22.0s | 已用 76.1min ETA 29.2min | 错误 0
+  [250/339] 0d992ab5 screen 27.6s | 已用 78.1min ETA 27.8min | 错误 0
+  [255/339] 0dd7111a screen 20.3s | 已用 79.8min ETA 26.3min | 错误 0
+  [260/339] 0e24417c screen 23.4s | 已用 81.7min ETA 24.8min | 错误 0
+  [265/339] 0e712c5d screen 24.3s | 已用 83.9min ETA 23.4min | 错误 0
+  [270/339] 0ec14f75 screen 25.0s | 已用 85.7min ETA 21.9min | 错误 0
+  [275/339] 0f083f85 screen 15.3s | 已用 87.2min ETA 20.3min | 错误 0
+  [280/339] 0f542aeb screen 14.2s | 已用 88.4min ETA 18.6min | 错误 0
+  [285/339] 0f88c049 screen 16.3s | 已用 89.8min ETA 17.0min | 错误 0
+  [290/339] 0fade254 screen 16.0s | 已用 90.9min ETA 15.4min | 错误 0
+  [295/339] 0fdfd61e screen 11.2s | 已用 92.0min ETA 13.7min | 错误 0
+  [300/339] 103dbe49 screen 15.4s | 已用 93.1min ETA 12.1min | 错误 0
+  [305/339] 1086c015 screen 10.7s | 已用 94.1min ETA 10.5min | 错误 0
+  [310/339] 10ad4239 screen 11.7s | 已用 95.1min ETA 8.9min | 错误 0
+  [315/339] 111e0801 screen 12.7s | 已用 96.2min ETA 7.3min | 错误 0
+  [320/339] 11637fa6 screen 13.6s | 已用 97.3min ETA 5.8min | 错误 0
+  [325/339] 118f5a6c screen 14.5s | 已用 98.3min ETA 4.2min | 错误 0
+  [330/339] 1c47ea6a screen 14.5s | 已用 99.4min ETA 2.7min | 错误 0
+  [335/339] 8c842293 screen 19.6s | 已用 101.2min ETA 1.2min | 错误 0
+  [339/339] f103252e screen 25.3s | 已用 102.8min ETA 0.0min | 错误 0
+
+候选 280 条进窗搜索（跳过 text_shortcut / already_solvable）
+[localize/deepeyes] 共 280 个单元, 已完成 0, 待跑 280
+  [5/280] 0053006d localize 34.1s | 已用 5.0min ETA 276.0min | 错误 0
+  [10/280] 007f8a76 localize 64.8s | 已用 10.3min ETA 279.4min | 错误 0
+  [15/280] 012583ae localize 75.2s | 已用 15.8min ETA 279.6min | 错误 0
+  [20/280] 018b0b08 localize 65.2s | 已用 20.7min ETA 268.5min | 错误 0
+  [25/280] 01bb2b90 localize 43.0s | 已用 24.3min ETA 248.3min | 错误 0
+  [30/280] 02095156 localize 59.1s | 已用 29.0min ETA 241.7min | 错误 0
+  [35/280] 0256d9bf localize 57.1s | 已用 33.8min ETA 236.9min | 错误 0
+  [40/280] 028dc6a7 localize 41.7s | 已用 38.4min ETA 230.2min | 错误 0
+  [45/280] 02b2cea0 localize 58.0s | 已用 42.8min ETA 223.5min | 错误 0
+  [50/280] 02fb0f6f localize 52.2s | 已用 46.7min ETA 214.9min | 错误 0
+  [55/280] 033a8ca2 localize 45.9s | 已用 50.6min ETA 207.2min | 错误 0
+  [60/280] 036975ea localize 62.4s | 已用 55.0min ETA 201.7min | 错误 0
+  [65/280] 03951c2d localize 51.6s | 已用 60.2min ETA 199.0min | 错误 0
+  [70/280] 03d5358d localize 61.4s | 已用 63.8min ETA 191.3min | 错误 0
+  [75/280] 0404e944 localize 56.4s | 已用 67.9min ETA 185.6min | 错误 0
+  [80/280] 04322fb8 localize 60.4s | 已用 71.9min ETA 179.9min | 错误 0
+  [85/280] 04960c4f localize 64.4s | 已用 76.1min ETA 174.6min | 错误 0
+  [90/280] 04c11717 localize 69.5s | 已用 81.1min ETA 171.2min | 错误 0
+  [95/280] 05230870 localize 35.2s | 已用 84.6min ETA 164.8min | 错误 0
+  [100/280] 05645735 localize 46.5s | 已用 89.0min ETA 160.2min | 错误 0
+  [105/280] 060879ea localize 44.4s | 已用 92.9min ETA 154.8min | 错误 0
+  [110/280] 0675eb89 localize 72.7s | 已用 98.8min ETA 152.8min | 错误 0
+  [115/280] 06a66a3d localize 40.2s | 已用 104.1min ETA 149.4min | 错误 0
+  [120/280] 07050483 localize 78.6s | 已用 109.5min ETA 146.0min | 错误 0
+  [125/280] 07945539 localize 11.0s | 已用 114.1min ETA 141.4min | 错误 0
+  [130/280] 07f6d423 localize 49.0s | 已用 118.1min ETA 136.2min | 错误 0
+  [135/280] 0845ab07 localize 22.3s | 已用 121.3min ETA 130.3min | 错误 0
+  [140/280] 0893e529 localize 35.9s | 已用 124.1min ETA 124.1min | 错误 0
+  [145/280] 092e1c8d localize 37.1s | 已用 126.5min ETA 117.8min | 错误 0
+  [150/280] 097252a8 localize 37.3s | 已用 129.4min ETA 112.1min | 错误 0
+  [155/280] 09ac6b93 localize 36.7s | 已用 132.1min ETA 106.5min | 错误 0
+  [160/280] 0a11e666 localize 38.2s | 已用 135.1min ETA 101.3min | 错误 0
+  [165/280] 0aa74c23 localize 50.2s | 已用 137.8min ETA 96.0min | 错误 0
+  [170/280] 0b01b9ff localize 51.6s | 已用 141.9min ETA 91.8min | 错误 0
+  [175/280] 0b5580ab localize 49.2s | 已用 145.4min ETA 87.3min | 错误 0
+  [180/280] 0bb47aee localize 47.7s | 已用 149.1min ETA 82.8min | 错误 0
+  [185/280] 0c193e16 localize 54.4s | 已用 153.0min ETA 78.6min | 错误 0
+  [190/280] 0c6d0dd1 localize 51.9s | 已用 157.3min ETA 74.5min | 错误 0
+  [195/280] 0c98080c localize 44.5s | 已用 161.4min ETA 70.4min | 错误 0
+  [200/280] 0d29bf9d localize 20.0s | 已用 164.1min ETA 65.6min | 错误 0
+  [205/280] 0d72449d localize 24.2s | 已用 166.6min ETA 61.0min | 错误 0
+  [210/280] 0db40947 localize 56.5s | 已用 170.8min ETA 56.9min | 错误 0
+  [215/280] 0dfece58 localize 35.3s | 已用 174.2min ETA 52.7min | 错误 0
+  [220/280] 0e52e9eb localize 32.7s | 已用 177.1min ETA 48.3min | 错误 0
+  [225/280] 0ebe5286 localize 34.0s | 已用 179.5min ETA 43.9min | 错误 0
+  [230/280] 0f083f85 localize 19.0s | 已用 181.9min ETA 39.5min | 错误 0
+  [235/280] 0f609375 localize 53.6s | 已用 185.3min ETA 35.5min | 错误 0
+  [240/280] 0f9a2471 localize 29.8s | 已用 188.7min ETA 31.4min | 错误 0
+  [245/280] 0fcda87e localize 43.9s | 已用 192.4min ETA 27.5min | 错误 0
+  [250/280] 103dbe49 localize 38.1s | 已用 195.8min ETA 23.5min | 错误 0
+  [255/280] 1086c015 localize 36.9s | 已用 198.6min ETA 19.5min | 错误 0
+  [260/280] 10b05210 localize 41.3s | 已用 202.2min ETA 15.6min | 错误 0
+  [265/280] 11441916 localize 38.1s | 已用 205.6min ETA 11.6min | 错误 0
+  [270/280] 117abc05 localize 35.3s | 已用 207.9min ETA 7.7min | 错误 0
+  [275/280] 32f317ad localize 25.6s | 已用 211.1min ETA 3.8min | 错误 0
+  [280/280] dffb7271 localize 36.8s | 已用 213.9min ETA 0.0min | 错误 0
+
+=== 阶段一+二 汇总 (339 条已筛, 280 条已做窗搜索) ===
+  unsolvable            236  (70%)
+  already_solvable       55  (16%)
+  borderline             36  (11%)
+  evidence_required       8  (2%)
+  text_shortcut           4  (1%)
+
+Evidence-Required@8 = 8 条
+  → <20，短剪辑里 necessity 稀有，走加长上下文的 contingency
+  域分布: {'Basketball': 2, 'Pottery': 2, 'Parkour': 1, 'Cricket': 1, 'Bartending': 1, 'American Football': 1}
+  其中"只有定位到窗才行"（均匀加帧/加分辨率都不行）: 5 条

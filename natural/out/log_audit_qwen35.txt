@@ -1,0 +1,37 @@
+审计单元 (认证者=qwen35, 被测=qwen35): 22 条 evidence_required + 40 条 N=0 对照
+[qwen35] 加载完成 75s  device=cuda:0  thinking_template=True  letter_ids={'A': [32, 357], 'B': [33, 417], 'C': [34, 351], 'D': [35, 414]}
+[audit/qwen35] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c audit 28.3s | 已用 1.8min ETA 21.1min | 错误 0
+  [10/62] 0845ab07 audit 21.5s | 已用 3.4min ETA 17.5min | 错误 0
+  [15/62] 0c67dfa1 audit 15.6s | 已用 5.0min ETA 15.5min | 错误 0
+  [20/62] 10a19c06 audit 29.9s | 已用 6.8min ETA 14.2min | 错误 0
+  [25/62] 0ee3b7b5 audit 20.8s | 已用 8.5min ETA 12.5min | 错误 0
+  [30/62] 11467317 audit 28.4s | 已用 10.5min ETA 11.2min | 错误 0
+  [35/62] 061659fb audit 23.8s | 已用 12.3min ETA 9.5min | 错误 0
+  [40/62] 0a502966 audit 16.7s | 已用 13.5min ETA 7.4min | 错误 0
+  [45/62] 089b7c3f audit 21.0s | 已用 15.4min ETA 5.8min | 错误 0
+  [50/62] 11441916 audit 31.8s | 已用 17.2min ETA 4.1min | 错误 0
+  [55/62] 044551b6 audit 25.5s | 已用 19.1min ETA 2.4min | 错误 0
+  [60/62] 0a428591 audit 20.9s | 已用 20.8min ETA 0.7min | 错误 0
+  [62/62] 029cb47f audit 18.9s | 已用 21.4min ETA 0.0min | 错误 0
+
+=== 四条件审计汇总 (62 条) ===
+
+[required] n=22
+  p(正确): none=0.410  true=0.648  decoy=0.339  irr=0.440  dense_matched=0.521
+  EEG = log p(true) - log p(decoy) = +0.702
+  ERG = acc(true) - acc(decoy)     = +0.682
+  比等预算密采多拿到          = +0.128
+  False Resolution 率 = 18% (n=22)
+  Twin 翻转率        = 17% (n=12)
+
+[control] n=40
+  p(正确): none=0.898  true=0.893  decoy=0.879  irr=0.880  dense_matched=0.886
+  EEG = log p(true) - log p(decoy) = +0.016
+  ERG = acc(true) - acc(decoy)     = +0.000
+  比等预算密采多拿到          = +0.007
+  False Resolution 率 = 0% (n=40)
+  Twin 翻转率        = 21% (n=28)
+
+精简 JSON: /mnt/afs/panzhengyuan/llm_training/project/video-agent/data/evidencegap_v_natural/out/trajectories_qwen35.json
+entropy 图: 0 张逐条 + 汇总 None

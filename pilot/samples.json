@@ -1,0 +1,495 @@
+[
+ {
+  "id": "s1_occlusion_color",
+  "version": "v1",
+  "base": "f103252e-1db7-4fb2-b65d-4924c410a4fe.mp4",
+  "question": "On the counter at the lower left there is a small round object that is covered by a dark card for most of the video. At one brief moment the card slides aside and the object is visible. What color is the round object?",
+  "options": [
+   "red",
+   "blue",
+   "green",
+   "yellow"
+  ],
+  "question_zh": "画面左下方的台面上有一个小圆形物体，视频里大部分时间它都被一张深色卡片盖着，只有很短的一瞬卡片滑开、物体露了出来。这个圆形物体是什么颜色？",
+  "options_zh": [
+   "红色",
+   "蓝色",
+   "绿色",
+   "黄色"
+  ],
+  "twins": {
+   "A": {
+    "video": "s1_occlusion_color_A.mp4",
+    "answer": "red",
+    "answer_idx": 0,
+    "answer_letter": "A",
+    "answer_zh": "红色"
+   },
+   "B": {
+    "video": "s1_occlusion_color_B.mp4",
+    "answer": "blue",
+    "answer_idx": 1,
+    "answer_letter": "B",
+    "answer_zh": "蓝色"
+   }
+  },
+  "evidence_bbox": [
+   190,
+   740,
+   410,
+   960
+  ],
+  "decoy_bbox": [
+   190,
+   740,
+   410,
+   960
+  ],
+  "fps": 24.0,
+  "n_frames": 432,
+  "evidence_window_frames": [
+   262,
+   292
+  ],
+  "evidence_window_sec": [
+   10.92,
+   12.17
+  ],
+  "decoy_window_frames": [
+   0,
+   252
+  ],
+  "coarse_frame_idx": [
+   0,
+   61,
+   123,
+   184,
+   246,
+   307,
+   369,
+   431
+  ],
+  "params": {
+   "base": "f103252e-1db7-4fb2-b65d-4924c410a4fe.mp4",
+   "disc_xy": [
+    300,
+    850
+   ],
+   "disc_r": 45,
+   "card": [
+    190,
+    740,
+    410,
+    960
+   ],
+   "card_shift": [
+    320,
+    0
+   ],
+   "window": [
+    262,
+    292
+   ],
+   "question_zh": "画面左下方的台面上有一个小圆形物体，视频里大部分时间它都被一张深色卡片盖着，只有很短的一瞬卡片滑开、物体露了出来。这个圆形物体是什么颜色？",
+   "options_zh": [
+    "红色",
+    "蓝色",
+    "绿色",
+    "黄色"
+   ],
+   "evidence_bbox": [
+    190,
+    740,
+    410,
+    960
+   ]
+  }
+ },
+ {
+  "id": "s2_tiny_tag",
+  "version": "v4",
+  "base": "905ce3c1-63bf-455b-abc9-c1b61352f86e.mp4",
+  "question": "There is a small white tag with a number printed on it, lying on the bar counter near the lower right of the frame. What number is printed on the tag?",
+  "options": [
+   "358",
+   "356",
+   "338",
+   "386"
+  ],
+  "question_zh": "画面右下方的吧台上放着一张白色小标签，上面印着一个数字。标签上印的数字是多少？",
+  "options_zh": [
+   "358",
+   "356",
+   "338",
+   "386"
+  ],
+  "twins": {
+   "A": {
+    "video": "s2_tiny_tag_A.mp4",
+    "answer": "358",
+    "answer_idx": 0,
+    "answer_letter": "A",
+    "answer_zh": "358"
+   },
+   "B": {
+    "video": "s2_tiny_tag_B.mp4",
+    "answer": "386",
+    "answer_idx": 3,
+    "answer_letter": "D",
+    "answer_zh": "386"
+   }
+  },
+  "evidence_bbox": [
+   1077,
+   612,
+   1121,
+   642
+  ],
+  "decoy_bbox": [
+   880,
+   612,
+   924,
+   642
+  ],
+  "fps": 23.976023976023978,
+  "n_frames": 96,
+  "evidence_window_frames": null,
+  "decoy_window_frames": null,
+  "coarse_frame_idx": [
+   0,
+   13,
+   27,
+   40,
+   54,
+   67,
+   81,
+   95
+  ],
+  "params": {
+   "base": "905ce3c1-63bf-455b-abc9-c1b61352f86e.mp4",
+   "tag_xy": [
+    1085,
+    620
+   ],
+   "tag_wh": [
+    28,
+    14
+   ],
+   "text_px": 9,
+   "window": null,
+   "question_zh": "画面右下方的吧台上放着一张白色小标签，上面印着一个数字。标签上印的数字是多少？",
+   "options_zh": [
+    "358",
+    "356",
+    "338",
+    "386"
+   ],
+   "evidence_bbox": [
+    1077,
+    612,
+    1121,
+    642
+   ],
+   "decoy_bbox": [
+    880,
+    612,
+    924,
+    642
+   ]
+  }
+ },
+ {
+  "id": "s2b_tiny_tag_1080p",
+  "version": "v4",
+  "base": "f103252e-1db7-4fb2-b65d-4924c410a4fe.mp4",
+  "question": "There is a small white tag with a number printed on it, lying on the counter near the bottom center of the frame. What number is printed on the tag?",
+  "options": [
+   "358",
+   "356",
+   "338",
+   "386"
+  ],
+  "question_zh": "画面底部中央的台面上放着一张白色小标签，上面印着一个数字。标签上印的数字是多少？",
+  "options_zh": [
+   "358",
+   "356",
+   "338",
+   "386"
+  ],
+  "twins": {
+   "A": {
+    "video": "s2b_tiny_tag_1080p_A.mp4",
+    "answer": "358",
+    "answer_idx": 0,
+    "answer_letter": "A",
+    "answer_zh": "358"
+   },
+   "B": {
+    "video": "s2b_tiny_tag_1080p_B.mp4",
+    "answer": "386",
+    "answer_idx": 3,
+    "answer_letter": "D",
+    "answer_zh": "386"
+   }
+  },
+  "evidence_bbox": [
+   610,
+   930,
+   666,
+   968
+  ],
+  "decoy_bbox": [
+   400,
+   930,
+   456,
+   968
+  ],
+  "fps": 24.0,
+  "n_frames": 432,
+  "evidence_window_frames": null,
+  "decoy_window_frames": null,
+  "coarse_frame_idx": [
+   0,
+   61,
+   123,
+   184,
+   246,
+   307,
+   369,
+   431
+  ],
+  "params": {
+   "base": "f103252e-1db7-4fb2-b65d-4924c410a4fe.mp4",
+   "tag_xy": [
+    620,
+    940
+   ],
+   "tag_wh": [
+    36,
+    18
+   ],
+   "text_px": 12,
+   "window": null,
+   "question_zh": "画面底部中央的台面上放着一张白色小标签，上面印着一个数字。标签上印的数字是多少？",
+   "options_zh": [
+    "358",
+    "356",
+    "338",
+    "386"
+   ],
+   "evidence_bbox": [
+    610,
+    930,
+    666,
+    968
+   ],
+   "decoy_bbox": [
+    400,
+    930,
+    456,
+    968
+   ]
+  }
+ },
+ {
+  "id": "s3b_flash_symbol",
+  "version": "v3",
+  "base": "1c47ea6a-274d-450f-98bc-26260727428c.mp4",
+  "question": "At one brief moment a small white card with a black symbol on it is shown on the table near the lower right. What symbol is on the card?",
+  "options": [
+   "triangle",
+   "square",
+   "circle",
+   "cross"
+  ],
+  "question_zh": "视频中有一瞬间，画面右下方的桌面上出现一张印着黑色图案的白色卡片。卡片上的图案是什么？",
+  "options_zh": [
+   "三角形",
+   "正方形",
+   "圆形",
+   "十字"
+  ],
+  "twins": {
+   "A": {
+    "video": "s3b_flash_symbol_A.mp4",
+    "answer": "triangle",
+    "answer_idx": 0,
+    "answer_letter": "A",
+    "answer_zh": "三角形"
+   },
+   "B": {
+    "video": "s3b_flash_symbol_B.mp4",
+    "answer": "circle",
+    "answer_idx": 2,
+    "answer_letter": "C",
+    "answer_zh": "圆形"
+   }
+  },
+  "evidence_bbox": [
+   1260,
+   840,
+   1440,
+   1020
+  ],
+  "decoy_bbox": [
+   1260,
+   840,
+   1440,
+   1020
+  ],
+  "fps": 30.0,
+  "n_frames": 270,
+  "evidence_window_frames": [
+   160,
+   187
+  ],
+  "evidence_window_sec": [
+   5.33,
+   6.23
+  ],
+  "decoy_window_frames": [
+   0,
+   150
+  ],
+  "coarse_frame_idx": [
+   0,
+   38,
+   76,
+   115,
+   153,
+   192,
+   230,
+   269
+  ],
+  "params": {
+   "base": "1c47ea6a-274d-450f-98bc-26260727428c.mp4",
+   "card_xy": [
+    1290,
+    870
+   ],
+   "card_wh": [
+    120,
+    120
+   ],
+   "window": [
+    160,
+    187
+   ],
+   "question_zh": "视频中有一瞬间，画面右下方的桌面上出现一张印着黑色图案的白色卡片。卡片上的图案是什么？",
+   "options_zh": [
+    "三角形",
+    "正方形",
+    "圆形",
+    "十字"
+   ],
+   "evidence_bbox": [
+    1260,
+    840,
+    1440,
+    1020
+   ]
+  }
+ },
+ {
+  "id": "s3_roll_direction",
+  "version": "v2",
+  "base": "1c47ea6a-274d-450f-98bc-26260727428c.mp4",
+  "question": "At one brief moment a small orange ball rolls across the table near the bottom of the frame. Toward which side of the frame does the ball move as time goes on?",
+  "options": [
+   "toward the right side",
+   "toward the left side",
+   "toward the top",
+   "toward the bottom"
+  ],
+  "question_zh": "视频中有一瞬间，一个橙色小球从画面底部的桌面上滚过。随着时间推移，小球朝画面的哪一侧运动？",
+  "options_zh": [
+   "朝右侧",
+   "朝左侧",
+   "朝上方",
+   "朝下方"
+  ],
+  "twins": {
+   "A": {
+    "video": "s3_roll_direction_A.mp4",
+    "answer": "toward the right side",
+    "answer_idx": 0,
+    "answer_letter": "A",
+    "answer_zh": "朝右侧"
+   },
+   "B": {
+    "video": "s3_roll_direction_B.mp4",
+    "answer": "toward the left side",
+    "answer_idx": 1,
+    "answer_letter": "B",
+    "answer_zh": "朝左侧"
+   }
+  },
+  "evidence_bbox": [
+   200,
+   840,
+   1720,
+   1080
+  ],
+  "decoy_bbox": [
+   200,
+   840,
+   1720,
+   1080
+  ],
+  "fps": 30.0,
+  "n_frames": 270,
+  "evidence_window_frames": [
+   160,
+   187
+  ],
+  "evidence_window_sec": [
+   5.33,
+   6.23
+  ],
+  "decoy_window_frames": [
+   0,
+   150
+  ],
+  "coarse_frame_idx": [
+   0,
+   38,
+   76,
+   115,
+   153,
+   192,
+   230,
+   269
+  ],
+  "params": {
+   "base": "1c47ea6a-274d-450f-98bc-26260727428c.mp4",
+   "ball_r": 48,
+   "ball_color": [
+    245,
+    140,
+    20
+   ],
+   "y": 960,
+   "x_range": [
+    260,
+    1660
+   ],
+   "window": [
+    160,
+    187
+   ],
+   "question_zh": "视频中有一瞬间，一个橙色小球从画面底部的桌面上滚过。随着时间推移，小球朝画面的哪一侧运动？",
+   "options_zh": [
+    "朝右侧",
+    "朝左侧",
+    "朝上方",
+    "朝下方"
+   ],
+   "evidence_bbox": [
+    200,
+    840,
+    1720,
+    1080
+   ]
+  }
+ }
+]

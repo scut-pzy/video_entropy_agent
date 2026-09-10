@@ -1,0 +1,2375 @@
+{
+"000a7fef-b82f-4bae-9837-a094e95792d1": {
+"n_frames": 49,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 1.6349666666666667
+},
+"00137990-c517-42f8-a243-4c4c0935984f": {
+"n_frames": 60,
+"fps": 29.905956112852664,
+"width": 360,
+"height": 640,
+"duration": 2.006289308176101
+},
+"00195682-6175-42a2-b3ec-9a0744084c7b": {
+"n_frames": 335,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 13.4
+},
+"00362dfc-64b9-4ecb-beb6-36e07ecde1d8": {
+"n_frames": 75,
+"fps": 30.0,
+"width": 568,
+"height": 320,
+"duration": 2.5
+},
+"004e5ce0-fef3-4f76-8da2-e5a6e94c3f05": {
+"n_frames": 89,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.9696333333333333
+},
+"004f237c-7016-4f9e-9d89-39be66ca8230": {
+"n_frames": 2638,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 88.02126666666666
+},
+"005202cf-c165-441d-ac78-5a880e4c99a0": {
+"n_frames": 105,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.5
+},
+"0053006d-b0e3-499c-b599-6089def0e5cd": {
+"n_frames": 329,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 10.977633333333333
+},
+"00569342-c7cb-47cc-93fc-ea05dc7ee2fe": {
+"n_frames": 7956,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 132.6
+},
+"005a8473-9531-4886-b03a-a99d0aa39132": {
+"n_frames": 2340,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 78.0
+},
+"00652e15-b64a-445b-a274-fe564592b6d2": {
+"n_frames": 150,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"006db179-f2b0-448f-b065-e3f0ee4ac6d8": {
+"n_frames": 3114,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 103.9038
+},
+"00723481-cb6a-4f13-8339-7fda9d5867fb": {
+"n_frames": 2335,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 77.91116666666667
+},
+"007f8a76-747f-43d3-b0be-9a0b4fd77ae7": {
+"n_frames": 71,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 2.9612916666666664
+},
+"0085cd4c-8fbb-4815-abd3-d369f3898872": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"008765fd-6c82-4652-bc73-6e78fc7da12b": {
+"n_frames": 360,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 15.014999999999999
+},
+"00ba016a-cc19-418b-9079-fe306e3edd0f": {
+"n_frames": 200,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 8.0
+},
+"00be7a2a-0e9d-4731-bded-9686158343df": {
+"n_frames": 81,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 2.7
+},
+"00bf6a5f-84db-4a8e-88a8-7eb87f760d14": {
+"n_frames": 95,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 3.9622916666666663
+},
+"01175375-b9a4-4684-93b2-593fcae1fdd6": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"012583ae-a242-4b9b-8ec0-b65da2f68069": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 1080,
+"height": 1920,
+"duration": 3.0
+},
+"01398ac0-60e5-456d-84c9-7feda60a990f": {
+"n_frames": 240,
+"fps": 60.0,
+"width": 406,
+"height": 720,
+"duration": 4.0
+},
+"013d8ff1-a748-410b-9ef8-5049e66b919d": {
+"n_frames": 960,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 16.016000000000002
+},
+"01655f01-94a4-4a0c-a201-65cf65bea20a": {
+"n_frames": 150,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 5.0
+},
+"01727300-32d9-4cf2-a462-a8bb2d129d5e": {
+"n_frames": 96,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 4.004
+},
+"017a4228-c34f-42c0-b157-c13eca028c39": {
+"n_frames": 73,
+"fps": 8.0,
+"width": 320,
+"height": 240,
+"duration": 9.125
+},
+"01899db7-94f1-4a95-8cf3-134d3e07dfcf": {
+"n_frames": 150,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 5.005
+},
+"018b0b08-2daa-41c7-ac31-fb1e43c254d5": {
+"n_frames": 204,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.8068
+},
+"018c3ec1-ef59-41e6-a652-25f796160631": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 3.003
+},
+"019cc9ab-1ac7-47f8-9dc2-5981b76f7894": {
+"n_frames": 96,
+"fps": 30.0,
+"width": 406,
+"height": 720,
+"duration": 3.2
+},
+"01a0acd0-5904-49fc-afd8-e6d539ae8692": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 480,
+"duration": 7.007000000000001
+},
+"01a2142e-9694-4105-a8f1-f0cb8d04c18b": {
+"n_frames": 84,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 3.5035
+},
+"01b46e8d-5f35-44f6-8ff2-60ebbfdb0ca3": {
+"n_frames": 711,
+"fps": 30.0,
+"width": 1080,
+"height": 1920,
+"duration": 23.7
+},
+"01bb2b90-8a51-4f8c-a271-e45d3b3f810d": {
+"n_frames": 240,
+"fps": 30.0,
+"width": 640,
+"height": 480,
+"duration": 8.0
+},
+"01d0ba27-e77c-485b-8917-42b9e4442a75": {
+"n_frames": 383,
+"fps": 23.929,
+"width": 360,
+"height": 640,
+"duration": 16.005683480295875
+},
+"01d5a2bd-605d-481c-9fa0-4b07c2a8495b": {
+"n_frames": 2525,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 101.0
+},
+"01d661b0-b3ec-45fa-898e-c2c6ff8aa07e": {
+"n_frames": 339,
+"fps": 30.0,
+"width": 1080,
+"height": 1920,
+"duration": 11.3
+},
+"01df8fe9-1458-4902-8a3b-1050f816abbe": {
+"n_frames": 268,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 10.72
+},
+"01e1a46d-a214-43aa-8937-77614a5816fd": {
+"n_frames": 300,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 5.005
+},
+"01e52f38-d5c1-470d-8471-38e1e26228d6": {
+"n_frames": 613,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 10.226883333333333
+},
+"0201cd34-e86e-48ea-9c39-a374e7a18120": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.0040000000000004
+},
+"02044290-676d-4416-91d6-1a670856e0ff": {
+"n_frames": 102,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.4
+},
+"02095156-b0ef-43b4-8ebf-360707203b19": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 7.007000000000001
+},
+"02112da3-b26a-4f51-99bb-7da86e189d5b": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.0040000000000004
+},
+"0247c7f4-8809-476d-b59f-17ad1348fae0": {
+"n_frames": 75,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"02517c8a-9f04-49ca-b413-20c6185d0b0d": {
+"n_frames": 105,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.5035000000000003
+},
+"02536410-7c8b-4c12-a484-4d97882ebcaa": {
+"n_frames": 719,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 23.990633333333335
+},
+"0256d9bf-f914-4604-a203-071ca6dfa33f": {
+"n_frames": 66,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.2022
+},
+"0259b562-8c9c-4502-be78-4b164ff556be": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"025c96d6-8e6a-400c-84b2-118453cb56a3": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 4.0
+},
+"0269246f-25bb-45e5-81fe-73ba8fffef98": {
+"n_frames": 6324,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 211.01080000000002
+},
+"028b3264-3adb-4bd6-b9dd-860848a4e453": {
+"n_frames": 125,
+"fps": 50.0,
+"width": 1280,
+"height": 720,
+"duration": 2.5
+},
+"028dc6a7-e866-4e30-acc7-5f8e59296915": {
+"n_frames": 210,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 7.0
+},
+"029118f2-d436-4d18-b87a-3b37de9a9b90": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"029cb47f-8a83-4f9d-89ea-037437adf7d1": {
+"n_frames": 480,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 16.0
+},
+"02a57b80-1cfa-4eba-89a4-9b65af7ca8ce": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.0
+},
+"02ab07fb-f555-440c-89ab-e8d669abcccb": {
+"n_frames": 375,
+"fps": 30.0,
+"width": 406,
+"height": 720,
+"duration": 12.5
+},
+"02ab088f-5409-4eec-a6ce-9d97af38f860": {
+"n_frames": 48,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 2.002
+},
+"02ad21c3-8874-43fa-ae15-1fac34e3b5a2": {
+"n_frames": 268,
+"fps": 30.0,
+"width": 1280,
+"height": 670,
+"duration": 8.933333333333334
+},
+"02b2cea0-887e-4297-ad50-5da08afb1dce": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"02b39c36-e5f9-414d-b855-19128c3a6a92": {
+"n_frames": 65,
+"fps": 24.0,
+"width": 1920,
+"height": 1080,
+"duration": 2.7083333333333335
+},
+"02b8d51f-c42d-4233-9085-c125420e62db": {
+"n_frames": 119,
+"fps": 29.75,
+"width": 406,
+"height": 720,
+"duration": 4.0
+},
+"02bc30b2-8bbd-4202-9342-00251650f8ad": {
+"n_frames": 75,
+"fps": 29.97002997002997,
+"width": 854,
+"height": 480,
+"duration": 2.5025
+},
+"02de3c88-a69c-4c48-bc99-fa14c28bc28e": {
+"n_frames": 89,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 360,
+"duration": 2.9696333333333333
+},
+"02fb0f6f-e1ac-45cc-bdbd-e49e48c9f229": {
+"n_frames": 48,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 2.002
+},
+"02fe3aa3-d91c-46e4-b6ba-b787c643c502": {
+"n_frames": 72,
+"fps": 29.97,
+"width": 360,
+"height": 640,
+"duration": 2.4024024024024024
+},
+"03038de6-5e23-4c76-b3d6-f3178185dc80": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.0
+},
+"0304365f-9b86-414b-ba93-ca8d4ab71e6b": {
+"n_frames": 179,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 5.9726333333333335
+},
+"031a20cd-1e23-4243-8ddb-ab478f6b166a": {
+"n_frames": 495,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 16.5
+},
+"033a8ca2-4189-45dc-905d-d4f015f35ca6": {
+"n_frames": 1482,
+"fps": 30.0,
+"width": 640,
+"height": 480,
+"duration": 49.4
+},
+"033f044b-7bac-4a4f-8b67-173d292b6967": {
+"n_frames": 50,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"034b1a50-cd0b-421f-b9d8-9701a10e5bc8": {
+"n_frames": 75,
+"fps": 25.0,
+"width": 640,
+"height": 480,
+"duration": 3.0
+},
+"0357a9e5-a503-410e-b828-a4243fef871c": {
+"n_frames": 1349,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 45.011633333333336
+},
+"0366fe50-7de7-4b5a-8bd1-af8fa3013e66": {
+"n_frames": 63,
+"fps": 25.0,
+"width": 640,
+"height": 480,
+"duration": 2.52
+},
+"0367d739-3a76-4d25-8452-b58424421cc1": {
+"n_frames": 600,
+"fps": 30.0,
+"width": 640,
+"height": 480,
+"duration": 20.0
+},
+"036975ea-c469-404d-a129-2bbbc0ab0d22": {
+"n_frames": 527,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 21.980291666666666
+},
+"03719652-1e54-4997-9e95-60e3a5332ca5": {
+"n_frames": 105,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.5035000000000003
+},
+"037bdc28-dc09-4df1-9fae-ac5ea3d227db": {
+"n_frames": 167,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 6.965291666666666
+},
+"0381ecd5-ea0f-4688-b7e9-193fa8e67641": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"0386d539-9588-479d-af16-6e3ee5b397c5": {
+"n_frames": 60,
+"fps": 29.97,
+"width": 1280,
+"height": 720,
+"duration": 2.002002002002002
+},
+"038acf71-726e-4fe9-9555-14940158c520": {
+"n_frames": 11820,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 197.0
+},
+"03951c2d-fb23-4b59-9ed5-6e4088af3923": {
+"n_frames": 1529,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 51.017633333333336
+},
+"03a7c027-7630-4fb6-93fc-94cdc90c176e": {
+"n_frames": 81,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.7027
+},
+"03b92521-180a-4530-9308-e26d99a23319": {
+"n_frames": 287,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 4.783333333333333
+},
+"03ba05ca-8793-4718-9dad-5ef56ae85b42": {
+"n_frames": 60,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.0020000000000002
+},
+"03bebaab-b371-4d42-b04d-91bd38e35e68": {
+"n_frames": 69,
+"fps": 29.97002997002997,
+"width": 320,
+"height": 240,
+"duration": 2.3023000000000002
+},
+"03cad0dd-8a5a-4ac6-8f44-7a7cfffbe739": {
+"n_frames": 100,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"03cb958d-411e-4f77-addb-e79d68078523": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"03d5358d-8a65-48ac-aa3f-b7a528f8970d": {
+"n_frames": 100,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"03e4536f-9900-4514-9b3c-a6397abae7f9": {
+"n_frames": 330,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 11.0
+},
+"03ec3c45-4f15-4073-b161-6378fb2c034c": {
+"n_frames": 233,
+"fps": 29.0,
+"width": 406,
+"height": 720,
+"duration": 8.03448275862069
+},
+"03ed6c10-7206-41df-bec9-e3637b2c4869": {
+"n_frames": 528,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 8.8088
+},
+"03f196fc-139c-41d5-9834-4f6842fd7325": {
+"n_frames": 109,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.6333333333333333
+},
+"03f4167c-d1a3-42dc-82a5-183404b52de1": {
+"n_frames": 149,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.971633333333333
+},
+"03f68394-052b-4a08-a27b-f09c13f65e5d": {
+"n_frames": 78,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.6026000000000002
+},
+"0404e944-5716-4634-90f4-6ce8bd584711": {
+"n_frames": 160,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 5.338666666666667
+},
+"041f9c5f-0b22-4173-b777-9394ba5fff6c": {
+"n_frames": 72,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.4024
+},
+"04221b07-499a-4ad1-a1af-6eb6fa8972ca": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 360,
+"duration": 4.0040000000000004
+},
+"042250b4-6df9-42d1-8f44-2048d39e3459": {
+"n_frames": 150,
+"fps": 30.0,
+"width": 432,
+"height": 720,
+"duration": 5.0
+},
+"04287835-75a6-4709-8b57-94458b42c0ef": {
+"n_frames": 950,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 38.0
+},
+"04322fb8-2c2d-445d-83cd-3ef02a5eb536": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.0040000000000004
+},
+"044551b6-a549-4e62-a9c5-c30fe85623d0": {
+"n_frames": 3300,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 110.0
+},
+"04535232-c315-4697-a2ed-8218cd7c5342": {
+"n_frames": 345,
+"fps": 23.0,
+"width": 320,
+"height": 240,
+"duration": 15.0
+},
+"0469cd05-3105-47c9-8fce-ee6508ad8247": {
+"n_frames": 929,
+"fps": 29.97002997002997,
+"width": 854,
+"height": 480,
+"duration": 30.997633333333333
+},
+"04776104-5ae0-4fb3-a54d-8c41644cb4a6": {
+"n_frames": 554,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 18.485133333333334
+},
+"047d3384-c4dc-40c1-89a5-ce184f632dbf": {
+"n_frames": 275,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 11.0
+},
+"04960c4f-0c65-4bf1-b462-5a910427e9ce": {
+"n_frames": 528,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 8.8088
+},
+"04b42a56-8ff7-41b2-986c-5a9e2c563367": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 7.007000000000001
+},
+"04b81bef-009a-4ddb-a7a9-2bad4baa40d1": {
+"n_frames": 180,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"04bedfa4-7c52-4b52-a909-40df067d307c": {
+"n_frames": 424,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 14.133333333333333
+},
+"04c08527-4beb-436c-a75e-d1b4de719ed8": {
+"n_frames": 508,
+"fps": 25.0,
+"width": 360,
+"height": 640,
+"duration": 20.32
+},
+"04c11717-6caf-4605-9ad9-960cd006e504": {
+"n_frames": 71,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 2.9612916666666664
+},
+"04c7cdb8-c8bd-47f1-9120-a796111f6dbf": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 4.0
+},
+"04f282a0-7f54-48ec-a4e0-0a304904e8b7": {
+"n_frames": 629,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 26.234541666666665
+},
+"04faf2c8-51d0-45e0-89e3-02dc9334a8cc": {
+"n_frames": 119,
+"fps": 29.97002997002997,
+"width": 854,
+"height": 480,
+"duration": 3.9706333333333332
+},
+"0512a3f2-941f-45cc-a02b-4597bd14fc6a": {
+"n_frames": 419,
+"fps": 29.916666666666668,
+"width": 480,
+"height": 360,
+"duration": 14.005571030640668
+},
+"0517e1ba-a724-4a96-8b02-e04d1017f71a": {
+"n_frames": 95,
+"fps": 23.976023976023978,
+"width": 640,
+"height": 480,
+"duration": 3.9622916666666663
+},
+"05230870-c1ec-41a7-87f7-5a2b05c547e6": {
+"n_frames": 420,
+"fps": 30.0,
+"width": 404,
+"height": 720,
+"duration": 14.0
+},
+"052d599c-2902-4744-bec5-fb1d180aae3b": {
+"n_frames": 959,
+"fps": 59.94006309148265,
+"width": 1280,
+"height": 720,
+"duration": 15.999315825482869
+},
+"052e49d8-674a-4fc8-a083-7ec6069712ac": {
+"n_frames": 115,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.8333333333333335
+},
+"053408fe-4bd4-4787-be73-34997b097a62": {
+"n_frames": 1080,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 36.0
+},
+"0539a82d-7c7c-474a-9f0c-9c604c6efae5": {
+"n_frames": 353,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 14.708333333333334
+},
+"0543442b-b5bb-4d6f-a7b9-a9f9ccb46c86": {
+"n_frames": 216,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 9.008999999999999
+},
+"05645735-ed75-42a7-a51e-eb3c183ef5e9": {
+"n_frames": 47,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 1.9602916666666665
+},
+"05671564-8295-4dc7-bfb2-f61147ce4929": {
+"n_frames": 2100,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 35.0
+},
+"057f1d43-0c5a-4acc-ab72-e9e194be1b50": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.0
+},
+"05a33d78-d8b5-43e7-8eed-9ab5b9d6b1e7": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 454,
+"height": 360,
+"duration": 4.0
+},
+"05e41937-11ad-4b33-84b5-6d4e9529f9a2": {
+"n_frames": 365,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 6.083333333333333
+},
+"060879ea-39fb-45cb-8744-e53a0ee3dddf": {
+"n_frames": 75,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 2.5
+},
+"060f565c-1f1e-41a5-90f1-5f0b1cda6377": {
+"n_frames": 750,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 25.0
+},
+"061659fb-7193-4554-9a6e-6169e6169b47": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"062a56ff-e076-430c-a908-591411550db4": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"0638aa66-6b90-4da1-9662-b4c1f81dcb0b": {
+"n_frames": 690,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 480,
+"duration": 23.023
+},
+"06481e5e-ab86-4a0b-b047-f97c2e0e71a3": {
+"n_frames": 180,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"0675eb89-458a-4177-8419-cb14bd1d1f4e": {
+"n_frames": 1251,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 52.177125
+},
+"067f2f45-0413-4f9f-bb3e-73832f0aa98d": {
+"n_frames": 229,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 9.16
+},
+"0686fe1d-2d89-4fce-baf2-7149aaca67ab": {
+"n_frames": 120,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"0690d8b2-c9b9-4528-9a1b-6ddbc76712df": {
+"n_frames": 350,
+"fps": 50.0,
+"width": 1280,
+"height": 720,
+"duration": 7.0
+},
+"069d560d-7270-41d0-a4da-e660db2d6da1": {
+"n_frames": 1424,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 47.514133333333334
+},
+"06a07ca8-3aa2-4a27-be18-afd7b3af8db3": {
+"n_frames": 129,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 4.3
+},
+"06a66a3d-96ef-4c5c-b9d8-9b4099b20607": {
+"n_frames": 149,
+"fps": 29.97002997002997,
+"width": 360,
+"height": 640,
+"duration": 4.971633333333333
+},
+"06b72fc3-1102-4531-b738-7cf851673fc8": {
+"n_frames": 125,
+"fps": 25.0,
+"width": 1920,
+"height": 1080,
+"duration": 5.0
+},
+"06b86d66-0628-45f6-8bd9-4dc6a8c3b82f": {
+"n_frames": 99,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.3033
+},
+"06edbba3-b972-4b88-b6b7-408c8ade5ea7": {
+"n_frames": 95,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 3.9622916666666663
+},
+"06f1b59b-a3fa-4422-b612-364966d7da37": {
+"n_frames": 330,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 11.011000000000001
+},
+"06f589e4-228e-47c6-875d-3a046c68eff4": {
+"n_frames": 150,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"07050483-71b5-4f84-9848-054a09cfd832": {
+"n_frames": 200,
+"fps": 50.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"0735141f-75ba-4c11-904d-f2922f310649": {
+"n_frames": 100,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"077c21f0-bed3-49b6-9495-b5b161282971": {
+"n_frames": 105,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.5035000000000003
+},
+"078b65bb-ddf2-4d9a-b299-d28b963749d2": {
+"n_frames": 250,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 10.0
+},
+"0791f026-3634-4816-b67d-cdde7f57b460": {
+"n_frames": 225,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 7.5075
+},
+"07945539-9cd0-4207-aab9-c17c2af07f08": {
+"n_frames": 200,
+"fps": 25.0,
+"width": 352,
+"height": 264,
+"duration": 8.0
+},
+"07b135e9-ab18-4f7b-b1cb-b681e3c8e95b": {
+"n_frames": 1769,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 59.02563333333333
+},
+"07b1dfbd-2a06-491e-9fb8-1be978a7b783": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"07d4d07f-b881-47b8-900e-63b7988895e5": {
+"n_frames": 226,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 7.533333333333333
+},
+"07de0bed-2fa9-4567-86cc-b2491fe00df7": {
+"n_frames": 144,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 6.005999999999999
+},
+"07f0f879-c79f-4d19-937a-9776afc05375": {
+"n_frames": 250,
+"fps": 50.0,
+"width": 1280,
+"height": 720,
+"duration": 5.0
+},
+"07f6d423-dce5-4a9d-9bf5-5c8572aa02e7": {
+"n_frames": 950,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 38.0
+},
+"07f8f57c-13a3-4f43-bfaf-c11e0f74e51c": {
+"n_frames": 75,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"082ebbfd-5404-444d-b383-cc19fb112402": {
+"n_frames": 1225,
+"fps": 25.0,
+"width": 1920,
+"height": 1080,
+"duration": 49.0
+},
+"083580c4-2285-4241-820d-af9dff799e95": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 480,
+"duration": 7.007000000000001
+},
+"0845a043-7931-4c80-b799-eddce60ad099": {
+"n_frames": 94,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.1333333333333333
+},
+"0845ab07-098f-4a65-ad06-14e3fefe7587": {
+"n_frames": 60,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 2.0
+},
+"085c3bb0-f11b-4302-ab24-05788ad7a57b": {
+"n_frames": 75,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"08658793-6815-449e-9fc5-9ebe5d6bab20": {
+"n_frames": 100,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 1.6666666666666667
+},
+"0871038d-99fc-44ab-95c8-d96086276b5b": {
+"n_frames": 1530,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 51.0
+},
+"0880bbfb-8bb8-4726-a2bc-c6bc41752dab": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 4.0040000000000004
+},
+"088b561d-aa8a-4cb5-89a5-bf06635d5f96": {
+"n_frames": 79,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 2.6333333333333333
+},
+"0893e529-f073-41d9-b660-a3591f993b1e": {
+"n_frames": 119,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.9706333333333332
+},
+"0894c24e-aabc-40e3-a05d-006e7b0bbd97": {
+"n_frames": 206,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 3.433333333333333
+},
+"089b7c3f-6082-4047-9007-3fa726f9610e": {
+"n_frames": 600,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 25.025
+},
+"08bff6e3-d36b-494d-b90f-a03d44c1b8d1": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"08c38cbd-45db-46ae-85de-c873961906fd": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"08cd9894-1122-45ab-8351-e291648a7340": {
+"n_frames": 89,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.9696333333333333
+},
+"08fe851a-8bc8-4437-b4c1-e16a08c16dd4": {
+"n_frames": 270,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 9.0
+},
+"0900d769-20f1-4006-9748-1eadcd407be6": {
+"n_frames": 240,
+"fps": 29.97002997002997,
+"width": 960,
+"height": 720,
+"duration": 8.008000000000001
+},
+"090195d9-24e3-467f-a947-3b630b310390": {
+"n_frames": 390,
+"fps": 29.97002997002997,
+"width": 854,
+"height": 480,
+"duration": 13.013
+},
+"092e1c8d-7301-494a-86a9-16dda45975b8": {
+"n_frames": 420,
+"fps": 59.94005994005994,
+"width": 1920,
+"height": 1080,
+"duration": 7.007000000000001
+},
+"0946b5ec-612e-4bb8-ad42-6f2cd461e866": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"0947b19f-b5c7-411c-a255-9547079378cd": {
+"n_frames": 60,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"09528ab1-953d-46c8-92e3-217371307827": {
+"n_frames": 1740,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 58.0
+},
+"095c12b2-c1c1-4461-b778-629fd95a6ef3": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 640,
+"height": 480,
+"duration": 4.0
+},
+"097252a8-81dd-45ad-82f8-ea201c951424": {
+"n_frames": 82,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 3.420083333333333
+},
+"09955097-a7f1-4563-8b0b-79ff1212dd1c": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"09965add-3b12-4d8d-8359-f7892ccc8d20": {
+"n_frames": 105,
+"fps": 14.985014985014985,
+"width": 320,
+"height": 240,
+"duration": 7.007000000000001
+},
+"099918ae-8618-42cc-844d-9624a74cf122": {
+"n_frames": 179,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 2.9863166666666667
+},
+"099e2a75-5932-4bf2-b163-74946442a623": {
+"n_frames": 2100,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 35.0
+},
+"09aa2da9-410a-4685-b5ae-2f69ae6d9305": {
+"n_frames": 1259,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 21.004316666666668
+},
+"09ac6b93-ebed-4d73-bafe-b8ae66419831": {
+"n_frames": 321,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 10.710700000000001
+},
+"09af4c90-3011-4693-936a-ddab8a02c41b": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 720,
+"height": 1280,
+"duration": 4.0
+},
+"09afff4c-2b70-475e-84c7-83d696ffc22e": {
+"n_frames": 216,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 9.008999999999999
+},
+"09b5ec8c-7a9b-42aa-872a-4761496ee156": {
+"n_frames": 167,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 5.572233333333333
+},
+"09f6a069-063d-4d74-9ca1-2e8cdea46751": {
+"n_frames": 100,
+"fps": 50.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"0a0eb232-e9eb-4108-bc04-402d7c977d8a": {
+"n_frames": 120,
+"fps": 30.0,
+"width": 480,
+"height": 480,
+"duration": 4.0
+},
+"0a11e666-255b-4b9a-a948-a278e2337b62": {
+"n_frames": 225,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 7.5
+},
+"0a2933b7-38ac-478e-a4e4-8104334fd0c3": {
+"n_frames": 72,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 3.0029999999999997
+},
+"0a2a6f74-6fbb-4d2f-83ba-8daade9d31e4": {
+"n_frames": 180,
+"fps": 30.0,
+"width": 354,
+"height": 640,
+"duration": 6.0
+},
+"0a428591-4a70-4a84-b3a7-9e18b436e327": {
+"n_frames": 119,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.9706333333333332
+},
+"0a502966-4400-45b6-ad68-568e401462aa": {
+"n_frames": 450,
+"fps": 25.0,
+"width": 360,
+"height": 640,
+"duration": 18.0
+},
+"0a752fb3-2d69-4a13-8b79-bc8005b06ef1": {
+"n_frames": 1529,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 51.017633333333336
+},
+"0a8044c3-43f4-43c8-b1c8-50cd350788d4": {
+"n_frames": 568,
+"fps": 27.027027027027028,
+"width": 1280,
+"height": 720,
+"duration": 21.016
+},
+"0aa74c23-bbfd-4c91-bed9-d1fcc8dc458e": {
+"n_frames": 144,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 6.005999999999999
+},
+"0aabdf55-8e05-4356-b4de-d1d4bffdf1d8": {
+"n_frames": 32,
+"fps": 24.0,
+"width": 406,
+"height": 720,
+"duration": 1.3333333333333333
+},
+"0ac2a48e-74c1-412d-9699-9d498c40e49e": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"0aeb1625-160b-4410-b9a2-7b2fa7a373ab": {
+"n_frames": 168,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 5.6
+},
+"0aeffb72-341b-4e33-8d66-48d8c3c42c9d": {
+"n_frames": 150,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 5.0
+},
+"0b01b9ff-ebc2-40d7-b98a-c3c2bfa67cb0": {
+"n_frames": 270,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 9.009
+},
+"0b421f7b-2b93-4e39-957d-14bf5ebc67aa": {
+"n_frames": 84,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.8028
+},
+"0b423503-bd12-4507-8cac-a9ab601cf4fe": {
+"n_frames": 46,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 1.9185833333333333
+},
+"0b4eff1c-b207-4d7e-a2e6-7e77fba9754f": {
+"n_frames": 180,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 6.0
+},
+"0b4fe9bf-d8af-4702-8c34-721701d4748d": {
+"n_frames": 96,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 4.004
+},
+"0b5580ab-6f38-4eef-b602-3758b8260e74": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"0b785fc4-ee5d-453f-9a27-6e8e9c567b75": {
+"n_frames": 1320,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 44.0
+},
+"0b7c0298-7016-4b5e-926e-96565291142b": {
+"n_frames": 540,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 18.0
+},
+"0b905fbe-c43d-408a-ba77-185a29f9a46b": {
+"n_frames": 144,
+"fps": 24.0,
+"width": 576,
+"height": 360,
+"duration": 6.0
+},
+"0b9827ec-5536-427a-9d25-1ac7f9fccee2": {
+"n_frames": 270,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 9.009
+},
+"0b9a7ab3-58d5-4b58-90b0-f37ef72b68eb": {
+"n_frames": 384,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 6.4
+},
+"0bb47aee-02be-45df-8cc3-484c2c63148a": {
+"n_frames": 150,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"0beae15b-d154-4bd0-9509-70b4243d53b6": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 7.007000000000001
+},
+"0bec9990-2bd0-4d75-8d5f-174b288d623a": {
+"n_frames": 63,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.1021
+},
+"0bed6cc9-dfeb-4fc1-9c7e-d9b82720b40d": {
+"n_frames": 75,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.5025
+},
+"0bf7adb3-1d4c-409a-8cc4-ab78256f6144": {
+"n_frames": 660,
+"fps": 29.97002997002997,
+"width": 1920,
+"height": 1080,
+"duration": 22.022000000000002
+},
+"0c0d65aa-553b-49f9-b407-3f548ff6a643": {
+"n_frames": 156,
+"fps": 30.0,
+"width": 512,
+"height": 288,
+"duration": 5.2
+},
+"0c193e16-2d99-41be-b9a3-b04138ed6355": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"0c38c4fc-f1c8-430e-b575-2a7a11ecfeca": {
+"n_frames": 325,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 13.0
+},
+"0c55d7dd-3906-495b-a7c2-8abff09581c8": {
+"n_frames": 150,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"0c622af4-0193-4a9f-a2e8-721ccfc863b5": {
+"n_frames": 74,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.469133333333333
+},
+"0c67dfa1-1392-4dcb-b374-dd2d71627f5f": {
+"n_frames": 89,
+"fps": 29.916666666666668,
+"width": 1280,
+"height": 720,
+"duration": 2.9749303621169916
+},
+"0c6d0dd1-bf3a-4d21-b9a5-cfb09f7ef65f": {
+"n_frames": 98,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.2699333333333334
+},
+"0c73cbd7-6381-427f-9786-fb965900c069": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.0
+},
+"0c75b4f9-2c75-4565-9aa1-ae864874c56c": {
+"n_frames": 89,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.9696333333333333
+},
+"0c8ebdc8-75b8-407e-b277-70e82acb7db5": {
+"n_frames": 171,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 5.7
+},
+"0c8faabf-e6c8-447f-bd4a-7ed226c175a3": {
+"n_frames": 1200,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 20.0
+},
+"0c98080c-a5a4-418d-9023-b745700b9045": {
+"n_frames": 190,
+"fps": 28.5,
+"width": 854,
+"height": 346,
+"duration": 6.666666666666667
+},
+"0ce2b3ec-1e04-4d3a-afb5-cd14770b3ff2": {
+"n_frames": 1140,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 47.5
+},
+"0cf28ff6-3c8a-4d34-83e6-b751ff117b85": {
+"n_frames": 870,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 360,
+"duration": 29.029
+},
+"0d08d92b-9be6-432e-8ab2-d0b96a65e02e": {
+"n_frames": 119,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.9706333333333332
+},
+"0d0cff41-5d37-4813-bff1-24aef9669d18": {
+"n_frames": 119,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 3.9706333333333332
+},
+"0d1f9bbb-a0e1-4470-a4ba-517619bbac44": {
+"n_frames": 1230,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 49.2
+},
+"0d26e8ba-4c13-4b40-b7a2-ea4bbd8aab1c": {
+"n_frames": 840,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 28.0
+},
+"0d29bf9d-339a-4dc0-9af5-1ded0a062707": {
+"n_frames": 210,
+"fps": 30.0,
+"width": 568,
+"height": 320,
+"duration": 7.0
+},
+"0d2a4256-0bda-4024-a43b-7e75018941b0": {
+"n_frames": 240,
+"fps": 23.976,
+"width": 1280,
+"height": 640,
+"duration": 10.01001001001001
+},
+"0d403fbe-151d-4468-87a5-fb1f2463fe06": {
+"n_frames": 2157,
+"fps": 59.884534178188645,
+"width": 1280,
+"height": 720,
+"duration": 36.01931666666667
+},
+"0d55608d-681e-4666-933c-83b354c16c9e": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.0040000000000004
+},
+"0d5bcc46-04da-4306-bd77-d3f4855d74e0": {
+"n_frames": 53,
+"fps": 25.0,
+"width": 848,
+"height": 480,
+"duration": 2.12
+},
+"0d70bea1-e003-43dd-a4a9-e0d5fa2a1880": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 360,
+"height": 640,
+"duration": 4.0040000000000004
+},
+"0d72449d-3af3-4d22-bf94-3068a98e616f": {
+"n_frames": 490,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 16.333333333333332
+},
+"0d7912a2-ee6f-43fb-a695-1722abf17a4d": {
+"n_frames": 3536,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 58.992266666666666
+},
+"0d83d7cf-9947-4534-81cf-e17406a6b768": {
+"n_frames": 192,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 8.0
+},
+"0d992ab5-0a0a-4e13-9899-2510083f286d": {
+"n_frames": 57,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 1.9019
+},
+"0dabaf41-0e38-439c-8b0b-e7fe525168f3": {
+"n_frames": 122,
+"fps": 25.0,
+"width": 640,
+"height": 480,
+"duration": 4.88
+},
+"0db40947-f857-4cf5-8d6e-f261b874c833": {
+"n_frames": 48,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"0dcd6ce0-b2a8-4269-bf66-9b93dc80517e": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 480,
+"height": 360,
+"duration": 7.007000000000001
+},
+"0dd384cc-145e-4f01-b46f-b5cb48c286c6": {
+"n_frames": 330,
+"fps": 30.0,
+"width": 1920,
+"height": 1080,
+"duration": 11.0
+},
+"0dd7111a-1d67-42e1-9454-638daff76829": {
+"n_frames": 314,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 10.477133333333333
+},
+"0dee90ba-77eb-4fd7-9f27-0014403e7406": {
+"n_frames": 83,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 3.32
+},
+"0dfe0fc4-7de8-4796-a620-010546278653": {
+"n_frames": 2610,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 87.0
+},
+"0dfe8fc8-eadc-49b1-9135-2b09d7e52f65": {
+"n_frames": 125,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 5.0
+},
+"0dfece58-6e04-4707-9c07-340961e84760": {
+"n_frames": 96,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 4.004
+},
+"0e24417c-2912-4e99-bc19-fd19d3068936": {
+"n_frames": 144,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 6.005999999999999
+},
+"0e307187-d789-43cc-9928-0016883e8b04": {
+"n_frames": 1650,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 55.0
+},
+"0e3f5230-e047-4e5b-890a-0744fb3635c4": {
+"n_frames": 195,
+"fps": 29.916666666666668,
+"width": 1920,
+"height": 1080,
+"duration": 6.518105849582173
+},
+"0e4dc67b-610d-409c-ab1e-30345dc0cd43": {
+"n_frames": 100,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"0e52e9eb-9a46-4c35-ad9e-56e0834b5c4a": {
+"n_frames": 60,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.0020000000000002
+},
+"0e712c5d-4b5a-4d63-b93e-369036c3c121": {
+"n_frames": 408,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 17.017
+},
+"0e7a5848-f720-4cea-97b7-ada475a89123": {
+"n_frames": 60,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.0020000000000002
+},
+"0e82b302-26b0-4643-8883-be0d196afd71": {
+"n_frames": 539,
+"fps": 29.97,
+"width": 360,
+"height": 640,
+"duration": 17.984651317984653
+},
+"0eab678d-88b1-445e-8387-4c84c8b7edb3": {
+"n_frames": 719,
+"fps": 29.97002997002997,
+"width": 360,
+"height": 640,
+"duration": 23.990633333333335
+},
+"0ebe5286-9e95-4527-9fac-62a0c0a7debf": {
+"n_frames": 570,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 19.019000000000002
+},
+"0ec14f75-e440-46ad-89b2-25650e45ef1f": {
+"n_frames": 510,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 17.0
+},
+"0ed86ca0-f7a9-43bc-b028-efd472aafe08": {
+"n_frames": 178,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 5.933333333333334
+},
+"0ee3b7b5-f404-4f3e-833a-1ea9142fdbdd": {
+"n_frames": 210,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 7.0
+},
+"0effd7a2-18f2-47ad-8d6e-874bac3e9680": {
+"n_frames": 270,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 9.009
+},
+"0f07f9d1-6b3a-450a-b515-bc1596e14b86": {
+"n_frames": 179,
+"fps": 59.94005994005994,
+"width": 1280,
+"height": 720,
+"duration": 2.9863166666666667
+},
+"0f083f85-4ce0-4219-ac3e-1c3e99995d22": {
+"n_frames": 144,
+"fps": 24.0,
+"width": 576,
+"height": 360,
+"duration": 6.0
+},
+"0f0a7c87-df2f-49a5-9547-be600189b198": {
+"n_frames": 2908,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 97.03026666666666
+},
+"0f1d2de2-21e1-4aa8-8f45-21b12bd0aade": {
+"n_frames": 521,
+"fps": 24.0,
+"width": 1920,
+"height": 1080,
+"duration": 21.708333333333332
+},
+"0f361c25-434c-4383-af55-694e99baa8f2": {
+"n_frames": 36,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 1.2
+},
+"0f525ce1-63f7-4cfe-a1c4-38f42b5933a9": {
+"n_frames": 7,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 0.23333333333333334
+},
+"0f542aeb-343f-4282-bb31-52c273d1a62a": {
+"n_frames": 111,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 3.7
+},
+"0f609375-f564-4959-b22d-85ad535f89c5": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"0f6f2181-5965-4309-ace3-cf7f04d93e73": {
+"n_frames": 150,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 5.005
+},
+"0f6f5b09-bddc-4c12-bce8-25af337c061a": {
+"n_frames": 4268,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 178.01116666666667
+},
+"0f84a21c-4f8a-4f1a-8629-b5cbea475df0": {
+"n_frames": 60,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 2.0020000000000002
+},
+"0f88c049-c3cb-4fc8-9c48-4c53dd24c0db": {
+"n_frames": 210,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 7.007000000000001
+},
+"0f9055f6-ac6b-46fe-9ad5-100eae9254da": {
+"n_frames": 63,
+"fps": 29.911,
+"width": 360,
+"height": 640,
+"duration": 2.1062485373274047
+},
+"0f99b03a-20ee-40ea-9622-0354071ac3b3": {
+"n_frames": 240,
+"fps": 59.94006309148265,
+"width": 1280,
+"height": 720,
+"duration": 4.003999789484764
+},
+"0f9a2471-d68d-4eaf-9e4a-b342150bfb72": {
+"n_frames": 63,
+"fps": 29.97002997002997,
+"width": 360,
+"height": 640,
+"duration": 2.1021
+},
+"0fa107e0-c99f-4a44-b680-ee21a3d89737": {
+"n_frames": 120,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 4.0040000000000004
+},
+"0fade254-7480-4d77-8533-48233242fb38": {
+"n_frames": 321,
+"fps": 30.0,
+"width": 1222,
+"height": 720,
+"duration": 10.7
+},
+"0fb7e399-e7ef-4aef-ae72-5877a90bc2bd": {
+"n_frames": 510,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 17.0
+},
+"0fc56c4e-27c7-40d8-abdb-1136acc0ba11": {
+"n_frames": 360,
+"fps": 30.0,
+"width": 406,
+"height": 720,
+"duration": 12.0
+},
+"0fcda87e-cf07-4a8a-9d86-40c9cd17353c": {
+"n_frames": 96,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 4.0
+},
+"0fd1272a-e9d4-4223-a1cf-fbb784a6a7fe": {
+"n_frames": 1439,
+"fps": 59.94006309148265,
+"width": 1280,
+"height": 720,
+"duration": 24.0073154044524
+},
+"0fdfd61e-60d6-4d75-a5be-157258a7bc73": {
+"n_frames": 500,
+"fps": 25.0,
+"width": 640,
+"height": 480,
+"duration": 20.0
+},
+"0fe62a49-21c3-4355-8328-a7f0c0f484fd": {
+"n_frames": 240,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 8.0
+},
+"0feb44cb-dfc1-464e-adb3-4b631f395ab4": {
+"n_frames": 150,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 5.0
+},
+"101367e7-7417-4f5e-a201-a4ced7856415": {
+"n_frames": 90,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.003
+},
+"10271d78-cd7a-4c90-8b01-a415837590b2": {
+"n_frames": 256,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 8.533333333333333
+},
+"103dbe49-1c97-4720-b1c0-5b4115ac62de": {
+"n_frames": 179,
+"fps": 59.94006309148265,
+"width": 1280,
+"height": 720,
+"duration": 2.9863165096573865
+},
+"1042e924-0c5b-4bca-a2d0-44641928b19e": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 3.0
+},
+"104703f8-9492-4f7e-80bc-d38010523900": {
+"n_frames": 72,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 2.4
+},
+"104a55b0-a179-4069-8a73-2fab33275609": {
+"n_frames": 170,
+"fps": 25.0,
+"width": 360,
+"height": 640,
+"duration": 6.8
+},
+"10782308-79d5-4719-86e7-ab6acf2ad8b6": {
+"n_frames": 167,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 6.965291666666666
+},
+"1086c015-aacb-4b23-b5c1-9583973fe592": {
+"n_frames": 81,
+"fps": 29.97002997002997,
+"width": 854,
+"height": 480,
+"duration": 2.7027
+},
+"109675a4-85dd-4155-ad97-509be4dfac9b": {
+"n_frames": 150,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 6.0
+},
+"10a19c06-477b-46ba-969b-aa5b574e4d8e": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"10a6b562-87fd-424f-b3ca-395b689a8953": {
+"n_frames": 441,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 14.7
+},
+"10a8f970-208b-4e11-95fb-f3644770f85c": {
+"n_frames": 108,
+"fps": 30.0,
+"width": 1278,
+"height": 720,
+"duration": 3.6
+},
+"10ad4239-ddf2-443a-b22c-b3572c8ca7f1": {
+"n_frames": 87,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 2.9
+},
+"10b05210-4162-41c9-8336-f71b5be27c06": {
+"n_frames": 204,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.8068
+},
+"10c74cd2-7828-443d-9fdb-7cc72002109d": {
+"n_frames": 68,
+"fps": 23.976023976023978,
+"width": 1080,
+"height": 1920,
+"duration": 2.8361666666666663
+},
+"10dd8c9d-055f-4956-a939-19e7959fde0d": {
+"n_frames": 312,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 13.0
+},
+"110be48e-fb08-4a62-a0fc-da71b33c9490": {
+"n_frames": 348,
+"fps": 29.0,
+"width": 600,
+"height": 360,
+"duration": 12.0
+},
+"111e0801-5ba0-4f9f-acae-b7ebdd9fbb9f": {
+"n_frames": 48,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 2.002
+},
+"113b31e9-9206-4f8f-afa1-4d79df10d360": {
+"n_frames": 121,
+"fps": 29.97,
+"width": 1280,
+"height": 720,
+"duration": 4.037370704037371
+},
+"11441916-5c1e-43d4-80ab-b158c08ec8bb": {
+"n_frames": 50,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"11467317-4fbe-4bf6-967a-cab8d9d80363": {
+"n_frames": 117,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 3.9039
+},
+"1149b09f-7051-408c-8c3b-23b59c42530c": {
+"n_frames": 60,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 2.0
+},
+"11637fa6-98e4-46fe-8caf-5286f30a2e1a": {
+"n_frames": 1425,
+"fps": 25.0,
+"width": 1280,
+"height": 720,
+"duration": 57.0
+},
+"116953f5-1575-4a6d-81a1-61a7ab34d0d4": {
+"n_frames": 90,
+"fps": 30.0,
+"width": 640,
+"height": 480,
+"duration": 3.0
+},
+"116e0bea-5ab4-4490-88c2-07d3a90710de": {
+"n_frames": 34,
+"fps": 30.0,
+"width": 360,
+"height": 640,
+"duration": 1.1333333333333333
+},
+"116f16bc-565c-4be0-9103-1b3240c21d45": {
+"n_frames": 192,
+"fps": 24.0,
+"width": 1280,
+"height": 720,
+"duration": 8.0
+},
+"117abc05-c07e-46a4-8629-7c8aa2c9d677": {
+"n_frames": 222,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 7.4074
+},
+"118f5a6c-3805-475d-928e-e0a7678f9693": {
+"n_frames": 210,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 3.5
+},
+"11a68573-7c44-45a8-94cc-56f84fdd0fcd": {
+"n_frames": 165,
+"fps": 25.0,
+"width": 720,
+"height": 720,
+"duration": 6.6
+},
+"11b7d5e3-6198-4093-aaf6-d2da56e16b6e": {
+"n_frames": 270,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 9.0
+},
+"11ba70b5-4de5-4173-a42e-502e8691c008": {
+"n_frames": 480,
+"fps": 60.0,
+"width": 1280,
+"height": 720,
+"duration": 8.0
+},
+"11bde17c-b339-4a0b-811c-b29a966ec4a1": {
+"n_frames": 149,
+"fps": 29.97002997002997,
+"width": 640,
+"height": 480,
+"duration": 4.971633333333333
+},
+"1c47ea6a-274d-450f-98bc-26260727428c": {
+"n_frames": 270,
+"fps": 30.0,
+"width": 1920,
+"height": 1080,
+"duration": 9.0
+},
+"32f317ad-2804-4925-ad5e-c3d866f951ae": {
+"n_frames": 126,
+"fps": 30.0,
+"width": 636,
+"height": 480,
+"duration": 4.2
+},
+"34bd7239-46e9-4769-8896-ae3a1d8847ac": {
+"n_frames": 263,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 10.969291666666665
+},
+"5cc0e669-2cf7-4dbd-b991-128fad82b846": {
+"n_frames": 264,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 11.011
+},
+"79b1d7d7-b0bb-42d8-a526-0eaa566e1abf": {
+"n_frames": 270,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 9.009
+},
+"8c842293-6717-4988-a91c-6615251f2f66": {
+"n_frames": 60,
+"fps": 30.0,
+"width": 1280,
+"height": 720,
+"duration": 2.0
+},
+"905ce3c1-63bf-455b-abc9-c1b61352f86e": {
+"n_frames": 96,
+"fps": 23.976023976023978,
+"width": 1280,
+"height": 720,
+"duration": 4.004
+},
+"d41f172a-d38a-4ba6-93fa-4311a3349111": {
+"n_frames": 18,
+"fps": 30.0,
+"width": 480,
+"height": 480,
+"duration": 0.6
+},
+"dffb7271-5fce-44f7-9e78-65489c59e518": {
+"n_frames": 180,
+"fps": 29.97002997002997,
+"width": 1280,
+"height": 720,
+"duration": 6.006
+},
+"f103252e-1db7-4fb2-b65d-4924c410a4fe": {
+"n_frames": 432,
+"fps": 24.0,
+"width": 1920,
+"height": 1080,
+"duration": 18.0
+}
+}
