@@ -227,6 +227,7 @@ def infer_events(req):
                                                 for i in new]))
             except Exception as e:
                 rec['err'] = str(e)[:200]
+                print(f"[tool] 调用失败 uuid={it['uuid'][:8]} turn={turn} name={rec['name']} args={rec.get('args')} err={rec['err']}")
                 obs.append({'type': 'text', 'text': f'Error: {e}'})
                 yield sse(dict(type='tool_call', name=rec['name'], args=rec.get('args'), ok=False, err=rec['err']))
             tool_recs.append(rec)
@@ -252,7 +253,9 @@ def infer_events(req):
         if best[1] is not None:
             pre_letter = best[1]; pre_ans = True
     hits = [P.temporal_hit(r['window'], estar)[0] for r in tool_recs if r['ok'] and r['window'] and estar]
-    called = any(r['ok'] for r in tool_recs)
+    attempted = len(tool_recs)                       # 发出了 <tool_call> 的次数 (含执行失败的)
+    called = any(r['ok'] for r in tool_recs)         # 至少一次执行成功
+    errors = [f"{r['name'] or '?'}: {r['err']}" for r in tool_recs if not r['ok']]
     hit = any(hits) if hits else None
     correct = (pred == gt)
     # 熵: 首次工具调用前后
@@ -265,7 +268,9 @@ def infer_events(req):
     # 诊断: 这次推理落在 idea 的哪一层失败 (taxonomy 见 docs/01_proposal.md §1)
     required = lab.get('label') == 'evidence_required'
     solvable = lab.get('label') == 'already_solvable'
-    if not called:
+    if attempted and not called:
+        code, title, color = 'call_failed', '工具调用失败：发出了调用但一次都没执行成功（参数/工具名不合法），等于没拿到证据', 'red'
+    elif not called:
         if required:
             code, title, color = 'overconfident_skip', 'Overconfident Skip：需要证据却没调工具，直接作答', 'red'
         elif solvable:
@@ -287,7 +292,9 @@ def infer_events(req):
     details = []
     details.append(f"这题：{'需要证据' if required else ('粗看可解' if solvable else (lab.get('label') or '未认证'))}"
                    + (f"，E* = [{estar[0]:.2f}, {estar[1]:.2f}] s" if estar else ''))
-    details.append(f"调工具：{'是' if called else '否'}" + (f"，时间窗{'命中' if hit else '未命中'} E*" if (called and hit is not None) else ''))
+    details.append(f"调工具：发出 {attempted} 次，执行成功 {sum(1 for r in tool_recs if r['ok'])} 次"
+                   + (f"，时间窗{'命中' if hit else '未命中'} E*" if (called and hit is not None) else '')
+                   + (f"；失败原因：{' | '.join(errors)[:300]}" if errors else ''))
     details.append(f"调用前是否已下结论：{'是' if pre_ans else '否'}" + (f"（写的是 {pre_letter}，最终答 {pred}）" if pre_letter else ''))
     if ent_pre is not None:
         drop = (1 - ent_post / ent_pre) * 100 if ent_pre > 0 else 0
