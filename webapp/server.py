@@ -242,6 +242,15 @@ def infer_events(req):
     pre_ans = bool(re.search(PRE_ANSWER_RE, pre_think))
     m_pre = re.findall(r'(?:答案是|正确答案是|应该选|应选|选项|是)\s*([ABCD])\b', pre_think)
     pre_letter = m_pre[-1] if m_pre else None
+    if pre_letter is None:
+        # 调用前的 think 里直接点了某个选项的名字 (如 "这看起来像 interception"), 也算已下结论
+        low = pre_think.lower(); best = (-1, None)
+        for i, o in enumerate(it['options']):
+            j = low.rfind(o.lower())
+            if j > best[0]:
+                best = (j, 'ABCD'[i])
+        if best[1] is not None:
+            pre_letter = best[1]; pre_ans = True
     hits = [P.temporal_hit(r['window'], estar)[0] for r in tool_recs if r['ok'] and r['window'] and estar]
     called = any(r['ok'] for r in tool_recs)
     hit = any(hits) if hits else None
