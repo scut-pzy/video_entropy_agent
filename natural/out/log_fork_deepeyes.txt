@@ -1,0 +1,13 @@
+分叉单元: 22 required + 40 control
+[deepeyes] 加载完成 48s  device=cuda:0  thinking_template=False  letter_ids={'A': [32, 362], 'B': [33, 425], 'C': [34, 356], 'D': [35, 422]}
+[fork/deepeyes@qwen35] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c fork 12.6s | 已用 1.2min ETA 13.7min | 错误 0
+  [10/62] 0845ab07 fork 10.4s | 已用 2.2min ETA 11.4min | 错误 0
+  [15/62] 0c67dfa1 fork 17.5s | 已用 3.7min ETA 11.7min | 错误 0
+  [20/62] 10a19c06 fork 15.2s | 已用 5.1min ETA 10.7min | 错误 0
+  [25/62] 0ee3b7b5 fork 16.4s | 已用 6.5min ETA 9.6min | 错误 0
+  [30/62] 11467317 fork 20.9s | 已用 8.0min ETA 8.5min | 错误 0
+  [35/62] 061659fb fork 14.5s | 已用 9.6min ETA 7.4min | 错误 0
+  [40/62] 0a502966 fork 17.2s | 已用 11.0min ETA 6.1min | 错误 0
+  [45/62] 089b7c3f fork 17.0s | 已用 12.6min ETA 4.8min | 错误 0
+  [50/62] 11441916 fork 18.1s | 已用 13.9min ETA 3.3min | 错误 0

@@ -4,3 +4,5 @@ frames_cache/
 *.mp4
 .ipynb_checkpoints/
 webapp/logs/
+paper/iclr2027.zip
+paper/template/
