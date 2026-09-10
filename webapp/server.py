@@ -22,6 +22,20 @@ from prompts_zh import SYS_ZH, INSTR_ZH, CONT_ZH, PRE_ANSWER_RE
 
 app = FastAPI()
 STATE = dict(backend=None, model_name=None, loading=False, lock=threading.Lock())
+LOAD = dict(target=None, phase='空闲', percent=0, log=[], error=None, t0=None)   # 加载进度, 给前端进度条+日志框
+LOAD_LOCK = threading.Lock()
+
+
+def _log(msg):
+    LOAD['log'].append(f'[{time.strftime("%H:%M:%S")}] {msg}')
+    LOAD['log'] = LOAD['log'][-60:]
+    print('[load]', msg)
+
+
+def _model_bytes(name):
+    import glob
+    d = B.MODELS[name]
+    return sum(os.path.getsize(f) for f in glob.glob(os.path.join(d, '*.safetensors')))
 ITEMS = {}
 LABELS = {}          # uuid -> dict(label, why, estar, p_k8, p_estar)  (来自 natural/out/screen.jsonl, 认证者 qwen35)
 
@@ -47,17 +61,55 @@ def load_data():
 
 
 def ensure_backend(name):
+    """加载/切换模型. 进度 = 本进程显存增长 / 权重文件总大小 (bf16 落盘即上卡, 近似准确)."""
     if STATE['model_name'] == name and STATE['backend'] is not None:
         return STATE['backend']
-    STATE['loading'] = True
+    if not LOAD_LOCK.acquire(blocking=False):
+        # 别的线程正在加载: 等它
+        while STATE['loading']:
+            time.sleep(0.5)
+        if STATE['model_name'] == name and STATE['backend'] is not None:
+            return STATE['backend']
+        raise RuntimeError('模型加载失败: ' + str(LOAD.get('error')))
     try:
+        STATE['loading'] = True
+        LOAD.update(target=name, phase='准备', percent=0, log=[], error=None, t0=time.time())
         if STATE['backend'] is not None:
-            del STATE['backend']; STATE['backend'] = None; torch.cuda.empty_cache()
-        bk = B.Backend(name, device=0)
+            _log(f"卸载 {STATE['model_name']}，释放显存")
+            LOAD['phase'] = '释放旧模型'
+            del STATE['backend']; STATE['backend'] = None; STATE['model_name'] = None
+            import gc; gc.collect(); torch.cuda.empty_cache()
+        expected = max(1, _model_bytes(name)); base = torch.cuda.memory_allocated()
+        _log(f'开始加载 {name}（权重 {expected/1e9:.1f} GB，路径 {B.MODELS[name]}）')
+        LOAD['phase'] = '加载权重到 GPU'
+        stop = threading.Event()
+
+        def watch():
+            last = -1
+            while not stop.is_set():
+                pct = min(99, int(100 * (torch.cuda.memory_allocated() - base) / expected))
+                if pct != last:
+                    LOAD['percent'] = pct
+                    if pct // 10 != max(last, 0) // 10:
+                        _log(f'权重加载 {pct}%（{(torch.cuda.memory_allocated()-base)/1e9:.1f} GB，{time.time()-LOAD["t0"]:.0f}s）')
+                    last = pct
+                time.sleep(0.3)
+        th = threading.Thread(target=watch, daemon=True); th.start()
+        try:
+            bk = B.Backend(name, device=0)
+        except Exception as e:
+            LOAD.update(phase='失败', error=f'{type(e).__name__}: {e}')
+            _log('加载失败: ' + LOAD['error']); raise
+        finally:
+            stop.set(); th.join(timeout=2)
+        LOAD.update(phase='就绪', percent=100)
+        _log(f'{name} 加载完成，用时 {time.time()-LOAD["t0"]:.0f}s，显存 {torch.cuda.memory_allocated()/1e9:.1f} GB'
+             f'（thinking_template={bk.thinking_template}）')
         STATE['backend'] = bk; STATE['model_name'] = name
         return bk
     finally:
         STATE['loading'] = False
+        LOAD_LOCK.release()
 
 
 def pil_b64(pil, q=85):
@@ -208,7 +260,25 @@ def index():
 @app.get('/api/status')
 def status():
     return dict(model=STATE['model_name'], loading=STATE['loading'], n_items=len(ITEMS),
-                gpu=torch.cuda.get_device_name(0) if torch.cuda.is_available() else None)
+                gpu=torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+                gpu_mem_gb=round(torch.cuda.memory_allocated() / 1e9, 1) if torch.cuda.is_available() else None,
+                load=dict(target=LOAD['target'], phase=LOAD['phase'], percent=LOAD['percent'],
+                          log=LOAD['log'][-30:], error=LOAD['error'],
+                          elapsed=round(time.time() - LOAD['t0'], 0) if LOAD['t0'] else None))
+
+
+@app.post('/api/load')
+def load_model(req: dict):
+    """切换/预加载模型 (不推理). 前端在下拉框改变时调用, 然后轮询 /api/status 画进度条."""
+    name = req.get('model', 'deepeyes')
+    if name not in B.MODELS:
+        return JSONResponse({'error': f'未知模型 {name}'}, status_code=400)
+    if STATE['model_name'] == name and STATE['backend'] is not None:
+        return dict(ok=True, already=True)
+    if STATE['loading']:
+        return JSONResponse({'error': f"正在加载 {LOAD['target']}，等它结束"}, status_code=409)
+    threading.Thread(target=ensure_backend, args=(name,), daemon=True).start()
+    return dict(ok=True, started=True)
 
 
 @app.get('/api/items')

@@ -37,6 +37,9 @@
   canvas { width:100%; height:220px; border:1px solid #e5e7eb; border-radius:6px; background:#fff; }
   .summary { font-size:12.5px; color:#333; background:#f3f4f6; padding:6px 8px; border-radius:5px; margin-top:6px; line-height:1.7; }
   .legend { font-size:11px; color:var(--gray); margin-top:4px; }
+  .pbar { height:10px; background:#e5e7eb; border-radius:5px; overflow:hidden; margin-top:4px; }
+  .pbar > div { height:100%; background:var(--blue); width:0%; transition:width .3s; }
+  #loadlog { font-family: ui-monospace, Menlo, monospace; font-size:11px; background:#111827; color:#d1d5db; padding:6px 8px; border-radius:5px; max-height:130px; overflow:auto; white-space:pre-wrap; margin-top:4px; display:none; }
 </style>
 </head>
 <body>
@@ -44,6 +47,8 @@
   <div class="col">
     <h2>① 选题 · 看输入 · 改提示词</h2>
     <div class="status" id="status">连接中…</div>
+    <div class="pbar" id="pbar" style="display:none"><div id="pfill"></div></div>
+    <div id="loadlog"></div>
     <label>题目（按"需要证据 / 边缘 / 粗看可解 / 不会"排序；[E*] = 强模型认证过的证据窗）</label>
     <select id="item"></select>
     <div class="info" id="iteminfo"></div>
@@ -87,11 +92,30 @@ async function init() {
   $('item').innerHTML = ITEMS.map(it => `<option value="${it.uuid}">[${cn[it.label]||'未筛'}] ${it.domain} / ${it.name} · ${it.duration}s${it.estar?' [E*]':''}</option>`).join('');
   $('item').onchange = loadItem; await loadItem(); pollStatus();
 }
+let LOADING = false;
 async function pollStatus() {
-  const s = await (await fetch('/api/status')).json();
-  $('status').textContent = s.loading ? '模型加载中…（约 1 分钟）' : (s.model ? `模型已就绪：${s.model} · ${s.gpu||''} · ${s.n_items} 题` : '模型未加载（点推理时自动加载）');
-  setTimeout(pollStatus, 5000);
+  let s; try { s = await (await fetch('/api/status')).json(); } catch(e) { setTimeout(pollStatus, 3000); return; }
+  const L = s.load || {};
+  LOADING = !!s.loading;
+  if (s.loading) {
+    $('status').textContent = `正在加载 ${L.target} · ${L.phase} · ${L.percent}% · ${L.elapsed||0}s`;
+    $('pbar').style.display = 'block'; $('pfill').style.width = (L.percent||0) + '%';
+    $('loadlog').style.display = 'block'; $('loadlog').textContent = (L.log||[]).join('\n'); $('loadlog').scrollTop = 1e9;
+    $('run').disabled = true;
+  } else {
+    $('status').textContent = s.model ? `模型已就绪：${s.model} · 显存 ${s.gpu_mem_gb} GB · ${s.n_items} 题` : (L.error ? '加载失败：' + L.error : '模型未加载（切换下拉框或点推理时加载）');
+    if (L.percent === 100) { $('pfill').style.width = '100%'; setTimeout(() => { if (!LOADING) { $('pbar').style.display='none'; } }, 1500); }
+    if (L.log && L.log.length) { $('loadlog').style.display = 'block'; $('loadlog').textContent = L.log.join('\n'); $('loadlog').scrollTop = 1e9; }
+    if (!RUNNING) $('run').disabled = false;
+    if (s.model && $('model').value !== s.model && !RUNNING) { /* 保持用户的选择, 点推理时会切 */ }
+  }
+  setTimeout(pollStatus, s.loading ? 700 : 4000);
 }
+$('model').onchange = async () => {
+  const r = await fetch('/api/load', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({model: $('model').value})});
+  const j = await r.json();
+  if (r.status === 409) alert(j.error);
+};
 async function loadItem() {
   CUR = await (await fetch('/api/item/' + $('item').value)).json();
   $('question').value = CUR.question;
