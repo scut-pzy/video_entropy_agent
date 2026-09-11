@@ -16,17 +16,13 @@
 
 \newcommand{\fix}{\marginpar{FIX}}
 \newcommand{\new}{\marginpar{NEW}}
-\iclrfinalcopy % remove for anonymous submission
+% \iclrfinalcopy % 投稿时保持注释 (匿名)
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Reinforcement learning has taught multimodal models to reason over videos by zooming into frames or replaying segments, improving both tool use and task accuracy. Yet increased tool calls do not necessarily imply that the acquired evidence actually informs the model’s decision. Recent work shows that a small fraction of high-entropy tokens marks where models deliberate, providing a way to examine this distinction: when missing visual evidence is necessary for answering, uncertainty should not resolve before that evidence is observed. The key question is therefore not whether uncertainty decreases after a tool call, but whether it decreases because of what the tool returns.
-
-We find that RL-trained video agents often violate this principle. On videos where sparse frames omit the decisive evidence, 62\% of their top-entropy tokens occur before the first tool call, and the agents frequently commit to an answer before the requested evidence arrives. Although entropy drops sharply afterward, this apparent resolution is largely independent of the returned evidence: replacing the returned frames with random frames, blank frames, or frames containing the decisive evidence leaves 91\% of answers unchanged. In contrast, removing the premature conclusion formed before the call restores sensitivity to the returned evidence.
-
-Motivated by this diagnosis, we propose ERA (Entropy-Resolved Evidence Acquisition), which identifies cold-start trajectories in which uncertainty is resolved by genuine evidence but remains unresolved under counterfactual returns, and then reinforces evidence acquisition under a visual budget. On a VideoNet subset where sparse frames are insufficient but a short localized segment contains the decisive evidence, ERA improves accuracy by \todo{X} points, while its reinforcement-learning stage recovers \todo{Y} points on the diagnosed agents. By aligning uncertainty resolution with the evidence that causes it, ERA encourages video agents to acquire and use visual evidence before committing to an answer.
+Reinforcement learning has taught multimodal models to reason over videos by zooming into frames or replaying segments, improving both tool use and task accuracy. Yet increased tool calls do not necessarily imply that the acquired evidence actually informs the model’s decision. Recent work shows that a small fraction of high-entropy tokens marks where models deliberate, providing a way to examine this distinction: when missing visual evidence is necessary for answering, uncertainty should not resolve before that evidence is observed. The key question is therefore not whether uncertainty decreases after a tool call, but whether it decreases because of what the tool returns. We find that RL-trained video agents often violate this principle. On videos where sparse frames omit the decisive evidence, 62\% of their top-entropy tokens occur before the first tool call, and the agents frequently commit to an answer before the requested evidence arrives. Although entropy drops sharply afterward, this apparent resolution is largely independent of the returned evidence: replacing the returned frames with random frames, blank frames, or frames containing the decisive evidence leaves 91\% of answers unchanged. In contrast, removing the premature conclusion formed before the call restores sensitivity to the returned evidence. Motivated by this diagnosis, we propose ERA (Entropy-Resolved Evidence Acquisition), which identifies cold-start trajectories in which uncertainty is resolved by genuine evidence but remains unresolved under counterfactual returns, and then reinforces evidence acquisition under a visual budget. On a VideoNet subset where sparse frames are insufficient but a short localized segment contains the decisive evidence, ERA improves accuracy by \todo{X} points, while its reinforcement-learning stage recovers \todo{Y} points on the diagnosed agents. By aligning uncertainty resolution with the evidence that causes it, ERA encourages video agents to acquire and use visual evidence before committing to an answer.
 \end{abstract}
 
 \section{Introduction}
@@ -86,7 +82,7 @@ where $\bar H_{\mathrm{think}}$ is the mean next-token entropy over the regenera
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.62\linewidth]{../natural/out/figs/fig1_budget_curve_qwen35.png}
+\includegraphics[width=0.62\linewidth]{figs/fig1_budget_curve_qwen35.png}
 \caption{Belief in the correct answer versus uniform frame budget for the four screening groups (reference model). Evidence-gain samples saturate at $0.54$ with 32 uniform frames but reach $0.65$ (re-measured) with the six dense frames of $\estar$.}
 \label{fig:budget}
 \end{figure}
