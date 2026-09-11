@@ -1,15 +1,1 @@
-# Abstract v2（2026-09-11，289 tokens）— 加入"高熵 token = 模型在思考"的前提
-
 Reinforcement learning has taught multimodal models to think with videos, zooming into frames or replaying segments, and their tool-call rates and accuracy rise accordingly. Recent research reveals that a minority of high-entropy tokens mark where a model actually deliberates. This offers a direct view of tool use: a call that fetches missing evidence should sit inside the deliberation, and uncertainty should resolve only after the evidence arrives. We find the opposite. On videos whose sparse frames lack the decisive evidence, an RL-trained agent places 62% of its top-entropy tokens before the first call and reasons with less than half that entropy once the evidence returns. Counterfactual returns confirm this: replacing the returned frames with random frames, blank frames, or even the missing evidence leaves 91% of its answers unchanged, whereas removing its premature conclusion restores their dependence on the evidence. Inspired by this, we propose ERA (Entropy-Resolved evidence Acquisition). ERA selects cold-start trajectories whose high-entropy tokens surround the tool call and resolve only for genuine evidence, and then reinforces evidence acquisition under a visual budget. On a VideoNet subset that sparse frames cannot answer but a short localized segment can, ERA improves accuracy by [X] points, and its RL stage recovers [Y] points on the diagnosed agent. By aligning where a model deliberates with where evidence enters, ERA offers a pathway toward video agents that look before they conclude.
-
-## 每句对应的证据状态
-
-| 句子 | 状态 | 依据 |
-|---|---|---|
-| 高熵 token 标记模型在思考的位置 | 引用前提 | Wang et al. 2025（high-entropy minority tokens）；PEA（强推理在关键决策点有局部熵峰） |
-| 62% 的高熵 token 在第一次调用之前 | 已有 | 62 条 DeepEyes 轨迹，每条 top-20% 高熵 token 落在首个 `<tool_call>` 前的比例，中位 62% |
-| 证据返回后熵不到一半 | 已有 | 调用前平均 0.84；只算工具返回后续写推理段 0.39（review 修正口径） |
-| 91% 答案不变 | 已有 | `natural/out/fork_v2.jsonl`，22 条 |
-| 去掉结论后恢复依赖 | 已有 | `natural/out/decommit.jsonl`：中性思考 E* 对/随机错 6:0，p=0.03；原文思考 1:1 |
-| 按"高熵 token 围绕工具调用、且只对真证据下降"筛冷启动数据 | **待验证** | DeepEyes 上去结论后真/随机续写熵无差（1.177 vs 1.175）；看 Qwen3.5 结果 |
-| 冷启动 + RL，[X] / [Y] | **未做** | |
