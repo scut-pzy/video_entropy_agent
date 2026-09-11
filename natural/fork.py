@@ -6,7 +6,8 @@
        real    真实返回的帧
        random  同形状的随机返回 (seek→随机同长时间窗的密采; zoom→随机帧上随机位置的同尺寸裁剪)  —— Illusion 的 random-crop 口径
        gray    与真实返回同尺寸的灰图
-     三支各自续生成到作答 (后续若再调工具, 真实执行).
+       oracle  在同一个调用点塞进认证过的 E* 窗密采 6 帧 (它自己没找到的那段证据)  —— Illusion 没有 E*, 做不了这支
+     四支各自续生成到作答 (后续若再调工具, 真实执行).
   3. 每支记录: 最终答案/对错; 步级概率差 (固定前缀 + "<answer>" 读字母 logit, Illusion 的 VEG 口径, 含调用前基线);
      返回后**推理段**的 token 熵 (剔除 <tool_call>…</tool_call> 与 <answer>…</answer> 内的 token; review 指出原 ent_post 混入了参数文本).
   指标:
@@ -26,7 +27,7 @@ from prompts_zh import SYS_ZH, INSTR_ZH, CONT_ZH, PRE_ANSWER_RE
 from run_audit import select
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, 'out', 'fork.jsonl')
+OUT = os.path.join(HERE, 'out', 'fork_v2.jsonl')
 LETTERS = 'ABCD'
 
 
@@ -149,6 +150,8 @@ def fork_item(bk, it, estar, seed=0, max_turns=4, mnt=1024, lang='zh'):
     rec.update(status='forked', call=dict(name=first['name'], args=first['args'], window=first['window'], hit=hit))
     # 三支
     branches = {'real': first['idx'], 'random': _random_return(sess, first, rng), 'gray': _gray_like(sess, first['idx'])}
+    if estar:
+        branches['oracle'] = sess.tool_seek(dict(start_time=float(estar[0]), end_time=float(estar[1]), num_frames=6))
     out = {}
     for name, idx in branches.items():
         obs = P._labeled(sess, idx, lang) + [{'type': 'text', 'text': CONT_ZH}]
@@ -163,6 +166,11 @@ def fork_item(bk, it, estar, seed=0, max_turns=4, mnt=1024, lang='zh'):
     h = {k: v['ent_think'] for k, v in out.items()}
     rec['EER_random'] = round(h['random'] - h['real'], 4) if (h['random'] is not None and h['real'] is not None) else None
     rec['EER_gray'] = round(h['gray'] - h['real'], 4) if (h['gray'] is not None and h['real'] is not None) else None
+    if 'oracle' in out:
+        rec['VEG_oracle'] = round(g['oracle'] - g['random'], 4)          # 真证据到手 vs 随机: 步级
+        rec['EER_oracle'] = round(h['random'] - h['oracle'], 4) if (h['random'] is not None and h['oracle'] is not None) else None
+        rec['flip_oracle'] = out['oracle']['pred'] != out['random']['pred']
+        rec['oracle_correct'] = out['oracle']['correct']
     rec['flip_random'] = out['real']['pred'] != out['random']['pred']
     rec['flip_gray'] = out['real']['pred'] != out['gray']['pred']
     rec['pred'] = out['real']['pred']; rec['correct'] = out['real']['correct']
@@ -199,6 +207,19 @@ def summarize(path=OUT, model=None):
         v = [(r['VEG_random'], r['EER_random']) for r in fk if r['EER_random'] is not None]
         if len(v) > 3:
             a, b = zip(*v); print(f"  corr(VEG, EER) = {np.corrcoef(a, b)[0, 1]:+.2f}  (n={len(v)})")
+        oc = [r for r in fk if 'oracle' in r['branches']]
+        if oc:
+            print(f"  [oracle 支: 在它自己的调用点塞进 E*] n={len(oc)}  准确率 {np.mean([r['branches']['oracle']['correct'] for r in oc]):.2f} "
+                  f"| 概率差 {np.mean([r['branches']['oracle']['gap_probe'] for r in oc]):+.3f} "
+                  f"| VEG(oracle−random) = {np.mean([r['VEG_oracle'] for r in oc]):+.3f} "
+                  f"| 熵 H {np.mean([r['branches']['oracle']['ent_think'] for r in oc if r['branches']['oracle']['ent_think'] is not None]):.3f} "
+                  f"| EER(random−oracle) = {np.mean([r['EER_oracle'] for r in oc if r['EER_oracle'] is not None]):+.3f} "
+                  f"| 答案翻转 vs random {np.mean([r['flip_oracle'] for r in oc]):.0%}")
+            dep = [r for r in oc if r['VEG_oracle'] > 0.1 or r['flip_oracle']]
+            print(f"    真证据到手后证据依赖的轨迹: {len(dep)}/{len(oc)}")
+            v2 = [(r['VEG_oracle'], r['EER_oracle']) for r in oc if r['EER_oracle'] is not None]
+            if len(v2) > 3:
+                a, b = zip(*v2); print(f"    corr(VEG_oracle, EER_oracle) = {np.corrcoef(a, b)[0, 1]:+.2f}")
 
 
 def main():

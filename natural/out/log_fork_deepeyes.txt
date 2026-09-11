@@ -11,3 +11,24 @@
   [40/62] 0a502966 fork 17.2s | 已用 11.0min ETA 6.1min | 错误 0
   [45/62] 089b7c3f fork 17.0s | 已用 12.6min ETA 4.8min | 错误 0
   [50/62] 11441916 fork 18.1s | 已用 13.9min ETA 3.3min | 错误 0
+  [55/62] 044551b6 fork 13.2s | 已用 14.9min ETA 1.9min | 错误 0
+  [60/62] 0a428591 fork 10.9s | 已用 15.8min ETA 0.5min | 错误 0
+  [62/62] 029cb47f fork 11.9s | 已用 16.2min ETA 0.0min | 错误 0
+
+[required] n=22  调了工具并成功分叉 22  未调/失败 0
+  准确率:   real 0.45 | random 0.45 | gray 0.45   (调用前基线 p_gt 0.33)
+  步级概率差 gap: pre -0.223 → real -0.149 | random -0.157 | gray -0.156
+  VEG(real−random) = +0.008   VEG(real−gray) = +0.006
+  返回后推理段熵 H: real 0.435 | random 0.471 | gray 0.409   EER(random−real) = +0.035   EER(gray−real) = -0.026
+  答案翻转率: vs random 9% | vs gray 0%   调用前已下结论 55%   命中E* 5%
+  证据依赖 (VEG>0.1 或翻转) 的轨迹: 3/22; 它们的 EER(random−real) 均值 +0.052
+  corr(VEG, EER) = +0.41  (n=22)
+
+[control] n=40  调了工具并成功分叉 40  未调/失败 0
+  准确率:   real 0.62 | random 0.62 | gray 0.62   (调用前基线 p_gt 0.63)
+  步级概率差 gap: pre +0.341 → real +0.273 | random +0.271 | gray +0.270
+  VEG(real−random) = +0.002   VEG(real−gray) = +0.003
+  返回后推理段熵 H: real 0.451 | random 0.460 | gray 0.421   EER(random−real) = +0.009   EER(gray−real) = -0.029
+  答案翻转率: vs random 0% | vs gray 0%   调用前已下结论 52%   命中E* 65%
+  证据依赖 (VEG>0.1 或翻转) 的轨迹: 0/40
+  corr(VEG, EER) = -0.12  (n=40)

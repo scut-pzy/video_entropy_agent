@@ -424,6 +424,143 @@ async def infer(req: dict):
                              headers={'Cache-Control': 'no-cache', 'X-Accel-Buffering': 'no'})
 
 
+
+# ───────────────────────── 实验进展页 ─────────────────────────
+
+REPO = os.path.abspath(os.path.join(HERE, '..'))
+JOBS = {  # 脚本 → 日志 (用于"正在跑"面板)
+    'fork.py': 'natural/out/log_fork_v2.txt', 'run_screen.py': 'natural/out/log_screen_qwen35.txt',
+    'run_audit.py': 'natural/out/log_audit_deepeyes_at_qwen35.txt', 'make_sft.py': 'natural/out/log_sft.txt',
+}
+FORK_PATH = os.path.join(REPO, 'natural', 'out', 'fork_v2.jsonl')
+FEEDBACK = os.path.join(HERE, 'feedback.jsonl')
+
+
+@app.get('/progress', response_class=HTMLResponse)
+def progress_page():
+    return open(os.path.join(HERE, 'static', 'progress.html'), encoding='utf-8').read()
+
+
+@app.get('/api/progress')
+def api_progress():
+    import subprocess
+    d = json.load(open(os.path.join(HERE, 'progress.json'), encoding='utf-8'))
+    jobs = []
+    try:
+        ps = subprocess.run(['ps', '-eo', 'args'], capture_output=True, text=True, timeout=5).stdout
+    except Exception:
+        ps = ''
+    for script, log in JOBS.items():
+        running = any(script in l and 'python' in l for l in ps.splitlines())
+        p = os.path.join(REPO, log); last = ''
+        if os.path.exists(p):
+            lines = [l for l in open(p, encoding='utf-8', errors='ignore').read().splitlines()
+                     if l.strip() and 'Loading' not in l and 'it/s]' not in l]
+            prog = [l for l in lines if re.search(r'\[\d+/\d+\]', l)]
+            last = (prog[-1] if prog else (lines[-1] if lines else '')).strip()[:200]
+        if running or last:
+            jobs.append(dict(script=script, log=log, running=running, last=last,
+                             mtime=time.strftime('%m-%d %H:%M', time.localtime(os.path.getmtime(p))) if os.path.exists(p) else None))
+    d['jobs'] = jobs
+    d['webapp_model'] = STATE['model_name']
+    return d
+
+
+def _fork_records():
+    if not os.path.exists(FORK_PATH):
+        return []
+    return [r for r in D.read_records(FORK_PATH, stage='fork') if r.get('status') == 'forked']
+
+
+@app.get('/api/fork_summary')
+def fork_summary():
+    out = {}
+    for g in ('required', 'control'):
+        fk = [r for r in _fork_records() if r.get('group') == g]
+        if not fk:
+            continue
+        brs = [b for b in ('real', 'random', 'gray', 'oracle') if all(b in r['branches'] for r in fk)]
+        out[g] = dict(n=len(fk),
+                      acc={b: round(float(np.mean([r['branches'][b]['correct'] for r in fk])), 3) for b in brs},
+                      gap={b: round(float(np.mean([r['branches'][b]['gap_probe'] for r in fk])), 3) for b in brs},
+                      ent={b: round(float(np.mean([r['branches'][b]['ent_think'] for r in fk if r['branches'][b]['ent_think'] is not None])), 3) for b in brs},
+                      gap_pre=round(float(np.mean([r['gap_pre'] for r in fk])), 3),
+                      same_all=round(float(np.mean([len({r['branches'][b]['pred'] for b in brs}) == 1 for r in fk])), 3),
+                      saturated=round(float(np.mean([abs(r['branches']['real']['gap_probe']) >= 0.95 for r in fk])), 3),
+                      pre_answer=round(float(np.mean([r['pre_answer'] for r in fk])), 3))
+    return out
+
+
+@app.get('/api/fork_items')
+def fork_items():
+    out = []
+    for r in _fork_records():
+        out.append(dict(uuid=r['uuid'], name=r.get('name'), domain=r.get('domain'), group=r.get('group'),
+                        hit=r['call'].get('hit'), pre_answer=r['pre_answer'],
+                        outcome={b: dict(pred=v['pred'], correct=v['correct']) for b, v in r['branches'].items()}))
+    out.sort(key=lambda x: (x['group'] != 'required', x['domain'] or '', x['name'] or ''))
+    return out
+
+
+@app.get('/api/fork/{uuid}')
+def fork_one(uuid: str):
+    r = next((x for x in _fork_records() if x['uuid'] == uuid), None)
+    if r is None:
+        return JSONResponse({'error': 'not found'}, status_code=404)
+    it = ITEMS[uuid]
+    return dict(record=r, options=it['options'], answer_letter=it['answer_letter'], answer=it['answer'],
+                duration=it['duration'], fps=it['fps'], coarse_idx=F.uniform_indices(it['n_frames'], P.BUDGET_K),
+                definition=it['definition'])
+
+
+@app.get('/api/frame_at/{uuid}')
+def frame_at(uuid: str, t: float, bbox: str = None, cap: str = 'coarse', h: int = 0):
+    """按时间戳取帧 (帧缓存); bbox='l,t,r,b' 为粗采样显示坐标下的裁剪框 (zoom 的参数就是这个坐标系)."""
+    it = ITEMS[uuid]
+    idx = int(min(max(round(t * it['fps']), 0), it['n_frames'] - 1))
+    pil = F.load(uuid, [idx], F.COARSE_PIXELS if cap == 'coarse' else F.DETAIL_PIXELS, it['video'])[0]
+    if bbox:
+        try:
+            l, tt, rr, bb = [float(v) for v in bbox.split(',')]
+            l, tt = max(0, l), max(0, tt); rr, bb = min(pil.width, rr), min(pil.height, bb)
+            if rr - l >= 4 and bb - tt >= 4:
+                pil = pil.crop((int(l), int(tt), int(rr), int(bb)))
+        except Exception:
+            pass
+    if h:
+        pil = pil.resize((max(1, int(pil.width * h / pil.height)), h))
+    buf = io.BytesIO(); pil.convert('RGB').save(buf, format='JPEG', quality=82)
+    return Response(buf.getvalue(), media_type='image/jpeg')
+
+
+@app.get('/files/{path:path}')
+def repo_file(path: str):
+    p = os.path.abspath(os.path.join(REPO, path))
+    if not p.startswith(REPO + os.sep) or not os.path.isfile(p):
+        return JSONResponse({'error': 'not found'}, status_code=404)
+    ext = os.path.splitext(p)[1].lower()
+    mt = {'.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.md': 'text/plain; charset=utf-8',
+          '.json': 'application/json', '.txt': 'text/plain; charset=utf-8', '.tex': 'text/plain; charset=utf-8',
+          '.py': 'text/plain; charset=utf-8'}.get(ext)
+    if mt is None:
+        return JSONResponse({'error': 'type not served'}, status_code=403)
+    return Response(open(p, 'rb').read(), media_type=mt)
+
+
+@app.get('/api/feedback')
+def get_feedback():
+    if not os.path.exists(FEEDBACK):
+        return []
+    return [json.loads(l) for l in open(FEEDBACK, encoding='utf-8') if l.strip()][-50:]
+
+
+@app.post('/api/feedback')
+def post_feedback(req: dict):
+    rec = dict(time=time.strftime('%Y-%m-%d %H:%M:%S'), choice=req.get('choice'), text=(req.get('text') or '')[:4000])
+    with open(FEEDBACK, 'a', encoding='utf-8') as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + '\n')
+    return dict(ok=True, saved=rec)
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--port', type=int, default=4175); ap.add_argument('--host', default='0.0.0.0')

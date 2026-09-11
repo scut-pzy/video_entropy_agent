@@ -6,3 +6,4 @@ frames_cache/
 webapp/logs/
 paper/iclr2027.zip
 paper/template/
+webapp/feedback.jsonl

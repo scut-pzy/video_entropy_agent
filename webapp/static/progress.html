@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>实验进展 · video_entropy_agent</title>
+<style>
+  :root { --blue:#2b6cb0; --orange:#c05621; --green:#2f855a; --red:#c53030; --gray:#6b7280; --amber:#b7791f; --bg:#f7f7f8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"PingFang SC","Microsoft YaHei","WenQuanYi Zen Hei",sans-serif; font-size:14px; color:#1f2937; background:var(--bg); }
+  header { background:#111827; color:#f9fafb; padding:14px 22px; display:flex; align-items:center; gap:18px; }
+  header h1 { font-size:17px; margin:0; font-weight:650; }
+  header a { color:#93c5fd; text-decoration:none; font-size:13px; margin-left:auto; }
+  main { padding:16px 22px 60px; max-width:1500px; margin:0 auto; }
+  section { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:16px 18px; margin-bottom:16px; }
+  section > h2 { font-size:15.5px; margin:0 0 10px; }
+  .headline { font-size:15px; line-height:1.75; border-left:5px solid var(--blue); padding:6px 12px; background:#eff6ff; border-radius:6px; }
+  .jobs { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+  .job { border:1px solid #e5e7eb; border-radius:8px; padding:6px 10px; font-size:12.5px; background:#fafafa; max-width:560px; }
+  .job .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .job .dot.on { background:var(--blue); animation:pulse 1.2s infinite; } .job .dot.off { background:#9ca3af; }
+  @keyframes pulse { 0%{opacity:1} 50%{opacity:.25} 100%{opacity:1} }
+  .legend span { display:inline-flex; align-items:center; gap:5px; margin-right:14px; font-size:12px; color:#4b5563; }
+  .legend i { width:14px; height:10px; border-radius:3px; display:inline-block; }
+  .treewrap { display:grid; grid-template-columns: minmax(0, 1fr) 360px; gap:16px; align-items:start; }
+  #treebox { overflow:auto; border:1px solid #eef0f3; border-radius:8px; background:#fcfcfd; }
+  svg text { font-family:inherit; }
+  .node rect { cursor:pointer; }
+  .node:hover rect { filter:brightness(0.97); stroke-width:2.4; }
+  #detail { border:1px solid #eef0f3; border-radius:8px; padding:12px 14px; background:#fff; min-height:300px; position:sticky; top:10px; max-height:calc(100vh - 20px); overflow:auto; }
+  #detail h3 { margin:0 0 4px; font-size:15px; }
+  #detail .date { color:var(--gray); font-size:12px; }
+  #detail .sum { margin:8px 0; line-height:1.7; }
+  #detail ul { margin:6px 0; padding-left:18px; line-height:1.7; font-size:13px; }
+  #detail table { border-collapse:collapse; margin:8px 0; font-size:12.5px; }
+  #detail td { border:1px solid #e5e7eb; padding:3px 8px; }
+  #detail img { max-width:100%; border:1px solid #e5e7eb; border-radius:6px; margin-top:6px; cursor:zoom-in; }
+  #detail .files a { font-size:12px; margin-right:10px; color:var(--blue); }
+  .badge { display:inline-block; padding:1px 7px; border-radius:4px; font-size:11px; color:#fff; margin-left:6px; vertical-align:middle; }
+  /* fork */
+  .forkbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:10px; }
+  .forkbar select { padding:5px; font-size:13px; border:1px solid #d1d5db; border-radius:5px; max-width:640px; }
+  .summarygrid { display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:12px; }
+  .chart { border:1px solid #eef0f3; border-radius:8px; padding:8px; }
+  .chart h4 { margin:0 0 4px; font-size:13px; }
+  .forktree { display:grid; grid-template-columns: 360px 70px 1fr; align-items:stretch; }
+  .trunk { border:1px solid #e5e7eb; border-radius:8px; padding:10px; background:#fafafa; align-self:center; }
+  .trunk .frames { display:grid; grid-template-columns: repeat(4,1fr); gap:3px; }
+  .trunk .frames img { width:100%; border-radius:3px; }
+  .think { color:var(--blue); } .tc { color:var(--orange); font-family:ui-monospace,Menlo,monospace; font-size:12px; }
+  .txt { white-space:pre-wrap; line-height:1.6; font-size:12.5px; max-height:180px; overflow:auto; margin-top:6px; }
+  .branches { display:flex; flex-direction:column; gap:10px; }
+  .br { border:1px solid #e5e7eb; border-left-width:6px; border-radius:8px; padding:8px 10px; background:#fff; min-height:132px; }
+  .br h4 { margin:0; font-size:13.5px; display:flex; align-items:center; gap:8px; }
+  .br .row { display:flex; gap:12px; align-items:center; margin-top:5px; flex-wrap:wrap; font-size:12.5px; }
+  .br .thumbs img { height:54px; border-radius:3px; margin-right:3px; border:1px solid #e5e7eb; }
+  .gapbar { width:140px; height:10px; background:#f3f4f6; border-radius:5px; position:relative; }
+  .gapbar .mid { position:absolute; left:50%; top:-2px; width:1px; height:14px; background:#9ca3af; }
+  .gapbar .v { position:absolute; top:0; height:10px; border-radius:5px; }
+  .ok { color:var(--green); font-weight:650; } .bad { color:var(--red); font-weight:650; }
+  details summary { cursor:pointer; color:var(--gray); font-size:12px; margin-top:4px; }
+  /* next */
+  .opts { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:10px; }
+  .opt { border:1.5px solid #e5e7eb; border-radius:9px; padding:10px 12px; cursor:pointer; background:#fff; }
+  .opt:hover { border-color:#93c5fd; } .opt.sel { border-color:var(--blue); background:#eff6ff; }
+  .opt b { font-size:14px; } .opt .c { color:var(--gray); font-size:12px; margin:3px 0; } .opt .w { font-size:12.5px; line-height:1.6; }
+  textarea { width:100%; min-height:80px; margin-top:10px; font-size:13px; padding:8px; border:1px solid #d1d5db; border-radius:6px; font-family:inherit; }
+  button { padding:8px 16px; border:0; border-radius:6px; background:var(--blue); color:#fff; font-size:14px; cursor:pointer; margin-top:8px; }
+  #fblist { margin-top:10px; font-size:12.5px; color:#374151; }
+  #fblist div { border-top:1px dashed #e5e7eb; padding:5px 0; }
+  #lightbox { position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:9; }
+  #lightbox img { max-width:94vw; max-height:92vh; background:#fff; border-radius:6px; }
+</style>
+</head>
+<body>
+<header><h1>📊 实验进展 · 视频工具调用是真取证还是走过场？</h1><span id="upd" style="font-size:12px;color:#9ca3af"></span><a href="/">🔬 推理可视化 →</a></header>
+<main>
+
+<section>
+  <h2>① 现在在哪</h2>
+  <div class="headline" id="headline"></div>
+  <div class="jobs" id="jobs"></div>
+</section>
+
+<section>
+  <h2>② 研究进展树 <span style="font-weight:400;font-size:12px;color:#6b7280">（点节点看结论、图和文件；分叉处 = 方向转了一次）</span></h2>
+  <div class="legend" style="margin-bottom:8px">
+    <span><i style="background:#2f855a"></i>已完成</span><span><i style="background:#2b6cb0"></i>进行中</span>
+    <span><i style="background:#c05621"></i>转向 / 被推翻</span><span><i style="background:#b7791f"></i>有缺陷待重做</span>
+    <span><i style="background:#fff;border:1.5px dashed #9ca3af"></i>下一步（待定）</span>
+  </div>
+  <div class="treewrap">
+    <div id="treebox"><svg id="tree"></svg></div>
+    <div id="detail"><div style="color:#9ca3af">← 点一个节点</div></div>
+  </div>
+</section>
+
+<section id="forksec">
+  <h2>③ 关键实验：在它自己的工具调用处分叉</h2>
+  <div style="font-size:13px;line-height:1.7;color:#374151;margin-bottom:10px">
+    DeepEyes 先自己跑第一轮（思考 + 调工具）。在<b>工具返回的那一刻</b>，固定前面的一切，只把返回的画面换成四种之一，各自续写到作答：
+    <b style="color:#2f855a">真返回</b>（它自己调到的）、<b style="color:#6b7280">随机返回</b>（同形状、别的时间/位置）、<b style="color:#9ca3af">灰图</b>、
+    <b style="color:#7c3aed">证据窗 E*</b>（它没找到的那段关键证据，直接塞给它）。如果模型真在用证据，四支的答案应该不一样。
+  </div>
+  <div class="summarygrid">
+    <div class="chart"><h4>四支的答对率</h4><svg id="accchart" width="100%" height="190"></svg></div>
+    <div class="chart"><h4>返回后立刻读的答案倾向（正确 − 最强干扰，−1…+1）</h4><svg id="gapchart" width="100%" height="190"></svg></div>
+  </div>
+  <div id="forkfacts" style="font-size:13px;line-height:1.8;margin-bottom:12px"></div>
+  <div class="forkbar"><b>逐题看分叉树：</b><select id="forksel"></select><span id="forkmeta" style="font-size:12px;color:#6b7280"></span></div>
+  <div class="forktree">
+    <div class="trunk" id="trunk"></div>
+    <svg id="links" width="70" height="600"></svg>
+    <div class="branches" id="branches"></div>
+  </div>
+</section>
+
+<section>
+  <h2>④ 下一步往哪走？（选一个或写你的想法，我会读 <code>webapp/feedback.jsonl</code>）</h2>
+  <div class="opts" id="opts"></div>
+  <textarea id="fbtext" placeholder="例如：先做去结论分叉；或者：别管 DeepEyes 了，直接在 Qwen3.5 上 SFT……"></textarea>
+  <button id="fbsend">提交</button>
+  <div id="fblist"></div>
+</section>
+
+</main>
+<div id="lightbox"><img id="lbimg"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const COL = {done:'#2f855a', running:'#2b6cb0', pivot:'#c05621', flagged:'#b7791f', todo:'#9ca3af'};
+const CN = {done:'已完成', running:'进行中', pivot:'转向', flagged:'待重做', todo:'下一步'};
+const BR = {real:{n:'真返回', c:'#2f855a'}, random:{n:'随机返回', c:'#6b7280'}, gray:{n:'灰图', c:'#9ca3af'}, oracle:{n:'证据窗 E*（它没找到的）', c:'#7c3aed'}};
+let P = null, SEL = null, CHOICE = null;
+
+document.addEventListener('click', e => { if (e.target.tagName === 'IMG' && e.target.dataset.zoom) { $('lbimg').src = e.target.src; $('lightbox').style.display = 'flex'; } });
+$('lightbox').onclick = () => $('lightbox').style.display = 'none';
+
+async function loadProgress() {
+  P = await (await fetch('/api/progress')).json();
+  $('headline').textContent = P.headline; $('upd').textContent = '更新于 ' + P.updated;
+  $('jobs').innerHTML = (P.jobs||[]).map(j => `<div class="job"><span class="dot ${j.running?'on':'off'}"></span><b>${esc(j.script)}</b> ${j.running?'<span style="color:#2b6cb0">运行中</span>':'<span style="color:#6b7280">已结束 '+esc(j.mtime||'')+'</span>'}<div style="color:#4b5563;margin-top:3px;font-family:ui-monospace,monospace;font-size:11.5px">${esc(j.last)}</div></div>`).join('')
+    + `<div class="job"><span class="dot ${P.webapp_model?'on':'off'}"></span><b>推理可视化</b> 已加载模型：${esc(P.webapp_model||'无')}</div>`;
+  drawTree(); renderOpts();
+}
+
+// ── 研究树: 水平 tidy tree ──
+function drawTree() {
+  const nodes = P.nodes, byId = {}, kids = {};
+  nodes.forEach(n => { byId[n.id] = n; kids[n.id] = []; });
+  nodes.forEach(n => { if (n.parent) kids[n.parent].push(n.id); });
+  // 列距按可用宽度自适应, 让整棵树不用横向滚动
+  const depth = {}; (function d(id, k) { depth[id] = k; kids[id].forEach(c => d(c, k+1)); })('root', 0);
+  const maxD = Math.max(...Object.values(depth)), avail = Math.max(700, $('treebox').clientWidth - 8);
+  const NW = Math.min(214, Math.max(140, Math.floor(avail / (maxD + 1)) - 26)), NH = 48, DY = 60;
+  const DX = Math.max(NW + 22, Math.floor((avail - NW - 24) / Math.max(1, maxD)));
+  const MAXC = Math.max(7, Math.floor((NW - 20) / 12.5));
+  let slot = 0; const pos = {};
+  (function place(id, d) {
+    const ch = kids[id];
+    if (!ch.length) { pos[id] = {x: d*DX + 12, y: slot*DY + 12}; slot++; return; }
+    ch.forEach(c => place(c, d+1));
+    const ys = ch.map(c => pos[c].y); pos[id] = {x: d*DX + 12, y: (Math.min(...ys)+Math.max(...ys))/2};
+  })('root', 0);
+  const W = Math.max(...Object.values(pos).map(p=>p.x)) + NW + 20, H = slot*DY + 20;
+  const svg = $('tree'); svg.setAttribute('width', W); svg.setAttribute('height', H);
+  let h = '';
+  nodes.forEach(n => { if (!n.parent) return; const a = pos[n.parent], b = pos[n.id];
+    const x1 = a.x+NW, y1 = a.y+NH/2, x2 = b.x, y2 = b.y+NH/2, mx = (x1+x2)/2;
+    h += `<path d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}" fill="none" stroke="${n.status==='todo'?'#cbd5e1':'#94a3b8'}" stroke-width="1.6" ${n.status==='todo'?'stroke-dasharray="5,4"':''}/>`; });
+  nodes.forEach(n => { const p = pos[n.id], c = COL[n.status]||'#999', todo = n.status==='todo';
+    const t = n.title.length > MAXC ? n.title.slice(0,MAXC)+'…' : n.title;
+    h += `<g class="node" data-id="${n.id}" transform="translate(${p.x},${p.y})"><title>${esc(n.title)} — ${esc(n.summary||'')}</title>
+      <rect width="${NW}" height="${NH}" rx="9" fill="${todo?'#fff':c}" fill-opacity="${todo?1:0.12}" stroke="${c}" stroke-width="${SEL===n.id?3:1.6}" ${todo?'stroke-dasharray="5,4"':''}/>
+      <rect width="6" height="${NH}" rx="3" fill="${c}"/>
+      <text x="14" y="21" font-size="13" font-weight="650" fill="#111827">${esc(t)}</text>
+      <text x="14" y="39" font-size="11" fill="#6b7280">${esc(n.date||'')} · ${CN[n.status]||''}${n.status==='running'?' ●':''}</text>
+    </g>`; });
+  svg.innerHTML = h;
+  svg.querySelectorAll('.node').forEach(g => g.onclick = () => showNode(g.dataset.id));
+  if (!SEL) showNode('fork');
+}
+function showNode(id) {
+  SEL = id; const n = P.nodes.find(x => x.id === id); const c = COL[n.status];
+  let h = `<h3>${esc(n.title)}<span class="badge" style="background:${c}">${CN[n.status]}</span></h3><div class="date">${esc(n.date||'')}</div>`;
+  h += `<div class="sum">${esc(n.summary||'')}</div>`;
+  if (n.metrics) h += '<table>' + n.metrics.map(m => `<tr><td>${esc(m[0])}</td><td><b>${esc(m[1])}</b></td></tr>`).join('') + '</table>';
+  if (n.details) h += '<ul>' + n.details.map(d => `<li>${esc(d)}</li>`).join('') + '</ul>';
+  (n.figs||[]).forEach(f => h += `<img data-zoom="1" src="/files/${f}" title="点击放大">`);
+  if (n.fork_view) h += `<div style="margin-top:8px"><a href="#forksec">↓ 看下面的分叉树</a></div>`;
+  if (n.files) h += '<div class="files" style="margin-top:8px">📁 ' + n.files.map(f => f.startsWith('（') ? `<span style="font-size:12px;color:#6b7280">${esc(f)}</span>` : `<a href="/files/${f}" target="_blank">${esc(f)}</a>`).join('') + '</div>';
+  $('detail').innerHTML = h; drawTree._skip || drawTreeSelOnly();
+}
+function drawTreeSelOnly() { document.querySelectorAll('#tree .node').forEach(g => g.querySelector('rect').setAttribute('stroke-width', g.dataset.id===SEL?3:1.6)); }
+
+// ── 分叉汇总图 ──
+function bars(svgId, data, groups, vmin, vmax, fmt) {
+  const svg = $(svgId), W = svg.clientWidth || 600, H = 190, L = 34, B = 34, T = 14;
+  const brs = ['real','random','gray','oracle'].filter(b => groups.every(g => data[g] && data[g][b] !== undefined));
+  const gw = (W - L - 10) / groups.length, bw = Math.min(34, (gw - 30) / brs.length);
+  const y = v => T + (H - T - B) * (1 - (v - vmin) / (vmax - vmin));
+  let h = `<line x1="${L}" x2="${W-6}" y1="${y(0)}" y2="${y(0)}" stroke="#9ca3af"/>`;
+  for (let v = vmin; v <= vmax + 1e-9; v += (vmax - vmin) / 4) h += `<text x="4" y="${y(v)+4}" font-size="10" fill="#6b7280">${fmt(v)}</text><line x1="${L}" x2="${W-6}" y1="${y(v)}" y2="${y(v)}" stroke="#f1f5f9"/>`;
+  groups.forEach((g, gi) => {
+    const gx = L + gi*gw + 14;
+    brs.forEach((b, bi) => { const v = data[g][b], x = gx + bi*(bw+6), y0 = y(0), y1 = y(v);
+      h += `<rect x="${x}" y="${Math.min(y0,y1)}" width="${bw}" height="${Math.abs(y1-y0)}" fill="${BR[b].c}" rx="3"/>`;
+      h += `<text x="${x+bw/2}" y="${(v>=0?y1-4:y1+12)}" font-size="10.5" text-anchor="middle" fill="#111">${fmt(v)}</text>`; });
+    h += `<text x="${gx + (brs.length*(bw+6))/2 - 3}" y="${H-12}" font-size="12" text-anchor="middle" fill="#374151">${g==='required'?'需要证据的题':'粗看可解（对照）'} (n=${data[g].n})</text>`;
+  });
+  const lx = W - 300; brs.forEach((b, i) => h += `<rect x="${lx + i*75}" y="2" width="10" height="10" fill="${BR[b].c}"/><text x="${lx + i*75 + 13}" y="11" font-size="10.5" fill="#374151">${BR[b].n.split('（')[0]}</text>`);
+  svg.innerHTML = h;
+}
+async function loadForkSummary() {
+  const S = await (await fetch('/api/fork_summary')).json(); const groups = ['required','control'].filter(g => S[g]);
+  const acc = {}, gap = {}; groups.forEach(g => { acc[g] = {...S[g].acc, n:S[g].n}; gap[g] = {...S[g].gap, n:S[g].n}; });
+  bars('accchart', acc, groups, 0, 1, v => v.toFixed(2)); bars('gapchart', gap, groups, -1, 1, v => (v>=0?'+':'')+v.toFixed(2));
+  const r = S.required;
+  if (r) $('forkfacts').innerHTML = `
+    <b>怎么读：</b>左图四根柱子一样高 = 返回什么都不影响答对率；右图四根柱子一样 = 返回后它的答案倾向不随内容变。<br>
+    需要证据的 ${r.n} 题：四支答案<b>完全相同</b>的占 <b>${Math.round(r.same_all*100)}%</b>；返回后答案倾向已<b>饱和</b>（|倾向|≥0.95）的占 <b>${Math.round(r.saturated*100)}%</b>；
+    调用前平均倾向 ${r.gap_pre>=0?'+':''}${r.gap_pre}，返回后变成 ±1——<b>方向由它第一轮自己写的内容决定</b>，不是由返回的画面决定。<br>
+    对比：把同样的证据放在它<b>开始思考之前</b>喂（离线审计），信念会从 0.31 涨到 0.40。<b>证据放在"下结论之前"会被用，放在"下结论之后"不会。</b>`;
+}
+
+// ── 逐题分叉树 ──
+async function loadForkItems() {
+  const L = await (await fetch('/api/fork_items')).json();
+  $('forksel').innerHTML = L.map(x => { const o = x.outcome, m = b => o[b] ? (o[b].correct ? '✓' : '✗') : '·';
+    return `<option value="${x.uuid}">[${x.group==='required'?'需要证据':'对照'}] ${esc(x.domain)} / ${esc(x.name)} — 真${m('real')} 随机${m('random')} 灰${m('gray')} E*${m('oracle')}${x.hit?' · 命中E*':''}</option>`; }).join('');
+  $('forksel').onchange = () => loadFork($('forksel').value);
+  const pick = L.find(x => x.name === 'Absence Seizure') || L[0]; if (pick) { $('forksel').value = pick.uuid; loadFork(pick.uuid); }
+}
+function colorTurn(t) {
+  let h = '', i = 0; const re = /(<tool_call>[\s\S]*?(?:<\/tool_call>|$))|(<answer>[\s\S]*?(?:<\/answer>|$))/g; let m;
+  while ((m = re.exec(t)) !== null) { if (m.index > i) h += `<span class="think">${esc(t.slice(i, m.index))}</span>`;
+    h += m[1] ? `<span class="tc">${esc(m[1])}</span>` : `<b>${esc(m[2])}</b>`; i = m.index + m[0].length; }
+  if (i < t.length) h += `<span class="think">${esc(t.slice(i))}</span>`; return h;
+}
+async function loadFork(uuid) {
+  const D = await (await fetch('/api/fork/' + uuid)).json(); const r = D.record, call = r.call || {};
+  const opts = D.options.map((o,i) => `${'ABCD'[i]}. ${o}`).join('　');
+  $('forkmeta').textContent = `正确答案 ${D.answer_letter}（${D.answer}）· 证据窗 E* ${r.estar ? '['+r.estar.map(v=>(+v).toFixed(2)).join(', ')+'] s' : '无'} · 时长 ${D.duration.toFixed(1)}s`;
+  const win = call.window ? (call.window[0]===call.window[1] ? `t=${(+call.window[0]).toFixed(2)}s` : `[${call.window.map(v=>(+v).toFixed(2)).join(', ')}] s`) : '';
+  $('trunk').innerHTML = `<div style="font-size:12px;color:#6b7280;margin-bottom:4px">主干：模型看到的 8 帧粗采样</div>
+    <div class="frames">${D.coarse_idx.map(i => `<img data-zoom="1" src="/api/frame_at/${uuid}?t=${(i/D.fps).toFixed(3)}&h=90">`).join('')}</div>
+    <div style="font-size:12px;margin-top:6px;color:#374151">${esc(opts)}</div>
+    <div style="font-size:12px;margin-top:6px"><b>第一轮</b>（它自己写的）${r.pre_answer ? '<span class="badge" style="background:#c05621">调工具前已下结论</span>' : ''}</div>
+    <div class="txt">${colorTurn(r.turn1)}</div>
+    <div style="font-size:12px;margin-top:6px">🔧 调用：<span class="tc">${esc(call.name)}</span> ${esc(win)} ${call.hit===true?'<span class="ok">落在 E* 内</span>':(call.hit===false?'<span class="bad">未落在 E* 内</span>':'')}</div>
+    <div style="font-size:12px;margin-top:4px;color:#6b7280">调用前答案倾向：${r.gap_pre>=0?'+':''}${(+r.gap_pre).toFixed(2)}</div>`;
+  const order = ['real','random','gray','oracle'].filter(b => r.branches[b]);
+  $('branches').innerHTML = order.map(b => { const x = r.branches[b], ok = x.correct;
+    const thumbs = b === 'gray' ? `<span style="display:inline-block;width:80px;height:54px;background:#808080;border-radius:3px"></span>`
+      : (x.frames_t||[]).slice(0,6).map(t => { const bb = (b==='real' && call.name==='image_zoom_in_tool' && call.args && call.args.bbox_2d) ? '&bbox=' + call.args.bbox_2d.join(',') : '';
+          return `<img data-zoom="1" src="/api/frame_at/${uuid}?t=${t}${bb}&h=108">`; }).join('');
+    const g = x.gap_probe, w = Math.abs(g)*70, left = g >= 0 ? 70 : 70 - w;
+    const tail = (x.text||'').replace(/\s+/g,' ').trim();
+    return `<div class="br" style="border-left-color:${BR[b].c}">
+      <h4><span style="color:${BR[b].c}">●</span>${BR[b].n}<span class="${ok?'ok':'bad'}" style="margin-left:auto">${ok?'✓':'✗'} 答 ${esc(x.pred)}</span></h4>
+      <div class="row thumbs">${thumbs}${b==='random'&&call.name==='image_zoom_in_tool'?'<span style="font-size:11px;color:#6b7280">（随机位置裁剪，示意为整帧）</span>':''}</div>
+      <div class="row"><span>返回后答案倾向</span><span class="gapbar"><span class="mid"></span><span class="v" style="left:${left}px;width:${w}px;background:${g>=0?'#2f855a':'#c53030'}"></span></span><b>${g>=0?'+':''}${(+g).toFixed(2)}</b>
+        <span style="color:#6b7280">续写推理段平均熵 ${x.ent_think ?? '-'}</span><span style="color:#6b7280">${x.n_tokens} token</span></div>
+      <details><summary>看它的续写</summary><div class="txt">${colorTurn(x.text||'')}</div></details>
+    </div>`; }).join('');
+  requestAnimationFrame(drawLinks);
+}
+function drawLinks() {
+  const svg = $('links'), tr = $('trunk').getBoundingClientRect(), bs = [...document.querySelectorAll('#branches .br')];
+  const top = svg.getBoundingClientRect().top; const H = Math.max(tr.height, $('branches').getBoundingClientRect().height);
+  svg.setAttribute('height', H); const y0 = tr.top - top + tr.height/2; let h = '';
+  bs.forEach(b => { const r = b.getBoundingClientRect(), y1 = r.top - top + r.height/2, c = b.style.borderLeftColor;
+    h += `<path d="M0,${y0} C35,${y0} 35,${y1} 70,${y1}" fill="none" stroke="${c}" stroke-width="2.4"/>`; });
+  h += `<circle cx="3" cy="${y0}" r="5" fill="#c05621"/>`; svg.innerHTML = h;
+}
+window.addEventListener('resize', () => { requestAnimationFrame(drawLinks); loadForkSummary(); if (P) drawTree(); });
+
+// ── 下一步 ──
+function renderOpts() {
+  $('opts').innerHTML = (P.next_options||[]).map(o => `<div class="opt ${CHOICE===o.id?'sel':''}" data-id="${o.id}"><b>${esc(o.title)}</b><div class="c">${esc(o.cost)}</div><div class="w">${esc(o.why)}</div></div>`).join('');
+  document.querySelectorAll('.opt').forEach(d => d.onclick = () => { CHOICE = d.dataset.id; renderOpts(); showNode(CHOICE); });
+}
+async function loadFb() {
+  const L = await (await fetch('/api/feedback')).json();
+  $('fblist').innerHTML = L.slice().reverse().map(f => `<div><span style="color:#6b7280">${esc(f.time)}</span> ${f.choice?'<b>['+esc((P.next_options||[]).find(o=>o.id===f.choice)?.title||f.choice)+']</b> ':''}${esc(f.text)}</div>`).join('');
+}
+$('fbsend').onclick = async () => {
+  const text = $('fbtext').value.trim(); if (!text && !CHOICE) { alert('选一个方向或写几句'); return; }
+  await fetch('/api/feedback', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({choice: CHOICE, text})});
+  $('fbtext').value = ''; loadFb();
+};
+
+loadProgress().then(() => { loadForkSummary(); loadForkItems(); loadFb(); });
+setInterval(async () => { const q = await (await fetch('/api/progress')).json(); P.jobs = q.jobs; P.webapp_model = q.webapp_model;
+  $('jobs').innerHTML = (P.jobs||[]).map(j => `<div class="job"><span class="dot ${j.running?'on':'off'}"></span><b>${esc(j.script)}</b> ${j.running?'<span style="color:#2b6cb0">运行中</span>':'<span style="color:#6b7280">已结束 '+esc(j.mtime||'')+'</span>'}<div style="color:#4b5563;margin-top:3px;font-family:ui-monospace,monospace;font-size:11.5px">${esc(j.last)}</div></div>`).join('')
+    + `<div class="job"><span class="dot ${P.webapp_model?'on':'off'}"></span><b>推理可视化</b> 已加载模型：${esc(P.webapp_model||'无')}</div>`; }, 15000);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+分叉单元: 22 required + 40 control
+[deepeyes] 加载完成 45s  device=cuda:0  thinking_template=False  letter_ids={'A': [32, 362], 'B': [33, 425], 'C': [34, 356], 'D': [35, 422]}
+[fork/deepeyes@qwen35] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c fork 15.6s | 已用 1.5min ETA 17.5min | 错误 0
+  [10/62] 0845ab07 fork 13.1s | 已用 2.8min ETA 14.7min | 错误 0
+  [15/62] 0c67dfa1 fork 12.9s | 已用 4.1min ETA 12.7min | 错误 0
+  [20/62] 10a19c06 fork 12.0s | 已用 5.3min ETA 11.0min | 错误 0
+  [25/62] 0ee3b7b5 fork 13.2s | 已用 6.5min ETA 9.6min | 错误 0
+  [30/62] 11467317 fork 15.7s | 已用 7.7min ETA 8.2min | 错误 0
+  [35/62] 061659fb fork 11.8s | 已用 8.9min ETA 6.9min | 错误 0
+  [40/62] 0a502966 fork 13.0s | 已用 10.1min ETA 5.5min | 错误 0
+  [45/62] 089b7c3f fork 14.5s | 已用 11.4min ETA 4.3min | 错误 0
+  [50/62] 11441916 fork 21.1s | 已用 12.7min ETA 3.0min | 错误 0
+  [55/62] 044551b6 fork 19.1s | 已用 14.0min ETA 1.8min | 错误 0
+  [60/62] 0a428591 fork 13.9s | 已用 15.2min ETA 0.5min | 错误 0
+  [62/62] 029cb47f fork 14.8s | 已用 15.7min ETA 0.0min | 错误 0
+
+[required] n=22  调了工具并成功分叉 22  未调/失败 0
+  准确率:   real 0.45 | random 0.45 | gray 0.45   (调用前基线 p_gt 0.33)
+  步级概率差 gap: pre -0.223 → real -0.149 | random -0.157 | gray -0.156
+  VEG(real−random) = +0.008   VEG(real−gray) = +0.006
+  返回后推理段熵 H: real 0.435 | random 0.471 | gray 0.409   EER(random−real) = +0.035   EER(gray−real) = -0.026
+  答案翻转率: vs random 9% | vs gray 0%   调用前已下结论 55%   命中E* 5%
+  证据依赖 (VEG>0.1 或翻转) 的轨迹: 3/22; 它们的 EER(random−real) 均值 +0.052
+  corr(VEG, EER) = +0.41  (n=22)
+  [oracle 支: 在它自己的调用点塞进 E*] n=22  准确率 0.45 | 概率差 -0.115 | VEG(oracle−random) = +0.042 | 熵 H 0.435 | EER(random−oracle) = +0.035 | 答案翻转 vs random 5%
+    真证据到手后证据依赖的轨迹: 3/22
+    corr(VEG_oracle, EER_oracle) = +0.12
+
+[control] n=40  调了工具并成功分叉 40  未调/失败 0
+  准确率:   real 0.62 | random 0.62 | gray 0.62   (调用前基线 p_gt 0.63)
+  步级概率差 gap: pre +0.341 → real +0.273 | random +0.271 | gray +0.270
+  VEG(real−random) = +0.002   VEG(real−gray) = +0.003
+  返回后推理段熵 H: real 0.451 | random 0.460 | gray 0.421   EER(random−real) = +0.009   EER(gray−real) = -0.029
+  答案翻转率: vs random 0% | vs gray 0%   调用前已下结论 52%   命中E* 65%
+  证据依赖 (VEG>0.1 或翻转) 的轨迹: 0/40
+  corr(VEG, EER) = -0.12  (n=40)
+  [oracle 支: 在它自己的调用点塞进 E*] n=40  准确率 0.62 | 概率差 +0.312 | VEG(oracle−random) = +0.041 | 熵 H 0.439 | EER(random−oracle) = +0.020 | 答案翻转 vs random 0%
+    真证据到手后证据依赖的轨迹: 2/40
+    corr(VEG_oracle, EER_oracle) = -0.17
