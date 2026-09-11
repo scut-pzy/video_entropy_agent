@@ -429,7 +429,7 @@ async def infer(req: dict):
 
 REPO = os.path.abspath(os.path.join(HERE, '..'))
 JOBS = {  # 脚本 → 日志 (用于"正在跑"面板)
-    'fork.py': 'natural/out/log_fork_v2.txt', 'run_screen.py': 'natural/out/log_screen_qwen35.txt',
+    'decommit.py': 'natural/out/log_decommit.txt', 'fork.py': 'natural/out/log_fork_v2.txt', 'run_screen.py': 'natural/out/log_screen_qwen35.txt',
     'run_audit.py': 'natural/out/log_audit_deepeyes_at_qwen35.txt', 'make_sft.py': 'natural/out/log_sft.txt',
 }
 FORK_PATH = os.path.join(REPO, 'natural', 'out', 'fork_v2.jsonl')
@@ -545,6 +545,58 @@ def repo_file(path: str):
     if mt is None:
         return JSONResponse({'error': 'type not served'}, status_code=403)
     return Response(open(p, 'rb').read(), media_type=mt)
+
+
+DECOMMIT_PATH = os.path.join(REPO, 'natural', 'out', 'decommit.jsonl')
+
+
+def _dc_records():
+    return D.read_records(DECOMMIT_PATH, stage='decommit') if os.path.exists(DECOMMIT_PATH) else []
+
+
+@app.get('/api/decommit_summary')
+def decommit_summary():
+    out = {}
+    for g in ('required', 'control'):
+        rs = [r for r in _dc_records() if r.get('group') == g]
+        if not rs:
+            continue
+        row = {}
+        for v in ('orig', 'trunc', 'neutral'):
+            cell = {}
+            for x in ('oracle', 'random'):
+                bs = [r['branches'][f'{v}|{x}'] for r in rs]
+                cell[x] = dict(acc=round(float(np.mean([b['correct'] for b in bs])), 3),
+                               gap=round(float(np.mean([b['gap'] for b in bs])), 3),
+                               ent=round(float(np.mean([b['ent_think'] for b in bs if b['ent_think'] is not None] or [0])), 3))
+            cell['flip'] = round(float(np.mean([r['branches'][f'{v}|oracle']['pred'] != r['branches'][f'{v}|random']['pred'] for r in rs])), 3)
+            row[v] = cell
+        out[g] = dict(n=len(rs), n_trunc=sum(r['did_trunc'] for r in rs), rows=row)
+    return out
+
+
+@app.get('/api/decommit_items')
+def decommit_items():
+    out = []
+    for r in _dc_records():
+        o = {k: dict(pred=v['pred'], correct=v['correct']) for k, v in r['branches'].items()}
+        out.append(dict(uuid=r['uuid'], name=r.get('name'), domain=r.get('domain'), group=r.get('group'),
+                        did_trunc=r['did_trunc'], pre_answer=r.get('pre_answer'), outcome=o))
+    out.sort(key=lambda x: (x['group'] != 'required', not x['did_trunc'], x['domain'] or ''))
+    return out
+
+
+@app.get('/api/decommit/{uuid}')
+def decommit_one(uuid: str):
+    r = next((x for x in _dc_records() if x['uuid'] == uuid), None)
+    if r is None:
+        return JSONResponse({'error': 'not found'}, status_code=404)
+    it = ITEMS[uuid]
+    fk = next((x for x in _fork_records() if x['uuid'] == uuid), {})
+    return dict(record=r, options=it['options'], answer_letter=it['answer_letter'], answer=it['answer'],
+                estar=fk.get('estar'), fps=it['fps'], duration=it['duration'],
+                coarse_idx=F.uniform_indices(it['n_frames'], P.BUDGET_K),
+                random_t=(fk.get('branches', {}).get('random', {}) or {}).get('frames_t'))
 
 
 @app.get('/api/feedback')

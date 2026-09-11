@@ -1,0 +1,4 @@
+去结论分叉单元: 62 条 (22 required)
+[qwen35] 加载完成 72s  device=cuda:0  thinking_template=True  letter_ids={'A': [32, 357], 'B': [33, 417], 'C': [34, 351], 'D': [35, 414]}
+[decommit/qwen35@qwen35|prefix=deepeyes] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c decommit 140.1s | 已用 8.5min ETA 96.4min | 错误 0

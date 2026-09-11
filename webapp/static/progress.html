@@ -114,6 +114,18 @@
   </div>
 </section>
 
+<section id="dcsec">
+  <h2>③b 去结论分叉：是"它写下的结论"还是"返回的画面"决定了答案？</h2>
+  <div style="font-size:13px;line-height:1.7;color:#374151;margin-bottom:10px">
+    只改第一轮的<b>思考文本</b>，工具调用保持它自己的原样：<b>原文</b>（它自己写的，常含"因此答案是…"）、<b>截断</b>（截在第一次点名选项/下结论之前）、<b>中性</b>（换成一句"还定不了，需要看细节"）。
+    每种再接两种返回：<b style="color:#7c3aed">证据窗 E*</b> 或 <b style="color:#6b7280">随机返回</b>。
+    <b>要看的：</b>如果"原文"那一行 E* 和随机一样高、而"截断/中性"那两行 E* 明显高过随机——证据被忽略是因为它<b>先下了结论</b>。
+  </div>
+  <div id="dctable"></div>
+  <div class="forkbar" style="margin-top:12px"><b>逐题看两层分叉树：</b><select id="dcsel"></select><span id="dcmeta" style="font-size:12px;color:#6b7280"></span></div>
+  <div id="dctree" style="position:relative"></div>
+</section>
+
 <section>
   <h2>④ 下一步往哪走？（选一个或写你的想法，我会读 <code>webapp/feedback.jsonl</code>）</h2>
   <div class="opts" id="opts"></div>
@@ -290,7 +302,62 @@ $('fbsend').onclick = async () => {
   $('fbtext').value = ''; loadFb();
 };
 
-loadProgress().then(() => { loadForkSummary(); loadForkItems(); loadFb(); });
+
+// ── 去结论分叉 ──
+const VN = {orig:'原文（它自己写的）', trunc:'截断（结论前）', neutral:'中性（一句"还定不了"）'};
+async function loadDecommit() {
+  const S = await (await fetch('/api/decommit_summary')).json();
+  const gs = ['required','control'].filter(g => S[g]);
+  if (!gs.length) { $('dctable').innerHTML = '<div style="color:#9ca3af">实验还在跑，结果出来后这里自动出现。</div>'; return false; }
+  let h = '';
+  gs.forEach(g => { const s = S[g];
+    h += `<div style="font-size:13px;margin:6px 0 4px"><b>${g==='required'?'需要证据的题':'粗看可解（对照）'}</b> n=${s.n}（原文含结论、可截断的 ${s.n_trunc} 条）</div>
+    <table style="border-collapse:collapse;font-size:12.5px;margin-bottom:8px"><tr style="background:#f3f4f6">
+      <th style="padding:4px 10px;text-align:left">第一轮思考</th><th style="padding:4px 10px;color:#7c3aed">答对率 · E*</th><th style="padding:4px 10px;color:#6b7280">答对率 · 随机</th>
+      <th style="padding:4px 10px">差（E* − 随机）</th><th style="padding:4px 10px">答案倾向 E* / 随机</th><th style="padding:4px 10px">答案随返回变</th></tr>`;
+    ['orig','trunc','neutral'].forEach(v => { const c = s.rows[v], d = c.oracle.acc - c.random.acc;
+      const bar = w => `<span style="display:inline-block;height:9px;width:${Math.round(w*90)}px;background:currentColor;border-radius:3px;vertical-align:middle;margin-right:5px"></span>`;
+      h += `<tr><td style="padding:4px 10px;border-top:1px solid #eee">${VN[v]}</td>
+        <td style="padding:4px 10px;border-top:1px solid #eee;color:#7c3aed">${bar(c.oracle.acc)}${c.oracle.acc.toFixed(2)}</td>
+        <td style="padding:4px 10px;border-top:1px solid #eee;color:#6b7280">${bar(c.random.acc)}${c.random.acc.toFixed(2)}</td>
+        <td style="padding:4px 10px;border-top:1px solid #eee;font-weight:700;color:${d>0.05?'#2f855a':(d<-0.05?'#c53030':'#374151')}">${d>=0?'+':''}${d.toFixed(2)}</td>
+        <td style="padding:4px 10px;border-top:1px solid #eee">${c.oracle.gap>=0?'+':''}${c.oracle.gap.toFixed(2)} / ${c.random.gap>=0?'+':''}${c.random.gap.toFixed(2)}</td>
+        <td style="padding:4px 10px;border-top:1px solid #eee">${Math.round(c.flip*100)}%</td></tr>`; });
+    h += '</table>'; });
+  $('dctable').innerHTML = h;
+  const L = await (await fetch('/api/decommit_items')).json();
+  $('dcsel').innerHTML = L.map(x => { const o = x.outcome, m = k => o[k] ? (o[k].correct ? '✓' : '✗') : '·';
+    return `<option value="${x.uuid}">[${x.group==='required'?'需要证据':'对照'}]${x.did_trunc?'':'[原文无结论]'} ${esc(x.domain)} / ${esc(x.name)} — 原文 ${m('orig|oracle')}${m('orig|random')} · 截断 ${m('trunc|oracle')}${m('trunc|random')} · 中性 ${m('neutral|oracle')}${m('neutral|random')}</option>`; }).join('');
+  $('dcsel').onchange = () => loadDc($('dcsel').value);
+  if (L.length) loadDc(L[0].uuid);
+  return true;
+}
+async function loadDc(uuid) {
+  const D = await (await fetch('/api/decommit/' + uuid)).json(); const r = D.record;
+  $('dcmeta').textContent = `正确答案 ${D.answer_letter}（${D.answer}）· E* ${D.estar ? '['+D.estar.map(v=>(+v).toFixed(2)).join(', ')+'] s' : '-'}`;
+  const thinkOf = {orig: r.think_orig, trunc: r.think_trunc || '（截断后为空：原文整段就是结论）', neutral: '从这几帧粗采样画面还不能确定是哪一个动作，关键的动作细节可能发生在两个采样帧之间，我需要调用工具查看更多画面再判断。'};
+  const eThumbs = D.estar ? [0,1,2,3].map(i => { const t = D.estar[0] + (D.estar[1]-D.estar[0])*i/3; return `<img data-zoom="1" src="/api/frame_at/${uuid}?t=${t.toFixed(3)}&h=46">`; }).join('') : '';
+  const rThumbs = (D.random_t||[]).slice(0,4).map(t => `<img data-zoom="1" src="/api/frame_at/${uuid}?t=${t}&h=46">`).join('');
+  const leaf = (v, x) => { const b = r.branches[`${v}|${x}`], c = x==='oracle' ? '#7c3aed' : '#6b7280';
+    return `<div class="br" style="border-left-color:${c};min-height:0;padding:6px 9px">
+      <h4 style="font-size:12.5px"><span style="color:${c}">●</span>${x==='oracle'?'返回 E*':'返回随机'}<span class="${b.correct?'ok':'bad'}" style="margin-left:auto">${b.correct?'✓':'✗'} 答 ${esc(b.pred)}</span></h4>
+      <div class="row thumbs" style="margin-top:3px">${x==='oracle'?eThumbs:rThumbs}</div>
+      <div class="row" style="font-size:12px"><span>答案倾向 <b>${b.gap>=0?'+':''}${(+b.gap).toFixed(2)}</b></span><span style="color:#6b7280">续写熵 ${b.ent_think ?? '-'}</span></div>
+      <details><summary>续写</summary><div class="txt">${colorTurn(b.text||'')}</div></details></div>`; };
+  let h = `<div style="display:grid;grid-template-columns:300px 40px 330px 40px 1fr;align-items:center;row-gap:14px">`;
+  h += `<div class="trunk" style="grid-row:1 / span 3"><div style="font-size:12px;color:#6b7280;margin-bottom:4px">主干：同样的 8 帧 + 同样的问题</div>
+        <div class="frames">${D.coarse_idx.map(i => `<img data-zoom="1" src="/api/frame_at/${uuid}?t=${(i/D.fps).toFixed(3)}&h=80">`).join('')}</div>
+        <div style="font-size:12px;margin-top:6px">工具调用（三种思考共用它自己的这一个）：</div><div class="txt tc" style="max-height:80px">${esc(r.call)}</div></div>`;
+  ['orig','trunc','neutral'].forEach((v, i) => {
+    h += `<svg style="grid-column:2;grid-row:${i+1}" width="40" height="40"><path d="M0,20 L40,20" stroke="#94a3b8" stroke-width="2"/></svg>`;
+    h += `<div style="grid-column:3;grid-row:${i+1};border:1px solid #e5e7eb;border-left:6px solid ${v==='orig'?'#c05621':(v==='trunc'?'#b7791f':'#2b6cb0')};border-radius:8px;padding:7px 9px;background:#fff">
+            <div style="font-size:12.5px;font-weight:650">第一轮思考 · ${VN[v]}</div><div class="txt think" style="max-height:92px">${esc(thinkOf[v])}</div></div>`;
+    h += `<svg style="grid-column:4;grid-row:${i+1}" width="40" height="150"><path d="M0,75 C20,75 20,38 40,38" fill="none" stroke="#7c3aed" stroke-width="2"/><path d="M0,75 C20,75 20,112 40,112" fill="none" stroke="#6b7280" stroke-width="2"/></svg>`;
+    h += `<div style="grid-column:5;grid-row:${i+1};display:grid;grid-template-columns:1fr 1fr;gap:8px">${leaf(v,'oracle')}${leaf(v,'random')}</div>`;
+  });
+  h += '</div>'; $('dctree').innerHTML = h;
+}
+loadProgress().then(() => { loadForkSummary(); loadForkItems(); loadFb(); loadDecommit(); });
 setInterval(async () => { const q = await (await fetch('/api/progress')).json(); P.jobs = q.jobs; P.webapp_model = q.webapp_model;
   $('jobs').innerHTML = (P.jobs||[]).map(j => `<div class="job"><span class="dot ${j.running?'on':'off'}"></span><b>${esc(j.script)}</b> ${j.running?'<span style="color:#2b6cb0">运行中</span>':'<span style="color:#6b7280">已结束 '+esc(j.mtime||'')+'</span>'}<div style="color:#4b5563;margin-top:3px;font-family:ui-monospace,monospace;font-size:11.5px">${esc(j.last)}</div></div>`).join('')
     + `<div class="job"><span class="dot ${P.webapp_model?'on':'off'}"></span><b>推理可视化</b> 已加载模型：${esc(P.webapp_model||'无')}</div>`; }, 15000);

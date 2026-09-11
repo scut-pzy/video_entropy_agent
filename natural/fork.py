@@ -48,7 +48,8 @@ def _think_entropy(text, ent, toks):
 def _probe_gap(bk, messages, gt_idx):
     """固定前缀 + '<answer>' 读下一 token 的字母分布 → (p_gt, gap=p_gt − max_other, p[4])."""
     import torch
-    text = bk.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True) + '<answer>'
+    kw = {'enable_thinking': False} if getattr(bk, 'thinking_template', False) else {}   # Qwen3.5: 关掉思考再读答案字母
+    text = bk.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, **kw) + '<answer>'
     images = [c['image'] for m in messages if isinstance(m['content'], list) for c in m['content'] if c.get('type') == 'image']
     inputs = bk.processor(text=[text], images=images or None, padding=True, return_tensors='pt').to(bk.model.device)
     with torch.inference_mode():

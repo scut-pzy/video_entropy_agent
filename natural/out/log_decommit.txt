@@ -1,0 +1,36 @@
+去结论分叉单元: 62 条 (22 required)
+[deepeyes] 加载完成 49s  device=cuda:0  thinking_template=False  letter_ids={'A': [32, 362], 'B': [33, 425], 'C': [34, 356], 'D': [35, 422]}
+[decommit/deepeyes@qwen35] 共 62 个单元, 已完成 0, 待跑 62
+  [5/62] 060f565c decommit 19.5s | 已用 1.7min ETA 18.9min | 错误 0
+  [10/62] 0845ab07 decommit 15.3s | 已用 3.1min ETA 16.0min | 错误 0
+  [15/62] 0c67dfa1 decommit 17.5s | 已用 4.8min ETA 15.0min | 错误 0
+  [20/62] 10a19c06 decommit 15.6s | 已用 6.2min ETA 13.1min | 错误 0
+  [25/62] 0ee3b7b5 decommit 16.2s | 已用 7.6min ETA 11.2min | 错误 0
+  [30/62] 11467317 decommit 17.6s | 已用 9.0min ETA 9.6min | 错误 0
+  [35/62] 061659fb decommit 14.4s | 已用 10.4min ETA 8.0min | 错误 0
+  [40/62] 0a502966 decommit 14.4s | 已用 11.6min ETA 6.4min | 错误 0
+  [45/62] 089b7c3f decommit 15.9s | 已用 13.0min ETA 4.9min | 错误 0
+  [50/62] 11441916 decommit 22.9s | 已用 14.5min ETA 3.5min | 错误 0
+  [55/62] 044551b6 decommit 17.9s | 已用 15.8min ETA 2.0min | 错误 0
+  [60/62] 0a428591 decommit 16.7s | 已用 17.2min ETA 0.6min | 错误 0
+  [62/62] 029cb47f decommit 15.5s | 已用 17.7min ETA 0.0min | 错误 0
+
+[required] n=22   其中第一轮被截断(原文含结论)的 21 条
+思考       |  acc E*   acc 随机   Δacc |  gap E*   gap 随机    VEG |   H E*    H 随机    EER | 答案随返回变
+orig     |    0.41     0.41  +0.00 |   -0.11    -0.15  +0.04 |  0.410   0.481 +0.070 | 14%
+trunc    |    0.45     0.41  +0.05 |   -0.04    -0.15  +0.11 |  0.691   0.698 +0.006 | 27%
+neutral  |    0.45     0.18  +0.27 |   -0.12    -0.16  +0.04 |  1.177   1.175 -0.002 | 45%
+  —— 仅"原文调用前含结论"的 21 条:
+     orig     acc E* 0.43 vs 随机 0.38 (Δ +0.05) | VEG +0.03
+     trunc    acc E* 0.48 vs 随机 0.38 (Δ +0.10) | VEG +0.11
+     neutral  acc E* 0.48 vs 随机 0.19 (Δ +0.29) | VEG +0.06
+
+[control] n=40   其中第一轮被截断(原文含结论)的 37 条
+思考       |  acc E*   acc 随机   Δacc |  gap E*   gap 随机    VEG |   H E*    H 随机    EER | 答案随返回变
+orig     |    0.62     0.65  -0.03 |   +0.31    +0.27  +0.03 |  0.444   0.465 +0.022 | 2%
+trunc    |    0.70     0.65  +0.05 |   +0.47    +0.41  +0.06 |  0.624   0.631 +0.007 | 15%
+neutral  |    0.62     0.62  +0.00 |   +0.44    +0.43  +0.01 |  1.123   1.177 +0.054 | 18%
+  —— 仅"原文调用前含结论"的 37 条:
+     orig     acc E* 0.65 vs 随机 0.68 (Δ -0.03) | VEG -0.00
+     trunc    acc E* 0.73 vs 随机 0.68 (Δ +0.05) | VEG +0.03
+     neutral  acc E* 0.65 vs 随机 0.65 (Δ +0.00) | VEG -0.00
